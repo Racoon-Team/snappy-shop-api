@@ -372,7 +372,6 @@ const signUpWithOauthProvider = async (req, res) => {
 const getAllCustomers = async (req, res) => {
   try {
     const users = await Customer.find({}).sort({ _id: -1 });
-
     const usersWithOrdersCount = await Promise.all(
       users.map(async (user) => {
         
@@ -383,7 +382,7 @@ const getAllCustomers = async (req, res) => {
         };
       })
     );
-
+  
     res.send(usersWithOrdersCount);
   } catch (err) {
     console.error("Error in getAllCustomers:", err);
