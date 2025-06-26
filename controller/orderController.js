@@ -42,11 +42,19 @@ const getAllOrders = async (req, res) => {
   }
 
   if (customerName) {
-    queryObject.$or = [
-      { "user_info.name": { $regex: `${customerName}`, $options: "i" } },
-      { invoice: { $regex: `${customerName}`, $options: "i" } },
-    ];
+  const isNumber = !isNaN(customerName);
+  queryObject.$or = [];
+
+  queryObject.$or.push({
+    "user_info.name": { $regex: customerName, $options: "i" },
+  });
+
+  if (isNumber) {
+    queryObject.$or.push({
+      invoice: Number(customerName),
+    });
   }
+}
 
   if (day) {
     queryObject.createdAt = { $gte: dateTime, $lte: today };
