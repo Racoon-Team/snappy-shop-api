@@ -1,4 +1,5 @@
 require("dotenv").config();
+const Order = require("../models/Order");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const Customer = require("../models/Customer");
@@ -371,8 +372,20 @@ const signUpWithOauthProvider = async (req, res) => {
 const getAllCustomers = async (req, res) => {
   try {
     const users = await Customer.find({}).sort({ _id: -1 });
-    res.send(users);
+    const usersWithOrdersCount = await Promise.all(
+      users.map(async (user) => {
+        
+        const ordersCount = await Order.countDocuments({ user: user._id });
+        return {
+          ...user.toObject(),
+          ordersCount,
+        };
+      })
+    );
+  
+    res.send(usersWithOrdersCount);
   } catch (err) {
+    console.error("Error in getAllCustomers:", err);
     res.status(500).send({ message: err.message });
   }
 };
