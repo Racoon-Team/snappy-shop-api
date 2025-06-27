@@ -22,6 +22,12 @@ const customerSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
+    location: {
+      type: String,
+      required: false,
+      enum: ["Cochabamba", "Santa Cruz", "La Paz", ""],
+      default: "",
+    },
 
     shippingAddress: {
       type: Object,
