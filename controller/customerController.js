@@ -20,7 +20,8 @@ const verifyEmailAddress = async (req, res) => {
       message: "This Email already Added!",
     });
   } else {
-    const token = tokenForVerify(req.body);
+    const { name, email, password, location } = req.body;
+    const token = tokenForVerify({ name, email, password, location });
     const option = {
       name: req.body.name,
       email: req.body.email,
@@ -98,7 +99,8 @@ const registerCustomer = async (req, res) => {
   const token = req.params.token;
 
   try {
-    const { name, email, password } = jwt.decode(token);
+    const { name, email, password, location } = jwt.decode(token);
+
 
     // Check if the user is already registered
     const isAdded = await Customer.findOne({ email });
@@ -137,6 +139,7 @@ const registerCustomer = async (req, res) => {
               name,
               email,
               password: bcrypt.hashSync(password),
+              location,
             });
 
             await newUser.save();
