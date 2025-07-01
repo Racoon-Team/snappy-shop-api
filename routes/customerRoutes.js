@@ -19,6 +19,8 @@ const {
   getShippingAddress,
   updateShippingAddress,
   deleteShippingAddress,
+  getCustomerByEmail,
+  updateCustomerLocation,
 } = require("../controller/customerController");
 const {
   passwordVerificationLimit,
@@ -31,6 +33,9 @@ router.post("/verify-email", emailVerificationLimit, verifyEmailAddress);
 
 //verify phone number
 router.post("/verify-phone", phoneVerificationLimit, verifyPhoneNumber);
+
+router.get("/email/:email", getCustomerByEmail);
+router.put("/location", updateCustomerLocation);
 
 // shipping address send to array
 router.post("/shipping/address/:id", addShippingAddress);

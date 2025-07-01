@@ -20,8 +20,8 @@ const verifyEmailAddress = async (req, res) => {
       message: "This Email already Added!",
     });
   } else {
-    const { name, email, password, location } = req.body;
-    const token = tokenForVerify({ name, email, password, location });
+    const { name, email, password } = req.body;
+    const token = tokenForVerify({ name, email, password });
     const option = {
       name: req.body.name,
       email: req.body.email,
@@ -582,6 +582,39 @@ const deleteCustomer = (req, res) => {
   });
 };
 
+const getCustomerByEmail = async (req, res) => {
+  try {
+    const customer = await Customer.findOne({ email: req.params.email });
+    if (!customer) {
+      return res.status(404).send({ message: "Customer not found" });
+    }
+    res.send(customer);
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
+};
+
+const updateCustomerLocation = async (req, res) => {
+  try {
+    const { email, location } = req.body;
+
+    const customer = await Customer.findOne({ email });
+    if (!customer) {
+      return res.status(404).send({ message: "Customer not found" });
+    }
+
+    customer.location = location;
+    await customer.save();
+
+    res.send({
+      message: "Location updated successfully!",
+    });
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
+};
+
+
 module.exports = {
   loginCustomer,
   verifyPhoneNumber,
@@ -601,4 +634,6 @@ module.exports = {
   getShippingAddress,
   updateShippingAddress,
   deleteShippingAddress,
+  getCustomerByEmail,
+  updateCustomerLocation,
 };
