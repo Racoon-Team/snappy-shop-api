@@ -597,7 +597,6 @@ const getCustomerByEmail = async (req, res) => {
 const updateCustomerLocation = async (req, res) => {
   try {
     const { email, location } = req.body;
-    console.log("Email recibido:", email);
 
     const customer = await Customer.findOne({ email });
 
