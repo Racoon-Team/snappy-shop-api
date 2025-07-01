@@ -597,8 +597,10 @@ const getCustomerByEmail = async (req, res) => {
 const updateCustomerLocation = async (req, res) => {
   try {
     const { email, location } = req.body;
+    console.log("Email recibido:", email);
 
     const customer = await Customer.findOne({ email });
+
     if (!customer) {
       return res.status(404).send({ message: "Customer not found" });
     }
@@ -606,9 +608,7 @@ const updateCustomerLocation = async (req, res) => {
     customer.location = location;
     await customer.save();
 
-    res.send({
-      message: "Location updated successfully!",
-    });
+    res.send({ message: "Location updated successfully!" });
   } catch (err) {
     res.status(500).send({ message: err.message });
   }
