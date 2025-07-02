@@ -11,14 +11,17 @@ const {
   updateStaff,
   deleteStaff,
   updatedStatus,
+  getAvailableLocations,
+  
 } = require("../controller/adminController");
 const { passwordVerificationLimit } = require("../lib/email-sender/sender");
-
 //register a staff
 router.post("/register", registerAdmin);
 
 //login a admin
 router.post("/login", loginAdmin);
+
+router.get("/available-locations", getAvailableLocations);
 
 //forget-password
 router.put("/forget-password", passwordVerificationLimit, forgetPassword);
