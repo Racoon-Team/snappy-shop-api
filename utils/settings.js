@@ -926,7 +926,7 @@ const setting = [
       tawk_chat_property_id: "",
       tawk_chat_status: false,
       tawk_chat_widget_id: "",
-      availableLocations: ["La Paz", "Cochabamba", "Santa Cruz"]
+      available_locations: ["La Paz", "Cochabamba", "Santa Cruz"]
     },
     name: "storeSetting",
   },

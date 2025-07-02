@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const storeSettingSchema = new mongoose.Schema(
   {
     setting: {
-      availableLocations: {
+      available_locations: {
         type: [String],
         default: [],
       },

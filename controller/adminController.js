@@ -278,11 +278,11 @@ const getAvailableLocations = async (req, res) => {
   try {
     const store = await StoreSetting.findOne({ name: "storeSetting" });
 
-    if (!store || !store.setting || !Array.isArray(store.setting.availableLocations)) {
+    if (!store || !store.setting || !Array.isArray(store.setting.available_locations)) {
       return res.status(404).json({ message: "Ubicaciones no configuradas" });
     }
 
-    res.json(store.setting.availableLocations);
+    res.json(store.setting.available_locations);
   } catch (error) {
     console.error("Error en getAvailableLocations:", error);
     res.status(500).json({ message: "Error al obtener ubicaciones", error });
