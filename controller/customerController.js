@@ -20,7 +20,8 @@ const verifyEmailAddress = async (req, res) => {
       message: "This Email already Added!",
     });
   } else {
-    const token = tokenForVerify(req.body);
+    const { name, email, password } = req.body;
+    const token = tokenForVerify({ name, email, password });
     const option = {
       name: req.body.name,
       email: req.body.email,
@@ -98,7 +99,8 @@ const registerCustomer = async (req, res) => {
   const token = req.params.token;
 
   try {
-    const { name, email, password } = jwt.decode(token);
+    const { name, email, password, location } = jwt.decode(token);
+
 
     // Check if the user is already registered
     const isAdded = await Customer.findOne({ email });
@@ -137,6 +139,7 @@ const registerCustomer = async (req, res) => {
               name,
               email,
               password: bcrypt.hashSync(password),
+              location,
             });
 
             await newUser.save();
@@ -579,6 +582,38 @@ const deleteCustomer = (req, res) => {
   });
 };
 
+const getCustomerByEmail = async (req, res) => {
+  try {
+    const customer = await Customer.findOne({ email: req.params.email });
+    if (!customer) {
+      return res.status(404).send({ message: "Customer not found" });
+    }
+    res.send(customer);
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
+};
+
+const updateCustomerLocation = async (req, res) => {
+  try {
+    const { email, location } = req.body;
+
+    const customer = await Customer.findOne({ email });
+
+    if (!customer) {
+      return res.status(404).send({ message: "Customer not found" });
+    }
+
+    customer.location = location;
+    await customer.save();
+
+    res.send({ message: "Location updated successfully!" });
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
+};
+
+
 module.exports = {
   loginCustomer,
   verifyPhoneNumber,
@@ -598,4 +633,6 @@ module.exports = {
   getShippingAddress,
   updateShippingAddress,
   deleteShippingAddress,
+  getCustomerByEmail,
+  updateCustomerLocation,
 };
