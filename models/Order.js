@@ -65,6 +65,11 @@ const orderSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
+    deliveryPoint: {
+      type: String,
+      required: false,
+      default: null,
+    },
     paymentMethod: {
       type: String,
       required: true,
@@ -80,7 +85,7 @@ const orderSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 const Order = mongoose.model(
@@ -88,6 +93,6 @@ const Order = mongoose.model(
   orderSchema.plugin(AutoIncrement, {
     inc_field: "invoice",
     start_seq: 10000,
-  })
+  }),
 );
 module.exports = Order;

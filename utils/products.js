@@ -159,15 +159,18 @@ const products = [
     barcode: "",
     title: {
       en: "Premium T-Shirt",
+      es: "Camiseta premium",
     },
     description: {
       en: "A T-shirt (also spelled tee-shirt or tee shirt), or tee for short, is a style of fabric shirt named after the T shape of its body and sleeves. Traditionally, it has short sleeves and a round neckline, known as a crew neck, which lacks a collar.",
+      es: "Una camiseta (también escrita 'ee-shirt' o 'camiseta'), o 'tee' para abreviar, es un tipo de camisa de tela que recibe su nombre por la forma de 'T' de su cuerpo y mangas. Tradicionalmente, tiene mangas cortas y un cuello redondo, conocido como cuello redondo, sin cuello.",
     },
     slug: "premium-t-shirt",
     category: {
       _id: "632ab2b64d87ff2494210aa7",
       name: {
         en: "Men",
+        es: "Hombres",
       },
     },
     stock: 4972,
@@ -187,18 +190,21 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Protección de la piel",
         },
       },
     ],
@@ -216,14 +222,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282e1",
     title: {
       en: "Himalaya Powder",
+      es: "Himalaya Powder",
     },
     description: {
       en: "Baby Products are products intended to be used on infants and category under the age of three. Baby products are specially formulated to be mild and non-irritating and use ingredients that are selected for these properties. Baby products include baby shampoos and baby lotions, oils, powders and creams.",
+      es: "Los productos para bebés son aquellos diseñados para ser usados en infantes y pertenecen a la categoría de menores de tres años. Estos productos están especialmente formulados para ser suaves y no irritantes, utilizando ingredientes seleccionados por estas propiedades. Entre los productos para bebés se incluyen champús, lociones, aceites, polvos y cremas para bebés.",
     },
     category: {
       _id: "632ab2f04d87ff2494210ad0",
       name: {
         en: "Skin Care",
+        es: "Protección de la piel",
       },
     },
     stock: 5472,
@@ -243,36 +252,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -287,14 +302,17 @@ const products = [
     productId: "",
     title: {
       en: "Green Leaf Lettuce",
+      es: "Lechuga de hoja verde",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 463,
@@ -321,30 +339,35 @@ const products = [
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -363,14 +386,17 @@ const products = [
     productId: "",
     title: {
       en: "Rainbow Chard",
+      es: "Acelga arcoiris",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 472,
@@ -391,36 +417,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -435,14 +467,17 @@ const products = [
     productId: "",
     title: {
       en: "Clementine",
+      es: "Mandarina clementina",
     },
     description: {
       en: "In a botanical sense, a fruit is the fleshy or dry ripened ovary of a flowering plant, enclosing the seed or seeds. Apricots, bananas, and grapes, as well as bean pods, corn grains, tomatoes, cucumbers, and (in their shells) acorns and almonds, are all technically fruits.",
+      es: "En un sentido botánico, un fruto es el ovario maduro, carnoso o seco, de una planta con flores, que contiene la semilla o semillas. Los albaricoques, plátanos y uvas, así como las vainas de frijol, los granos de maíz, los tomates, los pepinos y (en sus cáscaras) las bellotas y almendras, son todos técnicamente frutos.",
     },
     category: {
       _id: "632aca454d87ff2494210c00",
       name: {
         en: "Fresh Fruits",
+        es: "Frutas frescas",
       },
     },
     stock: 451,
@@ -463,36 +498,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -507,14 +548,17 @@ const products = [
     productId: "644500c2839a5e0c2f5c17cf",
     title: {
       en: "Kale Sprouts",
+      es: "Brotitos de col rizada",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y contienen más del 70 % de agua, con solo alrededor del 3,5 % de proteínas y menos del 1 % de grasa. Entre las verduras de raíz se incluyen la remolacha, la zanahoria, el rábano, la batata y el nabo. Entre las verduras de tallo se encuentran el espárrago y el colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 299,
@@ -534,36 +578,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -578,14 +628,17 @@ const products = [
     productId: "",
     title: {
       en: "Rainbow Peppers",
+      es: "Pimientos arcoiris",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 412,
@@ -605,12 +658,14 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
@@ -623,18 +678,21 @@ const products = [
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -649,14 +707,17 @@ const products = [
     productId: "",
     title: {
       en: "Blueberry",
+      es: "Arándano",
     },
     description: {
       en: "In a botanical sense, a fruit is the fleshy or dry ripened ovary of a flowering plant, enclosing the seed or seeds. Apricots, bananas, and grapes, as well as bean pods, corn grains, tomatoes, cucumbers, and (in their shells) acorns and almonds, are all technically fruits.",
+      es: "En sentido botánico, una fruta es el ovario carnoso o seco y maduro de una planta con flores, que encierra la o las semillas. Los albaricoques, los plátanos y las uvas, así como las vainas de judías, los granos de maíz, los tomates, los pepinos y (con sus cáscaras) las bellotas y las almendras, son técnicamente frutas.",
     },
     category: {
       _id: "632aca454d87ff2494210c00",
       name: {
         en: "Fresh Fruits",
+        es: "Frutas frescas",
       },
     },
     stock: 201,
@@ -676,36 +737,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -724,14 +791,17 @@ const products = [
     productId: "",
     title: {
       en: "Calabaza Squash",
+      es: "Calabaza",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 582,
@@ -752,36 +822,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -796,14 +872,17 @@ const products = [
     productId: "",
     title: {
       en: "Lettuce",
+      es: "Lechuga",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 369,
@@ -824,36 +903,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -868,14 +953,16 @@ const products = [
     productId: "644500c2839a5e0c2f5c17ca",
     title: {
       en: "Radicchio",
+      es: "Radicchio",
     },
     description: {
-      en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      en: "La mayoría de las verduras frescas son bajas en calorías y contienen más del 70 % de agua, con solo alrededor del 3,5 % de proteínas y menos del 1 % de grasa. Entre las verduras de raíz se encuentran la remolacha, la zanahoria, el rábano, la batata y el nabo. Entre las verduras de tallo se incluyen el espárrago y el colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 80,
@@ -895,36 +982,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          e: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -939,14 +1032,17 @@ const products = [
     productId: "",
     title: {
       en: "Parsley",
+      es: "Perejil",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 172,
@@ -966,36 +1062,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -1010,14 +1112,17 @@ const products = [
     productId: "63f3484bd3639309840c961a",
     title: {
       en: "Strawberrie",
+      es: "Fresa",
     },
     description: {
       en: "In a botanical sense, a fruit is the fleshy or dry ripened ovary of a flowering plant, enclosing the seed or seeds. Apricots, bananas, and grapes, as well as bean pods, corn grains, tomatoes, cucumbers, and (in their shells) acorns and almonds, are all technically fruits.",
+      es: "En sentido botánico, una fruta es el ovario carnoso o seco y maduro de una planta con flores, que encierra la o las semillas. Los albaricoques, los plátanos y las uvas, así como las vainas de judías, los granos de maíz, los tomates, los pepinos y (con sus cáscaras) las bellotas y las almendras, son técnicamente frutas.",
     },
     category: {
       _id: "632aca454d87ff2494210c00",
       name: {
         en: "Fresh Fruits",
+        es: "Frutas frescas",
       },
     },
     stock: 423,
@@ -1037,36 +1142,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -1081,14 +1192,17 @@ const products = [
     productId: "",
     title: {
       en: "Cauliflower",
+      es: "Coliflor",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 224,
@@ -1108,36 +1222,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -1152,14 +1272,17 @@ const products = [
     productId: "",
     title: {
       en: "Organic Purple Cauliflower",
+      es: "Coliflor morada orgánica",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 29,
@@ -1179,36 +1302,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -1223,14 +1352,17 @@ const products = [
     productId: "",
     title: {
       en: "Ahold Acorn Squash",
+      es: "Calabaza bellota Ahold",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y contienen más del 70 % de agua, con solo alrededor del 3,5 % de proteínas y menos del 1 % de grasa. Entre las verduras de raíz se incluyen la remolacha, la zanahoria, el rábano, la batata y el nabo. Entre las verduras de tallo se encuentran el espárrago y el colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 767,
@@ -1250,36 +1382,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -1325,14 +1463,17 @@ const products = [
     productId: "63f3484bd3639309840c9616",
     title: {
       en: "Bok Choy Cabbage",
+      es: "Repollo Bok Choy",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70%, con solo alrededor del 3,5% de proteínas y menos del 1% de grasa. ... Las verduras de raíz incluyen remolachas, zanahorias, rábanos, batatas y nabos. Las verduras de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 297,
@@ -1352,36 +1493,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -1427,14 +1574,17 @@ const products = [
     productId: "63f3484bd3639309840c9615",
     title: {
       en: "Strawberries Package",
+      es: "Paquete de fresas",
     },
     description: {
       en: "In a botanical sense, a fruit is the fleshy or dry ripened ovary of a flowering plant, enclosing the seed or seeds. Apricots, bananas, and grapes, as well as bean pods, corn grains, tomatoes, cucumbers, and (in their shells) acorns and almonds, are all technically fruits.",
+      es: "En sentido botánico, una fruta es el ovario carnoso o seco y maduro de una planta con flores, que encierra la o las semillas. Los albaricoques, los plátanos y las uvas, así como las vainas de judías, los granos de maíz, los tomates, los pepinos y (con sus cáscaras) las bellotas y las almendras, son técnicamente frutas.",
     },
     category: {
       _id: "632aca454d87ff2494210c00",
       name: {
         en: "Fresh Fruits",
+        es: "Frutas frescas",
       },
     },
     stock: 1302,
@@ -1454,36 +1604,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -1498,14 +1654,17 @@ const products = [
     productId: "",
     title: {
       en: "Aloe Vera Leaf",
+      es: "Hoja de aloe vera",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 14,
@@ -1525,36 +1684,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -1569,14 +1734,17 @@ const products = [
     productId: "644500c2839a5e0c2f5c17c1",
     title: {
       en: "Pineapple Imported",
+      es: "Piña importada",
     },
     description: {
       en: "In a botanical sense, a fruit is the fleshy or dry ripened ovary of a flowering plant, enclosing the seed or seeds. Apricots, bananas, and grapes, as well as bean pods, corn grains, tomatoes, cucumbers, and (in their shells) acorns and almonds, are all technically fruits.",
+      es: "En sentido botánico, una fruta es el ovario carnoso o seco y maduro de una planta con flores, que encierra la o las semillas. Los albaricoques, los plátanos y las uvas, así como las vainas de judías, los granos de maíz, los tomates, los pepinos y (con sus cáscaras) las bellotas y las almendras, son técnicamente frutas.",
     },
     category: {
       _id: "632aca454d87ff2494210c00",
       name: {
         en: "Fresh Fruits",
+        es: "Frutas frescas",
       },
     },
     stock: 505,
@@ -1597,36 +1765,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -1641,14 +1815,17 @@ const products = [
     productId: "",
     title: {
       en: "Organic Broccoli",
+      es: "Brócoli Orgánico",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 211,
@@ -1668,36 +1845,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -1712,14 +1895,17 @@ const products = [
     productId: "",
     title: {
       en: "Organic Pinkerton Avocado",
+      es: "Aguacate orgánico Pinkerton",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 258,
@@ -1740,36 +1926,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -1784,14 +1976,17 @@ const products = [
     productId: "",
     title: {
       en: "Organic Kale",
+      es: "Col rizada orgánica",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 37,
@@ -1811,36 +2006,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Fruits & Vegetable",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -1855,14 +2056,17 @@ const products = [
     productId: "",
     title: {
       en: "Yellow Sweet Corn",
+      es: "Maíz dulce amarillo",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 776,
@@ -1883,36 +2087,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Fresh Vegetabl",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -2027,14 +2237,17 @@ const products = [
     productId: "63f3484bd3639309840c960e",
     title: {
       en: "Green Cauliflower",
+      es: "Coliflor Verde",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 3312,
@@ -2055,36 +2268,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Fruta fresca",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -2099,14 +2318,17 @@ const products = [
     productId: "",
     title: {
       en: "Organic Greens Red Kale",
+      es: "Col rizada roja orgánica",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 428,
@@ -2126,36 +2348,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -2170,14 +2398,17 @@ const products = [
     productId: "",
     title: {
       en: "Organic Green Cauliflower",
+      es: "Coliflor verde orgánica",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 192,
@@ -2198,36 +2429,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -2242,14 +2479,17 @@ const products = [
     productId: "",
     title: {
       en: "Organic Ginger Root",
+      es: "Raíz de jengibre orgánica",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 418,
@@ -2269,36 +2509,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -2313,14 +2559,17 @@ const products = [
     productId: "644500c2839a5e0c2f5c17b8",
     title: {
       en: "Organic Baby Carrot",
+      es: "Zanahoria Baby Orgánica",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 257,
@@ -2341,36 +2590,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "frutos secos",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -2385,14 +2640,17 @@ const products = [
     productId: "",
     title: {
       en: "Organic Cherry Tomato",
+      es: "Tomate Cherry Ecológico",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 683,
@@ -2413,36 +2671,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -2457,14 +2721,17 @@ const products = [
     productId: "",
     title: {
       en: "Organic Bell Pepper",
+      es: "Pimiento Morrón Orgánico",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 345,
@@ -2484,36 +2751,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -2564,14 +2837,17 @@ const products = [
     productId: "63f3484bd3639309840c9607",
     title: {
       en: "Potatoes",
+      es: "Papas",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 1014,
@@ -2591,36 +2867,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Fruta fresca",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -2635,14 +2917,17 @@ const products = [
     productId: "",
     title: {
       en: "Mint",
+      es: "Menta",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 731,
@@ -2663,36 +2948,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -2707,14 +2998,17 @@ const products = [
     productId: "644500c2839a5e0c2f5c17b3",
     title: {
       en: "Mini Pumpkin",
+      es: "Mini calabaza",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 53,
@@ -2734,36 +3028,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -2778,14 +3078,17 @@ const products = [
     productId: "63f3484bd3639309840c9604",
     title: {
       en: "Organic White Radish",
+      es: "Rábano Blanco Orgánico",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 302,
@@ -2805,36 +3108,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -2851,14 +3160,17 @@ const products = [
     productId: "",
     title: {
       en: "Lacinato Dinosaur Kale",
+      es: "Col rizada de dinosaurio lacinato",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 146,
@@ -2878,36 +3190,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -2922,14 +3240,17 @@ const products = [
     productId: "63f3484bd3639309840c9602",
     title: {
       en: "Iglotex Cauliflower",
+      es: "Coliflor Iglotex",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 61,
@@ -2949,36 +3270,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -2993,14 +3320,17 @@ const products = [
     productId: "63f3484bd3639309840c9601",
     title: {
       en: "French Green Beans",
+      es: "Judías verdes francesas",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 819,
@@ -3020,36 +3350,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Fruits & Vegetable",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -3064,14 +3400,17 @@ const products = [
     productId: "",
     title: {
       en: "Fennel Bulb",
+      es: "Bulbo de hinojo",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 501,
@@ -3091,36 +3430,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -3135,14 +3480,17 @@ const products = [
     productId: "63f3484bd3639309840c95ff",
     title: {
       en: "Escarole",
+      es: "Escarola",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 221,
@@ -3163,36 +3511,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -3207,14 +3561,17 @@ const products = [
     productId: "644500c2839a5e0c2f5c17ac",
     title: {
       en: "Chinese Broccoli",
+      es: "Brócoli chino",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 %, con solo un 3,5 % de proteínas y menos del 1 % de grasas. ... Las hortalizas de raíz incluyen remolacha, zanahoria, rábano, boniato y nabo. Las hortalizas de tallo incluyen espárragos y colinabo.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 677,
@@ -3234,36 +3591,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -3278,14 +3641,17 @@ const products = [
     productId: "",
     title: {
       en: "Bicolor Sweet Corn",
+      es: "Maíz Dulce Bicolor",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verduras Frescas",
       },
     },
     stock: 264,
@@ -3305,36 +3671,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutos secos",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -3349,14 +3721,17 @@ const products = [
     productId: "",
     title: {
       en: "Asparagus",
+      es: "Espárragos",
     },
     description: {
       en: "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+      es: "La mayoría de las verduras frescas son bajas en calorías y tienen un contenido de agua superior al 70 por ciento, con solo aproximadamente un 3,5 por ciento de proteína y menos del 1 por ciento de grasa. ... Las verduras de raíz incluyen remolachas, zanahorias, rábanos, batatas y nabos. Las verduras de tallo incluyen espárragos y colinabos.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Verdura fresca",
       },
     },
     stock: 666,
@@ -3376,36 +3751,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutas Secas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas Frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -3420,14 +3801,17 @@ const products = [
     productId: "",
     title: {
       en: "Haitian Mangoe",
+      es: "Mango Haitiano",
     },
     description: {
       en: "In a botanical sense, a fruit is the fleshy or dry ripened ovary of a flowering plant, enclosing the seed or seeds. Apricots, bananas, and grapes, as well as bean pods, corn grains, tomatoes, cucumbers, and (in their shells) acorns and almonds, are all technically fruits.",
+      es: "En sentido botánico, una fruta es el ovario carnoso o seco maduro de una planta con flores, que encierra la semilla o semillas. Los albaricoques, plátanos y uvas, así como las vainas de frijol, granos de maíz, tomates, pepinos y (en sus cáscaras) bellotas y almendras, son todos técnicamente frutas.",
     },
     category: {
       _id: "632aca454d87ff2494210c00",
       name: {
         en: "Fresh Fruits",
+        es: "Frutas Frescas",
       },
     },
     stock: 658,
@@ -3447,36 +3831,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutas Secas",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas Frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -3491,14 +3881,17 @@ const products = [
     productId: "",
     title: {
       en: "Fresh Dates",
+      es: "Dátiles Frescos",
     },
     description: {
       en: "In a botanical sense, a fruit is the fleshy or dry ripened ovary of a flowering plant, enclosing the seed or seeds. Apricots, bananas, and grapes, as well as bean pods, corn grains, tomatoes, cucumbers, and (in their shells) acorns and almonds, are all technically fruits.",
+      es: "En sentido botánico, una fruta es el ovario carnoso o seco maduro de una planta con flores, que encierra la semilla o semillas. Los albaricoques, plátanos y uvas, así como las vainas de frijol, granos de maíz, tomates, pepinos y (en sus cáscaras) bellotas y almendras, son todos técnicamente frutas.",
     },
     category: {
       _id: "632aca454d87ff2494210c00",
       name: {
         en: "Fresh Fruits",
+        es: "Frutas Frescas",
       },
     },
     stock: 591,
@@ -3519,36 +3912,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutas Secas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas Frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -3563,14 +3962,17 @@ const products = [
     productId: "",
     title: {
       en: "Cranberries",
+      es: "Arándanos Rojos",
     },
     description: {
       en: "In a botanical sense, a fruit is the fleshy or dry ripened ovary of a flowering plant, enclosing the seed or seeds. Apricots, bananas, and grapes, as well as bean pods, corn grains, tomatoes, cucumbers, and (in their shells) acorns and almonds, are all technically fruits.",
+      es: "En sentido botánico, una fruta es el ovario carnoso o seco maduro de una planta con flores, que encierra la semilla o semillas. Los albaricoques, plátanos y uvas, así como las vainas de frijol, granos de maíz, tomates, pepinos y (en sus cáscaras) bellotas y almendras, son todos técnicamente frutas.",
     },
     category: {
       _id: "632aca454d87ff2494210c00",
       name: {
         en: "Fresh Fruits",
+        es: "Frutas Frescas",
       },
     },
     stock: 276,
@@ -3590,36 +3992,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutas Secas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas Frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -3634,14 +4042,17 @@ const products = [
     productId: "",
     title: {
       en: "Mandarin Clementine",
+      es: "Mandarina Clementina",
     },
     description: {
       en: "In a botanical sense, a fruit is the fleshy or dry ripened ovary of a flowering plant, enclosing the seed or seeds. Apricots, bananas, and grapes, as well as bean pods, corn grains, tomatoes, cucumbers, and (in their shells) acorns and almonds, are all technically fruits.",
+      es: "En sentido botánico, una fruta es el ovario carnoso o seco maduro de una planta con flores, que encierra la semilla o semillas. Los albaricoques, plátanos y uvas, así como las vainas de frijol, granos de maíz, tomates, pepinos y (en sus cáscaras) bellotas y almendras, son todos técnicamente frutas.",
     },
     category: {
       _id: "632aca454d87ff2494210c00",
       name: {
         en: "Fresh Fruits",
+        es: "Frutas Frescas",
       },
     },
     stock: 246,
@@ -3661,36 +4072,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutas Secas",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas Frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -3705,14 +4122,17 @@ const products = [
     productId: "",
     title: {
       en: "Avocado juice Fruit",
+      es: "Jugo de Aguacate",
     },
     description: {
       en: "In a botanical sense, a fruit is the fleshy or dry ripened ovary of a flowering plant, enclosing the seed or seeds. Apricots, bananas, and grapes, as well as bean pods, corn grains, tomatoes, cucumbers, and (in their shells) acorns and almonds, are all technically fruits.",
+      es: "En sentido botánico, una fruta es el ovario carnoso o seco maduro de una planta con flores, que encierra la semilla o semillas. Los albaricoques, plátanos y uvas, así como las vainas de frijol, granos de maíz, tomates, pepinos y (en sus cáscaras) bellotas y almendras, son todos técnicamente frutas.",
     },
     category: {
       _id: "632aca454d87ff2494210c00",
       name: {
         en: "Fresh Fruits",
+        es: "Frutas Frescas",
       },
     },
     stock: 176,
@@ -3732,36 +4152,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutas Secas",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas Frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -3776,14 +4202,17 @@ const products = [
     productId: "",
     title: {
       en: "Golden Garden Love Plum",
+      es: "Ciruela Amor del Jardín Dorado",
     },
     description: {
       en: "Dried fruit is fruit from which the majority of the original water content has been removed either naturally, through sun drying, or through the use of specialized dryers or dehydrators. ... Nearly half of the dried fruits sold are raisins, followed by dates, prunes, figs, apricots, peaches, apples, and pears.",
+      es: "Los frutos secos son frutas de las cuales se ha eliminado la mayor parte del contenido de agua original, ya sea de forma natural, mediante secado al sol, o mediante el uso de secadores o deshidratadores especializados. ... Casi la mitad de los frutos secos vendidos son pasas, seguidas de dátiles, ciruelas pasas, higos, albaricoques, duraznos, manzanas y peras.",
     },
     category: {
       _id: "632aca3d4d87ff2494210bf8",
       name: {
         en: "Dry Fruits",
+        es: "Frutas Secas",
       },
     },
     stock: 125,
@@ -3803,36 +4232,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutas Secas",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas Frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -3849,14 +4284,17 @@ const products = [
     productId: "",
     title: {
       en: "Golden Garden Blueberry Plum",
+      es: "Ciruela Azul del Jardín Dorado",
     },
     description: {
       en: "Dried fruit is fruit from which the majority of the original water content has been removed either naturally, through sun drying, or through the use of specialized dryers or dehydrators. ... Nearly half of the dried fruits sold are raisins, followed by dates, prunes, figs, apricots, peaches, apples, and pears.",
+      es: "Los frutos secos son frutas de las cuales se ha eliminado la mayor parte del contenido de agua original, ya sea de forma natural, mediante secado al sol, o mediante el uso de secadores o deshidratadores especializados. ... Casi la mitad de los frutos secos vendidos son pasas, seguidas de dátiles, ciruelas pasas, higos, albaricoques, duraznos, manzanas y peras.",
     },
     category: {
       _id: "632aca3d4d87ff2494210bf8",
       name: {
         en: "Dry Fruits",
+        es: "Frutas Secas",
       },
     },
     stock: 437,
@@ -3876,36 +4314,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutas Secas",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas Frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -3920,14 +4364,17 @@ const products = [
     productId: "",
     title: {
       en: "Dry Fig Loose",
+      es: "Higos Secos a Granel",
     },
     description: {
       en: "Dried fruit is fruit from which the majority of the original water content has been removed either naturally, through sun drying, or through the use of specialized dryers or dehydrators. ... Nearly half of the dried fruits sold are raisins, followed by dates, prunes, figs, apricots, peaches, apples, and pears.",
+      es: "Los frutos secos son frutas de las cuales se ha eliminado la mayor parte del contenido de agua original, ya sea de forma natural, mediante secado al sol, o mediante el uso de secadores o deshidratadores especializados. ... Casi la mitad de los frutos secos vendidos son pasas, seguidas de dátiles, ciruelas pasas, higos, albaricoques, duraznos, manzanas y peras.",
     },
     category: {
       _id: "632aca3d4d87ff2494210bf8",
       name: {
         en: "Dry Fruits",
+        es: "Frutas Secas",
       },
     },
     stock: 369,
@@ -3947,36 +4394,42 @@ const products = [
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
       {
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutas Secas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas Frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
     ],
@@ -3991,14 +4444,17 @@ const products = [
     productId: "",
     title: {
       en: "Dates Loose",
+      es: "Dátiles a Granel",
     },
     description: {
       en: "Dried fruit is fruit from which the majority of the original water content has been removed either naturally, through sun drying, or through the use of specialized dryers or dehydrators. ... Nearly half of the dried fruits sold are raisins, followed by dates, prunes, figs, apricots, peaches, apples, and pears.",
+      es: "Los frutos secos son frutas de las cuales se ha eliminado la mayor parte del contenido de agua original, ya sea de forma natural, mediante secado al sol, o mediante el uso de secadores o deshidratadores especializados. ... Casi la mitad de los frutos secos vendidos son pasas, seguidas de dátiles, ciruelas pasas, higos, albaricoques, duraznos, manzanas y peras.",
     },
     category: {
       _id: "632aca3d4d87ff2494210bf8",
       name: {
         en: "Dry Fruits",
+        es: "Frutas Secas",
       },
     },
     stock: 138,
@@ -4019,36 +4475,42 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "632aca3d4d87ff2494210bf8",
         name: {
           en: "Dry Fruits",
+          es: "Frutas Secas",
         },
       },
       {
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Verduras Frescas",
         },
       },
       {
         _id: "632aca454d87ff2494210c00",
         name: {
           en: "Fresh Fruits",
+          es: "Frutas Frescas",
         },
       },
       {
         _id: "632aca594d87ff2494210c10",
         name: {
           en: "Orange",
+          es: "Naranja",
         },
       },
       {
         _id: "62d2bbd22e63b40520194f1b",
         name: {
           en: "Apple",
+          es: "Manzana",
         },
       },
     ],
@@ -4065,14 +4527,17 @@ const products = [
     productId: "",
     title: {
       en: "Dates Iranian Loose",
+      es: "Dátiles Iraníes a Granel",
     },
     description: {
       en: "Dried fruit is fruit from which the majority of the original water content has been removed either naturally, through sun drying, or through the use of specialized dryers or dehydrators. ... Nearly half of the dried fruits sold are raisins, followed by dates, prunes, figs, apricots, peaches, apples, and pears.",
+      es: "Los frutos secos son frutas de las cuales se ha eliminado la mayor parte del contenido de agua original, ya sea de forma natural, mediante secado al sol, o mediante el uso de secadores o deshidratadores especializados. ... Casi la mitad de los frutos secos vendidos son pasas, seguidas de dátiles, ciruelas pasas, higos, albaricoques, duraznos, manzanas y peras.",
     },
     category: {
       _id: "632aca3d4d87ff2494210bf8",
       name: {
         en: "Dry Fruits",
+        es: "Frutas Secas",
       },
     },
     stock: 181,
@@ -4092,6 +4557,7 @@ const products = [
         _id: "632ab1e04d87ff2494210a6a",
         name: {
           en: "Jam & Jelly",
+          es: "Mermeladas y Jaleas",
         },
       },
     ],
@@ -4106,14 +4572,17 @@ const products = [
     productId: "",
     title: {
       en: "Paka Pape",
+      es: "Paka Pape",
     },
     description: {
       en: "Organic food is food produced by methods complying with the standards of organic farming. Standards vary worldwide, but organic farming features practices that cycle resources, promote ecological balance, and conserve biodiversity.",
+      es: "La comida orgánica es aquella producida mediante métodos que cumplen con los estándares de la agricultura orgánica. Los estándares varían en todo el mundo, pero la agricultura orgánica incluye prácticas que reciclan recursos, promueven el equilibrio ecológico y conservan la biodiversidad.",
     },
     category: {
       _id: "632ab1e04d87ff2494210a6a",
       name: {
         en: "Jam & Jelly",
+        es: "Mermeladas y Jaleas",
       },
     },
     stock: 191,
@@ -4126,13 +4595,14 @@ const products = [
     prices: {
       price: 10,
       originalPrice: 17.67,
-      discount: 7.670000000000002,
+      discount: 7.67,
     },
     categories: [
       {
         _id: "632ab1e04d87ff2494210a6a",
         name: {
           en: "Jam & Jelly",
+          es: "Mermeladas y Jaleas",
         },
       },
     ],
@@ -4149,14 +4619,17 @@ const products = [
     productId: "644500c2839a5e0c2f5c179e",
     title: {
       en: "Orange Imported",
+      es: "Naranja Importada",
     },
     description: {
       en: "Organic food is food produced by methods complying with the standards of organic farming. Standards vary worldwide, but organic farming features practices that cycle resources, promote ecological balance, and conserve biodiversity.",
+      es: "La comida orgánica es aquella producida mediante métodos que cumplen con los estándares de la agricultura orgánica. Los estándares varían en todo el mundo, pero la agricultura orgánica incluye prácticas que reciclan recursos, promueven el equilibrio ecológico y conservan la biodiversidad.",
     },
     category: {
       _id: "632ab1e04d87ff2494210a6a",
       name: {
         en: "Jam & Jelly",
+        es: "Mermeladas y Jaleas",
       },
     },
     stock: 186,
@@ -4176,6 +4649,7 @@ const products = [
         _id: "632ab1e04d87ff2494210a6a",
         name: {
           en: "Jam & Jelly",
+          es: "Mermeladas y Jaleas",
         },
       },
     ],
@@ -4190,14 +4664,17 @@ const products = [
     productId: "",
     title: {
       en: "China Fuji apple",
+      es: "Manzana Fuji China",
     },
     description: {
       en: "Organic food is food produced by methods complying with the standards of organic farming. Standards vary worldwide, but organic farming features practices that cycle resources, promote ecological balance, and conserve biodiversity.",
+      es: "La comida orgánica es aquella producida mediante métodos que cumplen con los estándares de la agricultura orgánica. Los estándares varían en todo el mundo, pero la agricultura orgánica incluye prácticas que reciclan recursos, promueven el equilibrio ecológico y conservan la biodiversidad.",
     },
     category: {
       _id: "632ab1e04d87ff2494210a6a",
       name: {
         en: "Jam & Jelly",
+        es: "Mermeladas y Jaleas",
       },
     },
     stock: 537,
@@ -4217,6 +4694,7 @@ const products = [
         _id: "632ab1e04d87ff2494210a6a",
         name: {
           en: "Jam & Jelly",
+          es: "Mermeladas y Jaleas",
         },
       },
     ],
@@ -4231,14 +4709,17 @@ const products = [
     productId: "",
     title: {
       en: "Gerber-Organic",
+      es: "Gerber Orgánico",
     },
     description: {
       en: "Organic food is food produced by methods complying with the standards of organic farming. Standards vary worldwide, but organic farming features practices that cycle resources, promote ecological balance, and conserve biodiversity.",
+      es: "La comida orgánica es aquella producida mediante métodos que cumplen con los estándares de la agricultura orgánica. Los estándares varían en todo el mundo, pero la agricultura orgánica incluye prácticas que reciclan recursos, promueven el equilibrio ecológico y conservan la biodiversidad.",
     },
     category: {
       _id: "632ab1e04d87ff2494210a6a",
       name: {
         en: "Jam & Jelly",
+        es: "Mermeladas y Jaleas",
       },
     },
     stock: 724,
@@ -4258,6 +4739,7 @@ const products = [
         _id: "632ab1e04d87ff2494210a6a",
         name: {
           en: "Jam & Jelly",
+          es: "Mermeladas y Jaleas",
         },
       },
     ],
@@ -4274,14 +4756,17 @@ const products = [
     productId: "",
     title: {
       en: "Sugar Free Orange Jelly",
+      es: "Jalea de Naranja Sin Azúcar",
     },
     description: {
       en: "Organic food is food produced by methods complying with the standards of organic farming. Standards vary worldwide, but organic farming features practices that cycle resources, promote ecological balance, and conserve biodiversity.",
+      es: "La comida orgánica es aquella producida mediante métodos que cumplen con los estándares de la agricultura orgánica. Los estándares varían en todo el mundo, pero la agricultura orgánica incluye prácticas que reciclan recursos, promueven el equilibrio ecológico y conservan la biodiversidad.",
     },
     category: {
       _id: "632ab1e04d87ff2494210a6a",
       name: {
         en: "Jam & Jelly",
+        es: "Mermeladas y Jaleas",
       },
     },
     stock: 653,
@@ -4301,6 +4786,7 @@ const products = [
         _id: "632ab1e04d87ff2494210a6a",
         name: {
           en: "Jam & Jelly",
+          es: "Mermeladas y Jaleas",
         },
       },
     ],
@@ -4315,14 +4801,17 @@ const products = [
     productId: "644500c2839a5e0c2f5c179a",
     title: {
       en: "Pomelo",
+      es: "Pomelo",
     },
     description: {
       en: "Organic food is food produced by methods complying with the standards of organic farming. Standards vary worldwide, but organic farming features practices that cycle resources, promote ecological balance, and conserve biodiversity.",
+      es: "La comida orgánica es aquella producida mediante métodos que cumplen con los estándares de la agricultura orgánica. Los estándares varían en todo el mundo, pero la agricultura orgánica incluye prácticas que reciclan recursos, promueven el equilibrio ecológico y conservan la biodiversidad.",
     },
     category: {
       _id: "632ab1e04d87ff2494210a6a",
       name: {
         en: "Jam & Jelly",
+        es: "Mermeladas y Jaleas",
       },
     },
     stock: 1,
@@ -4342,6 +4831,7 @@ const products = [
         _id: "632ab1e04d87ff2494210a6a",
         name: {
           en: "Jam & Jelly",
+          es: "Mermeladas y Jaleas",
         },
       },
     ],
@@ -4356,14 +4846,17 @@ const products = [
     productId: "",
     title: {
       en: "Pineapple",
+      es: "Piña",
     },
     description: {
       en: "Organic food is food produced by methods complying with the standards of organic farming. Standards vary worldwide, but organic farming features practices that cycle resources, promote ecological balance, and conserve biodiversity.",
+      es: "La comida orgánica es aquella producida mediante métodos que cumplen con los estándares de la agricultura orgánica. Los estándares varían en todo el mundo, pero la agricultura orgánica incluye prácticas que reciclan recursos, promueven el equilibrio ecológico y conservan la biodiversidad.",
     },
     category: {
       _id: "632ab1e04d87ff2494210a6a",
       name: {
         en: "Jam & Jelly",
+        es: "Mermeladas y Jaleas",
       },
     },
     stock: 182,
@@ -4383,18 +4876,21 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida Enlatada",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab1e04d87ff2494210a6a",
         name: {
           en: "Jam & Jelly",
+          es: "Mermeladas y Jaleas",
         },
       },
     ],
@@ -4411,14 +4907,17 @@ const products = [
     productId: "639dc0f5c2fce72b697281e6",
     title: {
       en: "Sugar Free Guava Jelly",
+      es: "Jalea de Guayaba Sin Azúcar",
     },
     description: {
       en: "Organic food is food produced by methods complying with the standards of organic farming. Standards vary worldwide, but organic farming features practices that cycle resources, promote ecological balance, and conserve biodiversity.",
+      es: "La comida orgánica es aquella producida mediante métodos que cumplen con los estándares de la agricultura orgánica. Los estándares varían en todo el mundo, pero la agricultura orgánica incluye prácticas que reciclan recursos, promueven el equilibrio ecológico y conservan la biodiversidad.",
     },
     category: {
       _id: "632ab1e04d87ff2494210a6a",
       name: {
         en: "Jam & Jelly",
+        es: "Mermeladas y Jaleas",
       },
     },
     stock: 459,
@@ -4438,18 +4937,21 @@ const products = [
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632aca6d4d87ff2494210c24",
         name: {
           en: "Fish & Meat",
+          es: "Pescado y Carne",
         },
       },
       {
         _id: "632aca7e4d87ff2494210c34",
         name: {
           en: "Fish",
+          es: "Pescado",
         },
       },
     ],
@@ -4464,14 +4966,17 @@ const products = [
     productId: "",
     title: {
       en: "Wild King Salmon Steak",
+      es: "Filete de Salmón Real Salvaje",
     },
     description: {
       en: "A fish is an animal which lives and breathes in water. All fish are vertebrates (have a backbone) and most breathe through gills and have fins and scales. ... There are three classes of fish: jawless, cartilaginous, and bony. All fish have a backbone.",
+      es: "Un pez es un animal que vive y respira en el agua. Todos los peces son vertebrados (tienen columna vertebral) y la mayoría respira a través de branquias y tiene aletas y escamas. ... Hay tres clases de peces: sin mandíbulas, cartilaginosos y óseos. Todos los peces tienen columna vertebral.",
     },
     category: {
       _id: "632aca7e4d87ff2494210c34",
       name: {
         en: "Fish",
+        es: "Pescado",
       },
     },
     stock: 760,
@@ -4491,18 +4996,21 @@ const products = [
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632aca6d4d87ff2494210c24",
         name: {
           en: "Fish & Meat",
+          es: "Pescado y Carne",
         },
       },
       {
         _id: "632aca7e4d87ff2494210c34",
         name: {
           en: "Fish",
+          es: "Pescado",
         },
       },
     ],
@@ -4517,14 +5025,17 @@ const products = [
     productId: "",
     title: {
       en: "Canada Salmon",
+      es: "Salmón de Canadá",
     },
     description: {
       en: "A fish is an animal which lives and breathes in water. All fish are vertebrates (have a backbone) and most breathe through gills and have fins and scales. ... There are three classes of fish: jawless, cartilaginous, and bony. All fish have a backbone.",
+      es: "Un pez es un animal que vive y respira en el agua. Todos los peces son vertebrados (tienen columna vertebral) y la mayoría respira a través de branquias y tiene aletas y escamas. ... Hay tres clases de peces: sin mandíbulas, cartilaginosos y óseos. Todos los peces tienen columna vertebral.",
     },
     category: {
       _id: "632aca7e4d87ff2494210c34",
       name: {
         en: "Fish",
+        es: "Pescado",
       },
     },
     stock: 577,
@@ -4544,18 +5055,21 @@ const products = [
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632aca6d4d87ff2494210c24",
         name: {
           en: "Fish & Meat",
+          es: "Pescado y Carne",
         },
       },
       {
         _id: "632aca7e4d87ff2494210c34",
         name: {
           en: "Fish",
+          es: "Pescado",
         },
       },
     ],
@@ -4570,14 +5084,17 @@ const products = [
     productId: "",
     title: {
       en: "Atlantic Salmon",
+      es: "Salmón Atlántico",
     },
     description: {
       en: "A fish is an animal which lives and breathes in water. All fish are vertebrates (have a backbone) and most breathe through gills and have fins and scales. ... There are three classes of fish: jawless, cartilaginous, and bony. All fish have a backbone.",
+      es: "Un pez es un animal que vive y respira en el agua. Todos los peces son vertebrados (tienen columna vertebral) y la mayoría respira a través de branquias y tiene aletas y escamas. ... Hay tres clases de peces: sin mandíbulas, cartilaginosos y óseos. Todos los peces tienen columna vertebral.",
     },
     category: {
       _id: "632aca7e4d87ff2494210c34",
       name: {
         en: "Fish",
+        es: "Pescado",
       },
     },
     stock: 734,
@@ -4598,18 +5115,21 @@ const products = [
         _id: "632aca6d4d87ff2494210c24",
         name: {
           en: "Fish & Meat",
+          es: "Pescado y Carne",
         },
       },
       {
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632aca7e4d87ff2494210c34",
         name: {
           en: "Fish",
+          es: "Pescado",
         },
       },
     ],
@@ -4624,14 +5144,17 @@ const products = [
     productId: "",
     title: {
       en: "Salmon Filet Portion",
+      es: "Porción de Filete de Salmón",
     },
     description: {
       en: "A fish is an animal which lives and breathes in water. All fish are vertebrates (have a backbone) and most breathe through gills and have fins and scales. ... There are three classes of fish: jawless, cartilaginous, and bony. All fish have a backbone.",
+      es: "Un pez es un animal que vive y respira en el agua. Todos los peces son vertebrados (tienen columna vertebral) y la mayoría respira a través de branquias y tiene aletas y escamas. ... Hay tres clases de peces: sin mandíbulas, cartilaginosos y óseos. Todos los peces tienen columna vertebral.",
     },
     category: {
       _id: "632aca7e4d87ff2494210c34",
       name: {
         en: "Fish",
+        es: "Pescado",
       },
     },
     stock: 163,
@@ -4651,18 +5174,21 @@ const products = [
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632aca6d4d87ff2494210c24",
         name: {
           en: "Fish & Meat",
+          es: "Pescado y Carne",
         },
       },
       {
         _id: "632aca7e4d87ff2494210c34",
         name: {
           en: "Fish",
+          es: "Pescado",
         },
       },
     ],
@@ -4677,14 +5203,17 @@ const products = [
     productId: "",
     title: {
       en: "Ling Cod Steak",
+      es: "Filete de Bacalao Ling",
     },
     description: {
       en: "A fish is an animal which lives and breathes in water. All fish are vertebrates (have a backbone) and most breathe through gills and have fins and scales. ... There are three classes of fish: jawless, cartilaginous, and bony. All fish have a backbone.",
+      es: "Un pez es un animal que vive y respira en el agua. Todos los peces son vertebrados (tienen columna vertebral) y la mayoría respira a través de branquias y tiene aletas y escamas. ... Hay tres clases de peces: sin mandíbulas, cartilaginosos y óseos. Todos los peces tienen columna vertebral.",
     },
     category: {
       _id: "632aca7e4d87ff2494210c34",
       name: {
         en: "Fish",
+        es: "Pescado",
       },
     },
     stock: 567,
@@ -4704,18 +5233,21 @@ const products = [
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632aca6d4d87ff2494210c24",
         name: {
           en: "Fish & Meat",
+          es: "Pescado y Carne",
         },
       },
       {
         _id: "632aca7e4d87ff2494210c34",
         name: {
           en: "Fish",
+          es: "Pescado",
         },
       },
     ],
@@ -4730,14 +5262,17 @@ const products = [
     productId: "",
     title: {
       en: "Peeled Deveined Shrimp",
+      es: "Camarón Pelado y Desvenado",
     },
     description: {
       en: "A fish is an animal which lives and breathes in water. All fish are vertebrates (have a backbone) and most breathe through gills and have fins and scales. ... There are three classes of fish: jawless, cartilaginous, and bony. All fish have a backbone.",
+      es: "Un pez es un animal que vive y respira en el agua. Todos los peces son vertebrados (tienen columna vertebral) y la mayoría respira a través de branquias y tiene aletas y escamas. ... Hay tres clases de peces: sin mandíbulas, cartilaginosos y óseos. Todos los peces tienen columna vertebral.",
     },
     category: {
       _id: "632aca7e4d87ff2494210c34",
       name: {
         en: "Fish",
+        es: "Pescado",
       },
     },
     stock: 303,
@@ -4757,18 +5292,21 @@ const products = [
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632aca6d4d87ff2494210c24",
         name: {
           en: "Fish & Meat",
+          es: "Pescado y Carne",
         },
       },
       {
         _id: "632aca7e4d87ff2494210c34",
         name: {
           en: "Fish",
+          es: "Pescado",
         },
       },
     ],
@@ -4783,14 +5321,17 @@ const products = [
     productId: "",
     title: {
       en: "Chilean Sea Bass",
+      es: "Merluza de Chile",
     },
     description: {
       en: "A fish is an animal which lives and breathes in water. All fish are vertebrates (have a backbone) and most breathe through gills and have fins and scales. ... There are three classes of fish: jawless, cartilaginous, and bony. All fish have a backbone.",
+      es: "Un pez es un animal que vive y respira en el agua. Todos los peces son vertebrados (tienen columna vertebral) y la mayoría respira a través de branquias y tiene aletas y escamas. ... Hay tres clases de peces: sin mandíbulas, cartilaginosos y óseos. Todos los peces tienen columna vertebral.",
     },
     category: {
       _id: "632aca7e4d87ff2494210c34",
       name: {
         en: "Fish",
+        es: "Pescado",
       },
     },
     stock: 676,
@@ -4810,18 +5351,21 @@ const products = [
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632aca6d4d87ff2494210c24",
         name: {
           en: "Fish & Meat",
+          es: "Pescado y Carne",
         },
       },
       {
         _id: "632aca7e4d87ff2494210c34",
         name: {
           en: "Fish",
+          es: "Pescado",
         },
       },
     ],
@@ -4836,14 +5380,17 @@ const products = [
     productId: "",
     title: {
       en: "Beef Stew",
+      es: "Estofado de Res",
     },
     description: {
       en: "Beef, flesh of mature cattle, as distinguished from veal, the flesh of calves. The best beef is obtained from early maturing, special beef breeds. High-quality beef has firm, velvety, fine-grained lean, bright red in colour and well-marbled. The fat is smooth, creamy white, and well distributed.",
+      es: "Carne de res, la carne de ganado maduro, a diferencia de la ternera, que es la carne de los terneros. La mejor carne de res se obtiene de razas especiales de maduración temprana. La carne de alta calidad es firme, aterciopelada, magra de grano fino, de color rojo brillante y bien marmoleada. La grasa es suave, blanca cremosa y bien distribuida.",
     },
     category: {
       _id: "632aca7e4d87ff2494210c34",
       name: {
         en: "Fish",
+        es: "Pescado",
       },
     },
     stock: 41,
@@ -4863,18 +5410,21 @@ const products = [
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632aca6d4d87ff2494210c24",
         name: {
           en: "Fish & Meat",
+          es: "Pescado y Carne",
         },
       },
       {
         _id: "632aca7e4d87ff2494210c34",
         name: {
           en: "Fish",
+          es: "Pescado",
         },
       },
     ],
@@ -4889,14 +5439,17 @@ const products = [
     productId: "",
     title: {
       en: "Ground Turkey",
+      es: "Pavo Molido",
     },
     description: {
       en: "Beef, flesh of mature cattle, as distinguished from veal, the flesh of calves. The best beef is obtained from early maturing, special beef breeds. High-quality beef has firm, velvety, fine-grained lean, bright red in colour and well-marbled. The fat is smooth, creamy white, and well distributed.",
+      es: "Carne de res, la carne de ganado maduro, a diferencia de la ternera, que es la carne de los terneros. La mejor carne de res se obtiene de razas especiales de maduración temprana. La carne de alta calidad es firme, aterciopelada, magra de grano fino, de color rojo brillante y bien marmoleada. La grasa es suave, blanca cremosa y bien distribuida.",
     },
     category: {
       _id: "632aca7e4d87ff2494210c34",
       name: {
         en: "Fish",
+        es: "Pescado",
       },
     },
     stock: 265,
@@ -4916,18 +5469,21 @@ const products = [
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632aca6d4d87ff2494210c24",
         name: {
           en: "Fish & Meat",
+          es: "Pescado y Carne",
         },
       },
       {
         _id: "632aca7e4d87ff2494210c34",
         name: {
           en: "Fish",
+          es: "Pescado",
         },
       },
     ],
@@ -4942,14 +5498,17 @@ const products = [
     productId: "",
     title: {
       en: "Duck meat",
+      es: "Carne de Pato",
     },
     description: {
       en: "Beef, flesh of mature cattle, as distinguished from veal, the flesh of calves. The best beef is obtained from early maturing, special beef breeds. High-quality beef has firm, velvety, fine-grained lean, bright red in colour and well-marbled. The fat is smooth, creamy white, and well distributed.",
+      es: "Carne de res, la carne de ganado maduro, a diferencia de la ternera, que es la carne de los terneros. La mejor carne de res se obtiene de razas especiales de maduración temprana. La carne de alta calidad es firme, aterciopelada, magra de grano fino, de color rojo brillante y bien marmoleada. La grasa es suave, blanca cremosa y bien distribuida.",
     },
     category: {
       _id: "632aca7e4d87ff2494210c34",
       name: {
         en: "Fish",
+        es: "Pescado",
       },
     },
     stock: 301,
@@ -4969,18 +5528,21 @@ const products = [
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632aca6d4d87ff2494210c24",
         name: {
           en: "Fish & Meat",
+          es: "Pescado y Carne",
         },
       },
       {
         _id: "632aca7e4d87ff2494210c34",
         name: {
           en: "Fish",
+          es: "Pescado",
         },
       },
     ],
@@ -4995,14 +5557,17 @@ const products = [
     productId: "",
     title: {
       en: "Boneless Beef",
+      es: "Carne de Res Deshuesada",
     },
     description: {
       en: "Beef, flesh of mature cattle, as distinguished from veal, the flesh of calves. The best beef is obtained from early maturing, special beef breeds. High-quality beef has firm, velvety, fine-grained lean, bright red in colour and well-marbled. The fat is smooth, creamy white, and well distributed.",
+      es: "Carne de res, la carne de ganado maduro, a diferencia de la ternera, que es la carne de los terneros. La mejor carne de res se obtiene de razas especiales de maduración temprana. La carne de alta calidad es firme, aterciopelada, magra de grano fino, de color rojo brillante y bien marmoleada. La grasa es suave, blanca cremosa y bien distribuida.",
     },
     category: {
       _id: "632aca7e4d87ff2494210c34",
       name: {
         en: "Fish",
+        es: "Pescado",
       },
     },
     stock: 159,
@@ -5022,12 +5587,14 @@ const products = [
         _id: "632aca6d4d87ff2494210c24",
         name: {
           en: "Fish & Meat",
+          es: "Pescado y Carne",
         },
       },
       {
         _id: "632aca7e4d87ff2494210c34",
         name: {
           en: "Fish",
+          es: "Pescado",
         },
       },
     ],
@@ -5042,14 +5609,17 @@ const products = [
     productId: "639dc0f5c2fce72b697281f2",
     title: {
       en: "Bone In Chuck",
+      es: "Espaldilla con Hueso",
     },
     description: {
       en: "Beef, flesh of mature cattle, as distinguished from veal, the flesh of calves. The best beef is obtained from early maturing, special beef breeds. High-quality beef has firm, velvety, fine-grained lean, bright red in colour and well-marbled. The fat is smooth, creamy white, and well distributed.",
+      es: "Carne de res, la carne de ganado maduro, a diferencia de la ternera, que es la carne de los terneros. La mejor carne de res se obtiene de razas especiales de maduración temprana. La carne de alta calidad es firme, aterciopelada, magra de grano fino, de color rojo brillante y bien marmoleada. La grasa es suave, blanca cremosa y bien distribuida.",
     },
     category: {
       _id: "632aca7e4d87ff2494210c34",
       name: {
         en: "Fish",
+        es: "Pescado",
       },
     },
     stock: 387,
@@ -5069,12 +5639,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0504d87ff24942109d7",
         name: {
           en: "Coffee",
+          es: "Café",
         },
       },
     ],
@@ -5091,14 +5663,17 @@ const products = [
     productId: "",
     title: {
       en: "Marley coffee",
+      es: "Café Marley",
     },
     description: {
       en: "coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species. ... coffee is darkly colored, bitter, slightly acidic and has a stimulating effect in humans, primarily due to its caffeine content.",
+      es: "El café es una bebida preparada a partir de granos de café tostados, las semillas de las bayas de ciertas especies de Coffea. ... El café es de color oscuro, amargo, ligeramente ácido y tiene un efecto estimulante en los humanos, principalmente debido a su contenido de cafeína.",
     },
     category: {
       _id: "632ab0504d87ff24942109d7",
       name: {
         en: "Coffee",
+        es: "Café",
       },
     },
     stock: 718,
@@ -5118,12 +5693,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0504d87ff24942109d7",
         name: {
           en: "Coffee",
+          es: "Café",
         },
       },
     ],
@@ -5174,14 +5751,17 @@ const products = [
     productId: "63f3484bd3639309840c95dc",
     title: {
       en: "Cafe Escapes coffee",
+      es: "Café Escapes",
     },
     description: {
       en: "coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species. ... coffee is darkly colored, bitter, slightly acidic and has a stimulating effect in humans, primarily due to its caffeine content.",
+      es: "El café es una bebida preparada a partir de granos de café tostados, las semillas de las bayas de ciertas especies de Coffea. ... El café es de color oscuro, amargo, ligeramente ácido y tiene un efecto estimulante en los humanos, principalmente debido a su contenido de cafeína.",
     },
     category: {
       _id: "632ab0504d87ff24942109d7",
       name: {
         en: "Coffee",
+        es: "Café",
       },
     },
     stock: 471,
@@ -5201,12 +5781,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0504d87ff24942109d7",
         name: {
           en: "Coffee",
+          es: "Café",
         },
       },
     ],
@@ -5332,14 +5914,17 @@ const products = [
     productId: "63f3484bd3639309840c95db",
     title: {
       en: "Caffe Kimbo coffee",
+      es: "Café Kimbo",
     },
     description: {
       en: "coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species. ... coffee is darkly colored, bitter, slightly acidic and has a stimulating effect in humans, primarily due to its caffeine content.",
+      es: "El café es una bebida preparada a partir de granos de café tostados, las semillas de las bayas de ciertas especies de Coffea. ... El café es de color oscuro, amargo, ligeramente ácido y tiene un efecto estimulante en los humanos, principalmente debido a su contenido de cafeína.",
     },
     category: {
       _id: "632ab0504d87ff24942109d7",
       name: {
         en: "Coffee",
+        es: "Café",
       },
     },
     stock: 5193,
@@ -5359,12 +5944,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0504d87ff24942109d7",
         name: {
           en: "Coffee",
+          es: "Café",
         },
       },
     ],
@@ -5381,14 +5968,17 @@ const products = [
     productId: "",
     title: {
       en: "Just coffee",
+      es: "Solo café",
     },
     description: {
       en: "coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species. ... coffee is darkly colored, bitter, slightly acidic and has a stimulating effect in humans, primarily due to its caffeine content.",
+      es: "El café es una bebida preparada a partir de granos de café tostados, las semillas de las bayas de ciertas especies de Coffea. ... El café es de color oscuro, amargo, ligeramente ácido y tiene un efecto estimulante en los humanos, principalmente debido a su contenido de cafeína.",
     },
     category: {
       _id: "632ab0504d87ff24942109d7",
       name: {
         en: "Coffee",
+        es: "Café",
       },
     },
     stock: 382,
@@ -5408,12 +5998,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0504d87ff24942109d7",
         name: {
           en: "Coffee",
+          es: "Café",
         },
       },
     ],
@@ -5430,14 +6022,17 @@ const products = [
     productId: "",
     title: {
       en: "Caffe Perruci coffee",
+      es: "Café Caffe Perruci",
     },
     description: {
       en: "coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species. ... coffee is darkly colored, bitter, slightly acidic and has a stimulating effect in humans, primarily due to its caffeine content.",
+      es: "El café es una bebida preparada a partir de granos de café tostados, las semillas de las bayas de ciertas especies de Coffea. ... El café es de color oscuro, amargo, ligeramente ácido y tiene un efecto estimulante en los humanos, principalmente debido a su contenido de cafeína.",
     },
     category: {
       _id: "632ab0504d87ff24942109d7",
       name: {
         en: "Coffee",
+        es: "Café",
       },
     },
     stock: 622,
@@ -5457,12 +6052,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0454d87ff24942109cc",
         name: {
           en: "Energy Drinks",
+          es: "Bebidas energéticas",
         },
       },
     ],
@@ -5479,14 +6076,17 @@ const products = [
     productId: "",
     title: {
       en: "Positive Energy Drink",
+      es: "Bebida Energética Positiva",
     },
     description: {
       en: "Energy drink, any beverage that contains high levels of a stimulant ingredient, usually caffeine, as well as sugar and often supplements, such as vitamins or carnitine, and that is promoted as a product capable of enhancing mental alertness and physical performance.",
+      es: "Bebida energética, cualquier bebida que contiene altos niveles de un ingrediente estimulante, generalmente cafeína, así como azúcar y a menudo suplementos, como vitaminas o carnitina, y que se promociona como un producto capaz de mejorar la alerta mental y el rendimiento físico.",
     },
     category: {
       _id: "632ab0454d87ff24942109cc",
       name: {
         en: "Energy Drinks",
+        es: "Bebidas Energéticas",
       },
     },
     stock: 77,
@@ -5506,12 +6106,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0454d87ff24942109cc",
         name: {
           en: "Energy Drinks",
+          es: "Bebidas Energéticas",
         },
       },
     ],
@@ -5571,14 +6173,17 @@ const products = [
     productId: "63f3484bd3639309840c95d7",
     title: {
       en: "Nerd Energy Drink",
+      es: "Bebida Energética Nerd",
     },
     description: {
       en: "Energy drink, any beverage that contains high levels of a stimulant ingredient, usually caffeine, as well as sugar and often supplements, such as vitamins or carnitine, and that is promoted as a product capable of enhancing mental alertness and physical performance.",
+      es: "Bebida energética, cualquier bebida que contiene altos niveles de un ingrediente estimulante, generalmente cafeína, así como azúcar y a menudo suplementos, como vitaminas o carnitina, y que se promociona como un producto capaz de mejorar la alerta mental y el rendimiento físico.",
     },
     category: {
       _id: "632ab0454d87ff24942109cc",
       name: {
         en: "Energy Drinks",
+        es: "Bebidas Energéticas",
       },
     },
     stock: 476,
@@ -5598,12 +6203,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0454d87ff24942109cc",
         name: {
           en: "Energy Drinks",
+          es: "Bebidas Energéticas",
         },
       },
     ],
@@ -5620,14 +6227,17 @@ const products = [
     productId: "",
     title: {
       en: "Monster Energy Drink",
+      es: "Bebida Energética Monster",
     },
     description: {
       en: "Energy drink, any beverage that contains high levels of a stimulant ingredient, usually caffeine, as well as sugar and often supplements, such as vitamins or carnitine, and that is promoted as a product capable of enhancing mental alertness and physical performance.",
+      es: "Bebida energética, cualquier bebida que contiene altos niveles de un ingrediente estimulante, generalmente cafeína, así como azúcar y a menudo suplementos, como vitaminas o carnitina, y que se promociona como un producto capaz de mejorar la alerta mental y el rendimiento físico.",
     },
     category: {
       _id: "632ab0454d87ff24942109cc",
       name: {
         en: "Energy Drinks",
+        es: "Bebidas Energéticas",
       },
     },
     stock: 145,
@@ -5647,12 +6257,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0454d87ff24942109cc",
         name: {
           en: "Energy Drinks",
+          es: "Bebidas Energéticas",
         },
       },
     ],
@@ -5669,14 +6281,17 @@ const products = [
     productId: "",
     title: {
       en: "BING Energy Drink",
+      es: "Bebida Energética BING",
     },
     description: {
       en: "Energy drink, any beverage that contains high levels of a stimulant ingredient, usually caffeine, as well as sugar and often supplements, such as vitamins or carnitine, and that is promoted as a product capable of enhancing mental alertness and physical performance.",
+      es: "Bebida energética, cualquier bebida que contiene altos niveles de un ingrediente estimulante, generalmente cafeína, así como azúcar y a menudo suplementos, como vitaminas o carnitina, y que se promociona como un producto capaz de mejorar la alerta mental y el rendimiento físico.",
     },
     category: {
       _id: "632ab0454d87ff24942109cc",
       name: {
         en: "Energy Drinks",
+        es: "Bebidas Energéticas",
       },
     },
     stock: 237,
@@ -5696,12 +6311,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0454d87ff24942109cc",
         name: {
           en: "Energy Drinks",
+          es: "Bebidas Energéticas",
         },
       },
     ],
@@ -5716,14 +6333,17 @@ const products = [
     productId: "639dc0f5c2fce72b697281fc",
     title: {
       en: "Go Grid Energy Drink",
+      es: "Bebida Energética Go Grid",
     },
     description: {
       en: "Energy drink, any beverage that contains high levels of a stimulant ingredient, usually caffeine, as well as sugar and often supplements, such as vitamins or carnitine, and that is promoted as a product capable of enhancing mental alertness and physical performance.",
+      es: "Bebida energética, cualquier bebida que contiene altos niveles de un ingrediente estimulante, generalmente cafeína, así como azúcar y a menudo suplementos, como vitaminas o carnitina, y que se promociona como un producto capaz de mejorar la alerta mental y el rendimiento físico.",
     },
     category: {
       _id: "632ab0454d87ff24942109cc",
       name: {
         en: "Energy Drinks",
+        es: "Bebidas Energéticas",
       },
     },
     stock: 546,
@@ -5743,12 +6363,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0564d87ff24942109df",
         name: {
           en: "Juice",
+          es: "Jugos",
         },
       },
     ],
@@ -5765,14 +6387,17 @@ const products = [
     productId: "",
     title: {
       en: "Robinsons Pink Lemonade",
+      es: "Limonada Rosa Robinsons",
     },
     description: {
       en: "juice is a drink made from the extraction or pressing of the natural liquid contained in fruit and vegetables. It can also refer to liquids that are flavored with concentrate or other biological food sources, such as meat or seafood, such as clam juice.",
+      es: "El jugo es una bebida elaborada a partir de la extracción o prensado del líquido natural contenido en frutas y verduras. También puede referirse a líquidos que se aromatizan con concentrados u otras fuentes alimenticias biológicas, como carne o mariscos, por ejemplo, el jugo de almeja.",
     },
     category: {
       _id: "632ab0564d87ff24942109df",
       name: {
         en: "Juice",
+        es: "Jugos",
       },
     },
     stock: 313,
@@ -5792,12 +6417,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0564d87ff24942109df",
         name: {
           en: "Juice",
+          es: "Jugos",
         },
       },
     ],
@@ -5814,14 +6441,17 @@ const products = [
     productId: "",
     title: {
       en: "Strawberry Lime juice",
+      es: "Jugo de Fresa y Lima",
     },
     description: {
       en: "juice is a drink made from the extraction or pressing of the natural liquid contained in fruit and vegetables. It can also refer to liquids that are flavored with concentrate or other biological food sources, such as meat or seafood, such as clam juice.",
+      es: "El jugo es una bebida elaborada a partir de la extracción o prensado del líquido natural contenido en frutas y verduras. También puede referirse a líquidos aromatizados con concentrados u otras fuentes alimenticias biológicas, como carne o mariscos, por ejemplo, el jugo de almeja.",
     },
     category: {
       _id: "632ab0564d87ff24942109df",
       name: {
         en: "Juice",
+        es: "Jugos",
       },
     },
     stock: 338,
@@ -5841,12 +6471,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0564d87ff24942109df",
         name: {
           en: "Juice",
+          es: "Jugos",
         },
       },
     ],
@@ -5863,14 +6495,17 @@ const products = [
     productId: "",
     title: {
       en: "Musselman Sparkling Cider",
+      es: "Sidra Espumante Musselman",
     },
     description: {
       en: "juice is a drink made from the extraction or pressing of the natural liquid contained in fruit and vegetables. It can also refer to liquids that are flavored with concentrate or other biological food sources, such as meat or seafood, such as clam juice.",
+      es: "El jugo es una bebida elaborada a partir de la extracción o prensado del líquido natural contenido en frutas y verduras. También puede referirse a líquidos aromatizados con concentrados u otras fuentes alimenticias biológicas, como carne o mariscos, por ejemplo, el jugo de almeja.",
     },
     category: {
       _id: "632ab0564d87ff24942109df",
       name: {
         en: "Juice",
+        es: "Jugos",
       },
     },
     stock: 91,
@@ -5890,12 +6525,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0564d87ff24942109df",
         name: {
           en: "Juice",
+          es: "Jugos",
         },
       },
     ],
@@ -5910,14 +6547,17 @@ const products = [
     productId: "",
     title: {
       en: "Hood Orange juice",
+      es: "Jugo de Naranja Hood",
     },
     description: {
       en: "juice is a drink made from the extraction or pressing of the natural liquid contained in fruit and vegetables. It can also refer to liquids that are flavored with concentrate or other biological food sources, such as meat or seafood, such as clam juice.",
+      es: "El jugo es una bebida elaborada a partir de la extracción o prensado del líquido natural contenido en frutas y verduras. También puede referirse a líquidos aromatizados con concentrados u otras fuentes alimenticias biológicas, como carne o mariscos, por ejemplo, el jugo de almeja.",
     },
     category: {
       _id: "632ab0564d87ff24942109df",
       name: {
         en: "Juice",
+        es: "Jugos",
       },
     },
     stock: 56,
@@ -5937,12 +6577,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0564d87ff24942109df",
         name: {
           en: "Juice",
+          es: "Jugos",
         },
       },
     ],
@@ -5959,14 +6601,17 @@ const products = [
     productId: "",
     title: {
       en: "Evolution Orange juice",
+      es: "Jugo de Naranja Evolution",
     },
     description: {
       en: "juice is a drink made from the extraction or pressing of the natural liquid contained in fruit and vegetables. It can also refer to liquids that are flavored with concentrate or other biological food sources, such as meat or seafood, such as clam juice.",
+      es: "El jugo es una bebida elaborada a partir de la extracción o prensado del líquido natural contenido en frutas y verduras. También puede referirse a líquidos aromatizados con concentrados u otras fuentes alimenticias biológicas, como carne o mariscos, por ejemplo, el jugo de almeja.",
     },
     category: {
       _id: "632ab0564d87ff24942109df",
       name: {
         en: "Juice",
+        es: "Jugos",
       },
     },
     stock: 481,
@@ -5986,12 +6631,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0664d87ff24942109ef",
         name: {
           en: "Tea",
+          es: "Té",
         },
       },
     ],
@@ -6006,14 +6653,17 @@ const products = [
     productId: "",
     title: {
       en: "VPK Organic Kapha",
+      es: "VPK Kapha Orgánico",
     },
     description: {
       en: "tea is an aromatic beverage prepared by pouring hot or boiling water over cured or fresh leaves of Camellia sinensis, an evergreen shrub native to China and East Asia. After water, it is the most widely consumed drink in the world. ... tea has a stimulating effect in humans primarily due to its caffeine content.",
+      es: "El té es una bebida aromática preparada vertiendo agua caliente o hirviendo sobre hojas curadas o frescas de Camellia sinensis, un arbusto perenne originario de China y Asia Oriental. Después del agua, es la bebida más consumida en el mundo. ... El té tiene un efecto estimulante en los humanos, principalmente debido a su contenido de cafeína.",
     },
     category: {
       _id: "632ab0664d87ff24942109ef",
       name: {
         en: "Tea",
+        es: "Té",
       },
     },
     stock: 719,
@@ -6033,12 +6683,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0664d87ff24942109ef",
         name: {
           en: "Tea",
+          es: "Té",
         },
       },
     ],
@@ -6055,14 +6707,17 @@ const products = [
     productId: "",
     title: {
       en: "Calming Herbal tea",
+      es: "Té Herbal Calmante",
     },
     description: {
       en: "tea is an aromatic beverage prepared by pouring hot or boiling water over cured or fresh leaves of Camellia sinensis, an evergreen shrub native to China and East Asia. After water, it is the most widely consumed drink in the world. ... tea has a stimulating effect in humans primarily due to its caffeine content.",
+      es: "El té es una bebida aromática preparada vertiendo agua caliente o hirviendo sobre hojas curadas o frescas de Camellia sinensis, un arbusto perenne originario de China y Asia Oriental. Después del agua, es la bebida más consumida en el mundo. ... El té tiene un efecto estimulante en los humanos, principalmente debido a su contenido de cafeína.",
     },
     category: {
       _id: "632ab0664d87ff24942109ef",
       name: {
         en: "Tea",
+        es: "Té",
       },
     },
     stock: 398,
@@ -6082,12 +6737,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0664d87ff24942109ef",
         name: {
           en: "Tea",
+          es: "Té",
         },
       },
     ],
@@ -6104,14 +6761,17 @@ const products = [
     productId: "",
     title: {
       en: "Slimming Slender tea",
+      es: "Té Adelgazante Slimming Slender",
     },
     description: {
       en: "tea is an aromatic beverage prepared by pouring hot or boiling water over cured or fresh leaves of Camellia sinensis, an evergreen shrub native to China and East Asia. After water, it is the most widely consumed drink in the world. ... tea has a stimulating effect in humans primarily due to its caffeine content.",
+      es: "El té es una bebida aromática preparada vertiendo agua caliente o hirviendo sobre hojas curadas o frescas de Camellia sinensis, un arbusto perenne originario de China y Asia Oriental. Después del agua, es la bebida más consumida en el mundo. ... El té tiene un efecto estimulante en los humanos, principalmente debido a su contenido de cafeína.",
     },
     category: {
       _id: "632ab0664d87ff24942109ef",
       name: {
         en: "Tea",
+        es: "Té",
       },
     },
     stock: 157,
@@ -6131,12 +6791,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0664d87ff24942109ef",
         name: {
           en: "Tea",
+          es: "Té",
         },
       },
     ],
@@ -6153,14 +6815,17 @@ const products = [
     productId: "",
     title: {
       en: "Mt Rose Herb tea",
+      es: "Té de Hierbas Mt Rose",
     },
     description: {
       en: "tea is an aromatic beverage prepared by pouring hot or boiling water over cured or fresh leaves of Camellia sinensis, an evergreen shrub native to China and East Asia. After water, it is the most widely consumed drink in the world. ... tea has a stimulating effect in humans primarily due to its caffeine content.",
+      es: "El té es una bebida aromática preparada vertiendo agua caliente o hirviendo sobre hojas curadas o frescas de Camellia sinensis, un arbusto perenne originario de China y Asia Oriental. Después del agua, es la bebida más consumida en el mundo. ... El té tiene un efecto estimulante en los humanos, principalmente debido a su contenido de cafeína.",
     },
     category: {
       _id: "632ab0664d87ff24942109ef",
       name: {
         en: "Tea",
+        es: "Té",
       },
     },
     stock: 455,
@@ -6180,12 +6845,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0664d87ff24942109ef",
         name: {
           en: "Tea",
+          es: "Té",
         },
       },
     ],
@@ -6202,14 +6869,17 @@ const products = [
     productId: "639dc0f5c2fce72b69728206",
     title: {
       en: "Organic Pitta tea",
+      es: "Té Pitta Orgánico",
     },
     description: {
       en: "tea is an aromatic beverage prepared by pouring hot or boiling water over cured or fresh leaves of Camellia sinensis, an evergreen shrub native to China and East Asia. After water, it is the most widely consumed drink in the world. ... tea has a stimulating effect in humans primarily due to its caffeine content.",
+      es: "El té es una bebida aromática preparada vertiendo agua caliente o hirviendo sobre hojas curadas o frescas de Camellia sinensis, un arbusto perenne originario de China y Asia Oriental. Después del agua, es la bebida más consumida en el mundo. ... El té tiene un efecto estimulante en los humanos, principalmente debido a su contenido de cafeína.",
     },
     category: {
       _id: "632ab0664d87ff24942109ef",
       name: {
         en: "Tea",
+        es: "Té",
       },
     },
     stock: 522,
@@ -6229,12 +6899,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0604d87ff24942109e7",
         name: {
           en: "Water",
+          es: "Agua",
         },
       },
     ],
@@ -6249,14 +6921,17 @@ const products = [
     productId: "",
     title: {
       en: "Alhambra Purified water",
+      es: "Agua Purificada Alhambra",
     },
     description: {
       en: "water, a substance composed of the chemical elements hydrogen and oxygen and existing in gaseous, liquid, and solid states. It is one of the most plentiful and essential of compounds. A tasteless and odourless liquid at room temperature, it has the important ability to dissolve many other substances.",
+      es: "El agua es una sustancia compuesta por los elementos químicos hidrógeno y oxígeno y que existe en estados gaseoso, líquido y sólido. Es uno de los compuestos más abundantes y esenciales. Líquido incoloro e insípido a temperatura ambiente, posee la importante capacidad de disolver muchas otras sustancias.",
     },
     category: {
       _id: "632ab0604d87ff24942109e7",
       name: {
         en: "Water",
+        es: "Agua",
       },
     },
     stock: 183,
@@ -6276,12 +6951,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0604d87ff24942109e7",
         name: {
           en: "Water",
+          es: "Agua",
         },
       },
     ],
@@ -6298,14 +6975,17 @@ const products = [
     productId: "",
     title: {
       en: "Deer Park water",
+      es: "Agua Deer Park",
     },
     description: {
       en: "water, a substance composed of the chemical elements hydrogen and oxygen and existing in gaseous, liquid, and solid states. It is one of the most plentiful and essential of compounds. A tasteless and odourless liquid at room temperature, it has the important ability to dissolve many other substances.",
+      es: "El agua es una sustancia compuesta por los elementos químicos hidrógeno y oxígeno y que existe en estados gaseoso, líquido y sólido. Es uno de los compuestos más abundantes y esenciales. Líquido incoloro e insípido a temperatura ambiente, posee la importante capacidad de disolver muchas otras sustancias.",
     },
     category: {
       _id: "632ab0604d87ff24942109e7",
       name: {
         en: "Water",
+        es: "Agua",
       },
     },
     stock: 670,
@@ -6325,12 +7005,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0604d87ff24942109e7",
         name: {
           en: "Water",
+          es: "Agua",
         },
       },
     ],
@@ -6347,14 +7029,17 @@ const products = [
     productId: "",
     title: {
       en: "Food Club water",
+      es: "Agua Food Club",
     },
     description: {
       en: "water, a substance composed of the chemical elements hydrogen and oxygen and existing in gaseous, liquid, and solid states. It is one of the most plentiful and essential of compounds. A tasteless and odourless liquid at room temperature, it has the important ability to dissolve many other substances.",
+      es: "El agua es una sustancia compuesta por los elementos químicos hidrógeno y oxígeno y que existe en estados gaseoso, líquido y sólido. Es uno de los compuestos más abundantes y esenciales. Líquido incoloro e insípido a temperatura ambiente, posee la importante capacidad de disolver muchas otras sustancias.",
     },
     category: {
       _id: "632ab0604d87ff24942109e7",
       name: {
         en: "Water",
+        es: "Agua",
       },
     },
     stock: 366,
@@ -6374,12 +7059,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0604d87ff24942109e7",
         name: {
           en: "Water",
+          es: "Agua",
         },
       },
     ],
@@ -6396,14 +7083,17 @@ const products = [
     productId: "",
     title: {
       en: "Fresh-Thyme water",
+      es: "Agua Fresh-Thyme",
     },
     description: {
       en: "water, a substance composed of the chemical elements hydrogen and oxygen and existing in gaseous, liquid, and solid states. It is one of the most plentiful and essential of compounds. A tasteless and odourless liquid at room temperature, it has the important ability to dissolve many other substances.",
+      es: "El agua es una sustancia compuesta por los elementos químicos hidrógeno y oxígeno y que existe en estados gaseoso, líquido y sólido. Es uno de los compuestos más abundantes y esenciales. Líquido incoloro e insípido a temperatura ambiente, posee la importante capacidad de disolver muchas otras sustancias.",
     },
     category: {
       _id: "632ab0604d87ff24942109e7",
       name: {
         en: "Water",
+        es: "Agua",
       },
     },
     stock: 253,
@@ -6423,12 +7113,14 @@ const products = [
         _id: "632ab0334d87ff24942109c1",
         name: {
           en: "Drinks",
+          es: "Bebidas",
         },
       },
       {
         _id: "632ab0604d87ff24942109e7",
         name: {
           en: "Water",
+          es: "Agua",
         },
       },
     ],
@@ -6445,14 +7137,17 @@ const products = [
     productId: "639dc0f5c2fce72b6972820b",
     title: {
       en: "Smeraldina water",
+      es: "Agua Smeraldina",
     },
     description: {
       en: "water, a substance composed of the chemical elements hydrogen and oxygen and existing in gaseous, liquid, and solid states. It is one of the most plentiful and essential of compounds. A tasteless and odourless liquid at room temperature, it has the important ability to dissolve many other substances.",
+      es: "El agua es una sustancia compuesta por los elementos químicos hidrógeno y oxígeno y que existe en estados gaseoso, líquido y sólido. Es uno de los compuestos más abundantes y esenciales. Líquido incoloro e insípido a temperatura ambiente, posee la importante capacidad de disolver muchas otras sustancias.",
     },
     category: {
       _id: "632ab0604d87ff24942109e7",
       name: {
         en: "Water",
+        es: "Agua",
       },
     },
     stock: 154,
@@ -6472,6 +7167,7 @@ const products = [
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Vegetales Frescos",
         },
       },
     ],
@@ -6488,14 +7184,17 @@ const products = [
     productId: "",
     title: {
       en: "Wild King Salmon Steak",
+      es: "Filete de Salmón Rey Salvaje",
     },
     description: {
       en: "A fish is an animal which lives and breathes in water. All fish are vertebrates (have a backbone) and most breathe through gills and have fins and scales. ... There are three classes of fish: jawless, cartilaginous, and bony. All fish have a backbone.",
+      es: "Un pez es un animal que vive y respira en el agua. Todos los peces son vertebrados (tienen columna vertebral) y la mayoría respiran a través de branquias y tienen aletas y escamas. ... Hay tres clases de peces: sin mandíbula, cartilaginosos y óseos. Todos los peces tienen columna vertebral.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Vegetales Frescos",
       },
     },
     stock: 152,
@@ -6515,6 +7214,7 @@ const products = [
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Vegetales Frescos",
         },
       },
     ],
@@ -6531,14 +7231,17 @@ const products = [
     productId: "",
     title: {
       en: "Canada Salmon",
+      es: "Salmón de Canadá",
     },
     description: {
       en: "A fish is an animal which lives and breathes in water. All fish are vertebrates (have a backbone) and most breathe through gills and have fins and scales. ... There are three classes of fish: jawless, cartilaginous, and bony. All fish have a backbone.",
+      es: "Un pez es un animal que vive y respira en el agua. Todos los peces son vertebrados (tienen columna vertebral) y la mayoría respiran a través de branquias y tienen aletas y escamas. ... Hay tres clases de peces: sin mandíbula, cartilaginosos y óseos. Todos los peces tienen columna vertebral.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Vegetales Frescos",
       },
     },
     stock: 138,
@@ -6558,6 +7261,7 @@ const products = [
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Vegetales Frescos",
         },
       },
     ],
@@ -6574,14 +7278,17 @@ const products = [
     productId: "",
     title: {
       en: "Atlantic Salmon",
+      es: "Salmón Atlántico",
     },
     description: {
       en: "A fish is an animal which lives and breathes in water. All fish are vertebrates (have a backbone) and most breathe through gills and have fins and scales. ... There are three classes of fish: jawless, cartilaginous, and bony. All fish have a backbone.",
+      es: "Un pez es un animal que vive y respira en el agua. Todos los peces son vertebrados (tienen columna vertebral) y la mayoría respira a través de branquias y tiene aletas y escamas. ... Hay tres clases de peces: sin mandíbula, cartilaginosos y óseos. Todos los peces tienen columna vertebral.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Vegetales Frescos",
       },
     },
     stock: 473,
@@ -6601,6 +7308,7 @@ const products = [
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Vegetales Frescos",
         },
       },
     ],
@@ -6617,14 +7325,17 @@ const products = [
     productId: "",
     title: {
       en: "Salmon Filet Portion",
+      es: "Porción de Filete de Salmón",
     },
     description: {
       en: "A fish is an animal which lives and breathes in water. All fish are vertebrates (have a backbone) and most breathe through gills and have fins and scales. ... There are three classes of fish: jawless, cartilaginous, and bony. All fish have a backbone.",
+      es: "Un pez es un animal que vive y respira en el agua. Todos los peces son vertebrados (tienen columna vertebral) y la mayoría respira a través de branquias y tiene aletas y escamas. ... Hay tres clases de peces: sin mandíbula, cartilaginosos y óseos. Todos los peces tienen columna vertebral.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Vegetales Frescos",
       },
     },
     stock: 697,
@@ -6644,6 +7355,7 @@ const products = [
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Vegetales Frescos",
         },
       },
     ],
@@ -6658,14 +7370,17 @@ const products = [
     productId: "",
     title: {
       en: "Ling Cod Steak",
+      es: "Filete de Bacalao Ling",
     },
     description: {
       en: "A fish is an animal which lives and breathes in water. All fish are vertebrates (have a backbone) and most breathe through gills and have fins and scales. ... There are three classes of fish: jawless, cartilaginous, and bony. All fish have a backbone.",
+      es: "Un pez es un animal que vive y respira en el agua. Todos los peces son vertebrados (tienen columna vertebral) y la mayoría respira a través de branquias y tiene aletas y escamas. ... Hay tres clases de peces: sin mandíbula, cartilaginosos y óseos. Todos los peces tienen columna vertebral.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Vegetales Frescos",
       },
     },
     stock: 618,
@@ -6685,6 +7400,7 @@ const products = [
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Vegetales Frescos",
         },
       },
     ],
@@ -6701,14 +7417,17 @@ const products = [
     productId: "",
     title: {
       en: "Peeled Deveined Shrimp",
+      es: "Camarones Pelados y Desvenados",
     },
     description: {
       en: "A fish is an animal which lives and breathes in water. All fish are vertebrates (have a backbone) and most breathe through gills and have fins and scales. ... There are three classes of fish: jawless, cartilaginous, and bony. All fish have a backbone.",
+      es: "Un pez es un animal que vive y respira en el agua. Todos los peces son vertebrados (tienen columna vertebral) y la mayoría respira a través de branquias y tiene aletas y escamas. ... Hay tres clases de peces: sin mandíbula, cartilaginosos y óseos. Todos los peces tienen columna vertebral.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Vegetales Frescos",
       },
     },
     stock: 243,
@@ -6728,6 +7447,7 @@ const products = [
         _id: "632aca374d87ff2494210bf0",
         name: {
           en: "Fresh Vegetable",
+          es: "Vegetales Frescos",
         },
       },
     ],
@@ -6742,14 +7462,17 @@ const products = [
     productId: "639dc0f5c2fce72b69728212",
     title: {
       en: "Chilean Sea Bass",
+      es: "Merluza Negra Chilena",
     },
     description: {
       en: "A fish is an animal which lives and breathes in water. All fish are vertebrates (have a backbone) and most breathe through gills and have fins and scales. ... There are three classes of fish: jawless, cartilaginous, and bony. All fish have a backbone.",
+      es: "Un pez es un animal que vive y respira en el agua. Todos los peces son vertebrados (tienen columna vertebral) y la mayoría respira a través de branquias y tiene aletas y escamas. ... Hay tres clases de peces: sin mandíbula, cartilaginosos y óseos. Todos los peces tienen columna vertebral.",
     },
     category: {
       _id: "632aca374d87ff2494210bf0",
       name: {
         en: "Fresh Vegetable",
+        es: "Vegetales Frescos",
       },
     },
     stock: 653,
@@ -6769,6 +7492,7 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
     ],
@@ -6783,14 +7507,17 @@ const products = [
     productId: "",
     title: {
       en: "ACI Pure Sugar",
+      es: "Azúcar Pura ACI",
     },
     description: {
       en: "Spice mixes are blended spices or herbs. ... Blends such as chili powder, curry powder, herbes de Provence, garlic salt, and other seasoned salts are traditionally sold pre-made by grocers, and sometimes baking blends such as pumpkin pie spice are also available.",
+      es: "Las mezclas de especias son combinaciones de especias o hierbas. ... Mezclas como chile en polvo, curry en polvo, hierbas de Provenza, sal de ajo y otras sales sazonadas se venden tradicionalmente premezcladas por los comerciantes, y a veces también hay mezclas para repostería como la especia para pastel de calabaza.",
     },
     category: {
       _id: "632aca0b4d87ff2494210bc4",
       name: {
         en: "Cooking Essentials",
+        es: "Esenciales de Cocina",
       },
     },
     stock: 206,
@@ -6810,6 +7537,7 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
     ],
@@ -6824,14 +7552,17 @@ const products = [
     productId: "",
     title: {
       en: "ACI Pure Salt",
+      es: "Sal Pura ACI",
     },
     description: {
       en: "Spice mixes are blended spices or herbs. ... Blends such as chili powder, curry powder, herbes de Provence, garlic salt, and other seasoned salts are traditionally sold pre-made by grocers, and sometimes baking blends such as pumpkin pie spice are also available.",
+      es: "Las mezclas de especias son combinaciones de especias o hierbas. ... Mezclas como chile en polvo, curry en polvo, hierbas de Provenza, sal de ajo y otras sales sazonadas se venden tradicionalmente premezcladas por los comerciantes, y a veces también hay mezclas para repostería como la especia para pastel de calabaza.",
     },
     category: {
       _id: "632aca0b4d87ff2494210bc4",
       name: {
         en: "Cooking Essentials",
+        es: "Esenciales de Cocina",
       },
     },
     stock: 515,
@@ -6851,12 +7582,14 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
       {
         _id: "632aca184d87ff2494210bd4",
         name: {
           en: "Flour",
+          es: "Harina",
         },
       },
     ],
@@ -6871,14 +7604,17 @@ const products = [
     productId: "639dc0f5c2fce72b69728215",
     title: {
       en: "Fresh flour",
+      es: "Harina Fresca",
     },
     description: {
-      en: "flour, finely ground cereal grains or other starchy portions of plants, used in various food products and as a basic ingredient of baked goods. flour made from wheat grains is the most satisfactory  for baked products that require spongy structure. ... The outer layers and internal structures of a kernel of wheat.",
+      en: "flour, finely ground cereal grains or other starchy portions of plants, used in various food products and as a basic ingredient of baked goods. flour made from wheat grains is the most satisfactory for baked products that require spongy structure. ... The outer layers and internal structures of a kernel of wheat.",
+      es: "Harina, granos de cereal finamente molidos u otras partes almidonadas de plantas, utilizada en diversos productos alimenticios y como ingrediente básico de productos horneados. La harina hecha de granos de trigo es la más adecuada para productos horneados que requieren una estructura esponjosa. ... Las capas externas y las estructuras internas de un grano de trigo.",
     },
     category: {
       _id: "632aca184d87ff2494210bd4",
       name: {
         en: "Flour",
+        es: "Harina",
       },
     },
     stock: 545,
@@ -6898,12 +7634,14 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
       {
         _id: "632aca184d87ff2494210bd4",
         name: {
           en: "Flour",
+          es: "Harina",
         },
       },
     ],
@@ -6918,14 +7656,17 @@ const products = [
     productId: "639dc0f5c2fce72b69728216",
     title: {
       en: "ACI Pure flour",
+      es: "Harina Pura ACI",
     },
     description: {
-      en: "flour, finely ground cereal grains or other starchy portions of plants, used in various food products and as a basic ingredient of baked goods. flour made from wheat grains is the most satisfactory  for baked products that require spongy structure. ... The outer layers and internal structures of a kernel of wheat.",
+      en: "flour, finely ground cereal grains or other starchy portions of plants, used in various food products and as a basic ingredient of baked goods. flour made from wheat grains is the most satisfactory for baked products that require spongy structure. ... The outer layers and internal structures of a kernel of wheat.",
+      es: "Harina, granos de cereal finamente molidos u otras partes almidonadas de plantas, utilizada en diversos productos alimenticios y como ingrediente básico de productos horneados. La harina hecha de granos de trigo es la más adecuada para productos horneados que requieren una estructura esponjosa. ... Las capas externas y las estructuras internas de un grano de trigo.",
     },
     category: {
       _id: "632aca184d87ff2494210bd4",
       name: {
         en: "Flour",
+        es: "Harina",
       },
     },
     stock: 254,
@@ -6945,12 +7686,14 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
       {
         _id: "632aca184d87ff2494210bd4",
         name: {
           en: "Flour",
+          es: "Harina",
         },
       },
     ],
@@ -6965,14 +7708,17 @@ const products = [
     productId: "639dc0f5c2fce72b69728217",
     title: {
       en: "ACI Pure flour",
+      es: "Harina Pura ACI",
     },
     description: {
-      en: "flour, finely ground cereal grains or other starchy portions of plants, used in various food products and as a basic ingredient of baked goods. flour made from wheat grains is the most satisfactory  for baked products that require spongy structure. ... The outer layers and internal structures of a kernel of wheat.",
+      en: "flour, finely ground cereal grains or other starchy portions of plants, used in various food products and as a basic ingredient of baked goods. flour made from wheat grains is the most satisfactory for baked products that require spongy structure. ... The outer layers and internal structures of a kernel of wheat.",
+      es: "Harina, granos de cereal finamente molidos u otras partes almidonadas de plantas, utilizada en diversos productos alimenticios y como ingrediente básico de productos horneados. La harina hecha de granos de trigo es la más adecuada para productos horneados que requieren una estructura esponjosa. ... Las capas externas y las estructuras internas de un grano de trigo.",
     },
     category: {
       _id: "632aca184d87ff2494210bd4",
       name: {
         en: "Flour",
+        es: "Harina",
       },
     },
     stock: 590,
@@ -6992,12 +7738,14 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
       {
         _id: "632aca184d87ff2494210bd4",
         name: {
           en: "Flour",
+          es: "Harina",
         },
       },
     ],
@@ -7012,14 +7760,17 @@ const products = [
     productId: "639dc0f5c2fce72b69728218",
     title: {
       en: "ACI Nutrilife Oats flour",
+      es: "Harina de Avena ACI Nutrilife",
     },
     description: {
-      en: "flour, finely ground cereal grains or other starchy portions of plants, used in various food products and as a basic ingredient of baked goods. flour made from wheat grains is the most satisfactory  for baked products that require spongy structure. ... The outer layers and internal structures of a kernel of wheat.",
+      en: "flour, finely ground cereal grains or other starchy portions of plants, used in various food products and as a basic ingredient of baked goods. flour made from wheat grains is the most satisfactory for baked products that require spongy structure. ... The outer layers and internal structures of a kernel of wheat.",
+      es: "Harina, granos de cereal finamente molidos u otras partes almidonadas de plantas, utilizada en diversos productos alimenticios y como ingrediente básico de productos horneados. La harina hecha de granos de trigo es la más adecuada para productos horneados que requieren una estructura esponjosa. ... Las capas externas y las estructuras internas de un grano de trigo.",
     },
     category: {
       _id: "632aca184d87ff2494210bd4",
       name: {
         en: "Flour",
+        es: "Harina",
       },
     },
     stock: 593,
@@ -7039,12 +7790,14 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
       {
         _id: "632aca184d87ff2494210bd4",
         name: {
           en: "Flour",
+          es: "Harina",
         },
       },
     ],
@@ -7093,14 +7846,17 @@ const products = [
     productId: "639dc0f5c2fce72b69728219",
     title: {
       en: "ACI Nutrilife flour",
+      es: "Harina ACI Nutrilife",
     },
     description: {
-      en: "flour, finely ground cereal grains or other starchy portions of plants, used in various food products and as a basic ingredient of baked goods. flour made from wheat grains is the most satisfactory  for baked products that require spongy structure. ... The outer layers and internal structures of a kernel of wheat.",
+      en: "flour, finely ground cereal grains or other starchy portions of plants, used in various food products and as a basic ingredient of baked goods. flour made from wheat grains is the most satisfactory for baked products that require spongy structure. ... The outer layers and internal structures of a kernel of wheat.",
+      es: "Harina, granos de cereal finamente molidos u otras partes almidonadas de plantas, utilizada en diversos productos alimenticios y como ingrediente básico de productos horneados. La harina hecha de granos de trigo es la más adecuada para productos horneados que requieren una estructura esponjosa. ... Las capas externas y las estructuras internas de un grano de trigo.",
     },
     category: {
       _id: "632aca184d87ff2494210bd4",
       name: {
         en: "Flour",
+        es: "Harina",
       },
     },
     stock: 879,
@@ -7120,12 +7876,14 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
       {
         _id: "632aca144d87ff2494210bcc",
         name: {
           en: "Oil",
+          es: "Aceite",
         },
       },
     ],
@@ -7140,14 +7898,17 @@ const products = [
     productId: "639dc0f5c2fce72b6972821a",
     title: {
       en: "Fresh Soyabean Oil",
+      es: "Aceite de Soya Fresco",
     },
     description: {
       en: "Cooking oil is plant, animal, or synthetic fat used in frying, baking, and other types of cooking. ... Cooking oil is typically a liquid at room temperature, although some oils that contain saturated fat, such as coconut oil, palm oil and palm kernel oil are solid.",
+      es: "El aceite de cocina es grasa vegetal, animal o sintética utilizada para freír, hornear y otros tipos de cocina. ... El aceite de cocina suele ser líquido a temperatura ambiente, aunque algunos aceites que contienen grasa saturada, como el aceite de coco, de palma y de palmiste, son sólidos.",
     },
     category: {
       _id: "632aca144d87ff2494210bcc",
       name: {
         en: "Oil",
+        es: "Aceite",
       },
     },
     stock: 445,
@@ -7167,12 +7928,14 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
       {
         _id: "632aca144d87ff2494210bcc",
         name: {
           en: "Oil",
+          es: "Aceite",
         },
       },
     ],
@@ -7187,14 +7950,17 @@ const products = [
     productId: "639dc0f5c2fce72b6972821b",
     title: {
       en: "Fresh Mustard Oil",
+      es: "Aceite de Mostaza Fresco",
     },
     description: {
       en: "Cooking oil is plant, animal, or synthetic fat used in frying, baking, and other types of cooking. ... Cooking oil is typically a liquid at room temperature, although some oils that contain saturated fat, such as coconut oil, palm oil and palm kernel oil are solid.",
+      es: "El aceite de cocina es grasa vegetal, animal o sintética utilizada para freír, hornear y otros tipos de cocina. ... El aceite de cocina suele ser líquido a temperatura ambiente, aunque algunos aceites que contienen grasa saturada, como el aceite de coco, de palma y de palmiste, son sólidos.",
     },
     category: {
       _id: "632aca144d87ff2494210bcc",
       name: {
         en: "Oil",
+        es: "Aceite",
       },
     },
     stock: 88,
@@ -7214,12 +7980,14 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
       {
         _id: "632aca144d87ff2494210bcc",
         name: {
           en: "Oil",
+          es: "Aceite",
         },
       },
     ],
@@ -7234,14 +8002,17 @@ const products = [
     productId: "639dc0f5c2fce72b6972821c",
     title: {
       en: "Fortune Oil",
+      es: "Aceite Fortune",
     },
     description: {
       en: "Cooking oil is plant, animal, or synthetic fat used in frying, baking, and other types of cooking. ... Cooking oil is typically a liquid at room temperature, although some oils that contain saturated fat, such as coconut oil, palm oil and palm kernel oil are solid.",
+      es: "El aceite de cocina es grasa vegetal, animal o sintética utilizada para freír, hornear y otros tipos de cocina. ... El aceite de cocina suele ser líquido a temperatura ambiente, aunque algunos aceites que contienen grasa saturada, como el aceite de coco, de palma y de palmiste, son sólidos.",
     },
     category: {
       _id: "632aca144d87ff2494210bcc",
       name: {
         en: "Oil",
+        es: "Aceite",
       },
     },
     stock: 486,
@@ -7261,12 +8032,14 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
       {
         _id: "632aca144d87ff2494210bcc",
         name: {
           en: "Oil",
+          es: "Aceite",
         },
       },
     ],
@@ -7312,14 +8085,17 @@ const products = [
     productId: "639dc0f5c2fce72b6972821d",
     title: {
       en: "ACI Pure Mustard Oil",
+      es: "Aceite de Mostaza Puro ACI",
     },
     description: {
       en: "Cooking oil is plant, animal, or synthetic fat used in frying, baking, and other types of cooking. ... Cooking oil is typically a liquid at room temperature, although some oils that contain saturated fat, such as coconut oil, palm oil and palm kernel oil are solid.",
+      es: "El aceite de cocina es grasa vegetal, animal o sintética utilizada para freír, hornear y otros tipos de cocina. ... El aceite de cocina suele ser líquido a temperatura ambiente, aunque algunos aceites que contienen grasa saturada, como el aceite de coco, de palma y de palmiste, son sólidos.",
     },
     category: {
       _id: "632aca144d87ff2494210bcc",
       name: {
         en: "Oil",
+        es: "Aceite",
       },
     },
     stock: 1479,
@@ -7339,12 +8115,14 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
       {
         _id: "632aca144d87ff2494210bcc",
         name: {
           en: "Oil",
+          es: "Aceite",
         },
       },
     ],
@@ -7359,14 +8137,17 @@ const products = [
     productId: "639dc0f5c2fce72b6972821e",
     title: {
       en: "ACI Aroma Mustard Oil",
+      es: "Aceite de Mostaza Aroma ACI",
     },
     description: {
       en: "Cooking oil is plant, animal, or synthetic fat used in frying, baking, and other types of cooking. ... Cooking oil is typically a liquid at room temperature, although some oils that contain saturated fat, such as coconut oil, palm oil and palm kernel oil are solid.",
+      es: "El aceite de cocina es grasa vegetal, animal o sintética utilizada para freír, hornear y otros tipos de cocina. ... El aceite de cocina suele ser líquido a temperatura ambiente, aunque algunos aceites que contienen grasa saturada, como el aceite de coco, de palma y de palmiste, son sólidos.",
     },
     category: {
       _id: "632aca144d87ff2494210bcc",
       name: {
         en: "Oil",
+        es: "Aceite",
       },
     },
     stock: 144,
@@ -7386,6 +8167,7 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
     ],
@@ -7400,14 +8182,17 @@ const products = [
     productId: "",
     title: {
       en: "Kalijira Premium Rice",
+      es: "Arroz Premium Kalijira",
     },
     description: {
       en: "rice, (Oryza sativa), edible starchy cereal grain and the grass plant (family Poaceae) by which it is produced. ... Rice is cooked by boiling, or it can be ground into a flour. It is eaten alone and in a great variety of soups, side dishes, and main dishes in Asian, Middle Eastern, and many other cuisines.",
+      es: "Arroz (Oryza sativa), cereal comestible con almidón y la planta de pasto (familia Poaceae) de la cual se produce. ... El arroz se cocina hirviéndolo o puede molerse en harina. Se consume solo y en una gran variedad de sopas, guarniciones y platos principales en la cocina asiática, de Medio Oriente y muchas otras.",
     },
     category: {
       _id: "632aca0b4d87ff2494210bc4",
       name: {
         en: "Cooking Essentials",
+        es: "Esenciales de Cocina",
       },
     },
     stock: 762,
@@ -7427,6 +8212,7 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
     ],
@@ -7541,14 +8327,17 @@ const products = [
     productId: "63f3484bd3639309840c95b0",
     title: {
       en: "Fresh Chinigura Rice",
+      es: "Arroz Chinigura Fresco",
     },
     description: {
       en: "rice, (Oryza sativa), edible starchy cereal grain and the grass plant (family Poaceae) by which it is produced. ... Rice is cooked by boiling, or it can be ground into a flour. It is eaten alone and in a great variety of soups, side dishes, and main dishes in Asian, Middle Eastern, and many other cuisines.",
+      es: "Arroz (Oryza sativa), cereal comestible con almidón y la planta de pasto (familia Poaceae) de la cual se produce. ... El arroz se cocina hirviéndolo o puede molerse en harina. Se consume solo y en una gran variedad de sopas, guarniciones y platos principales en la cocina asiática, de Medio Oriente y muchas otras.",
     },
     category: {
       _id: "632aca0b4d87ff2494210bc4",
       name: {
         en: "Cooking Essentials",
+        es: "Esenciales de Cocina",
       },
     },
     stock: 6309,
@@ -7568,6 +8357,7 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
     ],
@@ -7693,14 +8483,17 @@ const products = [
     productId: "63f3484bd3639309840c95af",
     title: {
       en: "Chinigura Premium Rice",
+      es: "Arroz Chinigura Premium",
     },
     description: {
       en: "rice, (Oryza sativa), edible starchy cereal grain and the grass plant (family Poaceae) by which it is produced. ... Rice is cooked by boiling, or it can be ground into a flour. It is eaten alone and in a great variety of soups, side dishes, and main dishes in Asian, Middle Eastern, and many other cuisines.",
+      es: "Arroz (Oryza sativa), cereal comestible con almidón y la planta de pasto (familia Poaceae) de la cual se produce. ... El arroz se cocina hirviéndolo o puede molerse en harina. Se consume solo y en una gran variedad de sopas, guarniciones y platos principales en la cocina asiática, de Medio Oriente y muchas otras.",
     },
     category: {
       _id: "632aca0b4d87ff2494210bc4",
       name: {
         en: "Cooking Essentials",
+        es: "Esenciales de Cocina",
       },
     },
     stock: 7020,
@@ -7720,6 +8513,7 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
     ],
@@ -7734,14 +8528,17 @@ const products = [
     productId: "",
     title: {
       en: "Aarong Nazirshail Rice",
+      es: "Arroz Aarong Nazirshail",
     },
     description: {
       en: "rice, (Oryza sativa), edible starchy cereal grain and the grass plant (family Poaceae) by which it is produced. ... Rice is cooked by boiling, or it can be ground into a flour. It is eaten alone and in a great variety of soups, side dishes, and main dishes in Asian, Middle Eastern, and many other cuisines.",
+      es: "Arroz (Oryza sativa), cereal comestible con almidón y la planta de pasto (familia Poaceae) de la cual se produce. ... El arroz se cocina hirviéndolo o puede molerse en harina. Se consume solo y en una gran variedad de sopas, guarniciones y platos principales en la cocina asiática, de Medio Oriente y muchas otras.",
     },
     category: {
       _id: "632aca0b4d87ff2494210bc4",
       name: {
         en: "Cooking Essentials",
+        es: "Esenciales de Cocina",
       },
     },
     stock: 689,
@@ -7761,6 +8558,7 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
     ],
@@ -7775,14 +8573,17 @@ const products = [
     productId: "",
     title: {
       en: "Aarong Kataribhog Rice",
+      es: "Arroz Aarong Kataribhog",
     },
     description: {
       en: "rice, (Oryza sativa), edible starchy cereal grain and the grass plant (family Poaceae) by which it is produced. ... Rice is cooked by boiling, or it can be ground into a flour. It is eaten alone and in a great variety of soups, side dishes, and main dishes in Asian, Middle Eastern, and many other cuisines.",
+      es: "Arroz (Oryza sativa), cereal comestible con almidón y la planta de pasto (familia Poaceae) de la cual se produce. ... El arroz se cocina hirviéndolo o puede molerse en harina. Se consume solo y en una gran variedad de sopas, guarniciones y platos principales en la cocina asiática, de Medio Oriente y muchas otras.",
     },
     category: {
       _id: "632aca0b4d87ff2494210bc4",
       name: {
         en: "Cooking Essentials",
+        es: "Esenciales de Cocina",
       },
     },
     stock: 186,
@@ -7802,6 +8603,7 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
     ],
@@ -7816,14 +8618,17 @@ const products = [
     productId: "",
     title: {
       en: "Onion Loose",
+      es: "Cebolla Suelta",
     },
     description: {
       en: "Any vegetable that has been dehydrated or dried in order to extend the shelf life and to concentrate the flavor. Popular dried vegetables include sun-dried tomatoes, onions, carrots, and chiles.",
+      es: "Cualquier vegetal que ha sido deshidratado o secado para prolongar su vida útil y concentrar su sabor. Entre los vegetales secos populares se incluyen tomates secos al sol, cebollas, zanahorias y chiles.",
     },
     category: {
       _id: "632aca0b4d87ff2494210bc4",
       name: {
         en: "Cooking Essentials",
+        es: "Esenciales de Cocina",
       },
     },
     stock: 767,
@@ -7843,6 +8648,7 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
     ],
@@ -7857,14 +8663,17 @@ const products = [
     productId: "",
     title: {
       en: "Ginger Hybrid",
+      es: "Jengibre Híbrido",
     },
     description: {
       en: "Any vegetable that has been dehydrated or dried in order to extend the shelf life and to concentrate the flavor. Popular dried vegetables include sun-dried tomatoes, onions, carrots, and chiles.",
+      es: "Cualquier vegetal que ha sido deshidratado o secado para prolongar su vida útil y concentrar su sabor. Entre los vegetales secos populares se incluyen tomates secos al sol, cebollas, zanahorias y chiles.",
     },
     category: {
       _id: "632aca0b4d87ff2494210bc4",
       name: {
         en: "Cooking Essentials",
+        es: "Esenciales de Cocina",
       },
     },
     stock: 109,
@@ -7884,6 +8693,7 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
     ],
@@ -7898,14 +8708,17 @@ const products = [
     productId: "",
     title: {
       en: "Garlic Loose",
+      es: "Ajo suelto",
     },
     description: {
       en: "Any vegetable that has been dehydrated or dried in order to extend the shelf life and to concentrate the flavor. Popular dried vegetables include sun-dried tomatoes, onions, carrots, and chiles.",
+      es: "Cualquier vegetal que ha sido deshidratado o secado para prolongar su vida útil y concentrar su sabor. Entre los vegetales secos populares se incluyen tomates secos al sol, cebollas, zanahorias y chiles.",
     },
     category: {
       _id: "632aca0b4d87ff2494210bc4",
       name: {
         en: "Cooking Essentials",
+        es: "Esenciales de Cocina",
       },
     },
     stock: 752,
@@ -7925,6 +8738,7 @@ const products = [
         _id: "632aca0b4d87ff2494210bc4",
         name: {
           en: "Cooking Essentials",
+          es: "Esenciales de Cocina",
         },
       },
     ],
@@ -7939,14 +8753,17 @@ const products = [
     productId: "",
     title: {
       en: "Ginger Imported Loose",
+      es: "Jengibre importado suelto",
     },
     description: {
       en: "Any vegetable that has been dehydrated or dried in order to extend the shelf life and to concentrate the flavor. Popular dried vegetables include sun-dried tomatoes, onions, carrots, and chiles.",
+      es: "Cualquier vegetal que ha sido deshidratado o secado para prolongar su vida útil y concentrar su sabor. Entre los vegetales secos populares se incluyen tomates secos al sol, cebollas, zanahorias y chiles.",
     },
     category: {
       _id: "632aca0b4d87ff2494210bc4",
       name: {
         en: "Cooking Essentials",
+        es: "Esenciales de Cocina",
       },
     },
     stock: 411,
@@ -7966,6 +8783,7 @@ const products = [
         _id: "632ac9e94d87ff2494210ba0",
         name: {
           en: "Biscuits & Cakes",
+          es: "Galletas y Pasteles",
         },
       },
     ],
@@ -7980,14 +8798,17 @@ const products = [
     productId: "",
     title: {
       en: "Dan Cake Layer Cake",
+      es: "Pastel de Capas Dan Cake",
     },
     description: {
       en: "Cake is a form of sweet food made from flour, sugar, and other ingredients, that is usually baked. ... The most commonly used cake ingredients include flour, sugar, eggs, butter or oil or margarine, a liquid, and a leavening agent, such as baking soda or baking powder.",
+      es: "El pastel es un tipo de alimento dulce hecho de harina, azúcar y otros ingredientes, que generalmente se hornea. ... Los ingredientes más utilizados para los pasteles incluyen harina, azúcar, huevos, mantequilla o aceite o margarina, un líquido y un agente leudante, como bicarbonato de sodio o polvo de hornear.",
     },
     category: {
       _id: "632ac9ef4d87ff2494210ba8",
       name: {
         en: "Cakes",
+        es: "Pasteles",
       },
     },
     stock: 517,
@@ -8007,6 +8828,7 @@ const products = [
         _id: "632ac9e94d87ff2494210ba0",
         name: {
           en: "Biscuits & Cakes",
+          es: "Galletas y Pasteles",
         },
       },
     ],
@@ -8021,14 +8843,17 @@ const products = [
     productId: "",
     title: {
       en: "Dan Cake Lemon",
+      es: "Pastel de Limón Dan Cake",
     },
     description: {
       en: "Cake is a form of sweet food made from flour, sugar, and other ingredients, that is usually baked. ... The most commonly used cake ingredients include flour, sugar, eggs, butter or oil or margarine, a liquid, and a leavening agent, such as baking soda or baking powder.",
+      es: "El pastel es un tipo de alimento dulce hecho de harina, azúcar y otros ingredientes, que generalmente se hornea. ... Los ingredientes más utilizados para los pasteles incluyen harina, azúcar, huevos, mantequilla o aceite o margarina, un líquido y un agente leudante, como bicarbonato de sodio o polvo de hornear.",
     },
     category: {
       _id: "632ac9ef4d87ff2494210ba8",
       name: {
         en: "Cakes",
+        es: "Pasteles",
       },
     },
     stock: 795,
@@ -8048,6 +8873,7 @@ const products = [
         _id: "632ac9e94d87ff2494210ba0",
         name: {
           en: "Biscuits & Cakes",
+          es: "Galletas y Pasteles",
         },
       },
     ],
@@ -8062,14 +8888,17 @@ const products = [
     productId: "",
     title: {
       en: "Dan Cake Pound Cake",
+      es: "Pastel de Libra Dan Cake",
     },
     description: {
       en: "Cake is a form of sweet food made from flour, sugar, and other ingredients, that is usually baked. ... The most commonly used cake ingredients include flour, sugar, eggs, butter or oil or margarine, a liquid, and a leavening agent, such as baking soda or baking powder.",
+      es: "El pastel es un tipo de alimento dulce hecho de harina, azúcar y otros ingredientes, que generalmente se hornea. ... Los ingredientes más utilizados para los pasteles incluyen harina, azúcar, huevos, mantequilla o aceite o margarina, un líquido y un agente leudante, como bicarbonato de sodio o polvo de hornear.",
     },
     category: {
       _id: "632ac9ef4d87ff2494210ba8",
       name: {
         en: "Cakes",
+        es: "Pasteles",
       },
     },
     stock: 630,
@@ -8089,6 +8918,7 @@ const products = [
         _id: "632ac9e94d87ff2494210ba0",
         name: {
           en: "Biscuits & Cakes",
+          es: "Galletas y Pasteles",
         },
       },
     ],
@@ -8104,15 +8934,18 @@ const products = [
     barcode: "",
     productId: "",
     title: {
-      en: "Dan Cake chocolate Muffin",
+      en: "Dan Cake Chocolate Muffin",
+      es: "Muffin de Chocolate Dan Cake",
     },
     description: {
       en: "Cake is a form of sweet food made from flour, sugar, and other ingredients, that is usually baked. ... The most commonly used cake ingredients include flour, sugar, eggs, butter or oil or margarine, a liquid, and a leavening agent, such as baking soda or baking powder.",
+      es: "El pastel es un tipo de alimento dulce hecho de harina, azúcar y otros ingredientes, que generalmente se hornea. ... Los ingredientes más utilizados para los pasteles incluyen harina, azúcar, huevos, mantequilla o aceite o margarina, un líquido y un agente leudante, como bicarbonato de sodio o polvo de hornear.",
     },
     category: {
       _id: "632ac9ef4d87ff2494210ba8",
       name: {
         en: "Cakes",
+        es: "Pasteles",
       },
     },
     stock: 0,
@@ -8132,6 +8965,7 @@ const products = [
         _id: "632ac9e94d87ff2494210ba0",
         name: {
           en: "Biscuits & Cakes",
+          es: "Galletas y Pasteles",
         },
       },
     ],
@@ -8148,14 +8982,17 @@ const products = [
     productId: "",
     title: {
       en: "Dan Cake",
+      es: "Pastel Dan Cake",
     },
     description: {
       en: "Cake is a form of sweet food made from flour, sugar, and other ingredients, that is usually baked. ... The most commonly used cake ingredients include flour, sugar, eggs, butter or oil or margarine, a liquid, and a leavening agent, such as baking soda or baking powder.",
+      es: "El pastel es un tipo de alimento dulce hecho de harina, azúcar y otros ingredientes, que generalmente se hornea. ... Los ingredientes más utilizados para los pasteles incluyen harina, azúcar, huevos, mantequilla o aceite o margarina, un líquido y un agente leudante, como bicarbonato de sodio o polvo de hornear.",
     },
     category: {
       _id: "632ac9ef4d87ff2494210ba8",
       name: {
         en: "Cakes",
+        es: "Pasteles",
       },
     },
     stock: 418,
@@ -8175,6 +9012,7 @@ const products = [
         _id: "632ac9e94d87ff2494210ba0",
         name: {
           en: "Biscuits & Cakes",
+          es: "Galletas y Pasteles",
         },
       },
     ],
@@ -8191,14 +9029,17 @@ const products = [
     productId: "",
     title: {
       en: "Dekko Ovaltine Cookie",
+      es: "Galleta Dekko Ovaltine",
     },
     description: {
       en: "A biscuit is a flour-based baked food product. In most countries, particularly in the Commonwealth and Ireland, biscuits are typically hard, flat and unleavened. They are usually sweet and may be made with sugar, chocolate, icing, jam, ginger or cinnamon. They can also be savoury and similar to crackers.",
+      es: "Una galleta es un producto horneado a base de harina. En la mayoría de los países, particularmente en la Commonwealth e Irlanda, las galletas suelen ser duras, planas y sin levadura. Generalmente son dulces y pueden estar hechas con azúcar, chocolate, glaseado, mermelada, jengibre o canela. También pueden ser saladas y similares a las galletas tipo cracker.",
     },
     category: {
       _id: "632ac9f64d87ff2494210bb0",
       name: {
         en: "Biscuits",
+        es: "Galletas",
       },
     },
     stock: 601,
@@ -8218,6 +9059,7 @@ const products = [
         _id: "632ac9e94d87ff2494210ba0",
         name: {
           en: "Biscuits & Cakes",
+          es: "Galletas y Pasteles",
         },
       },
     ],
@@ -8234,14 +9076,17 @@ const products = [
     productId: "",
     title: {
       en: "Danish Orange Biscuit",
+      es: "Galleta Danesa de Naranja",
     },
     description: {
       en: "A biscuit is a flour-based baked food product. In most countries, particularly in the Commonwealth and Ireland, biscuits are typically hard, flat and unleavened. They are usually sweet and may be made with sugar, chocolate, icing, jam, ginger or cinnamon. They can also be savoury and similar to crackers.",
+      es: "Una galleta es un producto horneado a base de harina. En la mayoría de los países, particularmente en la Commonwealth e Irlanda, las galletas suelen ser duras, planas y sin levadura. Generalmente son dulces y pueden estar hechas con azúcar, chocolate, glaseado, mermelada, jengibre o canela. También pueden ser saladas y similares a las galletas tipo cracker.",
     },
     category: {
       _id: "632ac9f64d87ff2494210bb0",
       name: {
         en: "Biscuits",
+        es: "Galletas",
       },
     },
     stock: 633,
@@ -8261,6 +9106,7 @@ const products = [
         _id: "632ac9e94d87ff2494210ba0",
         name: {
           en: "Biscuits & Cakes",
+          es: "Galletas y Pasteles",
         },
       },
     ],
@@ -8275,14 +9121,17 @@ const products = [
     productId: "",
     title: {
       en: "Bisk Club Cream Biscuit",
+      es: "Galleta Bisk Club de Crema",
     },
     description: {
       en: "A biscuit is a flour-based baked food product. In most countries, particularly in the Commonwealth and Ireland, biscuits are typically hard, flat and unleavened. They are usually sweet and may be made with sugar, chocolate, icing, jam, ginger or cinnamon. They can also be savoury and similar to crackers.",
+      es: "Una galleta es un producto horneado a base de harina. En la mayoría de los países, particularmente en la Commonwealth e Irlanda, las galletas suelen ser duras, planas y sin levadura. Generalmente son dulces y pueden estar hechas con azúcar, chocolate, glaseado, mermelada, jengibre o canela. También pueden ser saladas y similares a las galletas tipo cracker.",
     },
     category: {
       _id: "632ac9f64d87ff2494210bb0",
       name: {
         en: "Biscuits",
+        es: "Galletas",
       },
     },
     stock: 672,
@@ -8302,6 +9151,7 @@ const products = [
         _id: "632ac9e94d87ff2494210ba0",
         name: {
           en: "Biscuits & Cakes",
+          es: "Galletas y Pasteles",
         },
       },
     ],
@@ -8316,14 +9166,17 @@ const products = [
     productId: "",
     title: {
       en: "Bisk Club Masala Flavor",
+      es: "Galleta Bisk Club Sabor Masala",
     },
     description: {
       en: "A biscuit is a flour-based baked food product. In most countries, particularly in the Commonwealth and Ireland, biscuits are typically hard, flat and unleavened. They are usually sweet and may be made with sugar, chocolate, icing, jam, ginger or cinnamon. They can also be savoury and similar to crackers.",
+      es: "Una galleta es un producto horneado a base de harina. En la mayoría de los países, particularmente en la Commonwealth e Irlanda, las galletas suelen ser duras, planas y sin levadura. Generalmente son dulces y pueden estar hechas con azúcar, chocolate, glaseado, mermelada, jengibre o canela. También pueden ser saladas y similares a las galletas tipo cracker.",
     },
     category: {
       _id: "632ac9f64d87ff2494210bb0",
       name: {
         en: "Biscuits",
+        es: "Galletas",
       },
     },
     stock: 432,
@@ -8343,6 +9196,7 @@ const products = [
         _id: "632ac9e94d87ff2494210ba0",
         name: {
           en: "Biscuits & Cakes",
+          es: "Galletas y Pasteles",
         },
       },
     ],
@@ -8357,14 +9211,17 @@ const products = [
     productId: "",
     title: {
       en: "Fun Milk Wafer Biscuit",
+      es: "Galleta Wáfer de Leche Fun",
     },
     description: {
       en: "A biscuit is a flour-based baked food product. In most countries, particularly in the Commonwealth and Ireland, biscuits are typically hard, flat and unleavened. They are usually sweet and may be made with sugar, chocolate, icing, jam, ginger or cinnamon. They can also be savoury and similar to crackers.",
+      es: "Una galleta es un producto horneado a base de harina. En la mayoría de los países, particularmente en la Commonwealth e Irlanda, las galletas suelen ser duras, planas y sin levadura. Generalmente son dulces y pueden estar hechas con azúcar, chocolate, glaseado, mermelada, jengibre o canela. También pueden ser saladas y similares a las galletas tipo cracker.",
     },
     category: {
       _id: "632ac9f64d87ff2494210bb0",
       name: {
         en: "Biscuits",
+        es: "Galletas",
       },
     },
     stock: 184,
@@ -8384,6 +9241,7 @@ const products = [
         _id: "62cfad52484d89068aa7a81f",
         name: {
           en: "Pickles & Condiments",
+          es: "Pickles y Condimentos",
         },
       },
     ],
@@ -8398,14 +9256,17 @@ const products = [
     productId: "",
     title: {
       en: "Life Tomato Ketchup",
+      es: "Ketchup de Tomate Life",
     },
     description: {
-      en: "sauce, liquid or semiliquid mixture that is added to a food as it cooks or that is served with it. sauces provide flavour, moisture, and a contrast in texture and colour. They may also serve as a medium in which food is contained, for example, the velouté sauce of creamed chicken.",
+      en: "Sauce, liquid or semiliquid mixture that is added to a food as it cooks or that is served with it. Sauces provide flavour, moisture, and a contrast in texture and colour. They may also serve as a medium in which food is contained, for example, the velouté sauce of creamed chicken.",
+      es: "Salsa, mezcla líquida o semilíquida que se añade a un alimento mientras se cocina o se sirve con él. Las salsas proporcionan sabor, humedad y un contraste en textura y color. También pueden servir como medio en el que se contiene el alimento, por ejemplo, la salsa velouté del pollo cremoso.",
     },
     category: {
       _id: "62cfad52484d89068aa7a81f",
       name: {
         en: "Pickles & Condiments",
+        es: "Pickles y Condimentos",
       },
     },
     stock: 105,
@@ -8425,6 +9286,7 @@ const products = [
         _id: "62cfad52484d89068aa7a81f",
         name: {
           en: "Pickles & Condiments",
+          es: "Pickles y Condimentos",
         },
       },
     ],
@@ -8439,14 +9301,17 @@ const products = [
     productId: "",
     title: {
       en: "Life Soya Sauce",
+      es: "Salsa de Soya Life",
     },
     description: {
-      en: "sauce, liquid or semiliquid mixture that is added to a food as it cooks or that is served with it. sauces provide flavour, moisture, and a contrast in texture and colour. They may also serve as a medium in which food is contained, for example, the velouté sauce of creamed chicken.",
+      en: "Sauce, liquid or semiliquid mixture that is added to a food as it cooks or that is served with it. Sauces provide flavour, moisture, and a contrast in texture and colour. They may also serve as a medium in which food is contained, for example, the velouté sauce of creamed chicken.",
+      es: "Salsa, mezcla líquida o semilíquida que se añade a un alimento mientras se cocina o se sirve con él. Las salsas proporcionan sabor, humedad y un contraste en textura y color. También pueden servir como medio en el que se contiene el alimento, por ejemplo, la salsa velouté del pollo cremoso.",
     },
     category: {
       _id: "62cfad52484d89068aa7a81f",
       name: {
         en: "Pickles & Condiments",
+        es: "Pickles y Condimentos",
       },
     },
     stock: 222,
@@ -8466,6 +9331,7 @@ const products = [
         _id: "62cfad52484d89068aa7a81f",
         name: {
           en: "Pickles & Condiments",
+          es: "Pickles y Condimentos",
         },
       },
     ],
@@ -8482,14 +9348,17 @@ const products = [
     productId: "",
     title: {
       en: "Life Dark Soya Sauce",
+      es: "Salsa de Soya Oscura Life",
     },
     description: {
-      en: "sauce, liquid or semiliquid mixture that is added to a food as it cooks or that is served with it. sauces provide flavour, moisture, and a contrast in texture and colour. They may also serve as a medium in which food is contained, for example, the velouté sauce of creamed chicken.",
+      en: "Sauce, liquid or semiliquid mixture that is added to a food as it cooks or that is served with it. Sauces provide flavour, moisture, and a contrast in texture and colour. They may also serve as a medium in which food is contained, for example, the velouté sauce of creamed chicken.",
+      es: "Salsa, mezcla líquida o semilíquida que se añade a un alimento mientras se cocina o se sirve con él. Las salsas proporcionan sabor, humedad y un contraste en textura y color. También pueden servir como medio en el que se contiene el alimento, por ejemplo, la salsa velouté del pollo cremoso.",
     },
     category: {
       _id: "62cfad52484d89068aa7a81f",
       name: {
         en: "Pickles & Condiments",
+        es: "Pickles y Condimentos",
       },
     },
     stock: 43,
@@ -8509,6 +9378,7 @@ const products = [
         _id: "62cfad52484d89068aa7a81f",
         name: {
           en: "Pickles & Condiments",
+          es: "Pickles y Condimentos",
         },
       },
     ],
@@ -8523,14 +9393,17 @@ const products = [
     productId: "",
     title: {
       en: "Kikkoman Soya Sauce",
+      es: "Salsa de Soya Kikkoman",
     },
     description: {
-      en: "sauce, liquid or semiliquid mixture that is added to a food as it cooks or that is served with it. sauces provide flavour, moisture, and a contrast in texture and colour. They may also serve as a medium in which food is contained, for example, the velouté sauce of creamed chicken.",
+      en: "Sauce, liquid or semiliquid mixture that is added to a food as it cooks or that is served with it. Sauces provide flavour, moisture, and a contrast in texture and colour. They may also serve as a medium in which food is contained, for example, the velouté sauce of creamed chicken.",
+      es: "Salsa, mezcla líquida o semilíquida que se añade a un alimento mientras se cocina o se sirve con él. Las salsas proporcionan sabor, humedad y un contraste en textura y color. También pueden servir como medio en el que se contiene el alimento, por ejemplo, la salsa velouté del pollo cremoso.",
     },
     category: {
       _id: "62cfad52484d89068aa7a81f",
       name: {
         en: "Pickles & Condiments",
+        es: "Pickles y Condimentos",
       },
     },
     stock: 458,
@@ -8550,6 +9423,7 @@ const products = [
         _id: "62cfad52484d89068aa7a81f",
         name: {
           en: "Pickles & Condiments",
+          es: "Pickles y Condimentos",
         },
       },
     ],
@@ -8566,14 +9440,17 @@ const products = [
     productId: "",
     title: {
       en: "Calypso Sauce",
+      es: "Salsa Calypso",
     },
     description: {
-      en: "sauce, liquid or semiliquid mixture that is added to a food as it cooks or that is served with it. sauces provide flavour, moisture, and a contrast in texture and colour. They may also serve as a medium in which food is contained, for example, the velouté sauce of creamed chicken.",
+      en: "Sauce, liquid or semiliquid mixture that is added to a food as it cooks or that is served with it. Sauces provide flavour, moisture, and a contrast in texture and colour. They may also serve as a medium in which food is contained, for example, the velouté sauce of creamed chicken.",
+      es: "Salsa, mezcla líquida o semilíquida que se añade a un alimento mientras se cocina o se sirve con él. Las salsas proporcionan sabor, humedad y un contraste en textura y color. También pueden servir como medio en el que se contiene el alimento, por ejemplo, la salsa velouté del pollo cremoso.",
     },
     category: {
       _id: "62cfad52484d89068aa7a81f",
       name: {
         en: "Pickles & Condiments",
+        es: "Pickles y Condimentos",
       },
     },
     stock: 463,
@@ -8593,6 +9470,7 @@ const products = [
         _id: "62cfad52484d89068aa7a81f",
         name: {
           en: "Pickles & Condiments",
+          es: "Pickles y Condimentos",
         },
       },
     ],
@@ -8608,15 +9486,18 @@ const products = [
     barcode: "",
     productId: "",
     title: {
-      en: "Heinz apple Cider Vinegar",
+      en: "Heinz Apple Cider Vinegar",
+      es: "Vinagre de Sidra de Manzana Heinz",
     },
     description: {
-      en: "The acetic acid in vinegar or the lactic acid produced by brine gives the pickle its salty, sour taste. ... bread-and-butter pickles, for example, have a distinctly sweet taste because sugar and other sweeteners are added to the brine. Like tomatoes, cucumbers (and thus, pickles) are technically fruits.",
+      en: "The acetic acid in vinegar or the lactic acid produced by brine gives the pickle its salty, sour taste. Bread-and-butter pickles, for example, have a distinctly sweet taste because sugar and other sweeteners are added to the brine. Like tomatoes, cucumbers (and thus, pickles) are technically fruits.",
+      es: "El ácido acético del vinagre o el ácido láctico producido por la salmuera le da al encurtido su sabor salado y ácido. Por ejemplo, los encurtidos de pan y mantequilla tienen un sabor claramente dulce porque se les añade azúcar y otros edulcorantes a la salmuera. Al igual que los tomates, los pepinos (y por lo tanto los encurtidos) son técnicamente frutas.",
     },
     category: {
       _id: "62cfad52484d89068aa7a81f",
       name: {
         en: "Pickles & Condiments",
+        es: "Pickles y Condimentos",
       },
     },
     stock: 723,
@@ -8636,6 +9517,7 @@ const products = [
         _id: "62cfad52484d89068aa7a81f",
         name: {
           en: "Pickles & Condiments",
+          es: "Pickles y Condimentos",
         },
       },
     ],
@@ -8651,15 +9533,18 @@ const products = [
     barcode: "",
     productId: "",
     title: {
-      en: "Discovery apple Cider Vinegar",
+      en: "Discovery Apple Cider Vinegar",
+      es: "Vinagre de Sidra de Manzana Discovery",
     },
     description: {
-      en: "The acetic acid in vinegar or the lactic acid produced by brine gives the pickle its salty, sour taste. ... bread-and-butter pickles, for example, have a distinctly sweet taste because sugar and other sweeteners are added to the brine. Like tomatoes, cucumbers (and thus, pickles) are technically fruits.",
+      en: "The acetic acid in vinegar or the lactic acid produced by brine gives the pickle its salty, sour taste. Bread-and-butter pickles, for example, have a distinctly sweet taste because sugar and other sweeteners are added to the brine. Like tomatoes, cucumbers (and thus, pickles) are technically fruits.",
+      es: "El ácido acético del vinagre o el ácido láctico producido por la salmuera le da al encurtido su sabor salado y ácido. Por ejemplo, los encurtidos de pan y mantequilla tienen un sabor claramente dulce porque se les añade azúcar y otros edulcorantes a la salmuera. Al igual que los tomates, los pepinos (y por lo tanto los encurtidos) son técnicamente frutas.",
     },
     category: {
       _id: "62cfad52484d89068aa7a81f",
       name: {
         en: "Pickles & Condiments",
+        es: "Pickles y Condimentos",
       },
     },
     stock: 472,
@@ -8679,6 +9564,7 @@ const products = [
         _id: "62cfad52484d89068aa7a81f",
         name: {
           en: "Pickles & Condiments",
+          es: "Pickles y Condimentos",
         },
       },
     ],
@@ -8693,14 +9579,17 @@ const products = [
     productId: "",
     title: {
       en: "Ahmed Garlic Pickle",
+      es: "Encurtido de Ajo Ahmed",
     },
     description: {
-      en: "The acetic acid in vinegar or the lactic acid produced by brine gives the pickle its salty, sour taste. ... bread-and-butter pickles, for example, have a distinctly sweet taste because sugar and other sweeteners are added to the brine. Like tomatoes, cucumbers (and thus, pickles) are technically fruits.",
+      en: "The acetic acid in vinegar or the lactic acid produced by brine gives the pickle its salty, sour taste. Bread-and-butter pickles, for example, have a distinctly sweet taste because sugar and other sweeteners are added to the brine. Like tomatoes, cucumbers (and thus, pickles) are technically fruits.",
+      es: "El ácido acético del vinagre o el ácido láctico producido por la salmuera le da al encurtido su sabor salado y ácido. Por ejemplo, los encurtidos de pan y mantequilla tienen un sabor claramente dulce porque se les añade azúcar y otros edulcorantes a la salmuera. Al igual que los tomates, los pepinos (y por lo tanto los encurtidos) son técnicamente frutas.",
     },
     category: {
       _id: "62cfad52484d89068aa7a81f",
       name: {
         en: "Pickles & Condiments",
+        es: "Pickles y Condimentos",
       },
     },
     stock: 569,
@@ -8720,6 +9609,7 @@ const products = [
         _id: "62cfad52484d89068aa7a81f",
         name: {
           en: "Pickles & Condiments",
+          es: "Pickles y Condimentos",
         },
       },
     ],
@@ -8736,14 +9626,17 @@ const products = [
     productId: "",
     title: {
       en: "American apple Cider Vinegar",
+      es: "Vinagre de Sidra de Manzana Americano",
     },
     description: {
-      en: "The acetic acid in vinegar or the lactic acid produced by brine gives the pickle its salty, sour taste. ... bread-and-butter pickles, for example, have a distinctly sweet taste because sugar and other sweeteners are added to the brine. Like tomatoes, cucumbers (and thus, pickles) are technically fruits.",
+      en: "The acetic acid in vinegar or the lactic acid produced by brine gives the pickle its salty, sour taste. Bread-and-butter pickles, for example, have a distinctly sweet taste because sugar and other sweeteners are added to the brine. Like tomatoes, cucumbers (and thus, pickles) are technically fruits.",
+      es: "El ácido acético del vinagre o el ácido láctico producido por la salmuera le da al encurtido su sabor salado y ácido. Por ejemplo, los encurtidos de pan y mantequilla tienen un sabor claramente dulce porque se les añade azúcar y otros edulcorantes a la salmuera. Al igual que los tomates, los pepinos (y por lo tanto los encurtidos) son técnicamente frutas.",
     },
     category: {
       _id: "62cfad52484d89068aa7a81f",
       name: {
         en: "Pickles & Condiments",
+        es: "Pickles y Condimentos",
       },
     },
     stock: 686,
@@ -8763,6 +9656,7 @@ const products = [
         _id: "62cfad52484d89068aa7a81f",
         name: {
           en: "Pickles & Condiments",
+          es: "Pickles y Condimentos",
         },
       },
     ],
@@ -8777,14 +9671,17 @@ const products = [
     productId: "",
     title: {
       en: "Ahmed Mango Pickle",
+      es: "Encurtido de Mango Ahmed",
     },
     description: {
-      en: "The acetic acid in vinegar or the lactic acid produced by brine gives the pickle its salty, sour taste. ... bread-and-butter pickles, for example, have a distinctly sweet taste because sugar and other sweeteners are added to the brine. Like tomatoes, cucumbers (and thus, pickles) are technically fruits.",
+      en: "The acetic acid in vinegar or the lactic acid produced by brine gives the pickle its salty, sour taste. Bread-and-butter pickles, for example, have a distinctly sweet taste because sugar and other sweeteners are added to the brine. Like tomatoes, cucumbers (and thus, pickles) are technically fruits.",
+      es: "El ácido acético del vinagre o el ácido láctico producido por la salmuera le da al encurtido su sabor salado y ácido. Por ejemplo, los encurtidos de pan y mantequilla tienen un sabor claramente dulce porque se les añade azúcar y otros edulcorantes a la salmuera. Al igual que los tomates, los pepinos (y por lo tanto los encurtidos) son técnicamente frutas.",
     },
     category: {
       _id: "62cfad52484d89068aa7a81f",
       name: {
         en: "Pickles & Condiments",
+        es: "Pickles y Condimentos",
       },
     },
     stock: 716,
@@ -8804,18 +9701,21 @@ const products = [
         _id: "632aae414d87ff2494210945",
         name: {
           en: "Breakfast",
+          es: "Desayuno",
         },
       },
       {
         _id: "632aae7b4d87ff2494210967",
         name: {
           en: "Bread",
+          es: "Pan",
         },
       },
       {
         _id: "632aae624d87ff2494210951",
         name: {
           en: "Cereal",
+          es: "Cereal",
         },
       },
     ],
@@ -8829,15 +9729,18 @@ const products = [
     barcode: "",
     productId: "",
     title: {
-      en: "Pita bread",
+      en: "Pita Bread",
+      es: "Pan Pita",
     },
     description: {
       en: "The definition of a breakfast food is a food that is eaten primarily for the first meal of the day commonly including: cereal, toast, eggs, pancakes, waffles, pastries, sausage or bacon. An example of a breakfast food is oatmeal. An example of a breakfast food is french toast with scrambled eggs.",
+      es: "La definición de un alimento para el desayuno es un alimento que se consume principalmente en la primera comida del día, incluyendo comúnmente: cereal, tostadas, huevos, panqueques, waffles, pasteles, salchicha o tocino. Un ejemplo de alimento para el desayuno es la avena. Otro ejemplo es el pan francés con huevos revueltos.",
     },
     category: {
       _id: "632aae7b4d87ff2494210967",
       name: {
         en: "Bread",
+        es: "Pan",
       },
     },
     stock: 417,
@@ -8857,18 +9760,21 @@ const products = [
         _id: "632aae414d87ff2494210945",
         name: {
           en: "Breakfast",
+          es: "Desayuno",
         },
       },
       {
         _id: "632aae7b4d87ff2494210967",
         name: {
           en: "Bread",
+          es: "Pan",
         },
       },
       {
         _id: "632aae624d87ff2494210951",
         name: {
           en: "Cereal",
+          es: "Cereal",
         },
       },
     ],
@@ -8882,15 +9788,18 @@ const products = [
     barcode: "",
     productId: "",
     title: {
-      en: "632aae7b4d87ff2494210967",
+      en: "Breakfast Bread",
+      es: "Pan de Desayuno",
     },
     description: {
       en: "The definition of a breakfast food is a food that is eaten primarily for the first meal of the day commonly including: cereal, toast, eggs, pancakes, waffles, pastries, sausage or bacon. An example of a breakfast food is oatmeal. An example of a breakfast food is french toast with scrambled eggs.",
+      es: "La definición de un alimento para el desayuno es un alimento que se consume principalmente en la primera comida del día, incluyendo comúnmente: cereal, tostadas, huevos, panqueques, waffles, pasteles, salchicha o tocino. Un ejemplo de alimento para el desayuno es la avena. Otro ejemplo es el pan francés con huevos revueltos.",
     },
     category: {
       _id: "632aae7b4d87ff2494210967",
       name: {
         en: "Bread",
+        es: "Pan",
       },
     },
     stock: 722,
@@ -8910,18 +9819,21 @@ const products = [
         _id: "632aae414d87ff2494210945",
         name: {
           en: "Breakfast",
+          es: "Desayuno",
         },
       },
       {
         _id: "632aae7b4d87ff2494210967",
         name: {
           en: "Bread",
+          es: "Pan",
         },
       },
       {
         _id: "632aae624d87ff2494210951",
         name: {
           en: "Cereal",
+          es: "Cereal",
         },
       },
     ],
@@ -8935,15 +9847,18 @@ const products = [
     barcode: "",
     productId: "",
     title: {
-      en: "Pita bread",
+      en: "Pita Bread",
+      es: "Pan Pita",
     },
     description: {
       en: "The definition of a breakfast food is a food that is eaten primarily for the first meal of the day commonly including: cereal, toast, eggs, pancakes, waffles, pastries, sausage or bacon. An example of a breakfast food is oatmeal. An example of a breakfast food is french toast with scrambled eggs.",
+      es: "La definición de un alimento para el desayuno es un alimento que se consume principalmente en la primera comida del día, incluyendo comúnmente: cereal, tostadas, huevos, panqueques, waffles, pasteles, salchicha o tocino. Un ejemplo de alimento para el desayuno es la avena. Otro ejemplo es el pan francés con huevos revueltos.",
     },
     category: {
       _id: "632aae7b4d87ff2494210967",
       name: {
         en: "Bread",
+        es: "Pan",
       },
     },
     stock: 84,
@@ -8963,18 +9878,21 @@ const products = [
         _id: "632aae414d87ff2494210945",
         name: {
           en: "Breakfast",
+          es: "Desayuno",
         },
       },
       {
         _id: "632aae7b4d87ff2494210967",
         name: {
           en: "Bread",
+          es: "Pan",
         },
       },
       {
         _id: "632aae624d87ff2494210951",
         name: {
           en: "Cereal",
+          es: "Cereal",
         },
       },
     ],
@@ -8990,15 +9908,18 @@ const products = [
     barcode: "",
     productId: "",
     title: {
-      en: "Wholemeal bread",
+      en: "Wholemeal Bread",
+      es: "Pan Integral",
     },
     description: {
       en: "The definition of a breakfast food is a food that is eaten primarily for the first meal of the day commonly including: cereal, toast, eggs, pancakes, waffles, pastries, sausage or bacon. An example of a breakfast food is oatmeal. An example of a breakfast food is french toast with scrambled eggs.",
+      es: "La definición de un alimento para el desayuno es un alimento que se consume principalmente en la primera comida del día, incluyendo comúnmente: cereal, tostadas, huevos, panqueques, waffles, pasteles, salchicha o tocino. Un ejemplo de alimento para el desayuno es la avena. Otro ejemplo es el pan francés con huevos revueltos.",
     },
     category: {
       _id: "632aae7b4d87ff2494210967",
       name: {
         en: "Bread",
+        es: "Pan",
       },
     },
     stock: 408,
@@ -9018,18 +9939,21 @@ const products = [
         _id: "632aae414d87ff2494210945",
         name: {
           en: "Breakfast",
+          es: "Desayuno",
         },
       },
       {
         _id: "632aae7b4d87ff2494210967",
         name: {
           en: "Bread",
+          es: "Pan",
         },
       },
       {
         _id: "632aae624d87ff2494210951",
         name: {
           en: "Cereal",
+          es: "Cereal",
         },
       },
     ],
@@ -9044,14 +9968,17 @@ const products = [
     productId: "",
     title: {
       en: "Quaker Oats Jar",
+      es: "Frasco de Avena Quaker",
     },
     description: {
       en: "The definition of a breakfast food is a food that is eaten primarily for the first meal of the day commonly including: cereal, toast, eggs, pancakes, waffles, pastries, sausage or bacon. An example of a breakfast food is oatmeal. An example of a breakfast food is french toast with scrambled eggs.",
+      es: "La definición de un alimento para el desayuno es un alimento que se consume principalmente en la primera comida del día, incluyendo comúnmente: cereal, tostadas, huevos, panqueques, waffles, pasteles, salchicha o tocino. Un ejemplo de alimento para el desayuno es la avena. Otro ejemplo es el pan francés con huevos revueltos.",
     },
     category: {
       _id: "632aae624d87ff2494210951",
       name: {
         en: "Cereal",
+        es: "Cereal",
       },
     },
     stock: 352,
@@ -9071,18 +9998,21 @@ const products = [
         _id: "632aae414d87ff2494210945",
         name: {
           en: "Breakfast",
+          es: "Desayuno",
         },
       },
       {
         _id: "632aae7b4d87ff2494210967",
         name: {
           en: "Bread",
+          es: "Pan",
         },
       },
       {
         _id: "632aae624d87ff2494210951",
         name: {
           en: "Cereal",
+          es: "Cereal",
         },
       },
     ],
@@ -9098,15 +10028,18 @@ const products = [
     barcode: "",
     productId: "",
     title: {
-      en: "breakfast cereal Pouch",
+      en: "Breakfast Cereal Pouch",
+      es: "Bolsa de Cereal para Desayuno",
     },
     description: {
       en: "The definition of a breakfast food is a food that is eaten primarily for the first meal of the day commonly including: cereal, toast, eggs, pancakes, waffles, pastries, sausage or bacon. An example of a breakfast food is oatmeal. An example of a breakfast food is french toast with scrambled eggs.",
+      es: "La definición de un alimento para el desayuno es un alimento que se consume principalmente en la primera comida del día, incluyendo comúnmente: cereal, tostadas, huevos, panqueques, waffles, pasteles, salchicha o tocino. Un ejemplo de alimento para el desayuno es la avena. Otro ejemplo es el pan francés con huevos revueltos.",
     },
     category: {
       _id: "632aae624d87ff2494210951",
       name: {
         en: "Cereal",
+        es: "Cereal",
       },
     },
     stock: 307,
@@ -9126,18 +10059,21 @@ const products = [
         _id: "632aae414d87ff2494210945",
         name: {
           en: "Breakfast",
+          es: "Desayuno",
         },
       },
       {
         _id: "632aae7b4d87ff2494210967",
         name: {
           en: "Bread",
+          es: "Pan",
         },
       },
       {
         _id: "632aae624d87ff2494210951",
         name: {
           en: "Cereal",
+          es: "Cereal",
         },
       },
     ],
@@ -9153,15 +10089,18 @@ const products = [
     barcode: "",
     productId: "",
     title: {
-      en: "honey breakfast cereal",
+      en: "Honey Breakfast Cereal",
+      es: "Cereal de Desayuno con Miel",
     },
     description: {
       en: "The definition of a breakfast food is a food that is eaten primarily for the first meal of the day commonly including: cereal, toast, eggs, pancakes, waffles, pastries, sausage or bacon. An example of a breakfast food is oatmeal. An example of a breakfast food is french toast with scrambled eggs.",
+      es: "La definición de un alimento para el desayuno es un alimento que se consume principalmente en la primera comida del día, incluyendo comúnmente: cereal, tostadas, huevos, panqueques, waffles, pasteles, salchicha o tocino. Un ejemplo de alimento para el desayuno es la avena. Otro ejemplo es el pan francés con huevos revueltos.",
     },
     category: {
       _id: "632aae624d87ff2494210951",
       name: {
         en: "Cereal",
+        es: "Cereal",
       },
     },
     stock: 372,
@@ -9181,18 +10120,21 @@ const products = [
         _id: "632aae414d87ff2494210945",
         name: {
           en: "Breakfast",
+          es: "Desayuno",
         },
       },
       {
         _id: "632aae7b4d87ff2494210967",
         name: {
           en: "Bread",
+          es: "Pan",
         },
       },
       {
         _id: "632aae624d87ff2494210951",
         name: {
           en: "Cereal",
+          es: "Cereal",
         },
       },
     ],
@@ -9208,15 +10150,18 @@ const products = [
     barcode: "",
     productId: "",
     title: {
-      en: "chocolate breakfast cereal",
+      en: "Chocolate Breakfast Cereal",
+      es: "Cereal de Desayuno con Chocolate",
     },
     description: {
       en: "The definition of a breakfast food is a food that is eaten primarily for the first meal of the day commonly including: cereal, toast, eggs, pancakes, waffles, pastries, sausage or bacon. An example of a breakfast food is oatmeal. An example of a breakfast food is french toast with scrambled eggs.",
+      es: "La definición de un alimento para el desayuno es un alimento que se consume principalmente en la primera comida del día, incluyendo comúnmente: cereal, tostadas, huevos, panqueques, waffles, pasteles, salchicha o tocino. Un ejemplo de alimento para el desayuno es la avena. Otro ejemplo es el pan francés con huevos revueltos.",
     },
     category: {
       _id: "632aae624d87ff2494210951",
       name: {
         en: "Cereal",
+        es: "Cereal",
       },
     },
     stock: 370,
@@ -9236,18 +10181,21 @@ const products = [
         _id: "632aae414d87ff2494210945",
         name: {
           en: "Breakfast",
+          es: "Desayuno",
         },
       },
       {
         _id: "632aae7b4d87ff2494210967",
         name: {
           en: "Bread",
+          es: "Pan",
         },
       },
       {
         _id: "632aae624d87ff2494210951",
         name: {
           en: "Cereal",
+          es: "Cereal",
         },
       },
     ],
@@ -9263,15 +10211,18 @@ const products = [
     barcode: "",
     productId: "",
     title: {
-      en: "Flakes breakfast cereal",
+      en: "Flakes Breakfast Cereal",
+      es: "Cereal de Desayuno en Copos",
     },
     description: {
       en: "The definition of a breakfast food is a food that is eaten primarily for the first meal of the day commonly including: cereal, toast, eggs, pancakes, waffles, pastries, sausage or bacon. An example of a breakfast food is oatmeal. An example of a breakfast food is french toast with scrambled eggs.",
+      es: "La definición de un alimento para el desayuno es un alimento que se consume principalmente en la primera comida del día, incluyendo comúnmente: cereal, tostadas, huevos, panqueques, waffles, pasteles, salchicha o tocino. Un ejemplo de alimento para el desayuno es la avena. Otro ejemplo es el pan francés con huevos revueltos.",
     },
     category: {
       _id: "632aae624d87ff2494210951",
       name: {
         en: "Cereal",
+        es: "Cereal",
       },
     },
     stock: 415,
@@ -9291,24 +10242,28 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
     ],
@@ -9323,14 +10278,17 @@ const products = [
     productId: "",
     title: {
       en: "Aseel Vegetable Ghee",
+      es: "Ghee Vegetal Aseel",
     },
     description: {
-      en: "Butter, a yellow-to-white solid emulsion of fat globules, water, and inorganic salts produced by churning the cream from cows'milk. ... Butter is a high-energy food, containing approximately 715 calories per 100 grams. It has a high content of butterfat, or milk fat (at least 80 percent), but is low in protein.",
+      en: "Butter, a yellow-to-white solid emulsion of fat globules, water, and inorganic salts produced by churning the cream from cows' milk. ... Butter is a high-energy food, containing approximately 715 calories per 100 grams. It has a high content of butterfat, or milk fat (at least 80 percent), but is low in protein.",
+      es: "La mantequilla es una emulsión sólida de color amarillo a blanco de glóbulos de grasa, agua y sales inorgánicas producida al batir la crema de la leche de vaca. ... La mantequilla es un alimento con alta energía, conteniendo aproximadamente 715 calorías por cada 100 gramos. Tiene un alto contenido de grasa de mantequilla, o grasa láctea (al menos 80 por ciento), pero es baja en proteínas.",
     },
     category: {
       _id: "632ab16c4d87ff2494210a44",
       name: {
         en: "Butter & Ghee",
+        es: "Mantequilla y Ghee",
       },
     },
     stock: 390,
@@ -9347,27 +10305,31 @@ const products = [
     },
     categories: [
       {
-        _id: "632ab14a4d87ff2494210a29",
+        _id: "632ab14c4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
     ],
@@ -9382,14 +10344,17 @@ const products = [
     productId: "",
     title: {
       en: "Ultra Ghee",
+      es: "Ghee Ultra",
     },
     description: {
-      en: "Butter, a yellow-to-white solid emulsion of fat globules, water, and inorganic salts produced by churning the cream from cows'milk. ... Butter is a high-energy food, containing approximately 715 calories per 100 grams. It has a high content of butterfat, or milk fat (at least 80 percent), but is low in protein.",
+      en: "Butter, a yellow-to-white solid emulsion of fat globules, water, and inorganic salts produced by churning the cream from cows' milk. ... Butter is a high-energy food, containing approximately 715 calories per 100 grams. It has a high content of butterfat, or milk fat (at least 80 percent), but is low in protein.",
+      es: "La mantequilla es una emulsión sólida de color amarillo a blanco de glóbulos de grasa, agua y sales inorgánicas producida al batir la crema de la leche de vaca. ... La mantequilla es un alimento con alta energía, conteniendo aproximadamente 715 calorías por cada 100 gramos. Tiene un alto contenido de grasa de mantequilla, o grasa láctea (al menos 80 por ciento), pero es baja en proteínas.",
     },
     category: {
       _id: "632ab16c4d87ff2494210a44",
       name: {
         en: "Butter & Ghee",
+        es: "Mantequilla y Ghee",
       },
     },
     stock: 264,
@@ -9409,24 +10374,28 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
     ],
@@ -9441,14 +10410,17 @@ const products = [
     productId: "",
     title: {
       en: "Pran Premium Ghee",
+      es: "Ghee Premium Pran",
     },
     description: {
-      en: "Butter, a yellow-to-white solid emulsion of fat globules, water, and inorganic salts produced by churning the cream from cows'milk. ... Butter is a high-energy food, containing approximately 715 calories per 100 grams. It has a high content of butterfat, or milk fat (at least 80 percent), but is low in protein.",
+      en: "Butter, a yellow-to-white solid emulsion of fat globules, water, and inorganic salts produced by churning the cream from cows' milk. ... Butter is a high-energy food, containing approximately 715 calories per 100 grams. It has a high content of butterfat, or milk fat (at least 80 percent), but is low in protein.",
+      es: "La mantequilla es una emulsión sólida de color amarillo a blanco de glóbulos de grasa, agua y sales inorgánicas producida al batir la crema de la leche de vaca. ... La mantequilla es un alimento con alta energía, conteniendo aproximadamente 715 calorías por cada 100 gramos. Tiene un alto contenido de grasa de mantequilla, o grasa láctea (al menos 80 por ciento), pero es baja en proteínas.",
     },
     category: {
       _id: "632ab16c4d87ff2494210a44",
       name: {
         en: "Butter & Ghee",
+        es: "Mantequilla y Ghee",
       },
     },
     stock: 258,
@@ -9468,24 +10440,28 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
     ],
@@ -9500,14 +10476,17 @@ const products = [
     productId: "",
     title: {
       en: "Aarong Ghee",
+      es: "Ghee Aarong",
     },
     description: {
-      en: "Butter, a yellow-to-white solid emulsion of fat globules, water, and inorganic salts produced by churning the cream from cows'milk. ... Butter is a high-energy food, containing approximately 715 calories per 100 grams. It has a high content of butterfat, or milk fat (at least 80 percent), but is low in protein.",
+      en: "Butter, a yellow-to-white solid emulsion of fat globules, water, and inorganic salts produced by churning the cream from cows' milk. ... Butter is a high-energy food, containing approximately 715 calories per 100 grams. It has a high content of butterfat, or milk fat (at least 80 percent), but is low in protein.",
+      es: "La mantequilla es una emulsión sólida de color amarillo a blanco de glóbulos de grasa, agua y sales inorgánicas producida al batir la crema de la leche de vaca. ... La mantequilla es un alimento con alta energía, conteniendo aproximadamente 715 calorías por cada 100 gramos. Tiene un alto contenido de grasa de mantequilla, o grasa láctea (al menos 80 por ciento), pero es baja en proteínas.",
     },
     category: {
       _id: "632ab16c4d87ff2494210a44",
       name: {
         en: "Butter & Ghee",
+        es: "Mantequilla y Ghee",
       },
     },
     stock: 728,
@@ -9527,24 +10506,28 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
     ],
@@ -9559,14 +10542,17 @@ const products = [
     productId: "",
     title: {
       en: "Aarong dairy Ghee",
+      es: "Ghee lácteo Aarong",
     },
     description: {
-      en: "Butter, a yellow-to-white solid emulsion of fat globules, water, and inorganic salts produced by churning the cream from cows'milk. ... Butter is a high-energy food, containing approximately 715 calories per 100 grams. It has a high content of butterfat, or milk fat (at least 80 percent), but is low in protein.",
+      en: "Butter, a yellow-to-white solid emulsion of fat globules, water, and inorganic salts produced by churning the cream from cows' milk. ... Butter is a high-energy food, containing approximately 715 calories per 100 grams. It has a high content of butterfat, or milk fat (at least 80 percent), but is low in protein.",
+      es: "La mantequilla es una emulsión sólida de color amarillo a blanco de glóbulos de grasa, agua y sales inorgánicas producida al batir la crema de la leche de vaca. ... La mantequilla es un alimento con alta energía, conteniendo aproximadamente 715 calorías por cada 100 gramos. Tiene un alto contenido de grasa de mantequilla, o grasa láctea (al menos 80 por ciento), pero es baja en proteínas.",
     },
     category: {
       _id: "632ab16c4d87ff2494210a44",
       name: {
         en: "Butter & Ghee",
+        es: "Mantequilla y Ghee",
       },
     },
     stock: 94,
@@ -9586,24 +10572,28 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
     ],
@@ -9618,14 +10608,17 @@ const products = [
     productId: "",
     title: {
       en: "Shurfine Whole Milk",
+      es: "Leche entera Shurfine",
     },
     description: {
       en: "a room, building, or establishment where milk is kept and butter or cheese is made. 2a : the department of farming or of a farm that is concerned with the production of milk, butter, and cheese. b : a farm devoted to such production.",
+      es: "Un lugar, edificio o establecimiento donde se conserva la leche y se produce mantequilla o queso. 2a: el departamento de agricultura o de una granja que se ocupa de la producción de leche, mantequilla y queso. b: una granja dedicada a dicha producción.",
     },
     category: {
       _id: "632ab1584d87ff2494210a31",
       name: {
         en: "Dairy",
+        es: "Lácteos",
       },
     },
     stock: 771,
@@ -9645,24 +10638,28 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
     ],
@@ -9679,14 +10676,17 @@ const products = [
     productId: "",
     title: {
       en: "Shurfine Vanilla Yogurt",
+      es: "Yogur de Vainilla Shurfine",
     },
     description: {
       en: "a room, building, or establishment where milk is kept and butter or cheese is made. 2a : the department of farming or of a farm that is concerned with the production of milk, butter, and cheese. b : a farm devoted to such production.",
+      es: "Un lugar, edificio o establecimiento donde se conserva la leche y se produce mantequilla o queso. 2a: el departamento de agricultura o de una granja que se ocupa de la producción de leche, mantequilla y queso. b: una granja dedicada a dicha producción.",
     },
     category: {
       _id: "632ab1584d87ff2494210a31",
       name: {
         en: "Dairy",
+        es: "Lácteos",
       },
     },
     stock: 140,
@@ -9706,24 +10706,28 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
     ],
@@ -9740,14 +10744,17 @@ const products = [
     productId: "",
     title: {
       en: "El Mexicano Yogurt",
+      es: "Yogur El Mexicano",
     },
     description: {
       en: "a room, building, or establishment where milk is kept and butter or cheese is made. 2a : the department of farming or of a farm that is concerned with the production of milk, butter, and cheese. b : a farm devoted to such production.",
+      es: "Un lugar, edificio o establecimiento donde se conserva la leche y se produce mantequilla o queso. 2a: el departamento de agricultura o de una granja que se ocupa de la producción de leche, mantequilla y queso. b: una granja dedicada a dicha producción.",
     },
     category: {
       _id: "632ab1584d87ff2494210a31",
       name: {
         en: "Dairy",
+        es: "Lácteos",
       },
     },
     stock: 558,
@@ -9767,24 +10774,28 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
     ],
@@ -9801,14 +10812,17 @@ const products = [
     productId: "",
     title: {
       en: "Cowgirl Creamery",
+      es: "Cowgirl Creamery",
     },
     description: {
       en: "a room, building, or establishment where milk is kept and butter or cheese is made. 2a : the department of farming or of a farm that is concerned with the production of milk, butter, and cheese. b : a farm devoted to such production.",
+      es: "Un lugar, edificio o establecimiento donde se conserva la leche y se produce mantequilla o queso. 2a: el departamento de agricultura o de una granja que se ocupa de la producción de leche, mantequilla y queso. b: una granja dedicada a dicha producción.",
     },
     category: {
       _id: "632ab1584d87ff2494210a31",
       name: {
         en: "Dairy",
+        es: "Lácteos",
       },
     },
     stock: 211,
@@ -9828,24 +10842,28 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
     ],
@@ -9862,14 +10880,17 @@ const products = [
     productId: "",
     title: {
       en: "Balducci AUSTRALIAN CHEDDAR",
+      es: "Balducci CHEDDAR AUSTRALIANO",
     },
     description: {
       en: "a room, building, or establishment where milk is kept and butter or cheese is made. 2a : the department of farming or of a farm that is concerned with the production of milk, butter, and cheese. b : a farm devoted to such production.",
+      es: "Un lugar, edificio o establecimiento donde se conserva la leche y se produce mantequilla o queso. 2a: el departamento de agricultura o de una granja que se ocupa de la producción de leche, mantequilla y queso. b: una granja dedicada a dicha producción.",
     },
     category: {
       _id: "632ab1584d87ff2494210a31",
       name: {
         en: "Dairy",
+        es: "Lácteos",
       },
     },
     stock: 749,
@@ -9889,24 +10910,28 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
     ],
@@ -9921,14 +10946,17 @@ const products = [
     productId: "",
     title: {
       en: "Polar",
+      es: "Polar",
     },
     description: {
       en: "Ice cream is a frozen dairy dessert obtained by freezing the ice cream mix with continuous agitation. It contains milk products, sweetening materials, stabilizers, colors, flavors, and egg products. Ice cream had its origins in Europe and was introduced later in the United States where it developed into an industry.",
+      es: "El helado es un postre lácteo congelado obtenido al congelar la mezcla de helado con agitación continua. Contiene productos lácteos, edulcorantes, estabilizadores, colorantes, sabores y productos de huevo. El helado se originó en Europa y fue introducido posteriormente en Estados Unidos, donde se desarrolló como una industria.",
     },
     category: {
       _id: "632ab1644d87ff2494210a3c",
       name: {
         en: "Ice Cream",
+        es: "Helado",
       },
     },
     stock: 211,
@@ -9948,24 +10976,28 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
     ],
@@ -9980,14 +11012,17 @@ const products = [
     productId: "",
     title: {
       en: "Igloo Kheer Malai",
+      es: "Igloo Kheer Malai",
     },
     description: {
       en: "Ice cream is a frozen dairy dessert obtained by freezing the ice cream mix with continuous agitation. It contains milk products, sweetening materials, stabilizers, colors, flavors, and egg products. Ice cream had its origins in Europe and was introduced later in the United States where it developed into an industry.",
+      es: "El helado es un postre lácteo congelado obtenido al congelar la mezcla de helado con agitación continua. Contiene productos lácteos, edulcorantes, estabilizadores, colorantes, sabores y productos de huevo. El helado se originó en Europa y fue introducido posteriormente en Estados Unidos, donde se desarrolló como una industria.",
     },
     category: {
       _id: "632ab1644d87ff2494210a3c",
       name: {
         en: "Ice Cream",
+        es: "Helado",
       },
     },
     stock: 566,
@@ -10007,24 +11042,28 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
     ],
@@ -10039,14 +11078,17 @@ const products = [
     productId: "",
     title: {
       en: "Igloo Cup Vanilla",
+      es: "Igloo Cup Vainilla",
     },
     description: {
       en: "Ice cream is a frozen dairy dessert obtained by freezing the ice cream mix with continuous agitation. It contains milk products, sweetening materials, stabilizers, colors, flavors, and egg products. Ice cream had its origins in Europe and was introduced later in the United States where it developed into an industry.",
+      es: "El helado es un postre lácteo congelado obtenido al congelar la mezcla de helado con agitación continua. Contiene productos lácteos, edulcorantes, estabilizadores, colorantes, sabores y productos de huevo. El helado se originó en Europa y fue introducido posteriormente en Estados Unidos, donde se desarrolló como una industria.",
     },
     category: {
       _id: "632ab1644d87ff2494210a3c",
       name: {
         en: "Ice Cream",
+        es: "Helado",
       },
     },
     stock: 627,
@@ -10066,24 +11108,28 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
     ],
@@ -10209,14 +11255,17 @@ const products = [
     productId: "63f3484bd3639309840c957e",
     title: {
       en: "Igloo Exotic Swiss",
+      es: "Igloo Exótico Suizo",
     },
     description: {
       en: "Ice cream is a frozen dairy dessert obtained by freezing the ice cream mix with continuous agitation. It contains milk products, sweetening materials, stabilizers, colors, flavors, and egg products. Ice cream had its origins in Europe and was introduced later in the United States where it developed into an industry.",
+      es: "El helado es un postre lácteo congelado obtenido al congelar la mezcla de helado con agitación continua. Contiene productos lácteos, edulcorantes, estabilizadores, colorantes, sabores y productos de huevo. El helado se originó en Europa y fue introducido posteriormente en Estados Unidos, donde se desarrolló como una industria.",
     },
     category: {
       _id: "632ab1644d87ff2494210a3c",
       name: {
         en: "Ice Cream",
+        es: "Helado",
       },
     },
     stock: 4833,
@@ -10236,24 +11285,28 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
       {
         _id: "632ab16c4d87ff2494210a44",
         name: {
           en: "Butter & Ghee",
+          es: "Mantequilla y Ghee",
         },
       },
       {
         _id: "632ab1584d87ff2494210a31",
         name: {
           en: "Dairy",
+          es: "Lácteos",
         },
       },
       {
         _id: "632ab1644d87ff2494210a3c",
         name: {
           en: "Ice Cream",
+          es: "Helado",
         },
       },
     ],
@@ -10270,14 +11323,17 @@ const products = [
     productId: "",
     title: {
       en: "Igloo Container Vanilla",
+      es: "Contenedor de Helado Igloo Vainilla",
     },
     description: {
       en: "Ice cream is a frozen dairy dessert obtained by freezing the ice cream mix with continuous agitation. It contains milk products, sweetening materials, stabilizers, colors, flavors, and egg products. Ice cream had its origins in Europe and was introduced later in the United States where it developed into an industry.",
+      es: "El helado es un postre lácteo congelado obtenido al congelar la mezcla de helado con agitación continua. Contiene productos lácteos, edulcorantes, estabilizadores, colorantes, sabores y productos de huevo. El helado se originó en Europa y fue introducido posteriormente en Estados Unidos, donde se desarrolló como una industria.",
     },
     category: {
       _id: "632ab1644d87ff2494210a3c",
       name: {
         en: "Ice Cream",
+        es: "Helado",
       },
     },
     stock: 104,
@@ -10297,42 +11353,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -10349,14 +11412,17 @@ const products = [
     productId: "",
     title: {
       en: "Lavender Orange Blossom",
+      es: "Lavanda y Flor de Naranja",
     },
     description: {
       en: "a device used to disperse chemicals intended to mask or eliminate unpleasant odors The bathrooms should also have matching towels, soap and tissue dispensers, and a candle or plug-in air freshener with a pleasant scent.",
+      es: "Un dispositivo usado para dispersar químicos destinados a enmascarar o eliminar olores desagradables. Los baños también deben tener toallas, jabones y dispensadores de papel a juego, y una vela o ambientador enchufable con un aroma agradable.",
     },
     category: {
       _id: "632ac99d4d87ff2494210b64",
       name: {
         en: "Air Freshener",
+        es: "Ambientador",
       },
     },
     stock: 263,
@@ -10376,42 +11442,49 @@ const products = [
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -10428,14 +11501,17 @@ const products = [
     productId: "",
     title: {
       en: "Glade Automatic Spray",
+      es: "Glade Spray Automático",
     },
     description: {
       en: "a device used to disperse chemicals intended to mask or eliminate unpleasant odors The bathrooms should also have matching towels, soap and tissue dispensers, and a candle or plug-in air freshener with a pleasant scent.",
+      es: "Un dispositivo usado para dispersar químicos destinados a enmascarar o eliminar olores desagradables. Los baños también deben tener toallas, jabón y dispensadores de papel a juego, y una vela o ambientador enchufable con un aroma agradable.",
     },
     category: {
       _id: "632ac99d4d87ff2494210b64",
       name: {
         en: "Air Freshener",
+        es: "Ambientador",
       },
     },
     stock: 125,
@@ -10455,42 +11531,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -10507,14 +11590,17 @@ const products = [
     productId: "",
     title: {
       en: "Natures Alchemy Rosewood",
+      es: "Natures Alchemy Madera de Rosa",
     },
     description: {
       en: "a device used to disperse chemicals intended to mask or eliminate unpleasant odors The bathrooms should also have matching towels, soap and tissue dispensers, and a candle or plug-in air freshener with a pleasant scent.",
+      es: "Un dispositivo usado para dispersar químicos destinados a enmascarar o eliminar olores desagradables. Los baños también deben tener toallas, jabón y dispensadores de papel a juego, y una vela o ambientador enchufable con un aroma agradable.",
     },
     category: {
       _id: "632ac99d4d87ff2494210b64",
       name: {
         en: "Air Freshener",
+        es: "Ambientador",
       },
     },
     stock: 50,
@@ -10534,42 +11620,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -10586,14 +11679,17 @@ const products = [
     productId: "",
     title: {
       en: "Glade air-freshener",
+      es: "Glade Ambientador",
     },
     description: {
       en: "a device used to disperse chemicals intended to mask or eliminate unpleasant odors The bathrooms should also have matching towels, soap and tissue dispensers, and a candle or plug-in air freshener with a pleasant scent.",
+      es: "Un dispositivo usado para dispersar químicos destinados a enmascarar o eliminar olores desagradables. Los baños también deben tener toallas, jabón y dispensadores de papel a juego, y una vela o ambientador enchufable con un aroma agradable.",
     },
     category: {
       _id: "632ac99d4d87ff2494210b64",
       name: {
         en: "Air Freshener",
+        es: "Ambientador",
       },
     },
     stock: 440,
@@ -10613,42 +11709,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -10665,14 +11768,17 @@ const products = [
     productId: "",
     title: {
       en: "Glade Refills Scented",
+      es: "Recargas Aromáticas Glade",
     },
     description: {
       en: "a device used to disperse chemicals intended to mask or eliminate unpleasant odors The bathrooms should also have matching towels, soap and tissue dispensers, and a candle or plug-in air freshener with a pleasant scent.",
+      es: "Un dispositivo usado para dispersar químicos destinados a enmascarar o eliminar olores desagradables. Los baños también deben tener toallas, jabón y dispensadores de papel a juego, y una vela o ambientador enchufable con un aroma agradable.",
     },
     category: {
       _id: "632ac99d4d87ff2494210b64",
       name: {
         en: "Air Freshener",
+        es: "Ambientador",
       },
     },
     stock: 271,
@@ -10692,42 +11798,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -10744,14 +11857,17 @@ const products = [
     productId: "",
     title: {
       en: "Sophresh",
+      es: "Sophresh",
     },
     description: {
       en: "A cleaner, or Custodian, is responsible for keeping offices, homes, hotels or other public areas neat and organized. Their main duties include sweeping, mopping and vacuuming floors, dusting countertops, ceilings and furniture and sanitizing bathrooms, kitchens or other public areas.",
+      es: "Un limpiador o conserje es responsable de mantener oficinas, hogares, hoteles u otras áreas públicas limpias y organizadas. Sus principales tareas incluyen barrer, trapear y aspirar pisos, desempolvar encimeras, techos y muebles, y sanitizar baños, cocinas u otras áreas públicas.",
     },
     category: {
       _id: "632ac9934d87ff2494210b54",
       name: {
         en: "Cleaner",
+        es: "Limpiador",
       },
     },
     stock: 331,
@@ -10771,42 +11887,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -10823,14 +11946,17 @@ const products = [
     productId: "",
     title: {
       en: "Rejuvenate Floor cleaner",
+      es: "Rejuvenate Limpiador de Pisos",
     },
     description: {
       en: "A cleaner, or Custodian, is responsible for keeping offices, homes, hotels or other public areas neat and organized. Their main duties include sweeping, mopping and vacuuming floors, dusting countertops, ceilings and furniture and sanitizing bathrooms, kitchens or other public areas.",
+      es: "Un limpiador o conserje es responsable de mantener oficinas, hogares, hoteles u otras áreas públicas limpias y organizadas. Sus principales tareas incluyen barrer, trapear y aspirar pisos, desempolvar encimeras, techos y muebles, y sanitizar baños, cocinas u otras áreas públicas.",
     },
     category: {
       _id: "632ac9934d87ff2494210b54",
       name: {
         en: "Cleaner",
+        es: "Limpiador",
       },
     },
     stock: 640,
@@ -10850,42 +11976,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -10902,14 +12035,17 @@ const products = [
     productId: "",
     title: {
       en: "Leather Automotive Cleaning",
+      es: "Limpieza de Automóviles en Cuero",
     },
     description: {
       en: "A cleaner, or Custodian, is responsible for keeping offices, homes, hotels or other public areas neat and organized. Their main duties include sweeping, mopping and vacuuming floors, dusting countertops, ceilings and furniture and sanitizing bathrooms, kitchens or other public areas.",
+      es: "Un limpiador o conserje es responsable de mantener oficinas, hogares, hoteles u otras áreas públicas limpias y organizadas. Sus principales tareas incluyen barrer, trapear y aspirar pisos, desempolvar encimeras, techos y muebles, y sanitizar baños, cocinas u otras áreas públicas.",
     },
     category: {
       _id: "632ac9934d87ff2494210b54",
       name: {
         en: "Cleaner",
+        es: "Limpiador",
       },
     },
     stock: 38,
@@ -10929,42 +12065,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -10981,14 +12124,17 @@ const products = [
     productId: "",
     title: {
       en: "Pure Citrus cleaner",
+      es: "Limpiador Cítrico Puro",
     },
     description: {
       en: "A cleaner, or Custodian, is responsible for keeping offices, homes, hotels or other public areas neat and organized. Their main duties include sweeping, mopping and vacuuming floors, dusting countertops, ceilings and furniture and sanitizing bathrooms, kitchens or other public areas.",
+      es: "Un limpiador o conserje es responsable de mantener oficinas, hogares, hoteles u otras áreas públicas limpias y organizadas. Sus principales tareas incluyen barrer, trapear y aspirar pisos, desempolvar encimeras, techos y muebles, y sanitizar baños, cocinas u otras áreas públicas.",
     },
     category: {
       _id: "632ac9934d87ff2494210b54",
       name: {
         en: "Cleaner",
+        es: "Limpiador",
       },
     },
     stock: 523,
@@ -11008,42 +12154,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -11060,14 +12213,17 @@ const products = [
     productId: "",
     title: {
       en: "Open Nature Granite",
+      es: "Granito Open Nature",
     },
     description: {
       en: "A cleaner, or Custodian, is responsible for keeping offices, homes, hotels or other public areas neat and organized. Their main duties include sweeping, mopping and vacuuming floors, dusting countertops, ceilings and furniture and sanitizing bathrooms, kitchens or other public areas.",
+      es: "Un limpiador o conserje es responsable de mantener oficinas, hogares, hoteles u otras áreas públicas limpias y organizadas. Sus principales tareas incluyen barrer, trapear y aspirar pisos, desempolvar encimeras, techos y muebles, y sanitizar baños, cocinas u otras áreas públicas.",
     },
     category: {
       _id: "632ac9934d87ff2494210b54",
       name: {
         en: "Cleaner",
+        es: "Limpiador",
       },
     },
     stock: 57,
@@ -11087,42 +12243,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -11139,14 +12302,17 @@ const products = [
     productId: "",
     title: {
       en: "Mr Clean cleaner",
+      es: "Limpiador Mr Clean",
     },
     description: {
       en: "A cleaner, or Custodian, is responsible for keeping offices, homes, hotels or other public areas neat and organized. Their main duties include sweeping, mopping and vacuuming floors, dusting countertops, ceilings and furniture and sanitizing bathrooms, kitchens or other public areas.",
+      es: "Un limpiador o conserje es responsable de mantener oficinas, hogares, hoteles u otras áreas públicas limpias y organizadas. Sus principales tareas incluyen barrer, trapear y aspirar pisos, desempolvar encimeras, techos y muebles, y sanitizar baños, cocinas u otras áreas públicas.",
     },
     category: {
       _id: "632ac9934d87ff2494210b54",
       name: {
         en: "Cleaner",
+        es: "Limpiador",
       },
     },
     stock: 122,
@@ -11166,42 +12332,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -11218,14 +12391,17 @@ const products = [
     productId: "",
     title: {
       en: "Good Clean Wipes",
+      es: "Toallitas Good Clean",
     },
     description: {
       en: "A cleaner, or Custodian, is responsible for keeping offices, homes, hotels or other public areas neat and organized. Their main duties include sweeping, mopping and vacuuming floors, dusting countertops, ceilings and furniture and sanitizing bathrooms, kitchens or other public areas.",
+      es: "Un limpiador o conserje es responsable de mantener oficinas, hogares, hoteles u otras áreas públicas limpias y organizadas. Sus principales tareas incluyen barrer, trapear y aspirar pisos, desempolvar encimeras, techos y muebles, y sanitizar baños, cocinas u otras áreas públicas.",
     },
     category: {
       _id: "632ac9934d87ff2494210b54",
       name: {
         en: "Cleaner",
+        es: "Limpiador",
       },
     },
     stock: 475,
@@ -11245,42 +12421,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -11297,14 +12480,17 @@ const products = [
     productId: "",
     title: {
       en: "Clean It cleaner",
+      es: "Limpiador Clean It",
     },
     description: {
       en: "A cleaner, or Custodian, is responsible for keeping offices, homes, hotels or other public areas neat and organized. Their main duties include sweeping, mopping and vacuuming floors, dusting countertops, ceilings and furniture and sanitizing bathrooms, kitchens or other public areas.",
+      es: "Un limpiador o conserje es responsable de mantener oficinas, hogares, hoteles u otras áreas públicas limpias y organizadas. Sus principales tareas incluyen barrer, trapear y aspirar pisos, desempolvar encimeras, techos y muebles, y sanitizar baños, cocinas u otras áreas públicas.",
     },
     category: {
       _id: "632ac9934d87ff2494210b54",
       name: {
         en: "Cleaner",
+        es: "Limpiador",
       },
     },
     stock: 131,
@@ -11324,42 +12510,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -11376,14 +12569,17 @@ const products = [
     productId: "",
     title: {
       en: "Artik Mandarine cleaner",
+      es: "Limpiador Artik Mandarine",
     },
     description: {
       en: "A cleaner, or Custodian, is responsible for keeping offices, homes, hotels or other public areas neat and organized. Their main duties include sweeping, mopping and vacuuming floors, dusting countertops, ceilings and furniture and sanitizing bathrooms, kitchens or other public areas.",
+      es: "Un limpiador o conserje es responsable de mantener oficinas, hogares, hoteles u otras áreas públicas limpias y organizadas. Sus principales tareas incluyen barrer, trapear y aspirar pisos, desempolvar encimeras, techos y muebles, y sanitizar baños, cocinas u otras áreas públicas.",
     },
     category: {
       _id: "632ac9934d87ff2494210b54",
       name: {
         en: "Cleaner",
+        es: "Limpiador",
       },
     },
     stock: 33,
@@ -11403,42 +12599,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -11453,14 +12656,17 @@ const products = [
     productId: "",
     title: {
       en: "Drano Build Up Remover",
+      es: "Removedor de Acumulación Drano",
     },
     description: {
       en: "A cleaner, or Custodian, is responsible for keeping offices, homes, hotels or other public areas neat and organized. Their main duties include sweeping, mopping and vacuuming floors, dusting countertops, ceilings and furniture and sanitizing bathrooms, kitchens or other public areas.",
+      es: "Un limpiador o conserje es responsable de mantener oficinas, hogares, hoteles u otras áreas públicas limpias y organizadas. Sus principales tareas incluyen barrer, trapear y aspirar pisos, desempolvar encimeras, techos y muebles, y sanitizar baños, cocinas u otras áreas públicas.",
     },
     category: {
       _id: "632ac9934d87ff2494210b54",
       name: {
         en: "Cleaner",
+        es: "Limpiador",
       },
     },
     stock: 487,
@@ -11480,42 +12686,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -11532,14 +12745,17 @@ const products = [
     productId: "",
     title: {
       en: "Window Squeegee",
+      es: "Racleta para Ventanas",
     },
     description: {
       en: "A variety of accurate and specific tools and products created and designed in various colors, materials, mechanisms, shapes, sizes and styles to clean easily, effectively and efficiently. Cleaning tools are vital to clean especially when your form of employment involves cleaning.",
+      es: "Una variedad de herramientas y productos precisos y específicos, creados y diseñados en diversos colores, materiales, mecanismos, formas, tamaños y estilos para limpiar de manera fácil, efectiva y eficiente. Las herramientas de limpieza son vitales, especialmente si tu trabajo involucra limpieza.",
     },
     category: {
       _id: "632ac9ba4d87ff2494210b7c",
       name: {
         en: "Cleaning Tools",
+        es: "Herramientas de Limpieza",
       },
     },
     stock: 626,
@@ -11559,42 +12775,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -11611,14 +12834,17 @@ const products = [
     productId: "",
     title: {
       en: "Scubbing Pad Brush",
+      es: "Cepillo con Estropajo",
     },
     description: {
       en: "A variety of accurate and specific tools and products created and designed in various colors, materials, mechanisms, shapes, sizes and styles to clean easily, effectively and efficiently. Cleaning tools are vital to clean especially when your form of employment involves cleaning.",
+      es: "Una variedad de herramientas y productos precisos y específicos, creados y diseñados en diversos colores, materiales, mecanismos, formas, tamaños y estilos para limpiar de manera fácil, efectiva y eficiente. Las herramientas de limpieza son vitales, especialmente si tu trabajo involucra limpieza.",
     },
     category: {
       _id: "632ac9ba4d87ff2494210b7c",
       name: {
         en: "Cleaning Tools",
+        es: "Herramientas de Limpieza",
       },
     },
     stock: 766,
@@ -11638,42 +12864,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -11688,14 +12921,17 @@ const products = [
     productId: "",
     title: {
       en: "Scrub Brush",
+      es: "Cepillo de Fregar",
     },
     description: {
       en: "A variety of accurate and specific tools and products created and designed in various colors, materials, mechanisms, shapes, sizes and styles to clean easily, effectively and efficiently. Cleaning tools are vital to clean especially when your form of employment involves cleaning.",
+      es: "Una variedad de herramientas y productos precisos y específicos, creados y diseñados en diversos colores, materiales, mecanismos, formas, tamaños y estilos para limpiar de manera fácil, efectiva y eficiente. Las herramientas de limpieza son vitales, especialmente si tu trabajo involucra limpieza.",
     },
     category: {
       _id: "632ac9ba4d87ff2494210b7c",
       name: {
         en: "Cleaning Tools",
+        es: "Herramientas de Limpieza",
       },
     },
     stock: 376,
@@ -11715,42 +12951,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -11765,14 +13008,17 @@ const products = [
     productId: "",
     title: {
       en: "Scrub Bob",
+      es: "Cepillo Scrub Bob",
     },
     description: {
       en: "A variety of accurate and specific tools and products created and designed in various colors, materials, mechanisms, shapes, sizes and styles to clean easily, effectively and efficiently. Cleaning tools are vital to clean especially when your form of employment involves cleaning.",
+      es: "Una variedad de herramientas y productos precisos y específicos, creados y diseñados en diversos colores, materiales, mecanismos, formas, tamaños y estilos para limpiar de manera fácil, efectiva y eficiente. Las herramientas de limpieza son vitales, especialmente si tu trabajo involucra limpieza.",
     },
     category: {
       _id: "632ac9ba4d87ff2494210b7c",
       name: {
         en: "Cleaning Tools",
+        es: "Herramientas de Limpieza",
       },
     },
     stock: 83,
@@ -11792,42 +13038,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -11844,14 +13097,17 @@ const products = [
     productId: "",
     title: {
       en: "Casabella Sponge Brush",
+      es: "Cepillo Esponja Casabella",
     },
     description: {
       en: "A variety of accurate and specific tools and products created and designed in various colors, materials, mechanisms, shapes, sizes and styles to clean easily, effectively and efficiently. Cleaning tools are vital to clean especially when your form of employment involves cleaning.",
+      es: "Una variedad de herramientas y productos precisos y específicos, creados y diseñados en diversos colores, materiales, mecanismos, formas, tamaños y estilos para limpiar de manera fácil, efectiva y eficiente. Las herramientas de limpieza son vitales, especialmente si tu trabajo involucra limpieza.",
     },
     category: {
       _id: "632ac9ba4d87ff2494210b7c",
       name: {
         en: "Cleaning Tools",
+        es: "Herramientas de Limpieza",
       },
     },
     stock: 496,
@@ -11871,42 +13127,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -11923,14 +13186,17 @@ const products = [
     productId: "",
     title: {
       en: "Xtra Spring laundry",
+      es: "Lavandería Xtra Spring",
     },
     description: {
       en: "A laundry service is a service in a hotel that washes and irons clothes for guests. Almost all hotels have a laundry service. If you hand in clothes one day you should get them back a day or two later. The laundry service will wash, dry, and iron your clothes.",
+      es: "El servicio de lavandería es un servicio en un hotel que lava y plancha la ropa de los huéspedes. Casi todos los hoteles cuentan con este servicio. Si entregas la ropa un día, deberías recibirla uno o dos días después. El servicio de lavandería lavará, secará y planchará tu ropa.",
     },
     category: {
       _id: "632ab2c34d87ff2494210ab2",
       name: {
         en: "Women",
+        es: "Mujer",
       },
     },
     stock: 436,
@@ -11950,42 +13216,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -12002,14 +13275,17 @@ const products = [
     productId: "",
     title: {
       en: "Valu Time Fabric Softener",
+      es: "Suavizante de Ropa Valu Time",
     },
     description: {
       en: "A laundry service is a service in a hotel that washes and irons clothes for guests. Almost all hotels have a laundry service. If you hand in clothes one day you should get them back a day or two later. The laundry service will wash, dry, and iron your clothes.",
+      es: "El servicio de lavandería es un servicio en un hotel que lava y plancha la ropa de los huéspedes. Casi todos los hoteles cuentan con este servicio. Si entregas la ropa un día, deberías recibirla uno o dos días después. El servicio de lavandería lavará, secará y planchará tu ropa.",
     },
     category: {
       _id: "632ab2c34d87ff2494210ab2",
       name: {
         en: "Women",
+        es: "Mujer",
       },
     },
     stock: 352,
@@ -12029,42 +13305,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -12081,14 +13364,17 @@ const products = [
     productId: "",
     title: {
       en: "Valu Time Lemon Scent",
+      es: "Valu Time Aroma a Limón",
     },
     description: {
       en: "A laundry service is a service in a hotel that washes and irons clothes for guests. Almost all hotels have a laundry service. If you hand in clothes one day you should get them back a day or two later. The laundry service will wash, dry, and iron your clothes.",
+      es: "El servicio de lavandería es un servicio en un hotel que lava y plancha la ropa de los huéspedes. Casi todos los hoteles cuentan con este servicio. Si entregas la ropa un día, deberías recibirla uno o dos días después. El servicio de lavandería lavará, secará y planchará tu ropa.",
     },
     category: {
       _id: "632ab2c34d87ff2494210ab2",
       name: {
         en: "Women",
+        es: "Mujer",
       },
     },
     stock: 91,
@@ -12108,42 +13394,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -12160,14 +13453,17 @@ const products = [
     productId: "",
     title: {
       en: "Ultra Clorox",
+      es: "Ultra Clorox",
     },
     description: {
       en: "A laundry service is a service in a hotel that washes and irons clothes for guests. Almost all hotels have a laundry service. If you hand in clothes one day you should get them back a day or two later. The laundry service will wash, dry, and iron your clothes.",
+      es: "El servicio de lavandería es un servicio en un hotel que lava y plancha la ropa de los huéspedes. Casi todos los hoteles cuentan con este servicio. Si entregas la ropa un día, deberías recibirla uno o dos días después. El servicio de lavandería lavará, secará y planchará tu ropa.",
     },
     category: {
       _id: "632ab2c34d87ff2494210ab2",
       name: {
         en: "Women",
+        es: "Mujer",
       },
     },
     stock: 476,
@@ -12187,42 +13483,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -12239,14 +13542,17 @@ const products = [
     productId: "",
     title: {
       en: "Tide Detergent",
+      es: "Detergente Tide",
     },
     description: {
       en: "A laundry service is a service in a hotel that washes and irons clothes for guests. Almost all hotels have a laundry service. If you hand in clothes one day you should get them back a day or two later. The laundry service will wash, dry, and iron your clothes.",
+      es: "El servicio de lavandería es un servicio en un hotel que lava y plancha la ropa de los huéspedes. Casi todos los hoteles cuentan con este servicio. Si entregas la ropa un día, deberías recibirla uno o dos días después. El servicio de lavandería lavará, secará y planchará tu ropa.",
     },
     category: {
       _id: "632ab2c34d87ff2494210ab2",
       name: {
         en: "Women",
+        es: "Mujer",
       },
     },
     stock: 770,
@@ -12266,42 +13572,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -12318,14 +13631,17 @@ const products = [
     productId: "",
     title: {
       en: "Open Nature Chlorine",
+      es: "Cloro Open Nature",
     },
     description: {
       en: "A laundry service is a service in a hotel that washes and irons clothes for guests. Almost all hotels have a laundry service. If you hand in clothes one day you should get them back a day or two later. The laundry service will wash, dry, and iron your clothes.",
+      es: "El servicio de lavandería es un servicio en un hotel que lava y plancha la ropa de los huéspedes. Casi todos los hoteles cuentan con este servicio. Si entregas la ropa un día, deberías recibirla uno o dos días después. El servicio de lavandería lavará, secará y planchará tu ropa.",
     },
     category: {
       _id: "632ab2c34d87ff2494210ab2",
       name: {
         en: "Women",
+        es: "Mujer",
       },
     },
     stock: 678,
@@ -12345,42 +13661,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -12397,14 +13720,17 @@ const products = [
     productId: "",
     title: {
       en: "Febreze Gain Scent",
+      es: "Febreze Aroma Gain",
     },
     description: {
       en: "A laundry service is a service in a hotel that washes and irons clothes for guests. Almost all hotels have a laundry service. If you hand in clothes one day you should get them back a day or two later. The laundry service will wash, dry, and iron your clothes.",
+      es: "El servicio de lavandería es un servicio en un hotel que lava y plancha la ropa de los huéspedes. Casi todos los hoteles cuentan con este servicio. Si entregas la ropa un día, deberías recibirla uno o dos días después. El servicio de lavandería lavará, secará y planchará tu ropa.",
     },
     category: {
       _id: "632ab2c34d87ff2494210ab2",
       name: {
         en: "Women",
+        es: "Mujer",
       },
     },
     stock: 397,
@@ -12424,42 +13750,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -12476,14 +13809,17 @@ const products = [
     productId: "",
     title: {
       en: "Febreze Moonlit Lavender",
+      es: "Febreze Lavanda Nocturna",
     },
     description: {
       en: "A laundry service is a service in a hotel that washes and irons clothes for guests. Almost all hotels have a laundry service. If you hand in clothes one day you should get them back a day or two later. The laundry service will wash, dry, and iron your clothes.",
+      es: "El servicio de lavandería es un servicio en un hotel que lava y plancha la ropa de los huéspedes. Casi todos los hoteles cuentan con este servicio. Si entregas la ropa un día, deberías recibirla uno o dos días después. El servicio de lavandería lavará, secará y planchará tu ropa.",
     },
     category: {
       _id: "632ab2c34d87ff2494210ab2",
       name: {
         en: "Women",
+        es: "Mujer",
       },
     },
     stock: 692,
@@ -12503,42 +13839,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -12555,14 +13898,17 @@ const products = [
     productId: "",
     title: {
       en: "Arm Hammer Detergent",
+      es: "Detergente Arm Hammer",
     },
     description: {
       en: "A laundry service is a service in a hotel that washes and irons clothes for guests. Almost all hotels have a laundry service. If you hand in clothes one day you should get them back a day or two later. The laundry service will wash, dry, and iron your clothes.",
+      es: "El servicio de lavandería es un servicio en un hotel que lava y plancha la ropa de los huéspedes. Casi todos los hoteles cuentan con este servicio. Si entregas la ropa un día, deberías recibirla uno o dos días después. El servicio de lavandería lavará, secará y planchará tu ropa.",
     },
     category: {
       _id: "632ab2c34d87ff2494210ab2",
       name: {
         en: "Women",
+        es: "Mujer",
       },
     },
     stock: 234,
@@ -12582,42 +13928,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -12634,14 +13987,17 @@ const products = [
     productId: "",
     title: {
       en: "Orange Guard Insect Spray",
+      es: "Spray Insecticida Orange Guard",
     },
     description: {
       en: "Pest control is the regulation or management of a species defined as a pest, a member of the animal kingdom that impacts adversely on human activities. ... This can be achieved by monitoring the crop, only applying insecticides when necessary, and by growing varieties and crops which are resistant to pests.",
+      es: "El control de plagas es la regulación o gestión de una especie definida como plaga, un miembro del reino animal que afecta negativamente las actividades humanas. ... Esto se puede lograr monitoreando el cultivo, aplicando insecticidas solo cuando sea necesario y cultivando variedades y cultivos resistentes a las plagas.",
     },
     category: {
       _id: "632ac9b24d87ff2494210b74",
       name: {
         en: "Pest Control",
+        es: "Control de Plagas",
       },
     },
     stock: 103,
@@ -12661,42 +14017,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -12713,14 +14076,17 @@ const products = [
     productId: "",
     title: {
       en: "Hot Shot Hornet Killer",
+      es: "Eliminador de Avispas Hot Shot",
     },
     description: {
       en: "Pest control is the regulation or management of a species defined as a pest, a member of the animal kingdom that impacts adversely on human activities. ... This can be achieved by monitoring the crop, only applying insecticides when necessary, and by growing varieties and crops which are resistant to pests.",
+      es: "El control de plagas es la regulación o gestión de una especie definida como plaga, un miembro del reino animal que afecta negativamente las actividades humanas. ... Esto se puede lograr monitoreando el cultivo, aplicando insecticidas solo cuando sea necesario y cultivando variedades y cultivos resistentes a las plagas.",
     },
     category: {
       _id: "632ac9b24d87ff2494210b74",
       name: {
         en: "Pest Control",
+        es: "Control de Plagas",
       },
     },
     stock: 591,
@@ -12740,42 +14106,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -12792,14 +14165,17 @@ const products = [
     productId: "",
     title: {
       en: "Hot Shot Insect Killer",
+      es: "Eliminador de Insectos Hot Shot",
     },
     description: {
       en: "Pest control is the regulation or management of a species defined as a pest, a member of the animal kingdom that impacts adversely on human activities. ... This can be achieved by monitoring the crop, only applying insecticides when necessary, and by growing varieties and crops which are resistant to pests.",
+      es: "El control de plagas es la regulación o gestión de una especie definida como plaga, un miembro del reino animal que afecta negativamente las actividades humanas. ... Esto se puede lograr monitoreando el cultivo, aplicando insecticidas solo cuando sea necesario y cultivando variedades y cultivos resistentes a las plagas.",
     },
     category: {
       _id: "632ac9b24d87ff2494210b74",
       name: {
         en: "Pest Control",
+        es: "Control de Plagas",
       },
     },
     stock: 655,
@@ -12819,42 +14195,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -12871,14 +14254,17 @@ const products = [
     productId: "",
     title: {
       en: "Hot Shot Ant Killer",
+      es: "Eliminador de Hormigas Hot Shot",
     },
     description: {
       en: "Pest control is the regulation or management of a species defined as a pest, a member of the animal kingdom that impacts adversely on human activities. ... This can be achieved by monitoring the crop, only applying insecticides when necessary, and by growing varieties and crops which are resistant to pests.",
+      es: "El control de plagas es la regulación o gestión de una especie definida como plaga, un miembro del reino animal que afecta negativamente las actividades humanas. ... Esto se puede lograr monitoreando el cultivo, aplicando insecticidas solo cuando sea necesario y cultivando variedades y cultivos resistentes a las plagas.",
     },
     category: {
       _id: "632ac9b24d87ff2494210b74",
       name: {
         en: "Pest Control",
+        es: "Control de Plagas",
       },
     },
     stock: 599,
@@ -12898,42 +14284,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -12950,14 +14343,17 @@ const products = [
     productId: "",
     title: {
       en: "d Con Trap Rat",
+      es: "Trampa para Ratas d Con",
     },
     description: {
       en: "Pest control is the regulation or management of a species defined as a pest, a member of the animal kingdom that impacts adversely on human activities. ... This can be achieved by monitoring the crop, only applying insecticides when necessary, and by growing varieties and crops which are resistant to pests.",
+      es: "El control de plagas es la regulación o gestión de una especie definida como plaga, un miembro del reino animal que afecta negativamente las actividades humanas. ... Esto se puede lograr monitoreando el cultivo, aplicando insecticidas solo cuando sea necesario y cultivando variedades y cultivos resistentes a las plagas.",
     },
     category: {
       _id: "632ac9b24d87ff2494210b74",
       name: {
         en: "Pest Control",
+        es: "Control de Plagas",
       },
     },
     stock: 464,
@@ -12977,42 +14373,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -13029,14 +14432,17 @@ const products = [
     productId: "",
     title: {
       en: "Black Flag Ant Killer",
+      es: "Eliminador de Hormigas Black Flag",
     },
     description: {
       en: "Pest control is the regulation or management of a species defined as a pest, a member of the animal kingdom that impacts adversely on human activities. ... This can be achieved by monitoring the crop, only applying insecticides when necessary, and by growing varieties and crops which are resistant to pests.",
+      es: "El control de plagas es la regulación o gestión de una especie definida como plaga, un miembro del reino animal que afecta negativamente las actividades humanas. ... Esto se puede lograr monitoreando el cultivo, aplicando insecticidas solo cuando sea necesario y cultivando variedades y cultivos resistentes a las plagas.",
     },
     category: {
       _id: "632ac9b24d87ff2494210b74",
       name: {
         en: "Pest Control",
+        es: "Control de Plagas",
       },
     },
     stock: 616,
@@ -13056,42 +14462,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -13108,14 +14521,17 @@ const products = [
     productId: "",
     title: {
       en: "Bayer Insect Killer",
+      es: "Eliminador de Insectos Bayer",
     },
     description: {
       en: "Pest control is the regulation or management of a species defined as a pest, a member of the animal kingdom that impacts adversely on human activities. ... This can be achieved by monitoring the crop, only applying insecticides when necessary, and by growing varieties and crops which are resistant to pests.",
+      es: "El control de plagas es la regulación o gestión de una especie definida como plaga, un miembro del reino animal que afecta negativamente las actividades humanas. ... Esto se puede lograr monitoreando el cultivo, aplicando insecticidas solo cuando sea necesario y cultivando variedades y cultivos resistentes a las plagas.",
     },
     category: {
       _id: "632ac9b24d87ff2494210b74",
       name: {
         en: "Pest Control",
+        es: "Control de Plagas",
       },
     },
     stock: 4,
@@ -13135,42 +14551,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -13187,14 +14610,17 @@ const products = [
     productId: "",
     title: {
       en: "BRITA water-filter",
+      es: "Filtro de Agua BRITA",
     },
     description: {
-      en: "water filtering is a method used to filter out undesired chemical compounds, organic and inorganic materials, and biological contaminants from water. The purpose of water filtration is to provide clean drinking water.",
+      en: "Water filtering is a method used to filter out undesired chemical compounds, organic and inorganic materials, and biological contaminants from water. The purpose of water filtration is to provide clean drinking water.",
+      es: "La filtración de agua es un método utilizado para eliminar compuestos químicos no deseados, materiales orgánicos e inorgánicos y contaminantes biológicos del agua. El objetivo de la filtración de agua es proporcionar agua potable limpia.",
     },
     category: {
       _id: "632ac9c24d87ff2494210b84",
       name: {
         en: "Water Filter",
+        es: "Filtro de Agua",
       },
     },
     stock: 514,
@@ -13214,42 +14640,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -13266,14 +14699,17 @@ const products = [
     productId: "",
     title: {
       en: "BRITA water-filter Dispenser",
+      es: "Dispensador de Filtro de Agua BRITA",
     },
     description: {
-      en: "water filtering is a method used to filter out undesired chemical compounds, organic and inorganic materials, and biological contaminants from water. The purpose of water filtration is to provide clean drinking water.",
+      en: "Water filtering is a method used to filter out undesired chemical compounds, organic and inorganic materials, and biological contaminants from water. The purpose of water filtration is to provide clean drinking water.",
+      es: "La filtración de agua es un método utilizado para eliminar compuestos químicos no deseados, materiales orgánicos e inorgánicos y contaminantes biológicos del agua. El objetivo de la filtración de agua es proporcionar agua potable limpia.",
     },
     category: {
       _id: "632ac9c24d87ff2494210b84",
       name: {
         en: "Water Filter",
+        es: "Filtro de Agua",
       },
     },
     stock: 262,
@@ -13293,42 +14729,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -13345,14 +14788,17 @@ const products = [
     productId: "",
     title: {
       en: "BRITA water-filter Pitcher",
+      es: "Jarra Filtro de Agua BRITA",
     },
     description: {
-      en: "water filtering is a method used to filter out undesired chemical compounds, organic and inorganic materials, and biological contaminants from water. The purpose of water filtration is to provide clean drinking water.",
+      en: "Water filtering is a method used to filter out undesired chemical compounds, organic and inorganic materials, and biological contaminants from water. The purpose of water filtration is to provide clean drinking water.",
+      es: "La filtración de agua es un método utilizado para eliminar compuestos químicos no deseados, materiales orgánicos e inorgánicos y contaminantes biológicos del agua. El objetivo de la filtración de agua es proporcionar agua potable limpia.",
     },
     category: {
       _id: "632ac9c24d87ff2494210b84",
       name: {
         en: "Water Filter",
+        es: "Filtro de Agua",
       },
     },
     stock: 687,
@@ -13372,42 +14818,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -13424,14 +14877,17 @@ const products = [
     productId: "",
     title: {
       en: "BRITA Replacement water-filter",
+      es: "Repuesto de Filtro de Agua BRITA",
     },
     description: {
-      en: "water filtering is a method used to filter out undesired chemical compounds, organic and inorganic materials, and biological contaminants from water. The purpose of water filtration is to provide clean drinking water.",
+      en: "Water filtering is a method used to filter out undesired chemical compounds, organic and inorganic materials, and biological contaminants from water. The purpose of water filtration is to provide clean drinking water.",
+      es: "La filtración de agua es un método utilizado para eliminar compuestos químicos no deseados, materiales orgánicos e inorgánicos y contaminantes biológicos del agua. El objetivo de la filtración de agua es proporcionar agua potable limpia.",
     },
     category: {
       _id: "632ac9c24d87ff2494210b84",
       name: {
         en: "Water Filter",
+        es: "Filtro de Agua",
       },
     },
     stock: 524,
@@ -13451,42 +14907,49 @@ const products = [
         _id: "632ac9864d87ff2494210b49",
         name: {
           en: "Household Tools",
+          es: "Herramientas del Hogar",
         },
       },
       {
         _id: "632ac99d4d87ff2494210b64",
         name: {
           en: "Air Freshener",
+          es: "Ambientador",
         },
       },
       {
         _id: "632ac9934d87ff2494210b54",
         name: {
           en: "Cleaner",
+          es: "Limpiador",
         },
       },
       {
         _id: "632ac9ba4d87ff2494210b7c",
         name: {
           en: "Cleaning Tools",
+          es: "Herramientas de Limpieza",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujer",
         },
       },
       {
         _id: "632ac9b24d87ff2494210b74",
         name: {
           en: "Pest Control",
+          es: "Control de Plagas",
         },
       },
       {
         _id: "632ac9c24d87ff2494210b84",
         name: {
           en: "Water Filter",
+          es: "Filtro de Agua",
         },
       },
     ],
@@ -13503,14 +14966,17 @@ const products = [
     productId: "",
     title: {
       en: "BRITA water-filter",
+      es: "Filtro de agua BRITA",
     },
     description: {
       en: "water filtering is a method used to filter out undesired chemical compounds, organic and inorganic materials, and biological contaminants from water. The purpose of water filtration is to provide clean drinking water.",
+      es: "La filtración de agua es un método utilizado para eliminar compuestos químicos no deseados, materiales orgánicos e inorgánicos y contaminantes biológicos del agua. El propósito de la filtración de agua es proporcionar agua potable limpia.",
     },
     category: {
       _id: "632ac9c24d87ff2494210b84",
       name: {
         en: "Water Filter",
+        es: "Filtro de agua",
       },
     },
     stock: 324,
@@ -13530,12 +14996,14 @@ const products = [
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
     ],
@@ -13550,14 +15018,17 @@ const products = [
     productId: "",
     title: {
       en: "Bird Toy",
+      es: "Juguete para Pájaros",
     },
     description: {
       en: "Many species of birds make fun, engaging pets. If you're considering bird ownership, the care requirements include providing good housing, nutritious food, and keeping an eye on the bird's health. You'll also need to provide plenty of enrichment and interaction, to keep your pet bird happy and alert.",
+      es: "Muchas especies de aves son mascotas divertidas y entretenidas. Si estás considerando tener un ave, los cuidados incluyen proporcionar una buena vivienda, alimento nutritivo y vigilar la salud del pájaro. También necesitarás brindar mucho entretenimiento e interacción para mantener a tu ave feliz y alerta.",
     },
     category: {
       _id: "632ab4434d87ff2494210b0e",
       name: {
         en: "Pet Care",
+        es: "Cuidado de Mascotas",
       },
     },
     stock: 777,
@@ -13577,12 +15048,14 @@ const products = [
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
     ],
@@ -13597,14 +15070,17 @@ const products = [
     productId: "",
     title: {
       en: "Foraging Pouch Bird Toy",
+      es: "Juguete para Pájaros con Bolsa de Forrajeo",
     },
     description: {
       en: "Many species of birds make fun, engaging pets. If you're considering bird ownership, the care requirements include providing good housing, nutritious food, and keeping an eye on the bird's health. You'll also need to provide plenty of enrichment and interaction, to keep your pet bird happy and alert.",
+      es: "Muchas especies de aves son mascotas divertidas y entretenidas. Si estás considerando tener un ave, los cuidados incluyen proporcionar una buena vivienda, alimento nutritivo y vigilar la salud del pájaro. También necesitarás brindar mucho entretenimiento e interacción para mantener a tu ave feliz y alerta.",
     },
     category: {
       _id: "632ab4434d87ff2494210b0e",
       name: {
         en: "Pet Care",
+        es: "Cuidado de Mascotas",
       },
     },
     stock: 691,
@@ -13624,12 +15100,14 @@ const products = [
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
     ],
@@ -13644,14 +15122,17 @@ const products = [
     productId: "",
     title: {
       en: "Ecotrition Goofy Links",
+      es: "Enlaces Divertidos Ecotrition",
     },
     description: {
       en: "Many species of birds make fun, engaging pets. If you're considering bird ownership, the care requirements include providing good housing, nutritious food, and keeping an eye on the bird's health. You'll also need to provide plenty of enrichment and interaction, to keep your pet bird happy and alert.",
+      es: "Muchas especies de aves son mascotas divertidas y entretenidas. Si estás considerando tener un ave, los cuidados incluyen proporcionar una buena vivienda, alimento nutritivo y vigilar la salud del pájaro. También necesitarás brindar mucho entretenimiento e interacción para mantener a tu ave feliz y alerta.",
     },
     category: {
       _id: "632ab4434d87ff2494210b0e",
       name: {
         en: "Pet Care",
+        es: "Cuidado de Mascotas",
       },
     },
     stock: 10,
@@ -13671,12 +15152,14 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
     ],
@@ -13691,14 +15174,17 @@ const products = [
     productId: "",
     title: {
       en: "Paradise Toys",
+      es: "Juguetes Paradise",
     },
     description: {
       en: "Many species of birds make fun, engaging pets. If you're considering bird ownership, the care requirements include providing good housing, nutritious food, and keeping an eye on the bird's health. You'll also need to provide plenty of enrichment and interaction, to keep your pet bird happy and alert.",
+      es: "Muchas especies de aves son mascotas divertidas y entretenidas. Si estás considerando tener un ave, los cuidados incluyen proporcionar una buena vivienda, alimento nutritivo y vigilar la salud del pájaro. También necesitarás brindar mucho entretenimiento e interacción para mantener a tu ave feliz y alerta.",
     },
     category: {
       _id: "632ab4524d87ff2494210b19",
       name: {
         en: "Cat Care",
+        es: "Cuidado de Gatos",
       },
     },
     stock: 115,
@@ -13718,12 +15204,14 @@ const products = [
         _id: "62c827b5a427b63741da9175",
         name: {
           en: "Home",
+          es: "Hogar",
         },
       },
       {
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
     ],
@@ -13738,14 +15226,17 @@ const products = [
     productId: "",
     title: {
       en: "Kaytee Bird Food",
+      es: "Comida para Pájaros Kaytee",
     },
     description: {
       en: "Many species of birds make fun, engaging pets. If you're considering bird ownership, the care requirements include providing good housing, nutritious food, and keeping an eye on the bird's health. You'll also need to provide plenty of enrichment and interaction, to keep your pet bird happy and alert.",
+      es: "Muchas especies de aves son mascotas divertidas y entretenidas. Si estás considerando tener un ave, los cuidados incluyen proporcionar una buena vivienda, alimento nutritivo y vigilar la salud del pájaro. También necesitarás brindar mucho entretenimiento e interacción para mantener a tu ave feliz y alerta.",
     },
     category: {
       _id: "632ab4434d87ff2494210b0e",
       name: {
         en: "Pet Care",
+        es: "Cuidado de Mascotas",
       },
     },
     stock: 124,
@@ -13765,18 +15256,21 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab45b4d87ff2494210b21",
         name: {
           en: "Dog Care",
+          es: "Cuidado de Perros",
         },
       },
     ],
@@ -13793,14 +15287,17 @@ const products = [
     productId: "",
     title: {
       en: "Sophresh Cat Food",
+      es: "Comida para Gatos Sophresh",
     },
     description: {
       en: "Provide plenty of human companionship. Provide regular, suitable meals with a constant supply of fresh water. Provide a clean and comfortable bed. Provide the cat with outdoor access or be prepared to empty and clean a litter tray on a daily basis.",
+      es: "Brinda mucha compañía humana. Proporciona comidas regulares y adecuadas con un suministro constante de agua fresca. Proporciona una cama limpia y cómoda. Ofrece al gato acceso al exterior o prepárate para vaciar y limpiar la caja de arena a diario.",
     },
     category: {
       _id: "632ab4524d87ff2494210b19",
       name: {
         en: "Cat Care",
+        es: "Cuidado de Gatos",
       },
     },
     stock: 569,
@@ -13820,18 +15317,21 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab45b4d87ff2494210b21",
         name: {
           en: "Dog Care",
+          es: "Cuidado de Perros",
         },
       },
     ],
@@ -13848,14 +15348,17 @@ const products = [
     productId: "",
     title: {
       en: "Cat Toy",
+      es: "Juguete para Gato",
     },
     description: {
       en: "Provide plenty of human companionship. Provide regular, suitable meals with a constant supply of fresh water. Provide a clean and comfortable bed. Provide the cat with outdoor access or be prepared to empty and clean a litter tray on a daily basis.",
+      es: "Brinda mucha compañía humana. Proporciona comidas regulares y adecuadas con un suministro constante de agua fresca. Proporciona una cama limpia y cómoda. Ofrece al gato acceso al exterior o prepárate para vaciar y limpiar la caja de arena a diario.",
     },
     category: {
       _id: "632ab4524d87ff2494210b19",
       name: {
         en: "Cat Care",
+        es: "Cuidado de Gatos",
       },
     },
     stock: 744,
@@ -13875,18 +15378,21 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab45b4d87ff2494210b21",
         name: {
           en: "Dog Care",
+          es: "Cuidado de Perros",
         },
       },
     ],
@@ -13903,14 +15409,17 @@ const products = [
     productId: "",
     title: {
       en: "Multipack Ball Cat Toy",
+      es: "Juguete para Gato con Pelotas Multipack",
     },
     description: {
       en: "Provide plenty of human companionship. Provide regular, suitable meals with a constant supply of fresh water. Provide a clean and comfortable bed. Provide the cat with outdoor access or be prepared to empty and clean a litter tray on a daily basis.",
+      es: "Brinda mucha compañía humana. Proporciona comidas regulares y adecuadas con un suministro constante de agua fresca. Proporciona una cama limpia y cómoda. Ofrece al gato acceso al exterior o prepárate para vaciar y limpiar la caja de arena a diario.",
     },
     category: {
       _id: "632ab4524d87ff2494210b19",
       name: {
         en: "Cat Care",
+        es: "Cuidado de Gatos",
       },
     },
     stock: 149,
@@ -13930,18 +15439,21 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab45b4d87ff2494210b21",
         name: {
           en: "Dog Care",
+          es: "Cuidado de Perros",
         },
       },
     ],
@@ -13958,14 +15470,17 @@ const products = [
     productId: "",
     title: {
       en: "Leaps Bounds Cat Toy",
+      es: "Juguete para Gato Leaps Bounds",
     },
     description: {
       en: "Provide plenty of human companionship. Provide regular, suitable meals with a constant supply of fresh water. Provide a clean and comfortable bed. Provide the cat with outdoor access or be prepared to empty and clean a litter tray on a daily basis.",
+      es: "Brinda mucha compañía humana. Proporciona comidas regulares y adecuadas con un suministro constante de agua fresca. Proporciona una cama limpia y cómoda. Ofrece al gato acceso al exterior o prepárate para vaciar y limpiar la caja de arena a diario.",
     },
     category: {
       _id: "632ab4524d87ff2494210b19",
       name: {
         en: "Cat Care",
+        es: "Cuidado de Gatos",
       },
     },
     stock: 724,
@@ -13985,18 +15500,21 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab45b4d87ff2494210b21",
         name: {
           en: "Dog Care",
+          es: "Cuidado de Perros",
         },
       },
     ],
@@ -14013,14 +15531,17 @@ const products = [
     productId: "",
     title: {
       en: "Premium Cat Food",
+      es: "Comida Premium para Gatos",
     },
     description: {
       en: "Provide plenty of human companionship. Provide regular, suitable meals with a constant supply of fresh water. Provide a clean and comfortable bed. Provide the cat with outdoor access or be prepared to empty and clean a litter tray on a daily basis.",
+      es: "Brinda mucha compañía humana. Proporciona comidas regulares y adecuadas con un suministro constante de agua fresca. Proporciona una cama limpia y cómoda. Ofrece al gato acceso al exterior o prepárate para vaciar y limpiar la caja de arena a diario.",
     },
     category: {
       _id: "632ab4524d87ff2494210b19",
       name: {
         en: "Cat Care",
+        es: "Cuidado de Gatos",
       },
     },
     stock: 490,
@@ -14040,18 +15561,21 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab45b4d87ff2494210b21",
         name: {
           en: "Dog Care",
+          es: "Cuidado de Perros",
         },
       },
     ],
@@ -14068,14 +15592,17 @@ const products = [
     productId: "",
     title: {
       en: "Vine Blend Cat Toy",
+      es: "Juguete para Gatos Mezcla de Vid",
     },
     description: {
       en: "Provide plenty of human companionship. Provide regular, suitable meals with a constant supply of fresh water. Provide a clean and comfortable bed. Provide the cat with outdoor access or be prepared to empty and clean a litter tray on a daily basis.",
+      es: "Brinda mucha compañía humana. Proporciona comidas regulares y adecuadas con un suministro constante de agua fresca. Proporciona una cama limpia y cómoda. Ofrece al gato acceso al exterior o prepárate para vaciar y limpiar la caja de arena a diario.",
     },
     category: {
       _id: "632ab4524d87ff2494210b19",
       name: {
         en: "Cat Care",
+        es: "Cuidado de Gatos",
       },
     },
     stock: 420,
@@ -14095,18 +15622,21 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab45b4d87ff2494210b21",
         name: {
           en: "Dog Care",
+          es: "Cuidado de Perros",
         },
       },
     ],
@@ -14123,14 +15653,17 @@ const products = [
     productId: "",
     title: {
       en: "Blue Pin Brush",
+      es: "Cepillo de Pin Azul",
     },
     description: {
-      en: "Dog Sitters supervise pets and take care of them in their owners'absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      en: "Dog Sitters supervise pets and take care of them in their owners' absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      es: "Los cuidadores de perros supervisan a las mascotas y las cuidan en ausencia de sus dueños. Las actividades típicas que aparecen en un ejemplo de currículum de cuidador de perros incluyen el aseo, proporcionar comida y agua, sacar a los perros a pasear, llevarlos a citas con el veterinario, administrar medicación, brindar compañía y seguir las instrucciones del dueño.",
     },
     category: {
       _id: "632ab45b4d87ff2494210b21",
       name: {
         en: "Dog Care",
+        es: "Cuidado de Perros",
       },
     },
     stock: 426,
@@ -14150,18 +15683,21 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab45b4d87ff2494210b21",
         name: {
           en: "Dog Care",
+          es: "Cuidado de Perros",
         },
       },
     ],
@@ -14178,14 +15714,17 @@ const products = [
     productId: "",
     title: {
       en: "Royal Canin Dog Food",
+      es: "Comida para Perros Royal Canin",
     },
     description: {
-      en: "Dog Sitters supervise pets and take care of them in their owners'absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      en: "Dog Sitters supervise pets and take care of them in their owners' absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      es: "Los cuidadores de perros supervisan a las mascotas y las cuidan en ausencia de sus dueños. Las actividades típicas que aparecen en un ejemplo de currículum de cuidador de perros incluyen el aseo, proporcionar comida y agua, sacar a los perros a pasear, llevarlos a citas con el veterinario, administrar medicación, brindar compañía y seguir las instrucciones del dueño.",
     },
     category: {
       _id: "632ab45b4d87ff2494210b21",
       name: {
         en: "Dog Care",
+        es: "Cuidado de Perros",
       },
     },
     stock: 628,
@@ -14205,18 +15744,21 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab45b4d87ff2494210b21",
         name: {
           en: "Dog Care",
+          es: "Cuidado de Perros",
         },
       },
     ],
@@ -14233,14 +15775,17 @@ const products = [
     productId: "",
     title: {
       en: "Pet Safe Elite",
+      es: "Pet Safe Elite",
     },
     description: {
-      en: "Dog Sitters supervise pets and take care of them in their owners'absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      en: "Dog Sitters supervise pets and take care of them in their owners' absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      es: "Los cuidadores de perros supervisan a las mascotas y las cuidan en ausencia de sus dueños. Las actividades típicas que aparecen en un ejemplo de currículum de cuidador de perros incluyen el aseo, proporcionar comida y agua, sacar a los perros a pasear, llevarlos a citas con el veterinario, administrar medicación, brindar compañía y seguir las instrucciones del dueño.",
     },
     category: {
       _id: "632ab45b4d87ff2494210b21",
       name: {
         en: "Dog Care",
+        es: "Cuidado de Perros",
       },
     },
     stock: 82,
@@ -14260,18 +15805,21 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab45b4d87ff2494210b21",
         name: {
           en: "Dog Care",
+          es: "Cuidado de Perros",
         },
       },
     ],
@@ -14288,14 +15836,17 @@ const products = [
     productId: "",
     title: {
       en: "Hill Science Diet Dog",
+      es: "Hill Science Diet Perro",
     },
     description: {
-      en: "Dog Sitters supervise pets and take care of them in their owners'absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      en: "Dog Sitters supervise pets and take care of them in their owners' absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      es: "Los cuidadores de perros supervisan a las mascotas y las cuidan en ausencia de sus dueños. Las actividades típicas que aparecen en un ejemplo de currículum de cuidador de perros incluyen el aseo, proporcionar comida y agua, sacar a los perros a pasear, llevarlos a citas con el veterinario, administrar medicación, brindar compañía y seguir las instrucciones del dueño.",
     },
     category: {
       _id: "632ab45b4d87ff2494210b21",
       name: {
         en: "Dog Care",
+        es: "Cuidado de Perros",
       },
     },
     stock: 77,
@@ -14315,18 +15866,21 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab45b4d87ff2494210b21",
         name: {
           en: "Dog Care",
+          es: "Cuidado de Perros",
         },
       },
     ],
@@ -14343,14 +15897,17 @@ const products = [
     productId: "",
     title: {
       en: "Halloween Dog Taco",
+      es: "Taco de Perro Halloween",
     },
     description: {
-      en: "Dog Sitters supervise pets and take care of them in their owners'absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      en: "Dog Sitters supervise pets and take care of them in their owners' absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      es: "Los cuidadores de perros supervisan a las mascotas y las cuidan en ausencia de sus dueños. Las actividades típicas que aparecen en un ejemplo de currículum de cuidador de perros incluyen el aseo, proporcionar comida y agua, sacar a los perros a pasear, llevarlos a citas con el veterinario, administrar medicación, brindar compañía y seguir las instrucciones del dueño.",
     },
     category: {
       _id: "632ab45b4d87ff2494210b21",
       name: {
         en: "Dog Care",
+        es: "Cuidado de Perros",
       },
     },
     stock: 52,
@@ -14370,18 +15927,21 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab45b4d87ff2494210b21",
         name: {
           en: "Dog Care",
+          es: "Cuidado de Perros",
         },
       },
     ],
@@ -14398,14 +15958,17 @@ const products = [
     productId: "",
     title: {
       en: "Colorado Dog Collar",
+      es: "Collar para Perro Colorado",
     },
     description: {
-      en: "Dog Sitters supervise pets and take care of them in their owners'absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      en: "Dog Sitters supervise pets and take care of them in their owners' absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      es: "Los cuidadores de perros supervisan a las mascotas y las cuidan en ausencia de sus dueños. Las actividades típicas incluyen aseo, proporcionar comida y agua, sacar a los perros a pasear, llevarlos a citas con el veterinario, administrar medicación, brindar compañía y seguir las instrucciones del dueño.",
     },
     category: {
       _id: "632ab45b4d87ff2494210b21",
       name: {
         en: "Dog Care",
+        es: "Cuidado de Perros",
       },
     },
     stock: 431,
@@ -14425,18 +15988,21 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab45b4d87ff2494210b21",
         name: {
           en: "Dog Care",
+          es: "Cuidado de Perros",
         },
       },
     ],
@@ -14453,14 +16019,17 @@ const products = [
     productId: "",
     title: {
       en: "Bling Dog Collar",
+      es: "Collar Brillante para Perro",
     },
     description: {
-      en: "Dog Sitters supervise pets and take care of them in their owners'absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      en: "Dog Sitters supervise pets and take care of them in their owners' absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      es: "Los cuidadores de perros supervisan a las mascotas y las cuidan en ausencia de sus dueños. Las actividades típicas incluyen aseo, proporcionar comida y agua, sacar a los perros a pasear, llevarlos a citas con el veterinario, administrar medicación, brindar compañía y seguir las instrucciones del dueño.",
     },
     category: {
       _id: "632ab45b4d87ff2494210b21",
       name: {
         en: "Dog Care",
+        es: "Cuidado de Perros",
       },
     },
     stock: 663,
@@ -14480,18 +16049,21 @@ const products = [
         _id: "632ab4434d87ff2494210b0e",
         name: {
           en: "Pet Care",
+          es: "Cuidado de Mascotas",
         },
       },
       {
         _id: "632ab4524d87ff2494210b19",
         name: {
           en: "Cat Care",
+          es: "Cuidado de Gatos",
         },
       },
       {
         _id: "632ab45b4d87ff2494210b21",
         name: {
           en: "Dog Care",
+          es: "Cuidado de Perros",
         },
       },
     ],
@@ -14508,14 +16080,17 @@ const products = [
     productId: "",
     title: {
       en: "Popsicle Dog Collar",
+      es: "Collar para Perro tipo Paleta",
     },
     description: {
-      en: "Dog Sitters supervise pets and take care of them in their owners'absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      en: "Dog Sitters supervise pets and take care of them in their owners' absence. Typical activities seen on a Dog Sitter example resume are grooming, providing food and water, taking dogs out for walk, taking dogs to vet appointments, administering medication, providing companionship, and following owner instructions.",
+      es: "Los cuidadores de perros supervisan a las mascotas y las cuidan en ausencia de sus dueños. Las actividades típicas incluyen aseo, proporcionar comida y agua, sacar a los perros a pasear, llevarlos a citas con el veterinario, administrar medicación, brindar compañía y seguir las instrucciones del dueño.",
     },
     category: {
       _id: "632ab45b4d87ff2494210b21",
       name: {
         en: "Dog Care",
+        es: "Cuidado de Perros",
       },
     },
     stock: 164,
@@ -14535,24 +16110,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -14569,14 +16148,17 @@ const products = [
     productId: "",
     title: {
       en: "Hibiscus Baby Corn",
+      es: "Maíz Bebé Hibiscus",
     },
     description: {
       en: "canned food - food preserved by canning. canned foods, canned goods, tinned goods. food product, foodstuff - a substance that can be used or prepared for use as food. canned meat, tinned meat - meat preserved in a can or tin.",
+      es: "Comida enlatada - alimentos conservados mediante enlatado. Comida enlatada, productos enlatados, alimentos enlatados. Producto alimenticio - una sustancia que puede ser utilizada o preparada como alimento. Carne enlatada - carne conservada en una lata.",
     },
     category: {
       _id: "62cfab4b484d89068aa7a7ff",
       name: {
         en: "Canned Food",
+        es: "Comida en Lata",
       },
     },
     stock: 485,
@@ -14596,24 +16178,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -14628,14 +16214,17 @@ const products = [
     productId: "",
     title: {
       en: "Figaro Green Olives",
+      es: "Aceitunas Verdes Figaro",
     },
     description: {
       en: "canned food - food preserved by canning. canned foods, canned goods, tinned goods. food product, foodstuff - a substance that can be used or prepared for use as food. canned meat, tinned meat - meat preserved in a can or tin.",
+      es: "Comida enlatada - alimentos conservados mediante enlatado. Comidas enlatadas, productos enlatados, alimentos enlatados. Producto alimenticio - una sustancia que puede ser utilizada o preparada como alimento. Carne enlatada - carne conservada en una lata.",
     },
     category: {
       _id: "62cfab4b484d89068aa7a7ff",
       name: {
         en: "Canned Food",
+        es: "Comida en Lata",
       },
     },
     stock: 212,
@@ -14655,24 +16244,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -14689,14 +16282,17 @@ const products = [
     productId: "",
     title: {
       en: "Borges Green Olive",
+      es: "Aceitunas Verdes Borges",
     },
     description: {
       en: "canned food - food preserved by canning. canned foods, canned goods, tinned goods. food product, foodstuff - a substance that can be used or prepared for use as food. canned meat, tinned meat - meat preserved in a can or tin.",
+      es: "Comida enlatada - alimentos conservados mediante enlatado. Comidas enlatadas, productos enlatados, alimentos enlatados. Producto alimenticio - una sustancia que puede ser utilizada o preparada como alimento. Carne enlatada - carne conservada en una lata.",
     },
     category: {
       _id: "62cfab4b484d89068aa7a7ff",
       name: {
         en: "Canned Food",
+        es: "Comida en Lata",
       },
     },
     stock: 249,
@@ -14716,24 +16312,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -14750,14 +16350,17 @@ const products = [
     productId: "",
     title: {
       en: "Borges Green Olives",
+      es: "Aceitunas Verdes Borges",
     },
     description: {
       en: "canned food - food preserved by canning. canned foods, canned goods, tinned goods. food product, foodstuff - a substance that can be used or prepared for use as food. canned meat, tinned meat - meat preserved in a can or tin.",
+      es: "Comida enlatada - alimentos conservados mediante enlatado. Comidas enlatadas, productos enlatados, alimentos enlatados. Producto alimenticio - una sustancia que puede ser utilizada o preparada como alimento. Carne enlatada - carne conservada en una lata.",
     },
     category: {
       _id: "62cfab4b484d89068aa7a7ff",
       name: {
         en: "Canned Food",
+        es: "Comida en Lata",
       },
     },
     stock: 18,
@@ -14777,24 +16380,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -14811,14 +16418,17 @@ const products = [
     productId: "",
     title: {
       en: "American Mushroom",
+      es: "Champiñón Americano",
     },
     description: {
       en: "canned food - food preserved by canning. canned foods, canned goods, tinned goods. food product, foodstuff - a substance that can be used or prepared for use as food. canned meat, tinned meat - meat preserved in a can or tin.",
+      es: "Comida enlatada - alimentos conservados mediante enlatado. Comidas enlatadas, productos enlatados, alimentos enlatados. Producto alimenticio - una sustancia que puede ser utilizada o preparada como alimento. Carne enlatada - carne conservada en una lata.",
     },
     category: {
       _id: "62cfab4b484d89068aa7a7ff",
       name: {
         en: "Canned Food",
+        es: "Comida en Lata",
       },
     },
     stock: 188,
@@ -14838,24 +16448,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -14870,14 +16484,17 @@ const products = [
     productId: "",
     title: {
       en: "Lays Classic Salted",
+      es: "Lays Clásicas Saladas",
     },
     description: {
       en: "a small usually thin and flat piece (as of wood or stone) cut, struck, or flaked off. b : a small piece of food: such as. (1) : a small, thin, crisp, usually salty piece of food typically prepared by frying, baking, or drying banana chips especially : potato chip — see also corn chip.",
+      es: "Un pedazo pequeño, usualmente delgado y plano (como de madera o piedra) cortado, golpeado o desmenuzado. b: un pequeño trozo de comida: por ejemplo, un pedazo delgado, crujiente, usualmente salado, típicamente preparado friéndolo, horneándolo o secándolo; especialmente chips de banana o papas — ver también chip de maíz.",
     },
     category: {
       _id: "62cfab39484d89068aa7a7fb",
       name: {
         en: "Chips & Nuts",
+        es: "Papas Fritas y Nueces",
       },
     },
     stock: 358,
@@ -14897,24 +16514,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -14931,14 +16552,17 @@ const products = [
     productId: "",
     title: {
       en: "Lays American Chips",
+      es: "Lays Americanas",
     },
     description: {
       en: "a small usually thin and flat piece (as of wood or stone) cut, struck, or flaked off. b : a small piece of food: such as. (1) : a small, thin, crisp, usually salty piece of food typically prepared by frying, baking, or drying banana chips especially : potato chip — see also corn chip.",
+      es: "Un pedazo pequeño, usualmente delgado y plano (como de madera o piedra) cortado, golpeado o desmenuzado. b: un pequeño trozo de comida: por ejemplo, un pedazo delgado, crujiente, usualmente salado, típicamente preparado friéndolo, horneándolo o secándolo; especialmente chips de banana o papas — ver también chip de maíz.",
     },
     category: {
       _id: "62cfab39484d89068aa7a7fb",
       name: {
         en: "Chips & Nuts",
+        es: "Papas Fritas y Nueces",
       },
     },
     stock: 531,
@@ -14958,24 +16582,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -14990,14 +16618,17 @@ const products = [
     productId: "",
     title: {
       en: "Kurkure Crackers",
+      es: "Galletas Kurkure",
     },
     description: {
       en: "a small usually thin and flat piece (as of wood or stone) cut, struck, or flaked off. b : a small piece of food: such as. (1) : a small, thin, crisp, usually salty piece of food typically prepared by frying, baking, or drying banana chips especially : potato chip — see also corn chip.",
+      es: "Un pedazo pequeño, usualmente delgado y plano (como de madera o piedra) cortado, golpeado o desmenuzado. b: un pequeño trozo de comida: por ejemplo, un pedazo delgado, crujiente, usualmente salado, típicamente preparado friéndolo, horneándolo o secándolo; especialmente chips de banana o papas — ver también chip de maíz.",
     },
     category: {
       _id: "62cfab39484d89068aa7a7fb",
       name: {
         en: "Chips & Nuts",
+        es: "Papas Fritas y Nueces",
       },
     },
     stock: 473,
@@ -15017,24 +16648,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -15049,14 +16684,17 @@ const products = [
     productId: "",
     title: {
       en: "Camel Smoked Almonds",
+      es: "Almendras Ahumadas Camel",
     },
     description: {
       en: "a small usually thin and flat piece (as of wood or stone) cut, struck, or flaked off. b : a small piece of food: such as. (1) : a small, thin, crisp, usually salty piece of food typically prepared by frying, baking, or drying banana chips especially : potato chip — see also corn chip.",
+      es: "Un pedazo pequeño, usualmente delgado y plano (como de madera o piedra) cortado, golpeado o desmenuzado. b: un pequeño trozo de comida, como un pedazo delgado, crujiente, usualmente salado, típicamente preparado friéndolo, horneándolo o secándolo; especialmente chips de banana o papas — ver también chip de maíz.",
     },
     category: {
       _id: "62cfab39484d89068aa7a7fb",
       name: {
         en: "Chips & Nuts",
+        es: "Papas Fritas y Nueces",
       },
     },
     stock: 767,
@@ -15076,24 +16714,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -15110,14 +16752,17 @@ const products = [
     productId: "",
     title: {
       en: "Blue Diamond Almonds",
+      es: "Almendras Blue Diamond",
     },
     description: {
       en: "a small usually thin and flat piece (as of wood or stone) cut, struck, or flaked off. b : a small piece of food: such as. (1) : a small, thin, crisp, usually salty piece of food typically prepared by frying, baking, or drying banana chips especially : potato chip — see also corn chip.",
+      es: "Un pedazo pequeño, usualmente delgado y plano (como de madera o piedra) cortado, golpeado o desmenuzado. b: un pequeño trozo de comida, como un pedazo delgado, crujiente, usualmente salado, típicamente preparado friéndolo, horneándolo o secándolo; especialmente chips de banana o papas — ver también chip de maíz.",
     },
     category: {
       _id: "62cfab39484d89068aa7a7fb",
       name: {
         en: "Chips & Nuts",
+        es: "Papas Fritas y Nueces",
       },
     },
     stock: 151,
@@ -15137,24 +16782,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -15169,14 +16818,17 @@ const products = [
     productId: "",
     title: {
       en: "Choco chocolate",
+      es: "Chocolate Choco",
     },
     description: {
       en: "a small usually thin and flat piece (as of wood or stone) cut, struck, or flaked off. b : a small piece of food: such as. (1) : a small, thin, crisp, usually salty piece of food typically prepared by frying, baking, or drying banana chips especially : potato chip — see also corn chip.",
+      es: "Un pedazo pequeño, usualmente delgado y plano (como de madera o piedra) cortado, golpeado o desmenuzado. b: un pequeño trozo de comida, como un pedazo delgado, crujiente, usualmente salado, típicamente preparado friéndolo, horneándolo o secándolo; especialmente chips de banana o papas — ver también chip de maíz.",
     },
     category: {
       _id: "62cfab28484d89068aa7a7f5",
       name: {
         en: "Chocolate",
+        es: "Chocolate",
       },
     },
     stock: 297,
@@ -15196,24 +16848,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -15228,14 +16884,17 @@ const products = [
     productId: "",
     title: {
       en: "Lotte Almond Chocoball",
+      es: "Lotte Chocoball de Almendra",
     },
     description: {
       en: "a small usually thin and flat piece (as of wood or stone) cut, struck, or flaked off. b : a small piece of food: such as. (1) : a small, thin, crisp, usually salty piece of food typically prepared by frying, baking, or drying banana chips especially : potato chip — see also corn chip.",
+      es: "Un pedazo pequeño, usualmente delgado y plano (como de madera o piedra) cortado, golpeado o desmenuzado. b: un pequeño trozo de comida, como un pedazo delgado, crujiente, usualmente salado, típicamente preparado friéndolo, horneándolo o secándolo; especialmente chips de banana o papas — ver también chip de maíz.",
     },
     category: {
       _id: "62cfab28484d89068aa7a7f5",
       name: {
         en: "Chocolate",
+        es: "Chocolate",
       },
     },
     stock: 334,
@@ -15255,24 +16914,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -15289,14 +16952,17 @@ const products = [
     productId: "",
     title: {
       en: "Passiar Mints",
+      es: "Mentas Passiar",
     },
     description: {
       en: "a small usually thin and flat piece (as of wood or stone) cut, struck, or flaked off. b : a small piece of food: such as. (1) : a small, thin, crisp, usually salty piece of food typically prepared by frying, baking, or drying banana chips especially : potato chip — see also corn chip.",
+      es: "Un pedazo pequeño, usualmente delgado y plano (como de madera o piedra) cortado, golpeado o desmenuzado. b: un pequeño trozo de comida, como un pedazo delgado, crujiente, usualmente salado, típicamente preparado friéndolo, horneándolo o secándolo; especialmente chips de banana o papas — ver también chip de maíz.",
     },
     category: {
       _id: "62cfab28484d89068aa7a7f5",
       name: {
         en: "Chocolate",
+        es: "Chocolate",
       },
     },
     stock: 248,
@@ -15316,24 +16982,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -15350,14 +17020,17 @@ const products = [
     productId: "",
     title: {
       en: "Assorted chocolate Box",
+      es: "Caja de Chocolates Surtidos",
     },
     description: {
       en: "a small usually thin and flat piece (as of wood or stone) cut, struck, or flaked off. b : a small piece of food: such as. (1) : a small, thin, crisp, usually salty piece of food typically prepared by frying, baking, or drying banana chips especially : potato chip — see also corn chip.",
+      es: "Un pedazo pequeño, usualmente delgado y plano (como de madera o piedra) cortado, golpeado o desmenuzado. b: un pequeño trozo de comida, como un pedazo delgado, crujiente, usualmente salado, típicamente preparado friéndolo, horneándolo o secándolo; especialmente chips de banana o papas — ver también chip de maíz.",
     },
     category: {
       _id: "62cfab28484d89068aa7a7f5",
       name: {
         en: "Chocolate",
+        es: "Chocolate",
       },
     },
     stock: 543,
@@ -15377,24 +17050,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -15411,14 +17088,17 @@ const products = [
     productId: "",
     title: {
       en: "Caramel Candy",
+      es: "Dulce de Caramelo",
     },
     description: {
       en: "a small usually thin and flat piece (as of wood or stone) cut, struck, or flaked off. b : a small piece of food: such as. (1) : a small, thin, crisp, usually salty piece of food typically prepared by frying, baking, or drying banana chips especially : potato chip — see also corn chip.",
+      es: "Un pedazo pequeño, usualmente delgado y plano (como de madera o piedra) cortado, golpeado o desmenuzado. b: un pequeño trozo de comida, como un pedazo delgado, crujiente, usualmente salado, típicamente preparado friéndolo, horneándolo o secándolo; especialmente chips de banana o papas — ver también chip de maíz.",
     },
     category: {
       _id: "62cfab28484d89068aa7a7f5",
       name: {
         en: "Chocolate",
+        es: "Chocolate",
       },
     },
     stock: 284,
@@ -15438,24 +17118,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -15472,14 +17156,17 @@ const products = [
     productId: "",
     title: {
       en: "Mr noodles Magic Masala",
+      es: "Fideos Mr Noodles Masala Mágico",
     },
     description: {
       en: "noodles are a  of food made from unleavened dough which is rolled flat and cut, stretched or extruded, into long strips or strings. ... noodles are usually cooked in boiling water, sometimes with cooking oil or salt added. They are also often pan-fried or deep-fried.",
+      es: "Los fideos son un alimento hecho de masa sin levadura, que se extiende y se corta, estira o extruye en tiras largas o hebras. ... Los fideos generalmente se cocinan en agua hirviendo, a veces con aceite o sal agregados. También se fríen a la sartén o se fríen en aceite.",
     },
     category: {
       _id: "62cfab4b484d89068aa7a7ff",
       name: {
         en: "Canned Food",
+        es: "Comida en Lata",
       },
     },
     stock: 755,
@@ -15499,24 +17186,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -15533,14 +17224,17 @@ const products = [
     productId: "",
     title: {
       en: "Mama Hot Spicy noodles",
+      es: "Fideos Picantes Mama Hot",
     },
     description: {
       en: "noodles are a  of food made from unleavened dough which is rolled flat and cut, stretched or extruded, into long strips or strings. ... noodles are usually cooked in boiling water, sometimes with cooking oil or salt added. They are also often pan-fried or deep-fried.",
+      es: "Los fideos son un alimento hecho de masa sin levadura, que se extiende y se corta, estira o extruye en tiras largas o hebras. ... Los fideos generalmente se cocinan en agua hirviendo, a veces con aceite o sal agregados. También se fríen a la sartén o se fríen en aceite.",
     },
     category: {
       _id: "62cfab4b484d89068aa7a7ff",
       name: {
         en: "Canned Food",
+        es: "Comida en Lata",
       },
     },
     stock: 353,
@@ -15560,24 +17254,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -15594,14 +17292,17 @@ const products = [
     productId: "",
     title: {
       en: "Mama Hot Spicy Flovour",
+      es: "Sabor Picante Mama Hot",
     },
     description: {
       en: "noodles are a  of food made from unleavened dough which is rolled flat and cut, stretched or extruded, into long strips or strings. ... noodles are usually cooked in boiling water, sometimes with cooking oil or salt added. They are also often pan-fried or deep-fried.",
+      es: "Los fideos son un alimento hecho de masa sin levadura, que se extiende y se corta, estira o extruye en tiras largas o hebras. ... Los fideos generalmente se cocinan en agua hirviendo, a veces con aceite o sal agregados. También se fríen a la sartén o se fríen en aceite.",
     },
     category: {
       _id: "62cfab4b484d89068aa7a7ff",
       name: {
         en: "Canned Food",
+        es: "Comida en Lata",
       },
     },
     stock: 9,
@@ -15621,24 +17322,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -15655,14 +17360,17 @@ const products = [
     productId: "",
     title: {
       en: "Maggi noodles",
+      es: "Fideos Maggi",
     },
     description: {
       en: "noodles are a  of food made from unleavened dough which is rolled flat and cut, stretched or extruded, into long strips or strings. ... noodles are usually cooked in boiling water, sometimes with cooking oil or salt added. They are also often pan-fried or deep-fried.",
+      es: "Los fideos son un alimento hecho de masa sin levadura, que se extiende y se corta, estira o extruye en tiras largas o hebras. ... Los fideos generalmente se cocinan en agua hirviendo, a veces con aceite o sal agregados. También se fríen a la sartén o se fríen en aceite.",
     },
     category: {
       _id: "62cfab4b484d89068aa7a7ff",
       name: {
         en: "Canned Food",
+        es: "Comida en Lata",
       },
     },
     stock: 627,
@@ -15682,24 +17390,28 @@ const products = [
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
       {
         _id: "62cfab39484d89068aa7a7fb",
         name: {
           en: "Chips & Nuts",
+          es: "Papas Fritas y Nueces",
         },
       },
       {
         _id: "62cfab28484d89068aa7a7f5",
         name: {
           en: "Chocolate",
+          es: "Chocolate",
         },
       },
       {
         _id: "62cfab4b484d89068aa7a7ff",
         name: {
           en: "Canned Food",
+          es: "Comida en Lata",
         },
       },
     ],
@@ -15714,14 +17426,17 @@ const products = [
     productId: "",
     title: {
       en: "Doodles noodles",
+      es: "Fideos Doodles",
     },
     description: {
       en: "noodles are a  of food made from unleavened dough which is rolled flat and cut, stretched or extruded, into long strips or strings. ... noodles are usually cooked in boiling water, sometimes with cooking oil or salt added. They are also often pan-fried or deep-fried.",
+      es: "Los fideos son un alimento hecho de masa sin levadura, que se extiende y se corta, estira o extruye en tiras largas o hebras. ... Los fideos generalmente se cocinan en agua hirviendo, a veces con aceite o sal agregados. También se fríen a la sartén o se fríen en aceite.",
     },
     category: {
       _id: "62cfab4b484d89068aa7a7ff",
       name: {
         en: "Canned Food",
+        es: "Comida en Lata",
       },
     },
     stock: 220,
@@ -15741,6 +17456,7 @@ const products = [
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
     ],
@@ -15755,14 +17471,17 @@ const products = [
     productId: "",
     title: {
       en: "Tropica Mustard honey",
+      es: "Miel de Mostaza Tropica",
     },
     description: {
       en: "honey, sweet, viscous liquid food, dark golden in colour, produced in the honey sacs of various bees from the nectar of flowers. Flavour and colour are determined by the flowers from which the nectar is gathered. Some of the most commercially desirable honeys are produced from clover by the domestic honeybee.",
+      es: "La miel es un alimento líquido dulce y viscoso, de color dorado oscuro, producido en los sacos de miel de varias abejas a partir del néctar de las flores. El sabor y el color dependen de las flores de las que se obtiene el néctar. Algunas de las mieles más deseables comercialmente se producen a partir del trébol por la abeja doméstica.",
     },
     category: {
       _id: "632ab2b64d87ff2494210aa7",
       name: {
         en: "Men",
+        es: "Hombres",
       },
     },
     stock: 431,
@@ -15782,6 +17501,7 @@ const products = [
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
     ],
@@ -15796,14 +17516,17 @@ const products = [
     productId: "",
     title: {
       en: "Saffola honey",
+      es: "Miel Saffola",
     },
     description: {
       en: "honey, sweet, viscous liquid food, dark golden in colour, produced in the honey sacs of various bees from the nectar of flowers. Flavour and colour are determined by the flowers from which the nectar is gathered. Some of the most commercially desirable honeys are produced from clover by the domestic honeybee.",
+      es: "La miel es un alimento líquido dulce y viscoso, de color dorado oscuro, producido en los sacos de miel de varias abejas a partir del néctar de las flores. El sabor y el color dependen de las flores de las que se obtiene el néctar. Algunas de las mieles más deseables comercialmente se producen a partir del trébol por la abeja doméstica.",
     },
     category: {
       _id: "632ab2b64d87ff2494210aa7",
       name: {
         en: "Men",
+        es: "Hombres",
       },
     },
     stock: 181,
@@ -15823,6 +17546,7 @@ const products = [
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
     ],
@@ -15837,14 +17561,17 @@ const products = [
     productId: "",
     title: {
       en: "Shefa Natural honey",
+      es: "Miel Natural Shefa",
     },
     description: {
       en: "honey, sweet, viscous liquid food, dark golden in colour, produced in the honey sacs of various bees from the nectar of flowers. Flavour and colour are determined by the flowers from which the nectar is gathered. Some of the most commercially desirable honeys are produced from clover by the domestic honeybee.",
+      es: "La miel es un alimento líquido dulce y viscoso, de color dorado oscuro, producido en los sacos de miel de varias abejas a partir del néctar de las flores. El sabor y el color dependen de las flores de las que se obtiene el néctar. Algunas de las mieles más deseables comercialmente se producen a partir del trébol por la abeja doméstica.",
     },
     category: {
       _id: "632ab2b64d87ff2494210aa7",
       name: {
         en: "Men",
+        es: "Hombres",
       },
     },
     stock: 548,
@@ -15864,6 +17591,7 @@ const products = [
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
     ],
@@ -15878,14 +17606,17 @@ const products = [
     productId: "",
     title: {
       en: "Dabur honey",
+      es: "Miel Dabur",
     },
     description: {
       en: "honey, sweet, viscous liquid food, dark golden in colour, produced in the honey sacs of various bees from the nectar of flowers. Flavour and colour are determined by the flowers from which the nectar is gathered. Some of the most commercially desirable honeys are produced from clover by the domestic honeybee.",
+      es: "La miel es un alimento líquido dulce y viscoso, de color dorado oscuro, producido en los sacos de miel de varias abejas a partir del néctar de las flores. El sabor y el color dependen de las flores de las que se obtiene el néctar. Algunas de las mieles más deseables comercialmente se producen a partir del trébol por la abeja doméstica.",
     },
     category: {
       _id: "632ab2b64d87ff2494210aa7",
       name: {
         en: "Men",
+        es: "Hombres",
       },
     },
     stock: 228,
@@ -15905,6 +17636,7 @@ const products = [
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
     ],
@@ -15921,14 +17653,17 @@ const products = [
     productId: "",
     title: {
       en: "Dabur honey Oil Free",
+      es: "Miel Dabur sin aceite",
     },
     description: {
       en: "honey, sweet, viscous liquid food, dark golden in colour, produced in the honey sacs of various bees from the nectar of flowers. Flavour and colour are determined by the flowers from which the nectar is gathered. Some of the most commercially desirable honeys are produced from clover by the domestic honeybee.",
+      es: "La miel es un alimento líquido dulce y viscoso, de color dorado oscuro, producido en los sacos de miel de varias abejas a partir del néctar de las flores. El sabor y el color dependen de las flores de las que se obtiene el néctar. Algunas de las mieles más deseables comercialmente se producen a partir del trébol por la abeja doméstica.",
     },
     category: {
       _id: "632ab2c34d87ff2494210ab2",
       name: {
         en: "Women",
+        es: "Mujeres",
       },
     },
     stock: 688,
@@ -15948,6 +17683,7 @@ const products = [
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
     ],
@@ -15964,14 +17700,17 @@ const products = [
     productId: "",
     title: {
       en: "Aussiebee honey Glass Bottle",
+      es: "Miel Aussiebee en botella de vidrio",
     },
     description: {
       en: "honey, sweet, viscous liquid food, dark golden in colour, produced in the honey sacs of various bees from the nectar of flowers. Flavour and colour are determined by the flowers from which the nectar is gathered. Some of the most commercially desirable honeys are produced from clover by the domestic honeybee.",
+      es: "La miel es un alimento líquido dulce y viscoso, de color dorado oscuro, producido en los sacos de miel de varias abejas a partir del néctar de las flores. El sabor y el color dependen de las flores de las que se obtiene el néctar. Algunas de las mieles más deseables comercialmente se producen a partir del trébol por la abeja doméstica.",
     },
     category: {
       _id: "632ab2c34d87ff2494210ab2",
       name: {
         en: "Women",
+        es: "Mujeres",
       },
     },
     stock: 341,
@@ -15991,6 +17730,7 @@ const products = [
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
     ],
@@ -16005,14 +17745,17 @@ const products = [
     productId: "",
     title: {
       en: "Aussiebee honey",
+      es: "Miel Aussiebee",
     },
     description: {
       en: "honey, sweet, viscous liquid food, dark golden in colour, produced in the honey sacs of various bees from the nectar of flowers. Flavour and colour are determined by the flowers from which the nectar is gathered. Some of the most commercially desirable honeys are produced from clover by the domestic honeybee.",
+      es: "La miel es un alimento líquido dulce y viscoso, de color dorado oscuro, producido en los sacos de miel de varias abejas a partir del néctar de las flores. El sabor y el color dependen de las flores de las que se obtiene el néctar. Algunas de las mieles más deseables comercialmente se producen a partir del trébol por la abeja doméstica.",
     },
     category: {
       _id: "632ab2c34d87ff2494210ab2",
       name: {
         en: "Women",
+        es: "Mujeres",
       },
     },
     stock: 552,
@@ -16032,6 +17775,7 @@ const products = [
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
     ],
@@ -16046,14 +17790,17 @@ const products = [
     productId: "",
     title: {
       en: "Aussiebee honey Bottle",
+      es: "Botella de miel Aussiebee",
     },
     description: {
       en: "honey, sweet, viscous liquid food, dark golden in colour, produced in the honey sacs of various bees from the nectar of flowers. Flavour and colour are determined by the flowers from which the nectar is gathered. Some of the most commercially desirable honeys are produced from clover by the domestic honeybee.",
+      es: "La miel es un alimento líquido dulce y viscoso, de color dorado oscuro, producido en los sacos de miel de varias abejas a partir del néctar de las flores. El sabor y el color dependen de las flores de las que se obtiene el néctar. Algunas de las mieles más deseables comercialmente se producen a partir del trébol por la abeja doméstica.",
     },
     category: {
       _id: "632ab2c34d87ff2494210ab2",
       name: {
         en: "Women",
+        es: "Mujeres",
       },
     },
     stock: 637,
@@ -16073,6 +17820,7 @@ const products = [
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
     ],
@@ -16087,14 +17835,17 @@ const products = [
     productId: "",
     title: {
       en: "Alshifa Natural honey",
+      es: "Miel natural Alshifa",
     },
     description: {
       en: "honey, sweet, viscous liquid food, dark golden in colour, produced in the honey sacs of various bees from the nectar of flowers. Flavour and colour are determined by the flowers from which the nectar is gathered. Some of the most commercially desirable honeys are produced from clover by the domestic honeybee.",
+      es: "La miel es un alimento líquido dulce y viscoso, de color dorado oscuro, producido en los sacos de miel de varias abejas a partir del néctar de las flores. El sabor y el color dependen de las flores de las que se obtiene el néctar. Algunas de las mieles más deseables comercialmente se producen a partir del trébol por la abeja doméstica.",
     },
     category: {
       _id: "632ab2c34d87ff2494210ab2",
       name: {
         en: "Women",
+        es: "Mujeres",
       },
     },
     stock: 756,
@@ -16114,6 +17865,7 @@ const products = [
         _id: "632ab1e04d87ff2494210a6a",
         name: {
           en: "Jam & Jelly",
+          es: "Mermeladas y jaleas",
         },
       },
     ],
@@ -16128,14 +17880,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282ad",
     title: {
       en: "Pran Mixed Fruit Jam",
+      es: "Mermelada de frutas mixtas Pran",
     },
     description: {
       en: "Jams and jellies are spreads typically made from fruit, sugar, and pectin. Jelly is made with the juice of the fruit; jam uses the meat of the fruit as well. Some vegetable jellies are also produced.",
+      es: "Las mermeladas y jaleas son untables típicamente elaboradas con fruta, azúcar y pectina. La jalea se hace con el jugo de la fruta; la mermelada utiliza también la pulpa de la fruta. También se producen algunas jaleas de verduras.",
     },
     category: {
       _id: "632ab1e04d87ff2494210a6a",
       name: {
         en: "Jam & Jelly",
+        es: "Mermeladas y jaleas",
       },
     },
     stock: 298,
@@ -16155,6 +17910,7 @@ const products = [
         _id: "632ab1e04d87ff2494210a6a",
         name: {
           en: "Jam & Jelly",
+          es: "Mermeladas y jaleas",
         },
       },
     ],
@@ -16169,14 +17925,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282ae",
     title: {
       en: "Pran Mango Jam",
+      es: "Mermelada de mango Pran",
     },
     description: {
       en: "Jams and jellies are spreads typically made from fruit, sugar, and pectin. Jelly is made with the juice of the fruit; jam uses the meat of the fruit as well. Some vegetable jellies are also produced.",
+      es: "Las mermeladas y jaleas son untables típicamente elaboradas con fruta, azúcar y pectina. La jalea se hace con el jugo de la fruta; la mermelada utiliza también la pulpa de la fruta. También se producen algunas jaleas de verduras.",
     },
     category: {
       _id: "632ab1e04d87ff2494210a6a",
       name: {
         en: "Jam & Jelly",
+        es: "Mermeladas y jaleas",
       },
     },
     stock: 720,
@@ -16196,6 +17955,7 @@ const products = [
         _id: "632ab1e04d87ff2494210a6a",
         name: {
           en: "Jam & Jelly",
+          es: "Mermeladas y jaleas",
         },
       },
     ],
@@ -16210,14 +17970,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282af",
     title: {
       en: "Pran apple Jelly",
+      es: "Jalea de manzana Pran",
     },
     description: {
       en: "Jams and jellies are spreads typically made from fruit, sugar, and pectin. Jelly is made with the juice of the fruit; jam uses the meat of the fruit as well. Some vegetable jellies are also produced.",
+      es: "Las mermeladas y jaleas son untables típicamente elaboradas con fruta, azúcar y pectina. La jalea se hace con el jugo de la fruta; la mermelada utiliza también la pulpa de la fruta. También se producen algunas jaleas de verduras.",
     },
     category: {
       _id: "632ab1e04d87ff2494210a6a",
       name: {
         en: "Jam & Jelly",
+        es: "Mermeladas y jaleas",
       },
     },
     stock: 711,
@@ -16237,6 +18000,7 @@ const products = [
         _id: "632ab1e04d87ff2494210a6a",
         name: {
           en: "Jam & Jelly",
+          es: "Mermeladas y jaleas",
         },
       },
     ],
@@ -16253,14 +18017,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282b0",
     title: {
       en: "Foster Clark Jam",
+      es: "Mermelada Foster Clark",
     },
     description: {
       en: "Jams and jellies are spreads typically made from fruit, sugar, and pectin. Jelly is made with the juice of the fruit; jam uses the meat of the fruit as well. Some vegetable jellies are also produced.",
+      es: "Las mermeladas y jaleas son untables típicamente elaboradas con fruta, azúcar y pectina. La jalea se hace con el jugo de la fruta; la mermelada utiliza también la pulpa de la fruta. También se producen algunas jaleas de verduras.",
     },
     category: {
       _id: "632ab1e04d87ff2494210a6a",
       name: {
         en: "Jam & Jelly",
+        es: "Mermeladas y jaleas",
       },
     },
     stock: 1,
@@ -16280,6 +18047,7 @@ const products = [
         _id: "632ab1e04d87ff2494210a6a",
         name: {
           en: "Jam & Jelly",
+          es: "Mermeladas y jaleas",
         },
       },
     ],
@@ -16294,14 +18062,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282b1",
     title: {
       en: "Ahmed Fruit Jelly",
+      es: "Jalea de Frutas Ahmed",
     },
     description: {
       en: "Jams and jellies are spreads typically made from fruit, sugar, and pectin. Jelly is made with the juice of the fruit; jam uses the meat of the fruit as well. Some vegetable jellies are also produced.",
+      es: "Las mermeladas y jaleas son untables típicamente hechos de fruta, azúcar y pectina. La jalea se hace con el jugo de la fruta; la mermelada usa también la pulpa de la fruta. También se producen algunas jaleas de vegetales.",
     },
     category: {
       _id: "632ab1e04d87ff2494210a6a",
       name: {
         en: "Jam & Jelly",
+        es: "Mermeladas y Jaleas",
       },
     },
     stock: 707,
@@ -16321,54 +18092,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -16385,14 +18165,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282b2",
     title: {
       en: "Goddess Garden Sunscreen",
+      es: "Protector Solar Goddess Garden",
     },
     description: {
       en: "skin-care is the range of practices that support skin integrity, enhance its appearance and relieve skin conditions. skin-care is a part of the treatment of wound healing, radiation therapy and some medications.",
+      es: "El cuidado de la piel es el conjunto de prácticas que apoyan la integridad de la piel, mejoran su apariencia y alivian condiciones cutáneas. El cuidado de la piel también forma parte del tratamiento de la cicatrización de heridas, la radioterapia y algunos medicamentos.",
     },
     category: {
       _id: "632ab2f04d87ff2494210ad0",
       name: {
         en: "Skin Care",
+        es: "Cuidado de la Piel",
       },
     },
     stock: 433,
@@ -16412,54 +18195,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -16474,14 +18266,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282b3",
     title: {
       en: "Sunscreen Lotion",
+      es: "Loción Protectora Solar",
     },
     description: {
       en: "skin-care is the range of practices that support skin integrity, enhance its appearance and relieve skin conditions. skin-care is a part of the treatment of wound healing, radiation therapy and some medications.",
+      es: "El cuidado de la piel es el conjunto de prácticas que apoyan la integridad de la piel, mejoran su apariencia y alivian condiciones cutáneas. El cuidado de la piel también forma parte del tratamiento de la cicatrización de heridas, la radioterapia y algunos medicamentos.",
     },
     category: {
       _id: "632ab2f04d87ff2494210ad0",
       name: {
         en: "Skin Care",
+        es: "Cuidado de la Piel",
       },
     },
     stock: 550,
@@ -16501,54 +18296,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -16565,14 +18369,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282b4",
     title: {
       en: "Erin Face Wash",
+      es: "Limpiador Facial Erin",
     },
     description: {
       en: "skin-care is the range of practices that support skin integrity, enhance its appearance and relieve skin conditions. skin-care is a part of the treatment of wound healing, radiation therapy and some medications.",
+      es: "El cuidado de la piel es el conjunto de prácticas que apoyan la integridad de la piel, mejoran su apariencia y alivian condiciones cutáneas. El cuidado de la piel también forma parte del tratamiento de la cicatrización de heridas, la radioterapia y algunos medicamentos.",
     },
     category: {
       _id: "632ab2f04d87ff2494210ad0",
       name: {
         en: "Skin Care",
+        es: "Cuidado de la Piel",
       },
     },
     stock: 727,
@@ -16592,54 +18399,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -16656,14 +18472,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282b5",
     title: {
       en: "Best Choice Soap",
+      es: "Jabón Mejor Elección",
     },
     description: {
       en: "skin-care is the range of practices that support skin integrity, enhance its appearance and relieve skin conditions. skin-care is a part of the treatment of wound healing, radiation therapy and some medications.",
+      es: "El cuidado de la piel es el conjunto de prácticas que apoyan la integridad de la piel, mejoran su apariencia y alivian condiciones cutáneas. El cuidado de la piel también forma parte del tratamiento de la cicatrización de heridas, la radioterapia y algunos medicamentos.",
     },
     category: {
       _id: "632ab2f04d87ff2494210ad0",
       name: {
         en: "Skin Care",
+        es: "Cuidado de la Piel",
       },
     },
     stock: 625,
@@ -16683,54 +18502,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -16747,14 +18575,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282b6",
     title: {
       en: "Banana Boat Lotion",
+      es: "Loción Banana Boat",
     },
     description: {
       en: "skin-care is the range of practices that support skin integrity, enhance its appearance and relieve skin conditions. skin-care is a part of the treatment of wound healing, radiation therapy and some medications.",
+      es: "El cuidado de la piel es el conjunto de prácticas que apoyan la integridad de la piel, mejoran su apariencia y alivian condiciones cutáneas. El cuidado de la piel también forma parte del tratamiento de la cicatrización de heridas, la radioterapia y algunos medicamentos.",
     },
     category: {
       _id: "632ab2f04d87ff2494210ad0",
       name: {
         en: "Skin Care",
+        es: "Cuidado de la Piel",
       },
     },
     stock: 710,
@@ -16774,54 +18605,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -16836,14 +18676,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282b7",
     title: {
       en: "Gillette Vector",
+      es: "Gillette Vector",
     },
     description: {
       en: "Health products are defined as those substances which gives energy or makes the person healthy. Health products are vitamins, minerals, herbal medicines, homeopathic preparations, probiotics and even some traditional medicines are also prescribed by doctor or any equivalent physician.",
+      es: "Los productos de salud se definen como aquellas sustancias que proporcionan energía o mantienen a la persona saludable. Los productos de salud incluyen vitaminas, minerales, medicamentos herbales, preparaciones homeopáticas, probióticos e incluso algunos medicamentos tradicionales que también son prescritos por un médico o profesional equivalente.",
     },
     category: {
       _id: "632ab2d54d87ff2494210ac0",
       name: {
         en: "Shaving Needs",
+        es: "Necesidades de Afeitado",
       },
     },
     stock: 327,
@@ -16863,54 +18706,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -16925,14 +18777,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282b8",
     title: {
       en: "Gillette Vector Refillable",
+      es: "Gillette Vector Recargable",
     },
     description: {
       en: "Health products are defined as those substances which gives energy or makes the person healthy. Health products are vitamins, minerals, herbal medicines, homeopathic preparations, probiotics and even some traditional medicines are also prescribed by doctor or any equivalent physician.",
+      es: "Los productos de salud se definen como aquellas sustancias que proporcionan energía o mantienen a la persona saludable. Los productos de salud incluyen vitaminas, minerales, medicamentos herbales, preparaciones homeopáticas, probióticos e incluso algunos medicamentos tradicionales que también son prescritos por un médico o profesional equivalente.",
     },
     category: {
       _id: "632ab2d54d87ff2494210ac0",
       name: {
         en: "Shaving Needs",
+        es: "Necesidades de Afeitado",
       },
     },
     stock: 746,
@@ -16952,54 +18807,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -17014,14 +18878,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282b9",
     title: {
       en: "Schick Exacta",
+      es: "Schick Exacta",
     },
     description: {
       en: "Health products are defined as those substances which gives energy or makes the person healthy. Health products are vitamins, minerals, herbal medicines, homeopathic preparations, probiotics and even some traditional medicines are also prescribed by doctor or any equivalent physician.",
+      es: "Los productos de salud se definen como aquellas sustancias que proporcionan energía o mantienen a la persona saludable. Los productos de salud incluyen vitaminas, minerales, medicamentos herbales, preparaciones homeopáticas, probióticos e incluso algunos medicamentos tradicionales que también son prescritos por un médico o profesional equivalente.",
     },
     category: {
       _id: "632ab2d54d87ff2494210ac0",
       name: {
         en: "Shaving Needs",
+        es: "Necesidades de Afeitado",
       },
     },
     stock: 665,
@@ -17041,54 +18908,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -17103,14 +18979,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282ba",
     title: {
       en: "Gillette Foam",
+      es: "Espuma Gillette",
     },
     description: {
       en: "Health products are defined as those substances which gives energy or makes the person healthy. Health products are vitamins, minerals, herbal medicines, homeopathic preparations, probiotics and even some traditional medicines are also prescribed by doctor or any equivalent physician.",
+      es: "Los productos de salud se definen como aquellas sustancias que proporcionan energía o mantienen a la persona saludable. Los productos de salud incluyen vitaminas, minerales, medicamentos herbales, preparaciones homeopáticas, probióticos e incluso algunos medicamentos tradicionales que también son prescritos por un médico o profesional equivalente.",
     },
     category: {
       _id: "632ab2d54d87ff2494210ac0",
       name: {
         en: "Shaving Needs",
+        es: "Necesidades de Afeitado",
       },
     },
     stock: 486,
@@ -17130,54 +19009,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -17192,14 +19080,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282bb",
     title: {
       en: "Denim After Shave",
+      es: "After Shave Denim",
     },
     description: {
       en: "Health products are defined as those substances which gives energy or makes the person healthy. Health products are vitamins, minerals, herbal medicines, homeopathic preparations, probiotics and even some traditional medicines are also prescribed by doctor or any equivalent physician.",
+      es: "Los productos de salud se definen como aquellas sustancias que proporcionan energía o mantienen a la persona saludable. Los productos de salud incluyen vitaminas, minerales, medicamentos herbales, preparaciones homeopáticas, probióticos e incluso algunos medicamentos tradicionales que también son prescritos por un médico o profesional equivalente.",
     },
     category: {
       _id: "632ab2d54d87ff2494210ac0",
       name: {
         en: "Shaving Needs",
+        es: "Necesidades de Afeitado",
       },
     },
     stock: 637,
@@ -17219,54 +19110,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -17281,14 +19181,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282bc",
     title: {
       en: "Pepsodent Toothbrush",
+      es: "Cepillo de Dientes Pepsodent",
     },
     description: {
       en: "oral-care Products are intended to cleanse the oral cavity, freshen the breath, and maintain good oral hygiene. Some products also include ingredients to protect against the formation of cavities.",
+      es: "Los productos de cuidado oral están destinados a limpiar la cavidad oral, refrescar el aliento y mantener una buena higiene bucal. Algunos productos también incluyen ingredientes para proteger contra la formación de caries.",
     },
     category: {
       _id: "632ab2f84d87ff2494210ad8",
       name: {
         en: "Oral Care",
+        es: "Cuidado Oral",
       },
     },
     stock: 400,
@@ -17308,54 +19211,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -17370,14 +19282,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282bd",
     title: {
       en: "Kshore Toothpaste",
+      es: "Pasta Dental Kshore",
     },
     description: {
       en: "oral-care Products are intended to cleanse the oral cavity, freshen the breath, and maintain good oral hygiene. Some products also include ingredients to protect against the formation of cavities.",
+      es: "Los productos de cuidado oral están destinados a limpiar la cavidad oral, refrescar el aliento y mantener una buena higiene bucal. Algunos productos también incluyen ingredientes para proteger contra la formación de caries.",
     },
     category: {
       _id: "632ab2f84d87ff2494210ad8",
       name: {
         en: "Oral Care",
+        es: "Cuidado Oral",
       },
     },
     stock: 571,
@@ -17397,54 +19312,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -17461,14 +19385,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282be",
     title: {
       en: "Eurofresh Toothpaste",
+      es: "Pasta Dental Eurofresh",
     },
     description: {
       en: "oral-care Products are intended to cleanse the oral cavity, freshen the breath, and maintain good oral hygiene. Some products also include ingredients to protect against the formation of cavities.",
+      es: "Los productos de cuidado oral están destinados a limpiar la cavidad oral, refrescar el aliento y mantener una buena higiene bucal. Algunos productos también incluyen ingredientes para proteger contra la formación de caries.",
     },
     category: {
       _id: "632ab2f84d87ff2494210ad8",
       name: {
         en: "Oral Care",
+        es: "Cuidado Oral",
       },
     },
     stock: 661,
@@ -17488,54 +19415,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -17552,14 +19488,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282bf",
     title: {
       en: "Colgate Mouthwash",
+      es: "Enjuague Bucal Colgate",
     },
     description: {
       en: "oral-care Products are intended to cleanse the oral cavity, freshen the breath, and maintain good oral hygiene. Some products also include ingredients to protect against the formation of cavities.",
+      es: "Los productos de cuidado oral están destinados a limpiar la cavidad oral, refrescar el aliento y mantener una buena higiene bucal. Algunos productos también incluyen ingredientes para proteger contra la formación de caries.",
     },
     category: {
       _id: "632ab2f84d87ff2494210ad8",
       name: {
         en: "Oral Care",
+        es: "Cuidado Oral",
       },
     },
     stock: 8,
@@ -17579,54 +19518,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -17643,14 +19591,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282c0",
     title: {
       en: "Closeup Toothpaste",
+      es: "Pasta Dental Closeup",
     },
     description: {
       en: "oral-care Products are intended to cleanse the oral cavity, freshen the breath, and maintain good oral hygiene. Some products also include ingredients to protect against the formation of cavities.",
+      es: "Los productos de cuidado oral están destinados a limpiar la cavidad oral, refrescar el aliento y mantener una buena higiene bucal. Algunos productos también incluyen ingredientes para proteger contra la formación de caries.",
     },
     category: {
       _id: "632ab2f84d87ff2494210ad8",
       name: {
         en: "Oral Care",
+        es: "Cuidado Oral",
       },
     },
     stock: 493,
@@ -17670,54 +19621,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -17734,14 +19694,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282c1",
     title: {
       en: "Pantene Shampoo",
+      es: "Champú Pantene",
     },
     description: {
       en: "hair-care products are those that help to control the properties and behavior of the hair so that it can be maintained in a controlled and desirable manner. This can include hair conditioners, hair sprays, hair straighteners and relaxers, permanent waves, shampoos, rinses, tonics and dressings.",
+      es: "Los productos para el cuidado del cabello son aquellos que ayudan a controlar las propiedades y el comportamiento del cabello para que pueda mantenerse de manera controlada y deseable. Esto puede incluir acondicionadores, lacas, alisadores y relajantes, permanentes, champús, enjuagues, tónicos y tratamientos.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
     stock: 447,
@@ -17761,54 +19724,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -17825,14 +19797,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282c2",
     title: {
       en: "Head Shoulders Shampoo",
+      es: "Champú Head Shoulders",
     },
     description: {
       en: "hair-care products are those that help to control the properties and behavior of the hair so that it can be maintained in a controlled and desirable manner. This can include hair conditioners, hair sprays, hair straighteners and relaxers, permanent waves, shampoos, rinses, tonics and dressings.",
+      es: "Los productos para el cuidado del cabello son aquellos que ayudan a controlar las propiedades y el comportamiento del cabello para que pueda mantenerse de manera controlada y deseable. Esto puede incluir acondicionadores, sprays, alisadores y relajantes, ondas permanentes, champús, enjuagues, tónicos y tratamientos.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
     stock: 544,
@@ -17852,54 +19827,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -17916,14 +19900,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282c3",
     title: {
       en: "Redken Conditioner",
+      es: "Acondicionador Redken",
     },
     description: {
       en: "hair-care products are those that help to control the properties and behavior of the hair so that it can be maintained in a controlled and desirable manner. This can include hair conditioners, hair sprays, hair straighteners and relaxers, permanent waves, shampoos, rinses, tonics and dressings.",
+      es: "Los productos para el cuidado del cabello son aquellos que ayudan a controlar las propiedades y el comportamiento del cabello, de manera que se pueda mantener de forma controlada y deseable. Esto incluye acondicionadores, sprays, alisadores y relajantes, permanentes, champús, enjuagues, tónicos y tratamientos capilares.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
     stock: 422,
@@ -17943,54 +19930,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -18007,14 +20003,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282c4",
     title: {
       en: "Pantene hair-care",
+      es: "Cuidado del cabello Pantene",
     },
     description: {
       en: "hair-care products are those that help to control the properties and behavior of the hair so that it can be maintained in a controlled and desirable manner. This can include hair conditioners, hair sprays, hair straighteners and relaxers, permanent waves, shampoos, rinses, tonics and dressings.",
+      es: "Los productos para el cuidado del cabello son aquellos que ayudan a controlar las propiedades y el comportamiento del cabello, de manera que se pueda mantener de forma controlada y deseable. Esto incluye acondicionadores, sprays, alisadores y relajantes, permanentes, champús, enjuagues, tónicos y tratamientos capilares.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
     stock: 476,
@@ -18034,54 +20033,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -18098,14 +20106,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282c5",
     title: {
       en: "Herbal Shampoo",
+      es: "Champú Herbal",
     },
     description: {
       en: "hair-care products are those that help to control the properties and behavior of the hair so that it can be maintained in a controlled and desirable manner. This can include hair conditioners, hair sprays, hair straighteners and relaxers, permanent waves, shampoos, rinses, tonics and dressings.",
+      es: "Los productos para el cuidado del cabello son aquellos que ayudan a controlar las propiedades y el comportamiento del cabello, de manera que se pueda mantener de forma controlada y deseable. Esto incluye acondicionadores, sprays, alisadores y relajantes, permanentes, champús, enjuagues, tónicos y tratamientos capilares.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
     stock: 435,
@@ -18125,54 +20136,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -18189,14 +20209,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282c6",
     title: {
       en: "Dark & Lovely Conditioner",
+      es: "Acondicionador Dark & Lovely",
     },
     description: {
       en: "hair-care products are those that help to control the properties and behavior of the hair so that it can be maintained in a controlled and desirable manner. This can include hair conditioners, hair sprays, hair straighteners and relaxers, permanent waves, shampoos, rinses, tonics and dressings.",
+      es: "Los productos para el cuidado del cabello son aquellos que ayudan a controlar las propiedades y el comportamiento del cabello, de manera que se pueda mantener de forma controlada y deseable. Esto incluye acondicionadores, sprays, alisadores y relajantes, permanentes, champús, enjuagues, tónicos y tratamientos capilares.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
     stock: 428,
@@ -18216,54 +20239,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -18280,16 +20312,20 @@ const products = [
     productId: "639dc0f5c2fce72b697282c7",
     title: {
       en: "Clear Conditioner",
+      es: "Acondicionador Clear",
     },
     description: {
       en: "hair-care products are those that help to control the properties and behavior of the hair so that it can be maintained in a controlled and desirable manner. This can include hair conditioners, hair sprays, hair straighteners and relaxers, permanent waves, shampoos, rinses, tonics and dressings.",
+      es: "Los productos para el cuidado del cabello son aquellos que ayudan a controlar las propiedades y el comportamiento del cabello, de manera que se pueda mantener de forma controlada y deseable. Esto incluye acondicionadores, sprays, alisadores y relajantes, permanentes, champús, enjuagues, tónicos y tratamientos capilares.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
+
     stock: 150,
     isCombination: false,
     __v: 0,
@@ -18307,54 +20343,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -18371,14 +20416,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282c8",
     title: {
       en: "Revlon Lipstick",
+      es: "Labial Revlon",
     },
     description: {
       en: "A cosmetic product shall mean any substance or mixture intended to be placed in contact with the various external parts of the human body (epidermis, hair system, nails, lips and external genital organs) or with the teeth and the mucous membranes of the oral cavity with a view exclusively or mainly to cleaning them",
+      es: "Un producto cosmético se define como cualquier sustancia o mezcla destinada a entrar en contacto con las distintas partes externas del cuerpo humano (epidermis, sistema capilar, uñas, labios y órganos genitales externos) o con los dientes y las membranas mucosas de la cavidad oral, con el objetivo exclusiva o principalmente de limpiarlos.",
     },
     category: {
       _id: "632ab2fd4d87ff2494210ae0",
       name: {
         en: "Cosmetics",
+        es: "Cosméticos",
       },
     },
     stock: 190,
@@ -18398,54 +20446,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -18462,14 +20519,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282c9",
     title: {
       en: "Firming Makeup",
+      es: "Maquillaje Reafirmante",
     },
     description: {
       en: "A cosmetic product shall mean any substance or mixture intended to be placed in contact with the various external parts of the human body (epidermis, hair system, nails, lips and external genital organs) or with the teeth and the mucous membranes of the oral cavity with a view exclusively or mainly to cleaning them",
+      es: "Un producto cosmético se define como cualquier sustancia o mezcla destinada a entrar en contacto con las distintas partes externas del cuerpo humano (epidermis, sistema capilar, uñas, labios y órganos genitales externos) o con los dientes y las membranas mucosas de la cavidad oral, con el objetivo exclusiva o principalmente de limpiarlos.",
     },
     category: {
       _id: "632ab2fd4d87ff2494210ae0",
       name: {
         en: "Cosmetics",
+        es: "Cosméticos",
       },
     },
     stock: 77,
@@ -18489,54 +20549,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -18553,14 +20622,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282ca",
     title: {
       en: "Essie Nail Color",
+      es: "Color de Uñas Essie",
     },
     description: {
       en: "A cosmetic product shall mean any substance or mixture intended to be placed in contact with the various external parts of the human body (epidermis, hair system, nails, lips and external genital organs) or with the teeth and the mucous membranes of the oral cavity with a view exclusively or mainly to cleaning them",
+      es: "Un producto cosmético se define como cualquier sustancia o mezcla destinada a entrar en contacto con las distintas partes externas del cuerpo humano (epidermis, sistema capilar, uñas, labios y órganos genitales externos) o con los dientes y las membranas mucosas de la cavidad oral, con el objetivo exclusiva o principalmente de limpiarlos.",
     },
     category: {
       _id: "632ab2fd4d87ff2494210ae0",
       name: {
         en: "Cosmetics",
+        es: "Cosméticos",
       },
     },
     stock: 235,
@@ -18580,54 +20652,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -18644,14 +20725,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282cb",
     title: {
       en: "Nail Polish",
+      es: "Esmalte de Uñas",
     },
     description: {
       en: "A cosmetic product shall mean any substance or mixture intended to be placed in contact with the various external parts of the human body (epidermis, hair system, nails, lips and external genital organs) or with the teeth and the mucous membranes of the oral cavity with a view exclusively or mainly to cleaning them",
+      es: "Un producto cosmético se define como cualquier sustancia o mezcla destinada a entrar en contacto con las distintas partes externas del cuerpo humano (epidermis, sistema capilar, uñas, labios y órganos genitales externos) o con los dientes y las membranas mucosas de la cavidad oral, con el objetivo exclusiva o principalmente de limpiarlos.",
     },
     category: {
       _id: "632ab2fd4d87ff2494210ae0",
       name: {
         en: "Cosmetics",
+        es: "Cosméticos",
       },
     },
     stock: 775,
@@ -18671,54 +20755,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -18735,14 +20828,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282cc",
     title: {
       en: "Orchid Lipcolor",
+      es: "Color de Labios Orchid",
     },
     description: {
       en: "A cosmetic product shall mean any substance or mixture intended to be placed in contact with the various external parts of the human body (epidermis, hair system, nails, lips and external genital organs) or with the teeth and the mucous membranes of the oral cavity with a view exclusively or mainly to cleaning them",
+      es: "Un producto cosmético se define como cualquier sustancia o mezcla destinada a entrar en contacto con las distintas partes externas del cuerpo humano (epidermis, sistema capilar, uñas, labios y órganos genitales externos) o con los dientes y las membranas mucosas de la cavidad oral, con el objetivo exclusiva o principalmente de limpiarlos.",
     },
     category: {
       _id: "632ab2fd4d87ff2494210ae0",
       name: {
         en: "Cosmetics",
+        es: "Cosméticos",
       },
     },
     stock: 770,
@@ -18762,54 +20858,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -18826,14 +20931,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282cd",
     title: {
       en: "Skin Lotion",
+      es: "Loción Corporal",
     },
     description: {
       en: "Body care means how you perform with passive range of motion, applications of dressings and ointments or lotions to the body, and pedicure to trim toenails and apply lotion to feet.",
+      es: "El cuidado corporal se refiere a cómo se realizan movimientos pasivos, la aplicación de apósitos y ungüentos o lociones en el cuerpo, y pedicura para recortar las uñas de los pies y aplicar loción en los pies.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
     stock: 786,
@@ -18853,54 +20961,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -18917,14 +21034,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282ce",
     title: {
       en: "Nova Soft Lotion",
+      es: "Loción Suave Nova",
     },
     description: {
       en: "Body care means how you perform with passive range of motion, applications of dressings and ointments or lotions to the body, and pedicure to trim toenails and apply lotion to feet.",
+      es: "El cuidado corporal se refiere a cómo se realizan movimientos pasivos, la aplicación de apósitos y ungüentos o lociones en el cuerpo, y pedicura para recortar las uñas de los pies y aplicar loción en los pies.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
     stock: 692,
@@ -18944,54 +21064,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -19008,14 +21137,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282cf",
     title: {
       en: "Oil Jasmine",
+      es: "Aceite Jazmín",
     },
     description: {
       en: "Body care means how you perform with passive range of motion, applications of dressings and ointments or lotions to the body, and pedicure to trim toenails and apply lotion to feet.",
+      es: "El cuidado corporal se refiere a cómo se realizan movimientos pasivos, la aplicación de apósitos y ungüentos o lociones en el cuerpo, y pedicura para recortar las uñas de los pies y aplicar loción en los pies.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
     stock: 313,
@@ -19035,54 +21167,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -19099,14 +21240,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282d0",
     title: {
       en: "Body Lotion",
+      es: "Loción Corporal",
     },
     description: {
       en: "Body care means how you perform with passive range of motion, applications of dressings and ointments or lotions to the body, and pedicure to trim toenails and apply lotion to feet.",
+      es: "El cuidado corporal se refiere a cómo se realizan movimientos pasivos, la aplicación de apósitos, ungüentos o lociones en el cuerpo, y la pedicura para recortar las uñas de los pies y aplicar loción.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
     stock: 590,
@@ -19126,48 +21270,56 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Productos de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -19184,14 +21336,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282d1",
     title: {
       en: "Dove Creme",
+      es: "Crema Dove",
     },
     description: {
       en: "Body care means how you perform with passive range of motion, applications of dressings and ointments or lotions to the body, and pedicure to trim toenails and apply lotion to feet.",
+      es: "El cuidado corporal se refiere a cómo se realizan movimientos pasivos, la aplicación de apósitos, ungüentos o lociones en el cuerpo, y la pedicura para recortar las uñas de los pies y aplicar loción.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
     stock: 580,
@@ -19211,42 +21366,49 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -19263,14 +21425,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282d2",
     title: {
       en: "Seed Oil",
+      es: "Aceite de Semillas",
     },
     description: {
       en: "Body care means how you perform with passive range of motion, applications of dressings and ointments or lotions to the body, and pedicure to trim toenails and apply lotion to feet.",
+      es: "El cuidado corporal se refiere a cómo se realizan movimientos pasivos, la aplicación de apósitos, ungüentos o lociones en el cuerpo, y la pedicura para recortar las uñas de los pies y aplicar loción.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
     stock: 282,
@@ -19290,54 +21455,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -19354,14 +21528,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282d3",
     title: {
       en: "Cucumber Melon",
+      es: "Pepino y Melón",
     },
     description: {
       en: "Body care means how you perform with passive range of motion, applications of dressings and ointments or lotions to the body, and pedicure to trim toenails and apply lotion to feet.",
+      es: "El cuidado corporal se refiere a cómo se realizan movimientos pasivos, la aplicación de apósitos, ungüentos o lociones en el cuerpo, y la pedicura para recortar las uñas de los pies y aplicar loción.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
     stock: 419,
@@ -19381,54 +21558,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -19445,14 +21631,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282d4",
     title: {
       en: "Avalon Organics Gel",
+      es: "Gel Avalon Organics",
     },
     description: {
       en: "Body care means how you perform with passive range of motion, applications of dressings and ointments or lotions to the body, and pedicure to trim toenails and apply lotion to feet.",
+      es: "El cuidado corporal se refiere a cómo se realizan movimientos pasivos, la aplicación de apósitos, ungüentos o lociones en el cuerpo, y la pedicura para recortar las uñas de los pies y aplicar loción.",
     },
     category: {
       _id: "632ab2df4d87ff2494210ac8",
       name: {
         en: "Body Care",
+        es: "Cuidado Corporal",
       },
     },
     stock: 203,
@@ -19472,54 +21661,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -19534,14 +21732,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282d5",
     title: {
       en: "Savlon Soap",
+      es: "Jabón Savlon",
     },
     description: {
       en: "bathroom accessories are items specifically designed for use in a bathroom, such as soap dishes, towel racks, etc. bathroom accessories accessories typically have durable, decorative finishes.",
+      es: "Los accesorios de baño son artículos diseñados específicamente para su uso en el baño, como jaboneras, toalleros, etc. Los accesorios de baño suelen tener acabados duraderos y decorativos.",
     },
     category: {
       _id: "632ab3044d87ff2494210ae8",
       name: {
         en: "Bath",
+        es: "Baño",
       },
     },
     stock: 74,
@@ -19561,54 +21762,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -19623,14 +21833,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282d6",
     title: {
       en: "Sandalina Soap",
+      es: "Jabón Sandalina",
     },
     description: {
       en: "bathroom accessories are items specifically designed for use in a bathroom, such as soap dishes, towel racks, etc. bathroom accessories accessories typically have durable, decorative finishes.",
+      es: "Los accesorios de baño son artículos diseñados específicamente para su uso en el baño, como jaboneras, toalleros, etc. Los accesorios de baño suelen tener acabados duraderos y decorativos.",
     },
     category: {
       _id: "632ab3044d87ff2494210ae8",
       name: {
         en: "Bath",
+        es: "Baño",
       },
     },
     stock: 479,
@@ -19650,54 +21863,63 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2d54d87ff2494210ac0",
         name: {
           en: "Shaving Needs",
+          es: "Necesidades de Afeitado",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -19712,14 +21934,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282d7",
     title: {
       en: "Nivea Soap",
+      es: "Jabón Nivea",
     },
     description: {
       en: "bathroom accessories are items specifically designed for use in a bathroom, such as soap dishes, towel racks, etc. bathroom accessories accessories typically have durable, decorative finishes.",
+      es: "Los accesorios de baño son artículos diseñados específicamente para su uso en el baño, como jaboneras, toalleros, etc. Los accesorios de baño suelen tener acabados duraderos y decorativos.",
     },
     category: {
       _id: "632ab3044d87ff2494210ae8",
       name: {
         en: "Bath",
+        es: "Baño",
       },
     },
     stock: 179,
@@ -19739,48 +21964,56 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
       {
         _id: "632ab2b64d87ff2494210aa7",
         name: {
           en: "Men",
+          es: "Hombres",
         },
       },
       {
         _id: "632ab2c34d87ff2494210ab2",
         name: {
           en: "Women",
+          es: "Mujeres",
         },
       },
       {
         _id: "632ab2df4d87ff2494210ac8",
         name: {
           en: "Body Care",
+          es: "Cuidado Corporal",
         },
       },
       {
         _id: "632ab2f04d87ff2494210ad0",
         name: {
           en: "Skin Care",
+          es: "Cuidado de la Piel",
         },
       },
       {
         _id: "632ab2f84d87ff2494210ad8",
         name: {
           en: "Oral Care",
+          es: "Cuidado Oral",
         },
       },
       {
         _id: "632ab2fd4d87ff2494210ae0",
         name: {
           en: "Cosmetics",
+          es: "Cosméticos",
         },
       },
       {
         _id: "632ab3044d87ff2494210ae8",
         name: {
           en: "Bath",
+          es: "Baño",
         },
       },
     ],
@@ -19797,14 +22030,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282d8",
     title: {
       en: "Neem Original Soap",
+      es: "Jabón Original Neem",
     },
     description: {
       en: "bathroom accessories are items specifically designed for use in a bathroom, such as soap dishes, towel racks, etc. bathroom accessories accessories typically have durable, decorative finishes.",
+      es: "Los accesorios de baño son artículos diseñados específicamente para su uso en el baño, como jaboneras, toalleros, etc. Los accesorios de baño suelen tener acabados duraderos y decorativos.",
     },
     category: {
       _id: "632ab3044d87ff2494210ae8",
       name: {
         en: "Bath",
+        es: "Baño",
       },
     },
     stock: 137,
@@ -19824,6 +22060,7 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
     ],
@@ -19838,14 +22075,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282d9",
     title: {
       en: "Harmony Orange Soap",
+      es: "Jabón Naranja Harmony",
     },
     description: {
       en: "bathroom accessories are items specifically designed for use in a bathroom, such as soap dishes, towel racks, etc. bathroom accessories accessories typically have durable, decorative finishes.",
+      es: "Los accesorios de baño son artículos diseñados específicamente para su uso en el baño, como jaboneras, toalleros, etc. Los accesorios de baño suelen tener acabados duraderos y decorativos.",
     },
     category: {
       _id: "632ab2864d87ff2494210a8a",
       name: {
         en: "Beauty & Healths",
+        es: "Belleza y Salud",
       },
     },
     stock: 283,
@@ -19865,6 +22105,7 @@ const products = [
         _id: "632ab2864d87ff2494210a8a",
         name: {
           en: "Beauty & Healths",
+          es: "Belleza y Salud",
         },
       },
     ],
@@ -19879,14 +22120,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282da",
     title: {
       en: "Glory Diaper",
+      es: "Pañal Glory",
     },
     description: {
       en: "Baby Products are products intended to be used on infants and category under the age of three. Baby products are specially formulated to be mild and non-irritating and use ingredients that are selected for these properties. Baby products include baby shampoos and baby lotions, oils, powders and creams.",
+      es: "Los productos para bebés son artículos destinados a ser usados en infantes menores de tres años. Estos productos están formulados para ser suaves y no irritantes, utilizando ingredientes seleccionados por estas propiedades. Incluyen champús, lociones, aceites, polvos y cremas para bebés.",
     },
     category: {
       _id: "632ab2864d87ff2494210a8a",
       name: {
         en: "Beauty & Healths",
+        es: "Belleza y Salud",
       },
     },
     stock: 16,
@@ -19906,12 +22150,14 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "63f12afdcc480f0454f475dd",
         name: {
           en: "Baby Food",
+          es: "Alimentos para Bebés",
         },
       },
     ],
@@ -19928,14 +22174,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282db",
     title: {
       en: "Cerelac Cornflakes",
+      es: "Cerelac Cornflakes",
     },
     description: {
       en: "Baby Products are products intended to be used on infants and category under the age of three. Baby products are specially formulated to be mild and non-irritating and use ingredients that are selected for these properties. Baby products include baby shampoos and baby lotions, oils, powders and creams.",
+      es: "Los productos para bebés son artículos destinados a ser usados en infantes menores de tres años. Estos productos están formulados para ser suaves y no irritantes, utilizando ingredientes seleccionados por estas propiedades. Incluyen champús, lociones, aceites, polvos y cremas para bebés.",
     },
     category: {
       _id: "63f12afdcc480f0454f475dd",
       name: {
         en: "Baby Food",
+        es: "Alimentos para Bebés",
       },
     },
     stock: 597,
@@ -19955,12 +22204,14 @@ const products = [
         _id: "632aca2b4d87ff2494210be8",
         name: {
           en: "Fruits & Vegetable",
+          es: "Frutas y Verduras",
         },
       },
       {
         _id: "63f12afdcc480f0454f475dd",
         name: {
           en: "Baby Food",
+          es: "Alimentos para Bebés",
         },
       },
     ],
@@ -19977,14 +22228,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282dc",
     title: {
       en: "Cerelac Cherry",
+      es: "Cerelac Cereza",
     },
     description: {
       en: "Baby Products are products intended to be used on infants and category under the age of three. Baby products are specially formulated to be mild and non-irritating and use ingredients that are selected for these properties. Baby products include baby shampoos and baby lotions, oils, powders and creams.",
+      es: "Los productos para bebés son artículos destinados a ser usados en infantes menores de tres años. Estos productos están formulados para ser suaves y no irritantes, utilizando ingredientes seleccionados por estas propiedades. Incluyen champús, lociones, aceites, polvos y cremas para bebés.",
     },
     category: {
       _id: "63f12afdcc480f0454f475dd",
       name: {
         en: "Baby Food",
+        es: "Alimentos para Bebés",
       },
     },
     stock: 379,
@@ -20004,6 +22258,7 @@ const products = [
         _id: "632ab14a4d87ff2494210a29",
         name: {
           en: "Milk & Dairy",
+          es: "Leche y Lácteos",
         },
       },
     ],
@@ -20018,14 +22273,17 @@ const products = [
     productId: "639dc0f5c2fce72b697282dd",
     title: {
       en: "Biomil-1",
+      es: "Biomil-1",
     },
     description: {
       en: "Baby Products are products intended to be used on infants and category under the age of three. Baby products are specially formulated to be mild and non-irritating and use ingredients that are selected for these properties. Baby products include baby shampoos and baby lotions, oils, powders and creams.",
+      es: "Los productos para bebés son artículos destinados a ser usados en infantes menores de tres años. Estos productos están formulados para ser suaves y no irritantes, utilizando ingredientes seleccionados por estas propiedades. Incluyen champús, lociones, aceites, polvos y cremas para bebés.",
     },
     category: {
       _id: "632ab14a4d87ff2494210a29",
       name: {
         en: "Milk & Dairy",
+        es: "Leche y Lácteos",
       },
     },
     stock: 51,

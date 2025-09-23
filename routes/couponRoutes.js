@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 const {
   addCoupon,
@@ -11,36 +11,36 @@ const {
   deleteCoupon,
   updateManyCoupons,
   deleteManyCoupons,
-} = require('../controller/couponController');
+} = require("../controller/couponController");
 
 //add a coupon
-router.post('/add', addCoupon);
+router.post("/add", addCoupon);
 
 //add multiple coupon
-router.post('/add/all', addAllCoupon);
+router.post("/add/all", addAllCoupon);
 
 //get all coupon
-router.get('/', getAllCoupons);
+router.get("/", getAllCoupons);
 
 //get only enable coupon
-router.get('/show', getShowingCoupons);
+router.get("/show", getShowingCoupons);
 
 //get a coupon
-router.get('/:id', getCouponById);
+router.get("/:id", getCouponById);
 
 //update a coupon
-router.put('/:id', updateCoupon);
+router.put("/:id", updateCoupon);
 
 //update many coupon
-router.patch('/update/many', updateManyCoupons);
+router.patch("/update/many", updateManyCoupons);
 
 //show/hide a coupon
-router.put('/status/:id', updateStatus);
+router.put("/status/:id", updateStatus);
 
 //delete a coupon
-router.delete('/:id', deleteCoupon);
+router.delete("/:id", deleteCoupon);
 
 //delete many coupon
-router.patch('/delete/many', deleteManyCoupons);
+router.patch("/delete/many", deleteManyCoupons);
 
 module.exports = router;

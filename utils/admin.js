@@ -128,6 +128,34 @@ const admins = [
       "customer-order",
     ],
   },
+  {
+    name: {
+      en: "Luke R. Parker",
+    },
+    image: "",
+    email: "luke@gmail.com",
+    password: bcrypt.hashSync("12345678"),
+    phone: "600-852-8814",
+    role: "Seller",
+    joiningData: new Date(),
+    access_list: [
+      "dashboard",
+      "products",
+      "product",
+      "categories",
+      "attributes",
+      "coupons",
+      "orders",
+      "order",
+      "languages",
+      "currencies",
+      "notifications",
+      "edit-profile",
+      "coming-soon",
+      "customers",
+      "customer-order",
+    ],
+  },
 ];
 
 module.exports = admins;

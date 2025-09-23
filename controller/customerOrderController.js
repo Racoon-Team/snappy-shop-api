@@ -45,7 +45,7 @@ const createPaymentIntent = async (req, res) => {
   if (payment_intent.id) {
     try {
       const current_intent = await stripeInstance.paymentIntents.retrieve(
-        payment_intent.id
+        payment_intent.id,
       );
       // If PaymentIntent has been created, just update the amount.
       if (current_intent) {
@@ -53,7 +53,7 @@ const createPaymentIntent = async (req, res) => {
           payment_intent.id,
           {
             amount: formatAmountForStripe(amount, "usd"),
-          }
+          },
         );
         // console.log("updated_intent", updated_intent);
         return res.send(updated_intent);

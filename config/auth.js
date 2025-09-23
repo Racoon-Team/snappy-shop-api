@@ -16,7 +16,7 @@ const signInToken = (user) => {
     process.env.JWT_SECRET,
     {
       expiresIn: "1d",
-    }
+    },
   );
 };
 
@@ -29,7 +29,7 @@ const tokenForVerify = (user) => {
       password: user.password,
     },
     process.env.JWT_SECRET_FOR_VERIFY,
-    { expiresIn: "15m" }
+    { expiresIn: "15m" },
   );
 };
 

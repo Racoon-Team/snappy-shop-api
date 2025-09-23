@@ -10,11 +10,9 @@ const settingSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
-// module.exports = settingSchema;
-
-const Setting = mongoose.model("Setting", settingSchema);
+const Setting = mongoose.model("Setting", settingSchema, "setting");
 
 module.exports = Setting;

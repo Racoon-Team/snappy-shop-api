@@ -25,9 +25,15 @@ const customerSchema = new mongoose.Schema(
     location: {
       type: String,
       required: false,
-      enum: ["Cochabamba", "Santa Cruz", "La Paz", ""],
       default: "",
     },
+
+    preferences: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Category",
+      },
+    ],
 
     shippingAddress: {
       type: Object,
@@ -89,7 +95,7 @@ const customerSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 const Customer = mongoose.model("Customer", customerSchema);

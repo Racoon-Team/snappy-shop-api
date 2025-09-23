@@ -215,7 +215,7 @@ const updateManyProducts = async (req, res) => {
       },
       {
         multi: true,
-      }
+      },
     );
     res.send({
       message: "Products update successfully!",
@@ -243,10 +243,11 @@ const updateStatus = (req, res) => {
         });
       } else {
         res.status(200).send({
-          message: `Product ${newStatus} Successfully!`,
+          message: `Product ${newStatus === "show" ? "Show" : "Hide"} Successfully!`,
+          messageKey: newStatus,
         });
       }
-    }
+    },
   );
 };
 

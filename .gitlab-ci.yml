@@ -1,0 +1,25 @@
+stages:
+  - lint
+  - format
+
+image: node:latest # Use a Node.js Docker image
+
+linter_code:
+  only:
+    - merge_requests
+  stage: lint
+  script:
+    - yarn install
+    # Install ESLint in this docker container
+    - npm install -g eslint
+    # Configure ESLint (will read your .eslintrc file)
+    - eslint .
+
+format_code:
+    only:
+      - merge_requests
+    stage: format
+    script:
+      - yarn install
+      # Configure ESLint (will read your .eslintrc file)
+      - yarn run prettier

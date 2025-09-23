@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const couponSchema = new mongoose.Schema(
   {
@@ -37,16 +37,16 @@ const couponSchema = new mongoose.Schema(
     status: {
       type: String,
       lowercase: true,
-      enum: ['show', 'hide'],
-      default: 'show',
+      enum: ["show", "hide"],
+      default: "show",
     },
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 // module.exports = couponSchema;
 
-const Coupon = mongoose.model('Coupon', couponSchema);
+const Coupon = mongoose.model("Coupon", couponSchema);
 module.exports = Coupon;

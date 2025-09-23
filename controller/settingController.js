@@ -18,8 +18,6 @@ const addGlobalSetting = async (req, res) => {
 
 const getGlobalSetting = async (req, res) => {
   try {
-    // console.log("getGlobalSetting");
-
     const globalSetting = await Setting.findOne({ name: "globalSetting" });
     res.send(globalSetting.setting);
   } catch (err) {
@@ -42,7 +40,7 @@ const updateGlobalSetting = async (req, res) => {
     const globalSetting = await Setting.findOneAndUpdate(
       { name: "globalSetting" },
       { $set: setObject },
-      { new: true, upsert: true }
+      { new: true, upsert: true },
     );
 
     res.send({
@@ -97,7 +95,7 @@ const updateStoreSetting = async (req, res) => {
     const storeSetting = await Setting.findOneAndUpdate(
       { name: "storeSetting" },
       { $set: updateFields },
-      { new: true, upsert: true } // upsert to create the document if it doesn't exist
+      { new: true, upsert: true }, // upsert to create the document if it doesn't exist
     );
 
     res.send({
@@ -150,7 +148,7 @@ const getStoreCustomizationSetting = async (req, res) => {
 
     const storeCustomizationSetting = await Setting.findOne(
       { name: "storeCustomizationSetting" },
-      projection
+      projection,
     );
 
     if (!storeCustomizationSetting) {
@@ -170,7 +168,7 @@ const getStoreSeoSetting = async (req, res) => {
       {
         name: "storeCustomizationSetting",
       },
-      { "setting.seo": 1, _id: 0 }
+      { "setting.seo": 1, _id: 0 },
     );
     // console.log("storeCustomizationSetting", storeCustomizationSetting);
     res.send(storeCustomizationSetting?.setting);
@@ -194,7 +192,7 @@ const updateStoreCustomizationSetting = async (req, res) => {
     const storeCustomizationSetting = await Setting.findOneAndUpdate(
       { name: "storeCustomizationSetting" },
       { $set: updateFields },
-      { new: true, upsert: true } // upsert to create the document if it doesn't exist
+      { new: true, upsert: true }, // upsert to create the document if it doesn't exist
     );
 
     res.send({
@@ -205,6 +203,134 @@ const updateStoreCustomizationSetting = async (req, res) => {
     res.status(500).send({
       message: err.message,
     });
+  }
+};
+
+const getDeliveryPoints = async (req, res) => {
+  try {
+    const deliveryPointsSetting = await Setting.findOne({
+      name: "deliveryPoints",
+    });
+    if (!deliveryPointsSetting) {
+      return res
+        .status(404)
+        .send({ message: "Delivery points setting not found" });
+    }
+    res.send(deliveryPointsSetting.setting.points || []);
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
+};
+
+const { v4: uuidv4 } = require("uuid");
+
+const addDeliveryPoint = async (req, res) => {
+  try {
+    const newPoint = req.body;
+    newPoint.id = uuidv4();
+    let deliveryPointsSetting = await Setting.findOne({
+      name: "deliveryPoints",
+    });
+    if (!deliveryPointsSetting) {
+      deliveryPointsSetting = new Setting({
+        name: "deliveryPoints",
+        setting: { points: [newPoint] },
+      });
+    } else {
+      deliveryPointsSetting.setting.points.push(newPoint);
+      deliveryPointsSetting.markModified("setting.points");
+    }
+    await deliveryPointsSetting.save();
+    res.status(200).send({
+      message: "Delivery point added successfully!",
+      data: deliveryPointsSetting.setting.points,
+    });
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+const deleteDeliveryPoint = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const setting = await Setting.findOne({ name: "deliveryPoints" });
+
+    if (!setting) {
+      return res
+        .status(404)
+        .send({ message: "Delivery points setting not found" });
+    }
+    const newPoints = setting.setting.points.filter(
+      (point) => String(point.id) !== String(id),
+    );
+    setting.setting.points = newPoints;
+    setting.markModified("setting.points");
+    await setting.save();
+
+    res.send({ message: "Delivery point deleted successfully" });
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
+};
+
+const getDeliveryPointById = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const setting = await Setting.findOne({ name: "deliveryPoints" });
+
+    if (!setting) {
+      return res
+        .status(404)
+        .send({ message: "Delivery points setting not found" });
+    }
+
+    const point = setting.setting.points.find(
+      (p) => String(p.id) === String(id),
+    );
+
+    if (!point) {
+      return res.status(404).send({ message: "Delivery point not found" });
+    }
+
+    res.status(200).send(point);
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
+};
+
+const updateDeliveryPoint = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedPoint = req.body;
+    console.log(req.params.id);
+
+    const deliveryPointsSetting = await Setting.findOne({
+      name: "deliveryPoints",
+    });
+
+    if (!deliveryPointsSetting) {
+      return res.status(404).send({ message: "Delivery points not found" });
+    }
+
+    const points = deliveryPointsSetting.setting.points;
+    const index = points.findIndex((p) => p.id === id);
+
+    if (index === -1) {
+      return res.status(404).send({ message: "Delivery point not found" });
+    }
+
+    points[index] = { ...points[index], ...updatedPoint };
+
+    deliveryPointsSetting.markModified("setting.points");
+    await deliveryPointsSetting.save();
+
+    res.status(200).send({
+      message: "Delivery point updated successfully!",
+      data: points[index],
+    });
+  } catch (err) {
+    res.status(500).send({ message: err.message });
   }
 };
 
@@ -219,4 +345,9 @@ module.exports = {
   addStoreCustomizationSetting,
   getStoreCustomizationSetting,
   updateStoreCustomizationSetting,
+  getDeliveryPoints,
+  addDeliveryPoint,
+  deleteDeliveryPoint,
+  getDeliveryPointById,
+  updateDeliveryPoint,
 };

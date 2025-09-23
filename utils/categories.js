@@ -4,11 +4,13 @@ const categories = [
     status: "show",
     name: {
       en: "Home",
+      es: "Inicio",
     },
     id: "Root",
     parentName: "Home",
     description: {
       en: "This is Home Category",
+      es: "Esta es la categoría Inicio",
     },
   },
   {
@@ -16,12 +18,13 @@ const categories = [
     status: "show",
     name: {
       en: "Baby Food",
-      de: "Babynahrung",
+      es: "Comida para bebés",
     },
     parentId: "62cc0637d511b304aecdfba8",
     parentName: "Baby Care",
     description: {
       en: "This is baby food category",
+      es: "Esta es la categoría de comida para bebés",
     },
     icon: "",
   },
@@ -36,6 +39,7 @@ const categories = [
     parentName: "Baby Care",
     description: {
       en: "This is baby accessories",
+      es: "Estos son accesorios para bebés",
     },
     icon: "",
   },
@@ -44,11 +48,13 @@ const categories = [
     status: "show",
     name: {
       en: "Chocolate",
+      es: "Chocolate",
     },
     parentId: "62cfab19484d89068aa7a7ef",
     parentName: "Snacks & Instant",
     description: {
       en: "This is Chocolate category",
+      es: "Esta es la categoría Chocolate",
     },
     icon: "",
   },
@@ -57,11 +63,13 @@ const categories = [
     status: "show",
     name: {
       en: "Chips & Nuts",
+      es: "Papas fritas y frutos secos",
     },
     parentId: "62cfab19484d89068aa7a7ef",
     parentName: "Snacks & Instant",
     description: {
       en: "This is Chips & Nuts category",
+      es: "Esta es la categoría Papas fritas y frutos secos",
     },
     icon: "",
   },
@@ -70,11 +78,13 @@ const categories = [
     status: "show",
     name: {
       en: "Canned Food",
+      es: "Comida enlatada",
     },
     parentId: "62cfab19484d89068aa7a7ef",
     parentName: "Snacks & Instant",
     description: {
       en: "This is Canned Food category",
+      es: "Esta es la categoría Comida enlatada",
     },
     icon: "",
   },
@@ -83,11 +93,13 @@ const categories = [
     status: "show",
     name: {
       en: "Sauces",
+      es: "Salsas",
     },
     parentId: "62cfad20484d89068aa7a812",
     parentName: "Sauces & Pickles",
     description: {
       en: "This is Sauces category",
+      es: "Esta es la categoría de Salsas",
     },
     icon: "",
   },
@@ -96,11 +108,13 @@ const categories = [
     status: "show",
     name: {
       en: "Pickles & Condiments",
+      es: "Encurtidos y Condimentos",
     },
     parentId: "62cfad20484d89068aa7a812",
     parentName: "Sauces & Pickles",
     description: {
       en: "This is Pickles & Condiments category",
+      es: "Esta es la categoría de Encurtidos y Condimentos",
     },
     icon: "",
   },
@@ -109,9 +123,11 @@ const categories = [
     status: "show",
     name: {
       en: "Tuna",
+      es: "Atún",
     },
     description: {
       en: "This is tuna fish category",
+      es: "Esta es la categoría de pescado Atún",
     },
     parentId: "62c851ae00bc1e3f08bb8191",
     parentName: "Fish",
@@ -122,11 +138,11 @@ const categories = [
     status: "show",
     name: {
       en: "Tuna",
-      de: "Thunfisch",
+      es: "Atún",
     },
     description: {
       en: "This is tuna category",
-      de: "Dies ist die Thunfisch-Kategorie",
+      es: "Esta es la categoría de Atún",
     },
     parentId: "62d03a112d28e904b20e2336",
     parentName: "Fish",
@@ -137,11 +153,11 @@ const categories = [
     status: "show",
     name: {
       en: "Rui",
-      de: "Rui",
+      es: "Rui",
     },
     description: {
       en: "This is Rui category",
-      de: "Dies ist die Rui-Kategorie",
+      es: "Esta es la categoría de Rui",
     },
     parentId: "62d03a112d28e904b20e2336",
     parentName: "Fish",
@@ -152,11 +168,13 @@ const categories = [
     status: "show",
     name: {
       en: "Apple",
+      es: "Manzana",
     },
     parentId: "62cf9f32484d89068aa7a75f",
     parentName: "Fresh Fruits",
     description: {
       en: "This is the apple category",
+      es: "Esta es la categoría de Manzana",
     },
     icon: "",
   },
@@ -165,9 +183,11 @@ const categories = [
     status: "show",
     name: {
       en: "Orange",
+      es: "Naranja",
     },
     description: {
       en: "This is orange category",
+      es: "Esta es la categoría de Naranja",
     },
     parentId: "62cf9f32484d89068aa7a75f",
     parentName: "Fresh Fruits",
@@ -178,11 +198,11 @@ const categories = [
     status: "show",
     name: {
       en: "Beef",
-      de: "Rindfleisch",
+      es: "Carne de res",
     },
     description: {
       en: "This is Beef Category",
-      de: "Dies ist die Kategorie Rindfleisch",
+      es: "Esta es la categoría de Carne de res",
     },
     parentId: "62c851be00bc1e3f08bb8197",
     parentName: "Meat",
@@ -193,9 +213,11 @@ const categories = [
     status: "show",
     name: {
       en: "Breakfast",
+      es: "Desayuno",
     },
     description: {
       en: "Breakfast",
+      es: "Desayuno",
     },
     parentId: "62c827b5a427b63741da9175",
     parentName: "Home",
@@ -206,9 +228,11 @@ const categories = [
     status: "show",
     name: {
       en: "Cereal",
+      es: "Cereal",
     },
     description: {
       en: "Cereal",
+      es: "Cereal",
     },
     parentId: "632aae414d87ff2494210945",
     parentName: "Breakfasts",
@@ -219,9 +243,11 @@ const categories = [
     status: "show",
     name: {
       en: "Bread",
+      es: "Pan",
     },
     description: {
       en: "Bread",
+      es: "Pan",
     },
     parentId: "632aae414d87ff2494210945",
     parentName: "Breakfasts",
@@ -232,9 +258,11 @@ const categories = [
     status: "show",
     name: {
       en: "Drinks",
+      es: "Bebidas",
     },
     description: {
       en: "Drinks",
+      es: "Bebidas",
     },
     parentId: "62c827b5a427b63741da9175",
     parentName: "Home",
@@ -245,9 +273,11 @@ const categories = [
     status: "show",
     name: {
       en: "Energy Drinks",
+      es: "Bebidas energéticas",
     },
     description: {
       en: "Energy Drinks",
+      es: "Bebidas energéticas",
     },
     parentId: "632ab0334d87ff24942109c1",
     parentName: "Drink",
@@ -258,9 +288,11 @@ const categories = [
     status: "show",
     name: {
       en: "Coffee",
+      es: "Café",
     },
     description: {
       en: "Coffee",
+      es: "Café",
     },
     parentId: "632ab0334d87ff24942109c1",
     parentName: "Drink",
@@ -271,9 +303,11 @@ const categories = [
     status: "show",
     name: {
       en: "Juice",
+      es: "Jugo",
     },
     description: {
       en: "Juice",
+      es: "Jugo",
     },
     parentId: "632ab0334d87ff24942109c1",
     parentName: "Drink",
@@ -284,9 +318,11 @@ const categories = [
     status: "show",
     name: {
       en: "Water",
+      es: "Agua",
     },
     description: {
       en: "Water",
+      es: "Agua",
     },
     parentId: "632ab0334d87ff24942109c1",
     parentName: "Drink",
@@ -297,9 +333,11 @@ const categories = [
     status: "show",
     name: {
       en: "Tea",
+      es: "Té",
     },
     description: {
       en: "Tea",
+      es: "Té",
     },
     parentId: "632ab0334d87ff24942109c1",
     parentName: "Drink",
@@ -310,9 +348,11 @@ const categories = [
     status: "show",
     name: {
       en: "Milk & Dairy",
+      es: "Leche y Lácteos",
     },
     description: {
       en: "Milk & Dairy",
+      es: "Leche y Lácteos",
     },
     parentId: "62c827b5a427b63741da9175",
     parentName: "Home",
@@ -323,9 +363,11 @@ const categories = [
     status: "show",
     name: {
       en: "Dairy",
+      es: "Lácteos",
     },
     description: {
       en: "Dairy",
+      es: "Lácteos",
     },
     parentId: "632ab14a4d87ff2494210a29",
     parentName: "Milk & Dairys",
@@ -336,9 +378,11 @@ const categories = [
     status: "show",
     name: {
       en: "Ice Cream",
+      es: "Helado",
     },
     description: {
       en: "Ice Cream",
+      es: "Helado",
     },
     parentId: "632ab14a4d87ff2494210a29",
     parentName: "Milk & Dairys",
@@ -349,9 +393,11 @@ const categories = [
     status: "show",
     name: {
       en: "Butter & Ghee",
+      es: "Mantequilla y Ghee",
     },
     description: {
       en: "Butter & Ghee",
+      es: "Mantequilla y Ghee",
     },
     parentId: "632ab14a4d87ff2494210a29",
     parentName: "Milk & Dairys",
@@ -362,9 +408,11 @@ const categories = [
     status: "show",
     name: {
       en: "Jam & Jelly",
+      es: "Mermelada y Jalea",
     },
     description: {
       en: "Jam & Jelly",
+      es: "Mermelada y Jalea",
     },
     parentId: "62c827b5a427b63741da9175",
     parentName: "Home",
@@ -375,9 +423,11 @@ const categories = [
     status: "show",
     name: {
       en: "Beauty & Healths",
+      es: "Belleza y Salud",
     },
     description: {
       en: "Beauty & Healths",
+      es: "Belleza y Salud",
     },
     parentId: "62c827b5a427b63741da9175",
     parentName: "Home",
@@ -388,9 +438,11 @@ const categories = [
     status: "show",
     name: {
       en: "Men",
+      es: "Hombres",
     },
     description: {
       en: "Men",
+      es: "Hombres",
     },
     parentId: "632ab2864d87ff2494210a8a",
     parentName: "Beauty & Healths",
@@ -401,9 +453,11 @@ const categories = [
     status: "show",
     name: {
       en: "Women",
+      es: "Mujeres",
     },
     description: {
       en: "Women",
+      es: "Mujeres",
     },
     parentId: "632ab2864d87ff2494210a8a",
     parentName: "Beauty & Healths",
@@ -414,9 +468,11 @@ const categories = [
     status: "show",
     name: {
       en: "Shaving Needs",
+      es: "Necesidades de Afeitado",
     },
     description: {
       en: "Shaving Needs",
+      es: "Necesidades de Afeitado",
     },
     parentId: "632ab2b64d87ff2494210aa7",
     parentName: "Men",
@@ -427,9 +483,11 @@ const categories = [
     status: "show",
     name: {
       en: "Body Care",
+      es: "Cuidado Corporal",
     },
     description: {
       en: "Body Care",
+      es: "Cuidado Corporal",
     },
     parentId: "632ab2b64d87ff2494210aa7",
     parentName: "Men",
@@ -440,9 +498,11 @@ const categories = [
     status: "show",
     name: {
       en: "Skin Care",
+      es: "Protección de la piel",
     },
     description: {
       en: "Skin Care",
+      es: "Protección de la piel",
     },
     parentId: "632ab2c34d87ff2494210ab2",
     parentName: "Women",
@@ -453,9 +513,11 @@ const categories = [
     status: "show",
     name: {
       en: "Oral Care",
+      es: "Cuidado bucal",
     },
     description: {
       en: "Oral Care",
+      es: "Cuidado bucal",
     },
     parentId: "632ab2c34d87ff2494210ab2",
     parentName: "Women",
@@ -466,9 +528,11 @@ const categories = [
     status: "show",
     name: {
       en: "Cosmetics",
+      es: "Productos cosméticos",
     },
     description: {
       en: "Cosmetics",
+      es: "Productos cosméticos",
     },
     parentId: "632ab2c34d87ff2494210ab2",
     parentName: "Women",
@@ -479,9 +543,11 @@ const categories = [
     status: "show",
     name: {
       en: "Bath",
+      es: "Baño",
     },
     description: {
       en: "Bath",
+      es: "Baño",
     },
     parentId: "632ab2c34d87ff2494210ab2",
     parentName: "Women",
@@ -492,9 +558,11 @@ const categories = [
     status: "show",
     name: {
       en: "Pet Care",
+      es: "Cuidado de mascotas",
     },
     description: {
       en: "Pet Care",
+      es: "Cuidado de mascotas",
     },
     parentId: "62c827b5a427b63741da9175",
     parentName: "Home",
@@ -505,9 +573,11 @@ const categories = [
     status: "show",
     name: {
       en: "Cat Care",
+      es: "Cuidado del gato",
     },
     description: {
       en: "Cat Care",
+      es: "Cuidado del gato",
     },
     parentId: "632ab4434d87ff2494210b0e",
     parentName: "Pet Cares",
@@ -518,9 +588,11 @@ const categories = [
     status: "show",
     name: {
       en: "Dog Care",
+      es: "Cuidado del perro",
     },
     description: {
       en: "Dog Care",
+      es: "Cuidado del perro",
     },
     parentId: "632ab4434d87ff2494210b0e",
     parentName: "Pet Cares",
@@ -531,9 +603,11 @@ const categories = [
     status: "show",
     name: {
       en: "Household Tools",
+      es: "Herramientas para el hogar",
     },
     description: {
       en: "Household Tools",
+      es: "Herramientas para el hogar",
     },
     parentId: "62c827b5a427b63741da9175",
     parentName: "Home",
@@ -544,9 +618,11 @@ const categories = [
     status: "show",
     name: {
       en: "Cleaner",
+      es: "Limpiador",
     },
     description: {
       en: "Cleaner",
+      es: "Limpiador",
     },
     parentId: "632ac9864d87ff2494210b49",
     parentName: "Household Tool",
@@ -557,9 +633,11 @@ const categories = [
     status: "show",
     name: {
       en: "Luandry",
+      es: "Lavandería",
     },
     description: {
       en: "Luandry",
+      es: "Lavandería",
     },
     parentId: "632ac9864d87ff2494210b49",
     parentName: "Household Tool",
@@ -570,9 +648,11 @@ const categories = [
     status: "show",
     name: {
       en: "Air Freshener",
+      es: "Ambientador",
     },
     description: {
       en: "Air Freshener",
+      es: "Ambientador",
     },
     parentId: "632ac9864d87ff2494210b49",
     parentName: "Household Tool",
@@ -583,9 +663,11 @@ const categories = [
     status: "show",
     name: {
       en: "Pest Control",
+      es: "Control de plagas",
     },
     description: {
       en: "Pest Control",
+      es: "Control de plagas",
     },
     parentId: "632ac9864d87ff2494210b49",
     parentName: "Household Tool",
@@ -596,9 +678,11 @@ const categories = [
     status: "show",
     name: {
       en: "Cleaning Tools",
+      es: "Herramientas de limpieza",
     },
     description: {
       en: "Cleaning Tools",
+      es: "Herramientas de limpieza",
     },
     parentId: "632ac9864d87ff2494210b49",
     parentName: "Household Tool",
@@ -609,9 +693,11 @@ const categories = [
     status: "show",
     name: {
       en: "Water Filter",
+      es: "Filtro de agua",
     },
     description: {
       en: "Water Filter",
+      es: "Filtro de agua",
     },
     parentId: "632ac9864d87ff2494210b49",
     parentName: "Household Tool",
@@ -622,9 +708,11 @@ const categories = [
     status: "show",
     name: {
       en: "Biscuits & Cakes",
+      es: "Galletas y pasteles",
     },
     description: {
       en: "Biscuits & Cakes",
+      es: "Galletas y pasteles",
     },
     parentId: "62c827b5a427b63741da9175",
     parentName: "Home",
@@ -635,9 +723,11 @@ const categories = [
     status: "show",
     name: {
       en: "Cakes",
+      es: "Pasteles",
     },
     description: {
       en: "Cakes",
+      es: "Pasteles",
     },
     parentId: "632ac9e94d87ff2494210ba0",
     parentName: "Biscuits & Cake",
@@ -648,9 +738,11 @@ const categories = [
     status: "show",
     name: {
       en: "Biscuits",
+      es: "Galletas",
     },
     description: {
       en: "Biscuits",
+      es: "Galletas",
     },
     parentId: "632ac9e94d87ff2494210ba0",
     parentName: "Biscuits & Cake",
@@ -661,9 +753,11 @@ const categories = [
     status: "show",
     name: {
       en: "Cooking Essentials",
+      es: "Esenciales de cocina",
     },
     description: {
       en: "Cooking Essentials",
+      es: "Esenciales de cocina",
     },
     parentId: "62c827b5a427b63741da9175",
     parentName: "Home",
@@ -674,9 +768,11 @@ const categories = [
     status: "show",
     name: {
       en: "Oil",
+      es: "Aceite",
     },
     description: {
       en: "Oil",
+      es: "Aceite",
     },
     parentId: "632aca0b4d87ff2494210bc4",
     parentName: "Cooking Essential",
@@ -687,9 +783,11 @@ const categories = [
     status: "show",
     name: {
       en: "Flour",
+      es: "Harina",
     },
     description: {
       en: "Flour",
+      es: "Harina",
     },
     parentId: "632aca0b4d87ff2494210bc4",
     parentName: "Cooking Essential",
@@ -700,9 +798,11 @@ const categories = [
     status: "show",
     name: {
       en: "Fruits & Vegetable",
+      es: "Frutas y verduras",
     },
     description: {
       en: "Fruits & Vegetable",
+      es: "Frutas y verduras",
     },
     parentId: "62c827b5a427b63741da9175",
     parentName: "Home",
@@ -713,9 +813,11 @@ const categories = [
     status: "show",
     name: {
       en: "Fresh Vegetable",
+      es: "Verduras frescas",
     },
     description: {
       en: "Fresh Vegetable",
+      es: "Verduras frescas",
     },
     parentId: "632aca2b4d87ff2494210be8",
     parentName: "Fruits & Vegetables",
@@ -726,9 +828,11 @@ const categories = [
     status: "show",
     name: {
       en: "Dry Fruits",
+      es: "Frutos secos",
     },
     description: {
       en: "Dry Fruits",
+      es: "Frutos secos",
     },
     parentId: "632aca2b4d87ff2494210be8",
     parentName: "Fruits & Vegetables",
@@ -739,9 +843,11 @@ const categories = [
     status: "show",
     name: {
       en: "Fresh Fruits",
+      es: "Frutas frescas",
     },
     description: {
       en: "Fresh Fruits",
+      es: "Frutas frescas",
     },
     parentId: "632aca2b4d87ff2494210be8",
     parentName: "Fruits & Vegetables",
@@ -752,9 +858,11 @@ const categories = [
     status: "show",
     name: {
       en: "Apple",
+      es: "Manzana",
     },
     description: {
       en: "Apple",
+      es: "Manzana",
     },
     parentId: "632aca454d87ff2494210c00",
     parentName: "Fresh Fruits",
@@ -765,9 +873,11 @@ const categories = [
     status: "show",
     name: {
       en: "Orange",
+      es: "Naranja",
     },
     description: {
       en: "Orange",
+      es: "Naranja",
     },
     parentId: "632aca454d87ff2494210c00",
     parentName: "Fresh Fruits",
@@ -778,9 +888,11 @@ const categories = [
     status: "show",
     name: {
       en: "Fish & Meat",
+      es: "Pescado y carne",
     },
     description: {
       en: "Fish & Meat",
+      es: "Pescado y carne",
     },
     parentId: "62c827b5a427b63741da9175",
     parentName: "Home",
@@ -791,9 +903,11 @@ const categories = [
     status: "show",
     name: {
       en: "Meat",
+      es: "Carne",
     },
     description: {
       en: "Meat",
+      es: "Carne",
     },
     parentId: "632aca6d4d87ff2494210c24",
     parentName: "Fish & Meats",
@@ -804,9 +918,11 @@ const categories = [
     status: "show",
     name: {
       en: "Fish",
+      es: "Pescado",
     },
     description: {
       en: "Fish",
+      es: "Pescado",
     },
     parentId: "632aca6d4d87ff2494210c24",
     parentName: "Fish & Meats",
@@ -817,9 +933,11 @@ const categories = [
     status: "show",
     name: {
       en: "Beef",
+      es: "Carne de res",
     },
     description: {
       en: "Beef",
+      es: "Carne de res",
     },
     parentId: "632aca754d87ff2494210c2c",
     parentName: "Meat",
@@ -830,9 +948,11 @@ const categories = [
     status: "show",
     name: {
       en: "Tuna",
+      es: "Atún",
     },
     description: {
       en: "Tuna",
+      es: "Atún",
     },
     parentId: "632aca7e4d87ff2494210c34",
     parentName: "Fish",
@@ -843,9 +963,11 @@ const categories = [
     status: "show",
     name: {
       en: "Rui",
+      es: "Pescado Rui",
     },
     description: {
       en: "Rui",
+      es: "Pescado Rui",
     },
     parentId: "632aca7e4d87ff2494210c34",
     parentName: "Fish",
@@ -857,9 +979,11 @@ const categories = [
     status: "show",
     name: {
       en: "Baby Food",
+      es: "Alimentos para bebés",
     },
     description: {
       en: "Baby Food",
+      es: "Alimentos para bebés",
     },
     parentId: "632aca2b4d87ff2494210be8",
     parentName: "Fruits & Vegetable",

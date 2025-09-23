@@ -33,7 +33,7 @@ const currencySchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 const Currency = mongoose.model("Currency", currencySchema);

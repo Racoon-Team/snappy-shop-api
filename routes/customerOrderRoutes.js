@@ -34,7 +34,7 @@ router.get("/", getOrderCustomer);
 router.post(
   "/customer/invoice",
   emailVerificationLimit,
-  sendEmailInvoiceToCustomer
+  sendEmailInvoiceToCustomer,
 );
 
 module.exports = router;

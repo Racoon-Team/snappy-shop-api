@@ -42,19 +42,19 @@ const getAllOrders = async (req, res) => {
   }
 
   if (customerName) {
-  const isNumber = !isNaN(customerName);
-  queryObject.$or = [];
+    const isNumber = !isNaN(customerName);
+    queryObject.$or = [];
 
-  queryObject.$or.push({
-    "user_info.name": { $regex: customerName, $options: "i" },
-  });
-
-  if (isNumber) {
     queryObject.$or.push({
-      invoice: Number(customerName),
+      "user_info.name": { $regex: customerName, $options: "i" },
     });
+
+    if (isNumber) {
+      queryObject.$or.push({
+        invoice: Number(customerName),
+      });
+    }
   }
-}
 
   if (day) {
     queryObject.createdAt = { $gte: dateTime, $lte: today };
@@ -83,7 +83,7 @@ const getAllOrders = async (req, res) => {
     const totalDoc = await Order.countDocuments(queryObject);
     const orders = await Order.find(queryObject)
       .select(
-        "_id invoice paymentMethod subTotal total user_info discount shippingCost status createdAt updatedAt"
+        "_id invoice paymentMethod subTotal total user_info discount shippingCost status createdAt updatedAt",
       )
       .sort({ updatedAt: -1 })
       .skip(skip)
@@ -104,7 +104,7 @@ const getAllOrders = async (req, res) => {
       for (const order of filteredOrders) {
         const { paymentMethod, total } = order;
         const existPayment = methodTotals.find(
-          (item) => item.method === paymentMethod
+          (item) => item.method === paymentMethod,
         );
 
         if (existPayment) {
@@ -178,7 +178,7 @@ const updateOrder = (req, res) => {
           message: "Order Updated Successfully!",
         });
       }
-    }
+    },
   );
 };
 
@@ -456,7 +456,7 @@ const getDashboardAmount = async (req, res) => {
         total: 1,
         createdAt: 1,
         updatedAt: 1,
-      }
+      },
     );
 
     res.send({
@@ -669,6 +669,31 @@ const getDashboardOrders = async (req, res) => {
   }
 };
 
+const getTotalSoldByProduct = async (req, res) => {
+  try {
+    const { productId } = req.params;
+
+    const result = await Order.aggregate([
+      { $unwind: "$cart" },
+      { $match: { "cart.id": productId } },
+      {
+        $group: {
+          _id: "$cart.id",
+          totalQuantity: { $sum: "$cart.quantity" },
+        },
+      },
+    ]);
+
+    res.json({
+      productId,
+      totalQuantity: result.length > 0 ? result[0].totalQuantity : 0,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error fetching total sold" });
+  }
+};
+
 module.exports = {
   getAllOrders,
   getOrderById,
@@ -680,4 +705,5 @@ module.exports = {
   getDashboardRecentOrder,
   getDashboardCount,
   getDashboardAmount,
+  getTotalSoldByProduct,
 };

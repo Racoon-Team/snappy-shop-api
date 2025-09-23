@@ -1,0 +1,6 @@
+.prettierrc.js
+.DS_store
+.gitignore
+.prettierignore
+.gitlab-ci.yml
+eslint.config.mjs

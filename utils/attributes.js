@@ -6,9 +6,11 @@ const attributes = [
     status: "show",
     title: {
       en: "Color",
+      es: "Color",
     },
     name: {
       en: "Color",
+      es: "Color",
     },
     variants: [
       {
@@ -16,6 +18,7 @@ const attributes = [
         _id: "63f078f54b86ed26b05281b3",
         name: {
           en: "Red",
+          es: "Rojo",
         },
       },
       {
@@ -23,6 +26,7 @@ const attributes = [
         _id: "63f078f54b86ed26b05281b4",
         name: {
           en: "Green",
+          es: "Verde",
         },
       },
       {
@@ -30,6 +34,7 @@ const attributes = [
         _id: "63f078f54b86ed26b05281b5",
         name: {
           en: "Blue",
+          es: "Azul",
         },
       },
     ],
@@ -42,9 +47,11 @@ const attributes = [
     status: "show",
     title: {
       en: "Size",
+      es: "Tamaño",
     },
     name: {
       en: "Size",
+      es: "Tamaño",
     },
     variants: [
       {
@@ -52,6 +59,7 @@ const attributes = [
         _id: "63f078f54b86ed26b05281b7",
         name: {
           en: "Small",
+          es: "Pequeño",
         },
       },
       {
@@ -59,6 +67,7 @@ const attributes = [
         _id: "63f078f54b86ed26b05281b8",
         name: {
           en: "Medium",
+          es: "Medio",
         },
       },
       {
@@ -66,6 +75,7 @@ const attributes = [
         _id: "63f078f54b86ed26b05281b9",
         name: {
           en: "Large",
+          es: "Grande",
         },
       },
     ],
@@ -78,9 +88,11 @@ const attributes = [
     status: "show",
     title: {
       en: "Gift Wrap",
+      es: "Papel de Regalo",
     },
     name: {
       en: "Gift Wrap",
+      es: "Papel de Regalo",
     },
     variants: [
       {
@@ -88,6 +100,7 @@ const attributes = [
         _id: "63f34946d3639309840ca337",
         name: {
           en: "Yes",
+          es: "Si",
         },
       },
       {
@@ -95,6 +108,7 @@ const attributes = [
         _id: "63f34946d3639309840ca338",
         name: {
           en: "No",
+          es: "No",
         },
       },
     ],
@@ -107,9 +121,11 @@ const attributes = [
     status: "show",
     title: {
       en: "Package",
+      es: "Paquete",
     },
     name: {
       en: "Package",
+      es: "Paquete",
     },
     variants: [
       {
@@ -117,6 +133,7 @@ const attributes = [
         _id: "63f34983d3639309840ca64b",
         name: {
           en: "Plastic",
+          es: "Plástico",
         },
       },
       {
@@ -124,6 +141,7 @@ const attributes = [
         _id: "63f34983d3639309840ca64c",
         name: {
           en: "Jar",
+          es: "Frasco",
         },
       },
       {
@@ -131,6 +149,7 @@ const attributes = [
         _id: "63f34983d3639309840ca64d",
         name: {
           en: "Eco Friendly",
+          es: "Ecológico",
         },
       },
     ],

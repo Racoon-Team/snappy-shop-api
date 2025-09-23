@@ -14,7 +14,6 @@ const updateManyProducts = async () => {
         sku: el.sku,
         barcode: el.barcode,
         productId: el.productId,
-
         title: el.title,
         description: el.description,
         categories: el.categories,

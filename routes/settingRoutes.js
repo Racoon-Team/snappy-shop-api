@@ -11,6 +11,11 @@ const {
   addStoreCustomizationSetting,
   getStoreCustomizationSetting,
   updateStoreCustomizationSetting,
+  getDeliveryPoints,
+  addDeliveryPoint,
+  deleteDeliveryPoint,
+  getDeliveryPointById,
+  updateDeliveryPoint,
 } = require("../controller/settingController");
 
 //add a global setting
@@ -44,5 +49,15 @@ router.get("/store/customization/all", getStoreCustomizationSetting);
 
 //update online store customization setting
 router.put("/store/customization/update", updateStoreCustomizationSetting);
+
+router.get("/delivery-points", getDeliveryPoints);
+
+router.post("/delivery-points/add", addDeliveryPoint);
+
+router.delete("/delivery-points/:id", deleteDeliveryPoint);
+
+router.get("/delivery-points/:id", getDeliveryPointById);
+
+router.put("/admin/delivery-points/:id", updateDeliveryPoint);
 
 module.exports = router;

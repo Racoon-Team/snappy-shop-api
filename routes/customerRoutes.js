@@ -21,6 +21,7 @@ const {
   deleteShippingAddress,
   getCustomerByEmail,
   updateCustomerLocation,
+  updateCustomerPreferences,
 } = require("../controller/customerController");
 const {
   passwordVerificationLimit,
@@ -33,10 +34,9 @@ router.post("/verify-email", emailVerificationLimit, verifyEmailAddress);
 //verify phone number
 router.post("/verify-phone", phoneVerificationLimit, verifyPhoneNumber);
 
-
 router.put("/location", updateCustomerLocation);
 router.get("/email/:email", getCustomerByEmail);
-
+router.put("/preferences", updateCustomerPreferences);
 
 // shipping address send to array
 router.post("/shipping/address/:id", addShippingAddress);
@@ -47,7 +47,6 @@ router.put("/shipping/address/:userId/:shippingId", updateShippingAddress);
 // shipping address delete
 router.delete("/shipping/address/:userId/:shippingId", deleteShippingAddress);
 
-
 //register a user
 router.post("/register/:token", registerCustomer);
 //login a user
@@ -56,7 +55,6 @@ router.post("/login", loginCustomer);
 router.post("/signup/oauth", signUpWithOauthProvider);
 //register or login with google and fb
 router.post("/signup/:token", signUpWithProvider);
-
 
 //forget-password
 router.put("/forget-password", passwordVerificationLimit, forgetPassword);
@@ -70,7 +68,6 @@ router.post("/add/all", addAllCustomers);
 //get all user
 router.get("/", getAllCustomers);
 
-
 //get a user
 router.get("/:id", getCustomerById);
 //update a user
@@ -79,4 +76,3 @@ router.put("/:id", updateCustomer);
 router.delete("/:id", deleteCustomer);
 
 module.exports = router;
-

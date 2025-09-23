@@ -1,3 +1,4 @@
+/* eslint-disable */
 const bcrypt = require("bcryptjs");
 const dayjs = require("dayjs");
 const utc = require("dayjs/plugin/utc");
@@ -260,10 +261,11 @@ const updatedStatus = async (req, res) => {
         $set: {
           status: newStatus,
         },
-      }
+      },
     );
     res.send({
       message: `Staff ${newStatus} Successfully!`,
+      messageKey: newStatus,
     });
   } catch (err) {
     res.status(500).send({
@@ -272,23 +274,22 @@ const updatedStatus = async (req, res) => {
   }
 };
 
-const StoreSetting = require("../models/StoreSetting");
+const Setting = require("../models/Setting");
 
 const getAvailableLocations = async (req, res) => {
   try {
-    const store = await StoreSetting.findOne({ name: "storeSetting" });
+    const store = await Setting.findOne({ name: "storeSetting" });
 
-    if (!store || !store.setting || !Array.isArray(store.setting.available_locations)) {
-      return res.status(404).json({ message: "Ubicaciones no configuradas" });
+    if (!store || !Array.isArray(store.setting.available_locations)) {
+      return res.status(404).json({ message: "Unconfigured locations" });
     }
 
-    res.json(store.setting.available_locations);
+    res.status(200).json(store.setting.available_locations);
   } catch (error) {
     console.error("Error en getAvailableLocations:", error);
-    res.status(500).json({ message: "Error al obtener ubicaciones", error });
+    res.status(500).json({ message: "Error getting locations", error });
   }
 };
-
 
 module.exports = {
   registerAdmin,

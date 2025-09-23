@@ -2,6 +2,7 @@ require("dotenv").config();
 const Order = require("../models/Order");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const mongoose = require("mongoose");
 const Customer = require("../models/Customer");
 const { signInToken, tokenForVerify } = require("../config/auth");
 const { sendEmail } = require("../lib/email-sender/sender");
@@ -31,7 +32,6 @@ const verifyEmailAddress = async (req, res) => {
       from: process.env.EMAIL_USER,
       // from: "info@demomailtrap.com",
       to: `${req.body.email}`,
-      subject: "Email Activation",
       subject: "Verify Your Email",
       html: customerRegisterBody(option),
     };
@@ -73,7 +73,7 @@ const verifyPhoneNumber = async (req, res) => {
 
     // Generate a random 6-digit verification code
     const verificationCode = Math.floor(
-      100000 + Math.random() * 900000
+      100000 + Math.random() * 900000,
     ).toString();
 
     // Send verification code via SMS
@@ -100,7 +100,6 @@ const registerCustomer = async (req, res) => {
 
   try {
     const { name, email, password, location } = jwt.decode(token);
-
 
     // Check if the user is already registered
     const isAdded = await Customer.findOne({ email });
@@ -152,7 +151,7 @@ const registerCustomer = async (req, res) => {
               message: "Email Verified, Please Login Now!",
             });
           }
-        }
+        },
       );
     }
   } catch (error) {
@@ -377,15 +376,14 @@ const getAllCustomers = async (req, res) => {
     const users = await Customer.find({}).sort({ _id: -1 });
     const usersWithOrdersCount = await Promise.all(
       users.map(async (user) => {
-        
         const ordersCount = await Order.countDocuments({ user: user._id });
         return {
           ...user.toObject(),
           ordersCount,
         };
-      })
+      }),
     );
-  
+
     res.send(usersWithOrdersCount);
   } catch (err) {
     console.error("Error in getAllCustomers:", err);
@@ -418,7 +416,7 @@ const addShippingAddress = async (req, res) => {
           shippingAddress: newShippingAddress,
         },
       },
-      { upsert: true } // Create a new document if no document matches the filter
+      { upsert: true }, // Create a new document if no document matches the filter
     );
 
     if (result.nModified > 0 || result.upserted) {
@@ -474,7 +472,7 @@ const updateShippingAddress = async (req, res) => {
   try {
     const activeDB = req.activeDB;
 
-    const Customer = activeDB.model("Customer", CustomerModel);
+    // const Customer = activeDB.model("Customer", CustomerModel);
     const customer = await Customer.findById(req.params.id);
 
     if (customer) {
@@ -495,14 +493,14 @@ const deleteShippingAddress = async (req, res) => {
     const activeDB = req.activeDB;
     const { userId, shippingId } = req.params;
 
-    const Customer = activeDB.model("Customer", CustomerModel);
+    // const Customer = activeDB.model("Customer", CustomerModel);
     await Customer.updateOne(
       { _id: userId },
       {
         $pull: {
           shippingAddress: { _id: shippingId },
         },
-      }
+      },
     );
 
     res.send({ message: "Shipping Address Deleted Successfully!" });
@@ -515,10 +513,7 @@ const deleteShippingAddress = async (req, res) => {
 
 const updateCustomer = async (req, res) => {
   try {
-    // Validate the input
-    const { name, email, address, phone, image } = req.body;
-
-    // Find the customer by ID
+    const { name, email, address, phone, image, location } = req.body;
     const customer = await Customer.findById(req.params.id);
     if (!customer) {
       return res.status(404).send({
@@ -526,7 +521,6 @@ const updateCustomer = async (req, res) => {
       });
     }
 
-    // Check if the email already exists and does not belong to the current customer
     const existingCustomer = await Customer.findOne({ email });
     if (
       existingCustomer &&
@@ -536,21 +530,16 @@ const updateCustomer = async (req, res) => {
         message: "Email already exists.",
       });
     }
-
-    // Update customer details
     customer.name = name;
     customer.email = email;
     customer.address = address;
     customer.phone = phone;
     customer.image = image;
+    customer.location = location;
 
-    // Save the updated customer
     const updatedUser = await customer.save();
 
-    // Generate a new token
     const token = signInToken(updatedUser);
-
-    // Send the updated customer data with the new token
     res.send({
       token,
       _id: updatedUser._id,
@@ -559,6 +548,7 @@ const updateCustomer = async (req, res) => {
       address: updatedUser.address,
       phone: updatedUser.phone,
       image: updatedUser.image,
+      location: updatedUser.location,
       message: "Customer updated successfully!",
     });
   } catch (err) {
@@ -613,6 +603,39 @@ const updateCustomerLocation = async (req, res) => {
   }
 };
 
+const updateCustomerPreferences = async (req, res) => {
+  try {
+    const { email, preferences } = req.body;
+
+    if (!Array.isArray(preferences)) {
+      return res.status(400).json({ message: "Preferences must be an array" });
+    }
+
+    const validPreferences = preferences.filter((id) =>
+      mongoose.Types.ObjectId.isValid(id),
+    );
+
+    if (validPreferences.length !== preferences.length) {
+      return res
+        .status(400)
+        .json({ message: "Some preferences have invalid IDs" });
+    }
+
+    const customer = await Customer.findOne({ email });
+
+    if (!customer) {
+      return res.status(404).json({ message: "Customer not found" });
+    }
+
+    customer.preferences = validPreferences;
+    await customer.save();
+
+    res.status(200).json({ message: "Preferences updated successfully" });
+  } catch (error) {
+    console.error("Error updating preferences:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+};
 
 module.exports = {
   loginCustomer,
@@ -635,4 +658,5 @@ module.exports = {
   deleteShippingAddress,
   getCustomerByEmail,
   updateCustomerLocation,
+  updateCustomerPreferences,
 };

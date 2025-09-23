@@ -67,7 +67,7 @@ const updateStatusNotification = async (req, res) => {
         $set: {
           status: newStatus,
         },
-      }
+      },
     );
     const totalDoc = await Notification.countDocuments({ status: "unread" });
 
@@ -93,7 +93,7 @@ const updateManyStatusNotification = async (req, res) => {
       },
       {
         multi: true,
-      }
+      },
     );
 
     res.send({

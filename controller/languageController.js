@@ -5,7 +5,7 @@ const addLanguage = async (req, res) => {
   try {
     const newLanguage = new Language(req.body);
     await newLanguage.save();
-    res.send({
+    res.status(200).send({
       message: "Language added successfully!",
     });
   } catch (err) {
@@ -97,7 +97,7 @@ const updateManyLanguage = async (req, res) => {
       },
       {
         multi: true,
-      }
+      },
     );
 
     res.send({
@@ -120,12 +120,11 @@ const updateStatus = async (req, res) => {
         $set: {
           status: req.body.status,
         },
-      }
+      },
     );
     res.status(200).send({
-      message: `Language ${
-        newStatus === "show" ? "Published" : "Un-Published"
-      } Successfully!`,
+      message: `Language ${newStatus === "show" ? "Published" : "Un-Published"} Successfully!`,
+      messageKey: newStatus,
     });
   } catch (err) {
     res.status(500).send({

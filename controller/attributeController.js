@@ -21,7 +21,7 @@ const addChildAttributes = async (req, res) => {
     const attribute = await Attribute.findById(id);
     await Attribute.updateOne(
       { _id: attribute._id },
-      { $push: { variants: req.body } }
+      { $push: { variants: req.body } },
     );
     res.send({
       message: "Attribute Value Added Successfully!",
@@ -122,7 +122,7 @@ const updateManyAttribute = async (req, res) => {
       },
       {
         multi: true,
-      }
+      },
     );
 
     res.send({
@@ -218,7 +218,7 @@ const updateChildAttributes = async (req, res) => {
             "variants.$.name": name,
             "variants.$.status": req.body.status,
           },
-        }
+        },
       );
     }
 
@@ -239,7 +239,7 @@ const updateManyChildAttribute = async (req, res) => {
     const childIdAttribute = await Attribute.findById(req.body.currentId);
 
     const final = childIdAttribute.variants.filter((value) =>
-      req.body.ids.find((value1) => value1 == value._id)
+      req.body.ids.find((value1) => value1 == value._id),
     );
 
     const updateStatusAttribute = final.map((value) => {
@@ -264,7 +264,7 @@ const updateManyChildAttribute = async (req, res) => {
         },
         {
           multi: true,
-        }
+        },
       );
     } else {
       await Attribute.updateOne(
@@ -276,7 +276,7 @@ const updateManyChildAttribute = async (req, res) => {
         },
         {
           multi: true,
-        }
+        },
       );
 
       await Attribute.updateOne(
@@ -286,7 +286,7 @@ const updateManyChildAttribute = async (req, res) => {
         },
         {
           multi: true,
-        }
+        },
       );
     }
 
@@ -309,12 +309,10 @@ const updateStatus = async (req, res) => {
         $set: {
           status: newStatus,
         },
-      }
+      },
     );
     res.status(200).send({
-      message: `Attribute ${
-        newStatus === "show" ? "Published" : "Un-Published"
-      } Successfully!`,
+      message: `Attribute ${newStatus === "show" ? "Published" : "Un-Published"} Successfully!`,
     });
   } catch (err) {
     res.status(500).send({
@@ -333,12 +331,10 @@ const updateChildStatus = async (req, res) => {
         $set: {
           "variants.$.status": newStatus,
         },
-      }
+      },
     );
     res.status(200).send({
-      message: `Attribute Value ${
-        newStatus === "show" ? "Published" : "Un-Published"
-      } Successfully!`,
+      message: `Attribute Value ${newStatus === "show" ? "Published" : "Un-Published"} Successfully!`,
     });
   } catch (err) {
     res.status(500).send({
@@ -366,7 +362,7 @@ const deleteChildAttribute = async (req, res) => {
 
     await Attribute.updateOne(
       { _id: attributeId },
-      { $pull: { variants: { _id: childId } } }
+      { $pull: { variants: { _id: childId } } },
     );
 
     await handleProductAttribute(attributeId, childId);
@@ -403,7 +399,7 @@ const deleteManyChildAttribute = async (req, res) => {
       },
       {
         multi: true,
-      }
+      },
     );
 
     await handleProductAttribute(req.body.id, req.body.ids, "multi");

@@ -58,6 +58,8 @@ const adminSchema = new mongoose.Schema(
         "Driver",
         "Security Guard",
         "Accountant",
+        "Delivery Person",
+        "Seller",
       ],
     },
     access_list: {
@@ -71,7 +73,7 @@ const adminSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 const Admin = mongoose.model("Admin", adminSchema);

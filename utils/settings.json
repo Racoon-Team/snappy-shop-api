@@ -865,6 +865,7 @@
   {
     "setting": {
       "cod_status": true,
+      "qr_status": false,
       "fb_pixel_key": "",
       "fb_pixel_status": false,
       "google_analytic_key": "",
@@ -881,6 +882,8 @@
       "facebook_secret": "",
       "nextauth_secret": "",
       "next_api_base_url": "http://localhost:5055/api",
+      "qr_key": "",
+      "qr_secret": "",
       "stripe_key": "",
       "stripe_secret": "",
       "stripe_status": false,

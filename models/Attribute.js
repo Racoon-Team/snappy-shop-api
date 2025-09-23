@@ -43,7 +43,7 @@ const attributeSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 // module.exports = attributeSchema;

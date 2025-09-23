@@ -110,7 +110,7 @@ const updateManyCoupons = async (req, res) => {
       },
       {
         multi: true,
-      }
+      },
     );
 
     res.send({
@@ -133,12 +133,11 @@ const updateStatus = async (req, res) => {
         $set: {
           status: newStatus,
         },
-      }
+      },
     );
     res.status(200).send({
-      message: `Coupon ${
-        newStatus === "show" ? "Published" : "Un-Published"
-      } Successfully!`,
+      message: `Coupon ${newStatus === "show" ? "Published" : "Un-Published"} Successfully!`,
+      messageKey: newStatus,
     });
   } catch (err) {
     res.status(500).send({

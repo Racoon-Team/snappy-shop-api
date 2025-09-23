@@ -12,9 +12,9 @@ const {
   deleteStaff,
   updatedStatus,
   getAvailableLocations,
-  
 } = require("../controller/adminController");
 const { passwordVerificationLimit } = require("../lib/email-sender/sender");
+
 //register a staff
 router.post("/register", registerAdmin);
 
