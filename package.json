@@ -23,7 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "@paypal/checkout-server-sdk": "^1.0.3",
-    "axios": "^1.11.0",
+    "axios": "^1.12.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cloudinary": "^1.26.3",
