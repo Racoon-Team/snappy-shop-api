@@ -46,21 +46,9 @@ const adminSchema = new mongoose.Schema(
       default: bcrypt.hashSync("12345678"),
     },
     role: {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Role",
       required: true,
-      default: "Admin",
-      enum: [
-        "Admin",
-        "Super Admin",
-        "Cashier",
-        "Manager",
-        "CEO",
-        "Driver",
-        "Security Guard",
-        "Accountant",
-        "Delivery Person",
-        "Seller",
-      ],
     },
     access_list: {
       type: Array,
