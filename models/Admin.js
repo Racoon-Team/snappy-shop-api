@@ -50,10 +50,6 @@ const adminSchema = new mongoose.Schema(
       ref: "Role",
       required: true,
     },
-    access_list: {
-      type: Array,
-      required: false,
-    },
     joiningData: {
       type: Date,
       required: false,

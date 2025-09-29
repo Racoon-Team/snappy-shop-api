@@ -37,6 +37,9 @@ const paymentData = require("../utilsBase/payments");
 const Stock = require("../models/Stock");
 const stockData = require("../utilsBase/stocks");
 
+const Role = require("../models/Role");
+const roleData = require("../utilsBase/roles");
+
 connectDB();
 const importData = async () => {
   try {
@@ -75,6 +78,9 @@ const importData = async () => {
 
     await Stock.deleteMany();
     await Stock.insertMany(stockData);
+
+    await Role.deleteMany();
+    await Role.insertMany(roleData);
 
     console.log("data inserted successfully!");
     process.exit();
