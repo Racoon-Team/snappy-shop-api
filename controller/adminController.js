@@ -1,4 +1,4 @@
-/* eslint-disable */
+
 const bcrypt = require("bcryptjs");
 const dayjs = require("dayjs");
 const utc = require("dayjs/plugin/utc");
