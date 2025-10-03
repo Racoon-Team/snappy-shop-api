@@ -138,7 +138,7 @@ const resetPassword = async (req, res) => {
 };
 
 const addStaff = async (req, res) => {
-  // console.log("add staf....", req.body.staffData);
+  
   try {
     const isAdded = await Admin.findOne({ email: req.body.email });
     if (isAdded) {
