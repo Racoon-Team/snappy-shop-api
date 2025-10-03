@@ -57,7 +57,7 @@ const loginAdmin = async (req, res) => {
       const token = signInToken(admin);
 
       const { data, iv } = handleEncryptData([
-        ...admin?.access_list,
+        ...(admin?.access_list ?? []),
         admin.role,
       ]);
       res.send({
@@ -210,7 +210,7 @@ const updateStaff = async (req, res) => {
       const token = signInToken(updatedAdmin);
 
       const { data, iv } = handleEncryptData([
-        ...updatedAdmin?.access_list,
+        ...(updatedAdmin?.access_list ?? []),
         updatedAdmin.role,
       ]);
       res.send({
