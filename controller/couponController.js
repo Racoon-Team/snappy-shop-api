@@ -2,7 +2,7 @@ const dayjs = require("dayjs");
 const utc = require("dayjs/plugin/utc");
 dayjs.extend(utc);
 
-// const { mongo_connection } = require('../config/db'); // CCDev
+
 const Coupon = require("../models/Coupon");
 
 const addCoupon = async (req, res) => {
@@ -49,7 +49,7 @@ const getAllCoupons = async (req, res) => {
 };
 
 const getShowingCoupons = async (req, res) => {
-  // console.log("getShowingCoupons");
+ 
   try {
     const coupons = await Coupon.find({
       status: "show",
@@ -79,11 +79,10 @@ const updateCoupon = async (req, res) => {
 
     if (coupon) {
       coupon.title = { ...coupon.title, ...req.body.title };
-      // coupon.title[req.body.lang] = req.body.title;
-      // coupon.title = req.body.title;
+    
       coupon.couponCode = req.body.couponCode;
       coupon.endTime = dayjs().utc().format(req.body.endTime);
-      // coupon.discountPercentage = req.body.discountPercentage;
+
       coupon.minimumAmount = req.body.minimumAmount;
       coupon.productType = req.body.productType;
       coupon.discountType = req.body.discountType;
@@ -93,7 +92,7 @@ const updateCoupon = async (req, res) => {
       res.send({ message: "Coupon Updated Successfully!" });
     }
   } catch (err) {
-    res.status(404).send({ message: "Coupon not found!" });
+    console.log(err);
   }
 };
 
