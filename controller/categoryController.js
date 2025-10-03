@@ -227,7 +227,7 @@ const deleteManyCategory = async (req, res) => {
       deletedCategories: categories,
     });
   } catch (err) {
-    res.status(500).send({ message: "Error deleting categories" });
+    res.status(500).send(err);
   }
 };
 
