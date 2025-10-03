@@ -1,4 +1,4 @@
-/* eslint-disable */
+
 const bcrypt = require("bcryptjs");
 const dayjs = require("dayjs");
 const utc = require("dayjs/plugin/utc");
@@ -57,7 +57,7 @@ const loginAdmin = async (req, res) => {
       const token = signInToken(admin);
 
       const { data, iv } = handleEncryptData([
-        ...admin?.access_list,
+        ...(admin?.access_list ?? []),
         admin.role,
       ]);
       res.send({
@@ -84,7 +84,7 @@ const loginAdmin = async (req, res) => {
 
 const forgetPassword = async (req, res) => {
   const isAdded = await Admin.findOne({ email: req.body.verifyEmail });
-  if (!isAdded) {
+  if (isAdded) {
     return res.status(404).send({
       message: "Admin/Staff Not found with this email!",
     });
@@ -138,7 +138,7 @@ const resetPassword = async (req, res) => {
 };
 
 const addStaff = async (req, res) => {
-  // console.log("add staf....", req.body.staffData);
+  
   try {
     const isAdded = await Admin.findOne({ email: req.body.email });
     if (isAdded) {
@@ -165,7 +165,7 @@ const addStaff = async (req, res) => {
     res.status(500).send({
       message: err.message,
     });
-    // console.log("error", err);
+   
   }
 };
 
@@ -203,17 +203,14 @@ const updateStaff = async (req, res) => {
       admin.role = req.body.role;
       admin.access_list = req.body.access_list;
       admin.joiningData = req.body.joiningDate;
-      // admin.password =
-      //   req.body.password !== undefined
-      //     ? bcrypt.hashSync(req.body.password)
-      //     : admin.password;
+     
 
       admin.image = req.body.image;
       const updatedAdmin = await admin.save();
       const token = signInToken(updatedAdmin);
 
       const { data, iv } = handleEncryptData([
-        ...updatedAdmin?.access_list,
+        ...(updatedAdmin?.access_list ?? []),
         updatedAdmin.role,
       ]);
       res.send({

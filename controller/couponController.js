@@ -76,12 +76,22 @@ const getCouponById = async (req, res) => {
 const updateCoupon = async (req, res) => {
   try {
     const coupon = await Coupon.findById(req.params.id);
-
+    
     if (coupon) {
+      res.status(404).send({ message: "Coupon not found!" });
+      
+    }
       coupon.title = { ...coupon.title, ...req.body.title };
+
+      
+      coupon.couponCode = req.body.couponCode;
+      coupon.endTime = dayjs().utc().format(req.body.endTime);
+      
+
     
       coupon.couponCode = req.body.couponCode;
       coupon.endTime = dayjs().utc().format(req.body.endTime);
+
 
       coupon.minimumAmount = req.body.minimumAmount;
       coupon.productType = req.body.productType;
@@ -90,9 +100,14 @@ const updateCoupon = async (req, res) => {
 
       await coupon.save();
       res.send({ message: "Coupon Updated Successfully!" });
-    }
   } catch (err) {
+
+    res.status(500).send({
+      message: err.message,
+    });
+
     console.log(err);
+
   }
 };
 
