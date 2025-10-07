@@ -25,6 +25,7 @@ const registerAdmin = async (req, res) => {
         email: req.body.email,
         role: req.body.role,
         password: bcrypt.hashSync(req.body.password),
+        joiningData: Date.now(),
       });
       const staff = await newStaff.save();
       const token = signInToken(staff);
@@ -35,6 +36,7 @@ const registerAdmin = async (req, res) => {
         email: staff.email,
         role: staff.role.name,
         permissions: staff.role.permissions,
+        joiningData: staff.joiningData,
       });
     }
   } catch (err) {
@@ -150,7 +152,7 @@ const addStaff = async (req, res) => {
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password),
         phone: req.body.phone,
-        joiningDate: req.body.joiningDate,
+        joiningData: req.body.joiningData,
         role: req.body.role,
         image: req.body.image,
       });
@@ -198,7 +200,7 @@ const updateStaff = async (req, res) => {
       admin.email = req.body.email;
       admin.phone = req.body.phone;
       admin.role = req.body.role;
-      admin.joiningData = req.body.joiningDate;
+      admin.joiningData = req.body.joiningData;
       admin.image = req.body.image;
 
       const updatedAdmin = await admin.save();
@@ -216,6 +218,7 @@ const updateStaff = async (req, res) => {
         role: updatedAdmin.role.name,
         data,
         iv,
+        joiningData: updatedAdmin.joiningData,
       });
     } else {
       res.status(404).send({
