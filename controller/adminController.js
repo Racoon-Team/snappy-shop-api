@@ -25,6 +25,7 @@ const registerAdmin = async (req, res) => {
         email: req.body.email,
         role: req.body.role,
         password: bcrypt.hashSync(req.body.password),
+        joiningData: Date.now(),
       });
       const staff = await newStaff.save();
       const token = signInToken(staff);
@@ -33,8 +34,9 @@ const registerAdmin = async (req, res) => {
         _id: staff._id,
         name: staff.name,
         email: staff.email,
-        role: staff.role,
-        joiningData: Date.now(),
+        role: staff.role.name,
+        permissions: staff.role.permissions,
+        joiningData: staff.joiningData,
       });
     }
   } catch (err) {
@@ -46,7 +48,9 @@ const registerAdmin = async (req, res) => {
 
 const loginAdmin = async (req, res) => {
   try {
-    const admin = await Admin.findOne({ email: req.body.email });
+    const admin = await Admin.findOne({ email: req.body.email }).populate(
+      "role",
+    );
     if (admin && bcrypt.compareSync(req.body.password, admin.password)) {
       if (admin?.status === "Inactive") {
         return res.status(403).send({
@@ -56,10 +60,7 @@ const loginAdmin = async (req, res) => {
       }
       const token = signInToken(admin);
 
-      const { data, iv } = handleEncryptData([
-        ...admin?.access_list,
-        admin.role,
-      ]);
+      const { data, iv } = handleEncryptData(admin.role.permissions);
       res.send({
         token,
         _id: admin._id,
@@ -67,6 +68,7 @@ const loginAdmin = async (req, res) => {
         phone: admin.phone,
         email: admin.email,
         image: admin.image,
+        role: admin.role.name,
         iv,
         data,
       });
@@ -138,7 +140,6 @@ const resetPassword = async (req, res) => {
 };
 
 const addStaff = async (req, res) => {
-  // console.log("add staf....", req.body.staffData);
   try {
     const isAdded = await Admin.findOne({ email: req.body.email });
     if (isAdded) {
@@ -151,10 +152,9 @@ const addStaff = async (req, res) => {
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password),
         phone: req.body.phone,
-        joiningDate: req.body.joiningDate,
+        joiningData: req.body.joiningData,
         role: req.body.role,
         image: req.body.image,
-        access_list: req.body.access_list,
       });
       await newStaff.save();
       res.status(200).send({
@@ -165,7 +165,6 @@ const addStaff = async (req, res) => {
     res.status(500).send({
       message: err.message,
     });
-    // console.log("error", err);
   }
 };
 
@@ -201,29 +200,25 @@ const updateStaff = async (req, res) => {
       admin.email = req.body.email;
       admin.phone = req.body.phone;
       admin.role = req.body.role;
-      admin.access_list = req.body.access_list;
-      admin.joiningData = req.body.joiningDate;
-      // admin.password =
-      //   req.body.password !== undefined
-      //     ? bcrypt.hashSync(req.body.password)
-      //     : admin.password;
-
+      admin.joiningData = req.body.joiningData;
       admin.image = req.body.image;
+
       const updatedAdmin = await admin.save();
       const token = signInToken(updatedAdmin);
 
-      const { data, iv } = handleEncryptData([
-        ...updatedAdmin?.access_list,
-        updatedAdmin.role,
-      ]);
+      await updatedAdmin.populate("role");
+      const { data, iv } = handleEncryptData(updatedAdmin.role.permissions);
+
       res.send({
         token,
         _id: updatedAdmin._id,
         name: updatedAdmin.name,
         email: updatedAdmin.email,
         image: updatedAdmin.image,
+        role: updatedAdmin.role.name,
         data,
         iv,
+        joiningData: updatedAdmin.joiningData,
       });
     } else {
       res.status(404).send({
@@ -291,6 +286,27 @@ const getAvailableLocations = async (req, res) => {
   }
 };
 
+const getAdminPermissions = async (req, res) => {
+  try {
+    const admin = await Admin.findById(req.params.id).populate(
+      "role",
+      "permissions name",
+    );
+    if (!admin) {
+      return res.status(404).json({ message: "Admin not found" });
+    }
+
+    res.status(200).json({
+      _id: admin._id,
+      name: admin.name,
+      role: admin.role.name,
+      permissions: admin.role.permissions,
+    });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   registerAdmin,
   loginAdmin,
@@ -303,4 +319,5 @@ module.exports = {
   deleteStaff,
   updatedStatus,
   getAvailableLocations,
+  getAdminPermissions,
 };

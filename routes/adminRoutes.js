@@ -12,6 +12,7 @@ const {
   deleteStaff,
   updatedStatus,
   getAvailableLocations,
+  getAdminPermissions,
 } = require("../controller/adminController");
 const { passwordVerificationLimit } = require("../lib/email-sender/sender");
 
@@ -46,5 +47,7 @@ router.put("/update-status/:id", updatedStatus);
 
 //delete a staff
 router.delete("/:id", deleteStaff);
+
+router.get("/:id/permissions", getAdminPermissions);
 
 module.exports = router;
