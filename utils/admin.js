@@ -1,15 +1,6 @@
 const bcrypt = require("bcryptjs");
 
 const admins = [
-  // {
-  //   name: { en: "Dorothy R. Brown" },
-  //   image: "https://i.ibb.co/d294W8Y/team-4.jpg",
-  //   email: "dorothy@gmail.com",
-  //   password: bcrypt.hashSync("12345678"),
-  //   phone: "708-628-3122",
-  //   role: "650a2b3c4d5e6f7890123450",
-  //   joiningData: new Date(),
-  // },
   {
     name: { en: "Alice B. Porter" },
     image: "https://i.ibb.co/m5B0hK4/team-8.jpg",
@@ -37,24 +28,6 @@ const admins = [
     role: "650a2b3c4d5e6f7890123454",
     joiningData: new Date(),
   },
-  // {
-  //   name: { en: "Stacey J. Meikle" },
-  //   image: "https://i.ibb.co/XjwBLcK/team-2.jpg",
-  //   email: "stacey@gmail.com",
-  //   password: bcrypt.hashSync("12345678"),
-  //   phone: "616-738-0407",
-  //   role: "650a2b3c4d5e6f7890123455",
-  //   joiningData: new Date(),
-  // },
-  // {
-  //   name: { en: "Marion V. Parker" },
-  //   image: "https://i.ibb.co/3zs3H7z/team-5.jpg",
-  //   email: "marion@gmail.com",
-  //   password: bcrypt.hashSync("12345678"),
-  //   phone: "713-675-8813",
-  //   role: "650a2b3c4d5e6f7890123456",
-  //   joiningData: new Date(),
-  // },
   {
     name: { en: "Admin" },
     image: "https://i.ibb.co/WpM5yZZ/9.png",
@@ -64,15 +37,6 @@ const admins = [
     role: "650a2b3c4d5e6f7890123451",
     joiningData: new Date(),
   },
-  // {
-  //   name: { en: "Luke R. Parker" },
-  //   image: "",
-  //   email: "luke@gmail.com",
-  //   password: bcrypt.hashSync("12345678"),
-  //   phone: "600-852-8814",
-  //   role: "650a2b3c4d5e6f7890123457",
-  //   joiningData: new Date(),
-  // },
 ];
 
 module.exports = admins;
