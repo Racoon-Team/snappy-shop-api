@@ -29,7 +29,7 @@ const Attribute = require("../models/Attribute");
 const attributeData = require("../utilsBase/attributes");
 
 const Setting = require("../models/Setting");
-const settingData = require("../utilsBase/settings");
+const settingData = require("../utils/shared/settings");
 
 const Payment = require("../models/Payment");
 const paymentData = require("../utilsBase/payments");
