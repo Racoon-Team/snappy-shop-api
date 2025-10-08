@@ -29,7 +29,7 @@ const Attribute = require("../models/Attribute");
 const attributeData = require("../utils/attributes");
 
 const Setting = require("../models/Setting");
-const settingData = require("../utils/settings");
+const settingData = require("../utils/shared/settings");
 
 const Payment = require("../models/Payment");
 const paymentData = require("../utils/payments");
@@ -38,7 +38,7 @@ const Stock = require("../models/Stock");
 const stockData = require("../utils/stocks");
 
 const Role = require("../models/Role");
-const roleData = require("../utils/roles");
+const roleData = require("../utils/shared/roles");
 
 connectDB();
 const importData = async () => {
