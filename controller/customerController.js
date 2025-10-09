@@ -177,10 +177,8 @@ const addAllCustomers = async (req, res) => {
 const loginCustomer = async (req, res) => {
   try {
     const customer = await Customer.findOne({ email: req.body.email });
-
     if (
-      customer &&
-      customer.password &&
+      customer?.password &&
       bcrypt.compareSync(req.body.password, customer.password)
     ) {
       const token = signInToken(customer);
@@ -209,11 +207,7 @@ const loginCustomer = async (req, res) => {
 
 const forgetPassword = async (req, res) => {
   const isAdded = await Customer.findOne({ email: req.body.email });
-  if (!isAdded) {
-    return res.status(404).send({
-      message: "User Not found with this email!",
-    });
-  } else {
+  if (isAdded) {
     const token = tokenForVerify(isAdded);
     const option = {
       name: isAdded.name,
@@ -223,13 +217,17 @@ const forgetPassword = async (req, res) => {
 
     const body = {
       from: process.env.EMAIL_USER,
-      to: `${req.body.email}`,
+      to: req.body.email,
       subject: "Password Reset",
       html: forgetPasswordEmailBody(option),
     };
 
     const message = "Please check your email to reset password!";
     sendEmail(body, res, message);
+  } else {
+    return res.status(404).send({
+      message: "User Not found with this email!",
+    });
   }
 };
 
@@ -287,7 +285,6 @@ const changePassword = async (req, res) => {
 const signUpWithProvider = async (req, res) => {
   try {
     const user = jwt.decode(req.params.token);
-
     const isAdded = await Customer.findOne({ email: user.email });
     if (isAdded) {
       const token = signInToken(isAdded);
@@ -427,7 +424,6 @@ const addShippingAddress = async (req, res) => {
 const getShippingAddress = async (req, res) => {
   try {
     const customerId = req.params.id;
-
     const customer = await Customer.findById(customerId);
     res.send({ shippingAddress: customer?.shippingAddress });
   } catch (err) {
@@ -439,8 +435,6 @@ const getShippingAddress = async (req, res) => {
 
 const updateShippingAddress = async (req, res) => {
   try {
-    const activeDB = req.activeDB;
-
     const customer = await Customer.findById(req.params.id);
 
     if (customer) {
@@ -458,7 +452,6 @@ const updateShippingAddress = async (req, res) => {
 
 const deleteShippingAddress = async (req, res) => {
   try {
-    const activeDB = req.activeDB;
     const { userId, shippingId } = req.params;
 
     await Customer.updateOne(

@@ -54,7 +54,6 @@ const calculateMethodTotals = async (queryObject) => {
 
   for (const order of filteredOrders) {
     const existing = totals.find((item) => item.method === order.paymentMethod);
-
     if (existing) {
       existing.total += order.total;
     } else {
