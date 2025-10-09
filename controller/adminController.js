@@ -1,4 +1,4 @@
-/* eslint-disable */
+
 const bcrypt = require("bcryptjs");
 const dayjs = require("dayjs");
 const utc = require("dayjs/plugin/utc");
@@ -86,36 +86,36 @@ const loginAdmin = async (req, res) => {
 
 const forgetPassword = async (req, res) => {
   const isAdded = await Admin.findOne({ email: req.body.verifyEmail });
-  if (!isAdded) {
-    return res.status(404).send({
-      message: "Admin/Staff Not found with this email!",
-    });
-  } else {
+
+  if (isAdded) {
+
     const token = tokenForVerify(isAdded);
     const body = {
       from: process.env.EMAIL_USER,
-      to: `${req.body.verifyEmail}`,
+      to: req.body.verifyEmail,
       subject: "Password Reset",
       html: `<h2>Hello ${req.body.verifyEmail}</h2>
-      <p>A request has been received to change the password for your <strong>Kachabazar</strong> account </p>
-
-        <p>This link will expire in <strong> 15 minute</strong>.</p>
-
-        <p style="margin-bottom:20px;">Click this link for reset your password</p>
-
-        <a href=${process.env.ADMIN_URL}/auth/reset-password/${token}  style="background:#22c55e;color:white;border:1px solid #22c55e; padding: 10px 15px; border-radius: 4px; text-decoration:none;">Reset Password </a>
-
-        
-        <p style="margin-top: 35px;">If you did not initiate this request, please contact us immediately at support@kachabazar.com</p>
-
-        <p style="margin-bottom:0px;">Thank you</p>
-        <strong>Kachabazar Team</strong>
-             `,
+             <p>A request has been received to change the password for your <strong>Kachabazar</strong> account.</p>
+             <p>This link will expire in <strong>15 minutes</strong>.</p>
+             <p style="margin-bottom:20px;">Click this link to reset your password:</p>
+             <a href=${process.env.ADMIN_URL}/auth/reset-password/${token} 
+                style="background:#22c55e;color:white;border:1px solid #22c55e; padding: 10px 15px; border-radius: 4px; text-decoration:none;">
+                Reset Password
+             </a>
+             <p style="margin-top: 35px;">If you did not initiate this request, please contact us immediately at support@kachabazar.com</p>
+             <p style="margin-bottom:0px;">Thank you</p>
+             <strong>Kachabazar Team</strong>`,
     };
     const message = "Please check your email to reset password!";
     sendEmail(body, res, message);
+  } else {
+   
+    return res.status(404).send({
+      message: "Admin/Staff Not found with this email!",
+    });
   }
 };
+
 
 const resetPassword = async (req, res) => {
   const token = req.body.token;

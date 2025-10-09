@@ -63,7 +63,7 @@ const getAllAttributes = async (req, res) => {
 
 const getShowingAttributes = async (req, res) => {
   try {
-    // console.log("getShowingAttributes");
+   
     const attributes = await Attribute.aggregate([
       {
         $match: {
@@ -139,7 +139,7 @@ const getAttributeById = async (req, res) => {
   try {
     const attribute = await Attribute.findById(req.params.id);
 
-    // console.log(attribute);
+    
 
     res.send(attribute);
   } catch (err) {
@@ -176,11 +176,10 @@ const updateAttributes = async (req, res) => {
       attribute.title = { ...attribute.title, ...req.body.title };
       attribute.name = { ...attribute.name, ...req.body.name };
       attribute._id = req.params.id;
-      //attribute.title = req.body.title;
-      // attribute.name = req.body.name;
+     
       attribute.option = req.body.option;
       attribute.type = req.body.type;
-      // attribute.variants = req.body.variants;
+      
     }
     await attribute.save();
     res.send({
@@ -379,7 +378,7 @@ const deleteChildAttribute = async (req, res) => {
 const deleteManyAttribute = async (req, res) => {
   try {
     await Attribute.deleteMany({ _id: req.body.ids });
-    // console.log('delete many attribute');
+  
     res.send({
       message: `Attributes Delete Successfully!`,
     });
