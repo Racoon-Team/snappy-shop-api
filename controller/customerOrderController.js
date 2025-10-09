@@ -2,7 +2,6 @@ require("dotenv").config();
 const stripe = require("stripe");
 const Razorpay = require("razorpay");
 const MailChecker = require("mailchecker");
-// const stripe = require("stripe")(`${process.env.STRIPE_KEY}` || null); /// use hardcoded key if env not work
 
 const mongoose = require("mongoose");
 
@@ -15,7 +14,6 @@ const { handleProductQuantity } = require("../lib/stock-controller/others");
 const customerInvoiceEmailBody = require("../lib/email-sender/templates/order-to-customer");
 
 const addOrder = async (req, res) => {
-  // console.log("addOrder", req.body);
   try {
     const newOrder = new Order({
       ...req.body,
@@ -34,8 +32,7 @@ const addOrder = async (req, res) => {
 //create payment intent for stripe
 const createPaymentIntent = async (req, res) => {
   const { total: amount, cardInfo: payment_intent, email } = req.body;
-  // console.log("req.body", req.body);
-  // Validate the amount that was passed from the client.
+
   if (!(amount >= process.env.MIN_AMOUNT && amount <= process.env.MAX_AMOUNT)) {
     return res.status(500).json({ message: "Invalid amount." });
   }
@@ -55,12 +52,10 @@ const createPaymentIntent = async (req, res) => {
             amount: formatAmountForStripe(amount, "usd"),
           },
         );
-        // console.log("updated_intent", updated_intent);
+
         return res.send(updated_intent);
       }
     } catch (err) {
-      // console.log("error", err);
-
       if (err.code !== "resource_missing") {
         const errorMessage =
           err instanceof Error ? err.message : "Internal server error";
@@ -79,7 +74,6 @@ const createPaymentIntent = async (req, res) => {
       },
     };
     const payment_intent = await stripeInstance.paymentIntents.create(params);
-    // console.log("payment_intent", payment_intent);
 
     res.send(payment_intent);
   } catch (err) {
@@ -92,7 +86,6 @@ const createPaymentIntent = async (req, res) => {
 const createOrderByRazorPay = async (req, res) => {
   try {
     const storeSetting = await Setting.findOne({ name: "storeSetting" });
-    // console.log("createOrderByRazorPay", storeSetting?.setting);
 
     const instance = new Razorpay({
       key_id: storeSetting?.setting?.razorpay_id,
@@ -136,7 +129,6 @@ const addRazorpayOrder = async (req, res) => {
 // get all orders user
 const getOrderCustomer = async (req, res) => {
   try {
-    // console.log("getOrderCustomer");
     const { page, limit } = req.query;
 
     const pages = Number(page) || 1;
@@ -229,7 +221,6 @@ const getOrderCustomer = async (req, res) => {
 };
 const getOrderById = async (req, res) => {
   try {
-    // console.log("getOrderById");
     const order = await Order.findById(req.params.id);
     res.send(order);
   } catch (err) {
@@ -251,7 +242,7 @@ const sendEmailInvoiceToCustomer = async (req, res) => {
           "Invalid or disposable email address. Please provide a valid email.",
       });
     }
-    // console.log("sendEmailInvoiceToCustomer");
+
     const pdf = await handleCreateInvoice(req.body, `${req.body.invoice}.pdf`);
 
     const option = {

@@ -44,8 +44,6 @@ const verifyEmailAddress = async (req, res) => {
 const verifyPhoneNumber = async (req, res) => {
   const phoneNumber = req.body.phone;
 
-  // console.log("verifyPhoneNumber", phoneNumber);
-
   // Check if phone number is provided and is in the correct format
   if (!phoneNumber) {
     return res.status(400).send({
@@ -180,8 +178,6 @@ const loginCustomer = async (req, res) => {
   try {
     const customer = await Customer.findOne({ email: req.body.email });
 
-    // console.log("loginCustomer", req.body.password, "customer", customer);
-
     if (
       customer &&
       customer.password &&
@@ -261,7 +257,6 @@ const resetPassword = async (req, res) => {
 
 const changePassword = async (req, res) => {
   try {
-    // console.log("changePassword", req.body);
     const customer = await Customer.findOne({ email: req.body.email });
     if (!customer.password) {
       return res.status(403).send({
@@ -291,10 +286,8 @@ const changePassword = async (req, res) => {
 
 const signUpWithProvider = async (req, res) => {
   try {
-    // const { user } = jwt.decode(req.body.params);
     const user = jwt.decode(req.params.token);
 
-    // console.log("user", user);
     const isAdded = await Customer.findOne({ email: user.email });
     if (isAdded) {
       const token = signInToken(isAdded);
@@ -333,8 +326,6 @@ const signUpWithProvider = async (req, res) => {
 
 const signUpWithOauthProvider = async (req, res) => {
   try {
-    // console.log("user", user);
-    // console.log("signUpWithOauthProvider", req.body);
     const isAdded = await Customer.findOne({ email: req.body.email });
     if (isAdded) {
       const token = signInToken(isAdded);
@@ -436,32 +427,10 @@ const addShippingAddress = async (req, res) => {
 const getShippingAddress = async (req, res) => {
   try {
     const customerId = req.params.id;
-    // const addressId = req.query.id;
-
-    // console.log("getShippingAddress", customerId);
-    // console.log("addressId", req.query);
 
     const customer = await Customer.findById(customerId);
     res.send({ shippingAddress: customer?.shippingAddress });
-
-    // if (addressId) {
-    //   // Find the specific address by its ID
-    //   const address = customer.shippingAddress.find(
-    //     (addr) => addr._id.toString() === addressId.toString()
-    //   );
-
-    //   if (!address) {
-    //     return res.status(404).send({
-    //       message: "Shipping address not found!",
-    //     });
-    //   }
-
-    //   return res.send({ shippingAddress: address });
-    // } else {
-    //   res.send({ shippingAddress: customer?.shippingAddress });
-    // }
   } catch (err) {
-    // console.error("Error adding shipping address:", err);
     res.status(500).send({
       message: err.message,
     });
@@ -472,7 +441,6 @@ const updateShippingAddress = async (req, res) => {
   try {
     const activeDB = req.activeDB;
 
-    // const Customer = activeDB.model("Customer", CustomerModel);
     const customer = await Customer.findById(req.params.id);
 
     if (customer) {
@@ -493,7 +461,6 @@ const deleteShippingAddress = async (req, res) => {
     const activeDB = req.activeDB;
     const { userId, shippingId } = req.params;
 
-    // const Customer = activeDB.model("Customer", CustomerModel);
     await Customer.updateOne(
       { _id: userId },
       {
