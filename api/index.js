@@ -3,8 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const path = require("path");
-// const http = require("http");
-// const { Server } = require("socket.io");
+
 
 const { connectDB } = require("../config/db");
 const productRoutes = require("../routes/productRoutes");
@@ -24,10 +23,7 @@ const roleRoutes = require("../routes/roleRoutes");
 
 const { isAuth, isAdmin } = require("../config/auth");
 const stockRoutes = require("../routes/stockRoutes");
-// const {
-//   getGlobalSetting,
-//   getStoreCustomizationSetting,
-// } = require("../lib/notification/setting");
+
 
 connectDB();
 const app = express();
@@ -85,11 +81,11 @@ app.get("*", (req, res) => {
 
 const PORT = process.env.PORT || 5055;
 
-// const server = http.createServer(app);
+
 
 app.listen(PORT, () => console.log(`server running on port ${PORT}`));
 
-// app.listen(PORT, () => console.log(`server running on port ${PORT}`));
+
 
 // set up socket
 // const io = new Server(server, {

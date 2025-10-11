@@ -16,7 +16,7 @@ const addCategory = async (req, res) => {
 
 // all multiple category
 const addAllCategory = async (req, res) => {
-  // console.log("category", req.body);
+  
   try {
     await Category.deleteMany();
 
@@ -37,14 +37,14 @@ const addAllCategory = async (req, res) => {
 // get status show category
 const getShowingCategory = async (req, res) => {
   try {
-    // console.log("getShowingCategory");
+   
 
     const categories = await Category.find({ status: "show" }).sort({
       _id: -1,
     });
 
     const categoryList = readyToParentAndChildrenCategory(categories);
-    // console.log("category list", categoryList.length);
+    
     res.send(categoryList);
   } catch (err) {
     res.status(500).send({
@@ -210,22 +210,28 @@ const deleteCategory = async (req, res) => {
 };
 
 // all multiple category delete
+
+
 const deleteManyCategory = async (req, res) => {
   try {
-    const categories = await Category.find({}).sort({ _id: -1 });
+    // Fuerza a string y valida los ids
+    const ids = (req.body.ids || []).map(id => id.toString());
 
-    await Category.deleteMany({ parentId: req.body.ids });
-    await Category.deleteMany({ _id: req.body.ids });
+    const categories = await Category.find({ _id: { $in: ids } });
+
+    await Category.deleteMany({ parentId: { $in: ids } });
+    await Category.deleteMany({ _id: { $in: ids } });
 
     res.status(200).send({
       message: "Categories Deleted Successfully!",
+      deletedCategories: categories,
     });
   } catch (err) {
-    res.status(500).send({
-      message: err.message,
-    });
+    res.status(500).send(err);
   }
 };
+
+
 const readyToParentAndChildrenCategory = (categories, parentId = null) => {
   const categoryList = [];
   let Categories;
