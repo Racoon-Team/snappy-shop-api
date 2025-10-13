@@ -2,7 +2,6 @@ require("dotenv").config();
 const stripe = require("stripe");
 const Razorpay = require("razorpay");
 const MailChecker = require("mailchecker");
-// const stripe = require("stripe")(`${process.env.STRIPE_KEY}` || null); /// use hardcoded key if env not work
 
 const mongoose = require("mongoose");
 
@@ -15,7 +14,6 @@ const { handleProductQuantity } = require("../lib/stock-controller/others");
 const customerInvoiceEmailBody = require("../lib/email-sender/templates/order-to-customer");
 
 const addOrder = async (req, res) => {
-  // console.log("addOrder", req.body);
   try {
     const newOrder = new Order({
       ...req.body,
@@ -32,67 +30,76 @@ const addOrder = async (req, res) => {
 };
 
 //create payment intent for stripe
+const handleStripeError = (err, res) => {
+  const errorMessage =
+    err instanceof Error ? err.message : "Internal server error";
+  res.status(500).send({ message: errorMessage });
+};
+
+const updateExistingPaymentIntent = async (
+  stripeInstance,
+  payment_intent,
+  amount,
+  res,
+) => {
+  try {
+    const current_intent = await stripeInstance.paymentIntents.retrieve(
+      payment_intent.id,
+    );
+    if (!current_intent) return false;
+
+    const updated_intent = await stripeInstance.paymentIntents.update(
+      payment_intent.id,
+      {
+        amount: formatAmountForStripe(amount, "usd"),
+      },
+    );
+    res.send(updated_intent);
+    return true;
+  } catch (err) {
+    if (err.code !== "resource_missing") handleStripeError(err, res);
+    return false;
+  }
+};
+
 const createPaymentIntent = async (req, res) => {
-  const { total: amount, cardInfo: payment_intent, email } = req.body;
-  // console.log("req.body", req.body);
-  // Validate the amount that was passed from the client.
+  const { total: amount, cardInfo: payment_intent } = req.body;
+
   if (!(amount >= process.env.MIN_AMOUNT && amount <= process.env.MAX_AMOUNT)) {
     return res.status(500).json({ message: "Invalid amount." });
   }
+
   const storeSetting = await Setting.findOne({ name: "storeSetting" });
   const stripeSecret = storeSetting?.setting?.stripe_secret;
   const stripeInstance = stripe(stripeSecret);
-  if (payment_intent.id) {
-    try {
-      const current_intent = await stripeInstance.paymentIntents.retrieve(
-        payment_intent.id,
-      );
-      // If PaymentIntent has been created, just update the amount.
-      if (current_intent) {
-        const updated_intent = await stripeInstance.paymentIntents.update(
-          payment_intent.id,
-          {
-            amount: formatAmountForStripe(amount, "usd"),
-          },
-        );
-        // console.log("updated_intent", updated_intent);
-        return res.send(updated_intent);
-      }
-    } catch (err) {
-      // console.log("error", err);
 
-      if (err.code !== "resource_missing") {
-        const errorMessage =
-          err instanceof Error ? err.message : "Internal server error";
-        return res.status(500).send({ message: errorMessage });
-      }
-    }
+  if (payment_intent?.id) {
+    const updated = await updateExistingPaymentIntent(
+      stripeInstance,
+      payment_intent,
+      amount,
+      res,
+    );
+    if (updated) return;
   }
+
   try {
-    // Create PaymentIntent from body params.
     const params = {
       amount: formatAmountForStripe(amount, "usd"),
       currency: "usd",
       description: process.env.STRIPE_PAYMENT_DESCRIPTION || "",
-      automatic_payment_methods: {
-        enabled: true,
-      },
+      automatic_payment_methods: { enabled: true },
     };
     const payment_intent = await stripeInstance.paymentIntents.create(params);
-    // console.log("payment_intent", payment_intent);
-
     res.send(payment_intent);
   } catch (err) {
-    const errorMessage =
-      err instanceof Error ? err.message : "Internal server error";
-    res.status(500).send({ message: errorMessage });
+    handleStripeError(err, res);
   }
 };
 
 const createOrderByRazorPay = async (req, res) => {
   try {
     const storeSetting = await Setting.findOne({ name: "storeSetting" });
-    // console.log("createOrderByRazorPay", storeSetting?.setting);
 
     const instance = new Razorpay({
       key_id: storeSetting?.setting?.razorpay_id,
@@ -117,26 +124,11 @@ const createOrderByRazorPay = async (req, res) => {
   }
 };
 
-const addRazorpayOrder = async (req, res) => {
-  try {
-    const newOrder = new Order({
-      ...req.body,
-      user: req.user._id,
-    });
-    const order = await newOrder.save();
-    res.status(201).send(order);
-    handleProductQuantity(order.cart);
-  } catch (err) {
-    res.status(500).send({
-      message: err.message,
-    });
-  }
-};
+const addRazorpayOrder = addOrder;
 
 // get all orders user
 const getOrderCustomer = async (req, res) => {
   try {
-    // console.log("getOrderCustomer");
     const { page, limit } = req.query;
 
     const pages = Number(page) || 1;
@@ -229,7 +221,6 @@ const getOrderCustomer = async (req, res) => {
 };
 const getOrderById = async (req, res) => {
   try {
-    // console.log("getOrderById");
     const order = await Order.findById(req.params.id);
     res.send(order);
   } catch (err) {
@@ -251,7 +242,7 @@ const sendEmailInvoiceToCustomer = async (req, res) => {
           "Invalid or disposable email address. Please provide a valid email.",
       });
     }
-    // console.log("sendEmailInvoiceToCustomer");
+
     const pdf = await handleCreateInvoice(req.body, `${req.body.invoice}.pdf`);
 
     const option = {

@@ -14,7 +14,7 @@ const getBankToken = async (req, res) => {
         .json({ message: "accountId y authorizationId falta" });
     }
     const token = await generateBankToken(accountId, authorizationId);
-    // console.log("token:", token);
+
     res.json({ token });
   } catch (err) {
     console.error("Error in getBankToken:", err);

@@ -1,32 +1,26 @@
 const Order = require("../models/Order");
 
 const buildQueryObject = (query) => {
-  const {
-    day,
-    status,
-    method,
-    endDate,
-    startDate,
-    customerName,
-  } = query;
+  const { day, status, method, endDate, startDate, customerName } = query;
 
   const queryObject = {};
 
   if (status) {
-  queryObject.status = { $regex: status, $options: "i" };
-} else {
-  queryObject.$or = [
-    { status: { $regex: "Pending", $options: "i" } },
-    { status: { $regex: "Processing", $options: "i" } },
-    { status: { $regex: "Delivered", $options: "i" } },
-    { status: { $regex: "Cancel", $options: "i" } },
-  ];
-}
+    queryObject.status = { $regex: status, $options: "i" };
+  } else {
+    queryObject.$or = [
+      { status: { $regex: "Pending", $options: "i" } },
+      { status: { $regex: "Processing", $options: "i" } },
+      { status: { $regex: "Delivered", $options: "i" } },
+      { status: { $regex: "Cancel", $options: "i" } },
+    ];
+  }
 
   if (customerName) {
     const isNumber = !Number.isNaN(Number(customerName));
-    queryObject.$or = [];
-    queryObject.$or = [{ "user_info.name": { $regex: customerName, $options: "i" } }];
+    queryObject.$or = [
+      { "user_info.name": { $regex: customerName, $options: "i" } },
+    ];
     if (isNumber) queryObject.$or.push({ invoice: Number(customerName) });
   }
 
@@ -60,7 +54,6 @@ const calculateMethodTotals = async (queryObject) => {
 
   for (const order of filteredOrders) {
     const existing = totals.find((item) => item.method === order.paymentMethod);
-
     if (existing) {
       existing.total += order.total;
     } else {
@@ -71,16 +64,18 @@ const calculateMethodTotals = async (queryObject) => {
   return totals;
 };
 
-
 const getAllOrders = async (req, res) => {
   try {
     const queryObject = buildQueryObject(req.query);
     const page = Number(req.query.page) || 1;
     const limit = Number(req.query.limit);
     const skip = (page - 1) * limit;
+
     const totalDoc = await Order.countDocuments(queryObject);
     const orders = await Order.find(queryObject)
-      .select("_id invoice paymentMethod subTotal total user_info discount shippingCost status createdAt updatedAt")
+      .select(
+        "_id invoice paymentMethod subTotal total user_info discount shippingCost status createdAt updatedAt",
+      )
       .sort({ updatedAt: -1 })
       .skip(skip)
       .limit(limit);
@@ -101,7 +96,6 @@ const getAllOrders = async (req, res) => {
     res.status(500).send({ message: err.message });
   }
 };
-
 
 const getOrderCustomer = async (req, res) => {
   try {
@@ -167,8 +161,6 @@ const deleteOrder = (req, res) => {
 // get dashboard recent order
 const getDashboardRecentOrder = async (req, res) => {
   try {
-  
-
     const { page, limit } = req.query;
     const pages = Number(page) || 1;
     const limits = Number(limit) || 8;
@@ -189,8 +181,6 @@ const getDashboardRecentOrder = async (req, res) => {
       .sort({ updatedAt: -1 })
       .skip(skip)
       .limit(limits);
-
-    
 
     res.send({
       orders: orders,
@@ -401,7 +391,6 @@ const getDashboardAmount = async (req, res) => {
       },
     ]);
 
-    
     // order list last 10 days
     const orderFilteringData = await Order.find(
       {
@@ -439,8 +428,6 @@ const getDashboardAmount = async (req, res) => {
 
 const getBestSellerProductChart = async (req, res) => {
   try {
-    
-
     const totalDoc = await Order.countDocuments({});
     const bestSellingProduct = await Order.aggregate([
       {

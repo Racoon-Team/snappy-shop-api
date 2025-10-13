@@ -44,8 +44,6 @@ const verifyEmailAddress = async (req, res) => {
 const verifyPhoneNumber = async (req, res) => {
   const phoneNumber = req.body.phone;
 
-  // console.log("verifyPhoneNumber", phoneNumber);
-
   // Check if phone number is provided and is in the correct format
   if (!phoneNumber) {
     return res.status(400).send({
@@ -179,12 +177,8 @@ const addAllCustomers = async (req, res) => {
 const loginCustomer = async (req, res) => {
   try {
     const customer = await Customer.findOne({ email: req.body.email });
-
-    // console.log("loginCustomer", req.body.password, "customer", customer);
-
     if (
-      customer &&
-      customer.password &&
+      customer?.password &&
       bcrypt.compareSync(req.body.password, customer.password)
     ) {
       const token = signInToken(customer);
@@ -213,11 +207,7 @@ const loginCustomer = async (req, res) => {
 
 const forgetPassword = async (req, res) => {
   const isAdded = await Customer.findOne({ email: req.body.email });
-  if (!isAdded) {
-    return res.status(404).send({
-      message: "User Not found with this email!",
-    });
-  } else {
+  if (isAdded) {
     const token = tokenForVerify(isAdded);
     const option = {
       name: isAdded.name,
@@ -227,13 +217,17 @@ const forgetPassword = async (req, res) => {
 
     const body = {
       from: process.env.EMAIL_USER,
-      to: `${req.body.email}`,
+      to: req.body.email,
       subject: "Password Reset",
       html: forgetPasswordEmailBody(option),
     };
 
     const message = "Please check your email to reset password!";
     sendEmail(body, res, message);
+  } else {
+    return res.status(404).send({
+      message: "User Not found with this email!",
+    });
   }
 };
 
@@ -261,7 +255,6 @@ const resetPassword = async (req, res) => {
 
 const changePassword = async (req, res) => {
   try {
-    // console.log("changePassword", req.body);
     const customer = await Customer.findOne({ email: req.body.email });
     if (!customer.password) {
       return res.status(403).send({
@@ -291,10 +284,7 @@ const changePassword = async (req, res) => {
 
 const signUpWithProvider = async (req, res) => {
   try {
-    // const { user } = jwt.decode(req.body.params);
     const user = jwt.decode(req.params.token);
-
-    // console.log("user", user);
     const isAdded = await Customer.findOne({ email: user.email });
     if (isAdded) {
       const token = signInToken(isAdded);
@@ -333,8 +323,6 @@ const signUpWithProvider = async (req, res) => {
 
 const signUpWithOauthProvider = async (req, res) => {
   try {
-    // console.log("user", user);
-    // console.log("signUpWithOauthProvider", req.body);
     const isAdded = await Customer.findOne({ email: req.body.email });
     if (isAdded) {
       const token = signInToken(isAdded);
@@ -436,32 +424,9 @@ const addShippingAddress = async (req, res) => {
 const getShippingAddress = async (req, res) => {
   try {
     const customerId = req.params.id;
-    // const addressId = req.query.id;
-
-    // console.log("getShippingAddress", customerId);
-    // console.log("addressId", req.query);
-
     const customer = await Customer.findById(customerId);
     res.send({ shippingAddress: customer?.shippingAddress });
-
-    // if (addressId) {
-    //   // Find the specific address by its ID
-    //   const address = customer.shippingAddress.find(
-    //     (addr) => addr._id.toString() === addressId.toString()
-    //   );
-
-    //   if (!address) {
-    //     return res.status(404).send({
-    //       message: "Shipping address not found!",
-    //     });
-    //   }
-
-    //   return res.send({ shippingAddress: address });
-    // } else {
-    //   res.send({ shippingAddress: customer?.shippingAddress });
-    // }
   } catch (err) {
-    // console.error("Error adding shipping address:", err);
     res.status(500).send({
       message: err.message,
     });
@@ -470,9 +435,6 @@ const getShippingAddress = async (req, res) => {
 
 const updateShippingAddress = async (req, res) => {
   try {
-    const activeDB = req.activeDB;
-
-    // const Customer = activeDB.model("Customer", CustomerModel);
     const customer = await Customer.findById(req.params.id);
 
     if (customer) {
@@ -490,10 +452,8 @@ const updateShippingAddress = async (req, res) => {
 
 const deleteShippingAddress = async (req, res) => {
   try {
-    const activeDB = req.activeDB;
     const { userId, shippingId } = req.params;
 
-    // const Customer = activeDB.model("Customer", CustomerModel);
     await Customer.updateOne(
       { _id: userId },
       {
