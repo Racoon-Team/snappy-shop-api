@@ -1,27 +1,27 @@
+const { default: mongoose } = require("mongoose");
 const Notification = require("../models/Notification");
 
 const addNotification = async (req, res) => {
   try {
-    if (req.body.productId) {
-      const isAdded = await Notification.findOne({
-        productId: req.body.productId,
-      });
-      if (isAdded) {
-        return res.end();
-      } else {
-        const newNotification = new Notification(req.body);
-        await newNotification.save();
-        res.status(200).send({
-          message: "Notification save successfully!",
-        });
-      }
-    } else {
-      const newNotification = new Notification(req.body);
-      await newNotification.save();
-      res.status(200).send({
-        message: "Notification save successfully!",
-      });
+    const { productId, userId, message } = req.body; 
+
+    if (productId && !mongoose.Types.ObjectId.isValid(productId)) {
+      return res.status(400).send({ message: "Invalid productId" });
     }
+
+    if (productId) {
+      const isAdded = await Notification.findOne({ productId, userId });
+      if (isAdded) {
+        return res.status(200).end();
+      }
+    }
+
+    const newNotification = new Notification({ productId, userId, message });
+    await newNotification.save();
+
+    res.status(200).send({
+      message: "Notification saved successfully!",
+    });
   } catch (err) {
     res.status(500).send({
       message: err.message,
@@ -108,16 +108,20 @@ const updateManyStatusNotification = async (req, res) => {
 
 const deleteNotificationById = async (req, res) => {
   try {
-    Notification.deleteOne({ _id: req.params.id }, (err) => {
-      if (err) {
-        res.status(500).send({
-          message: err.message,
-        });
-      } else {
-        res.send({
-          message: "Notification deleted successfully!",
-        });
-      }
+    const { id } = req.params;
+
+    if (!/^[0-9a-fA-F]{24}$/.test(id)) {
+      return res.status(400).send({ message: "Invalid ID" });
+    }
+
+    const result = await Notification.deleteOne({ _id: id });
+
+    if (result.deletedCount === 0) {
+      return res.status(404).send({ message: "Notification not found" });
+    }
+
+    res.send({
+      message: "Notification deleted successfully!",
     });
   } catch (err) {
     res.status(500).send({
@@ -126,18 +130,23 @@ const deleteNotificationById = async (req, res) => {
   }
 };
 
+
 const deleteNotificationByProductId = async (req, res) => {
   try {
-    Notification.deleteOne({ productId: req.params.id }, (err) => {
-      if (err) {
-        res.status(500).send({
-          message: err.message,
-        });
-      } else {
-        res.send({
-          message: "Notification deleted successfully!",
-        });
-      }
+    const { id } = req.params;
+
+    if (!/^[0-9a-fA-F]{24}$/.test(id)) {
+      return res.status(400).send({ message: "Invalid productId" });
+    }
+
+    const result = await Notification.deleteOne({ productId: id });
+
+    if (result.deletedCount === 0) {
+      return res.status(404).send({ message: "Notification not found" });
+    }
+    
+    res.send({
+      message: "Notification deleted successfully!",
     });
   } catch (err) {
     res.status(500).send({
@@ -148,10 +157,16 @@ const deleteNotificationByProductId = async (req, res) => {
 
 const deleteManyNotification = async (req, res) => {
   try {
-    await Notification.deleteMany({ _id: req.body.ids });
+    const { ids } = req.body;
+
+    if (!Array.isArray(ids) || ids.some(id => !/^[0-9a-fA-F]{24}$/.test(id))) {
+      return res.status(400).send({ message: "Invalid IDs" });
+    }
+
+    await Notification.deleteMany({ _id: { $in: ids } });
 
     res.send({
-      message: `Notification Delete Successfully!`,
+      message: "Notification Delete Successfully!",
     });
   } catch (err) {
     res.status(500).send({

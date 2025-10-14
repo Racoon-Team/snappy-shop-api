@@ -14,15 +14,27 @@ const addLanguage = async (req, res) => {
     });
   }
 };
-
 const addAllLanguage = async (req, res) => {
   try {
-    await Language.insertMany(req.body);
-    res.send({ message: "All zones added successfully!" });
+    if (!Array.isArray(req.body) || !req.body.length) {
+      return res.status(400).send({ message: "Request body must be a non-empty array" });
+    }
+
+    const validLanguages = req.body
+      .filter(lang => lang?.name && lang?.code)  
+      .map(lang => ({ 
+        name: String(lang.name).trim(), 
+        code: String(lang.code).trim() 
+      }));
+
+    if (!validLanguages.length) {
+      return res.status(400).send({ message: "No valid language data provided" });
+    }
+
+    await Language.insertMany(validLanguages);
+    res.send({ message: "All languages added successfully!" });
   } catch (err) {
-    res.status(500).send({
-      message: err.message,
-    });
+    res.status(500).send({ message: err.message });
   }
 };
 
@@ -41,6 +53,8 @@ const getAllLanguages = async (req, res) => {
 
 const getShowingLanguage = async (req, res) => {
   try {
+    
+
     // console.log('get showing language')
     const languages = await Language.find({ status: "show" }).sort({
       _id: -1,
@@ -86,54 +100,66 @@ const updateLanguage = async (req, res) => {
 
 const updateManyLanguage = async (req, res) => {
   try {
+    const { ids, status } = req.body;
+
+    if (!Array.isArray(ids) || ids.some(id => typeof id !== "string")) {
+      return res.status(400).send({ message: "Invalid IDs format" });
+    }
+
+    if (typeof status !== "string") {
+      return res.status(400).send({ message: "Invalid status value" });
+    }
+
     await Language.updateMany(
-      { _id: { $in: req.body.ids } },
-      {
-        $set: {
-          status: req.body.status,
-        },
-      },
-      {
-        multi: true,
-      },
+      { _id: { $in: ids } },
+      { $set: { status: status.trim() } }
     );
 
-    res.send({
-      message: "Languages update successfully!",
-    });
+    res.send({ message: "Languages updated successfully!" });
   } catch (err) {
-    res.status(500).send({
-      message: err.message,
-    });
+    res.status(500).send({ message: err.message });
   }
 };
 
 const updateStatus = async (req, res) => {
   try {
-    const newStatus = req.body.status;
+    const { id } = req.params;
+    const { status } = req.body;
+
+    if (typeof id !== "string" || !/^[0-9a-fA-F]{24}$/.test(id)) {
+      return res.status(400).send({ message: "Invalid ID format" });
+    }
+
+    if (typeof status !== "string" || !status.trim()) {
+      return res.status(400).send({ message: "Invalid status value" });
+    }
 
     await Language.updateOne(
-      { _id: req.params.id },
-      {
-        $set: {
-          status: req.body.status,
-        },
-      },
+      { _id: id },
+      { $set: { status: status.trim() } }
     );
+
     res.status(200).send({
-      message: `Language ${newStatus === "show" ? "Published" : "Un-Published"} Successfully!`,
-      messageKey: newStatus,
+      message: `Language ${
+        status === "show" ? "Published" : "Un-Published"} Successfully!`,
+      messageKey: status,
     });
   } catch (err) {
-    res.status(500).send({
-      message: err.message,
-    });
+    res.status(500).send({ message: err.message });
   }
 };
 
+
 const deleteLanguage = async (req, res) => {
   try {
-    await Language.deleteOne({ _id: req.params.id });
+    const { id } = req.params;
+
+    if (typeof id !== "string" || !/^[0-9a-fA-F]{24}$/.test(id)) {
+      return res.status(400).send({ message: "Invalid ID format" });
+    }
+
+    await Language.deleteOne({ _id: id });
+
     res.send({
       message: "Delete language successfully!",
     });
@@ -146,9 +172,24 @@ const deleteLanguage = async (req, res) => {
 
 const deleteManyLanguage = async (req, res) => {
   try {
-    await Language.deleteMany({ _id: req.body.ids });
+    const { ids } = req.body;
+
+    if (!Array.isArray(ids) || ids.length === 0) {
+      return res.status(400).send({ message: "IDs must be a non-empty array" });
+    }
+
+    const validIds = ids.filter(
+      (id) => typeof id === "string" && /^[0-9a-fA-F]{24}$/.test(id)
+    );
+
+    if (validIds.length === 0) {
+      return res.status(400).send({ message: "No valid IDs provided" });
+    }
+
+    await Language.deleteMany({ _id: { $in: validIds } });
+
     res.send({
-      message: `Language Delete Successfully!`,
+      message: "Languages deleted successfully!",
     });
   } catch (err) {
     res.status(500).send({
@@ -156,6 +197,7 @@ const deleteManyLanguage = async (req, res) => {
     });
   }
 };
+
 
 module.exports = {
   addLanguage,

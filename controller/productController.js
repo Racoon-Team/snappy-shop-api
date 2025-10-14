@@ -41,7 +41,7 @@ const getShowingProducts = async (req, res) => {
   try {
     const products = await Product.find({ status: "show" }).sort({ _id: -1 });
     res.send(products);
-    // console.log("products", products);
+
   } catch (err) {
     res.status(500).send({
       message: err.message,
@@ -52,7 +52,7 @@ const getShowingProducts = async (req, res) => {
 const getAllProducts = async (req, res) => {
   const { title, category, price, page, limit } = req.query;
 
-  // console.log("getAllProducts");
+  
 
   let queryObject = {};
   let sortObject = {};
@@ -91,7 +91,7 @@ const getAllProducts = async (req, res) => {
     sortObject = { _id: -1 };
   }
 
-  // console.log('sortObject', sortObject);
+
 
   if (category) {
     queryObject.categories = category;
@@ -118,7 +118,7 @@ const getAllProducts = async (req, res) => {
       pages,
     });
   } catch (err) {
-    // console.log("error", err);
+  
     res.status(500).send({
       message: err.message,
     });
@@ -126,7 +126,7 @@ const getAllProducts = async (req, res) => {
 };
 
 const getProductBySlug = async (req, res) => {
-  // console.log("slug", req.params.slug);
+
   try {
     const product = await Product.findOne({ slug: req.params.slug });
     res.send(product);
@@ -156,7 +156,7 @@ const updateProduct = async (req, res) => {
   // console.log('variant',req.body.variants)
   try {
     const product = await Product.findById(req.params.id);
-    // console.log("product", product);
+
 
     if (product) {
       product.title = { ...product.title, ...req.body.title };
@@ -201,12 +201,12 @@ const updateManyProducts = async (req, res) => {
         Object.entries(req.body[key]).length > 0 &&
         req.body[key] !== req.body.ids
       ) {
-        // console.log('req.body[key]', typeof req.body[key]);
+        
         updatedData[key] = req.body[key];
       }
     }
 
-    // console.log("updated data", updatedData);
+ 
 
     await Product.updateMany(
       { _id: { $in: req.body.ids } },
@@ -266,16 +266,15 @@ const deleteProduct = (req, res) => {
 };
 
 const getShowingStoreProducts = async (req, res) => {
-  // console.log("req.body", req);
+
   try {
     const queryObject = { status: "show" };
 
-    // console.log("getShowingStoreProducts");
+    
 
     const { category, title, slug } = req.query;
-    // console.log("title", title);
+   
 
-    // console.log("query", req);
 
     if (category) {
       queryObject.categories = {
@@ -368,8 +367,7 @@ const getShowingStoreProducts = async (req, res) => {
 
 const deleteManyProducts = async (req, res) => {
   try {
-    const cname = req.cname;
-    // console.log("deleteMany", cname, req.body.ids);
+ 
 
     await Product.deleteMany({ _id: req.body.ids });
 
