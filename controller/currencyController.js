@@ -17,7 +17,7 @@ const addCurrency = async (req, res) => {
 
 const addAllCurrency = async (req, res) => {
   try {
-    await Currencie.insertMany(req.body);
+    await Currencie.insertMany(structuredClone(req.body));
     res.send({ message: "All Currencies added successfully!" });
   } catch (err) {
     res.status(500).send({
@@ -88,11 +88,11 @@ const updateCurrency = async (req, res) => {
 const updateManyCurrency = async (req, res) => {
   try {
     await Currencie.updateMany(
-      { _id: { $in: req.body.ids } },
+      { _id: { $in: (req.body.ids || []).map(String) } },
       {
         $set: {
-          status: req.body.status,
-          live_exchange_rates: req.body.live_exchange_rates,
+          status: String(req.body.status),
+          live_exchange_rates: String(req.body.live_exchange_rates),
         },
       },
       {
@@ -112,13 +112,13 @@ const updateManyCurrency = async (req, res) => {
 
 const updateEnabledStatus = async (req, res) => {
   try {
-    const newStatus = req.body.status;
+    const newStatus = String(req.body.status);
 
     await Currencie.updateOne(
-      { _id: req.params.id },
+      { _id: String(req.params.id) },
       {
         $set: {
-          status: req.body.status,
+          status: newStatus,
         },
       },
     );
@@ -135,13 +135,13 @@ const updateEnabledStatus = async (req, res) => {
 
 const updateLiveExchangeRateStatus = async (req, res) => {
   try {
-    const newStatus = req.body.live_exchange_rates;
+    const newStatus = String(req.body.live_exchange_rates);
 
     await Currencie.updateOne(
-      { _id: req.params.id },
+      { _id: String(req.params.id) },
       {
         $set: {
-          live_exchange_rates: req.body.live_exchange_rates,
+          live_exchange_rates: newStatus,
         },
       },
     );
@@ -157,7 +157,7 @@ const updateLiveExchangeRateStatus = async (req, res) => {
 
 const deleteCurrency = async (req, res) => {
   try {
-    await Currencie.deleteOne({ _id: req.params.id });
+    await Currencie.deleteOne({ _id: String(req.params.id) });
     res.send({
       message: "Delete currency successfully!",
     });
@@ -170,7 +170,9 @@ const deleteCurrency = async (req, res) => {
 
 const deleteManyCurrency = async (req, res) => {
   try {
-    await Currencie.deleteMany({ _id: req.body.ids });
+    const ids = (req.body.ids || []).map(String);
+    await Currencie.deleteMany({ _id: { $in: ids } });
+
     res.send({
       message: `currency Delete Successfully!`,
     });

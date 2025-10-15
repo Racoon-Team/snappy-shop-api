@@ -16,11 +16,10 @@ const addCategory = async (req, res) => {
 
 // all multiple category
 const addAllCategory = async (req, res) => {
-  
   try {
     await Category.deleteMany();
 
-    await Category.insertMany(req.body);
+    await Category.insertMany(structuredClone(req.body));
 
     res.status(200).send({
       message: "Category Added Successfully!",
@@ -37,14 +36,12 @@ const addAllCategory = async (req, res) => {
 // get status show category
 const getShowingCategory = async (req, res) => {
   try {
-   
-
     const categories = await Category.find({ status: "show" }).sort({
       _id: -1,
     });
 
     const categoryList = readyToParentAndChildrenCategory(categories);
-    
+
     res.send(categoryList);
   } catch (err) {
     res.status(500).send({
@@ -133,9 +130,9 @@ const updateManyCategory = async (req, res) => {
     }
 
     await Category.updateMany(
-      { _id: { $in: req.body.ids } },
+      { _id: { $in: (req.body.ids || []).map(String) } },
       {
-        $set: updatedData,
+        $set: structuredClone(updatedData),
       },
       {
         multi: true,
@@ -156,10 +153,10 @@ const updateManyCategory = async (req, res) => {
 const updateStatus = async (req, res) => {
   // console.log('update status')
   try {
-    const newStatus = req.body.status;
+    const newStatus = String(req.body.status);
 
     await Category.updateOne(
-      { _id: req.params.id },
+      { _id: String(req.params.id) },
       {
         $set: {
           status: newStatus,
@@ -180,8 +177,8 @@ const updateStatus = async (req, res) => {
 const deleteCategory = async (req, res) => {
   try {
     console.log("id cat >>", req.params.id);
-    await Category.deleteOne({ _id: req.params.id });
-    await Category.deleteMany({ parentId: req.params.id });
+    await Category.deleteOne({ _id: String(req.params.id) });
+    await Category.deleteMany({ parentId: String(req.params.id) });
     res.status(200).send({
       message: "Category Deleted Successfully!",
     });
@@ -211,11 +208,10 @@ const deleteCategory = async (req, res) => {
 
 // all multiple category delete
 
-
 const deleteManyCategory = async (req, res) => {
   try {
     // Fuerza a string y valida los ids
-    const ids = (req.body.ids || []).map(id => id.toString());
+    const ids = (req.body.ids || []).map((id) => id.toString());
 
     const categories = await Category.find({ _id: { $in: ids } });
 
@@ -230,7 +226,6 @@ const deleteManyCategory = async (req, res) => {
     res.status(500).send(err);
   }
 };
-
 
 const readyToParentAndChildrenCategory = (categories, parentId = null) => {
   const categoryList = [];
