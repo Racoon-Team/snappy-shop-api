@@ -302,7 +302,7 @@ const changePassword = async (req, res) => {
 
     const customer = await Customer.findOne({ email });
 
-    if (!customer || !customer.password) {
+    if (!customer?.password) {
       return res.status(403).send({
         message:
           "For change password, you need to sign up with email & password!",
@@ -625,8 +625,9 @@ const getCustomerByEmail = async (req, res) => {
     ) {
       return res.status(400).send({ message: "Invalid email format" });
     }
-    const customer = await Customer.findOne({ email }).lean();
 
+    const sanitizedEmail = String(email).trim();
+    const customer = await Customer.findOne({ email: sanitizedEmail }).lean();
     if (!customer) {
       return res.status(404).send({ message: "Customer not found" });
     }
