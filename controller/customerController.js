@@ -15,7 +15,7 @@ const {
 const { sendVerificationCode } = require("../lib/phone-verification/sender");
 
 const verifyEmailAddress = async (req, res) => {
-  const isAdded = await Customer.findOne({ email: req.body.email });
+  const isAdded = await Customer.findOne({ email: String(req.body.email) });
   if (isAdded) {
     return res.status(403).send({
       message: "This Email already Added!",
@@ -288,7 +288,6 @@ const resetPassword = async (req, res) => {
 
 const changePassword = async (req, res) => {
   try {
-   
     const email =
       typeof req.body.email === "string"
         ? req.body.email.trim().toLowerCase()
@@ -302,12 +301,15 @@ const changePassword = async (req, res) => {
 
     const customer = await Customer.findOne({ email });
 
-    if (!customer || !customer.password) {
+    
+    if (!customer?.password) {
       return res.status(403).send({
         message:
           "For change password, you need to sign up with email & password!",
       });
-    } else if (bcrypt.compareSync(req.body.currentPassword, customer.password)) {
+    }
+
+    if (bcrypt.compareSync(req.body.currentPassword, customer.password)) {
       customer.password = bcrypt.hashSync(req.body.newPassword);
       await customer.save();
       res.send({
@@ -324,7 +326,6 @@ const changePassword = async (req, res) => {
     });
   }
 };
-
 
 const signUpWithProvider = async (req, res) => {
   try {
@@ -621,15 +622,23 @@ const deleteCustomer = (req, res) => {
 
 const getCustomerByEmail = async (req, res) => {
   try {
-    const { email } = req.params;
+    const rawEmail = req.params.email || req.body.email || req.query.email;
 
-    if (typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      return res.status(400).send({ message: "Invalid email format" });
+    const email =
+      typeof rawEmail === "string"
+        ? rawEmail.trim().toLowerCase().replaceAll(/[^\w@.-]/g, "")
+        : null;
+
+    if (!email) {
+      return res.status(400).send({ message: "Valid email is required" });
     }
+
     const customer = await Customer.findOne({ email }).lean();
+
     if (!customer) {
       return res.status(404).send({ message: "Customer not found" });
     }
+
     res.send(customer);
   } catch (err) {
     console.error("Error fetching customer by email:", err);

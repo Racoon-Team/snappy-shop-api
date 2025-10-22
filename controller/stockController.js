@@ -63,6 +63,11 @@ const getStockById = async (req, res) => {
 const getStocksByProductId = async (req, res) => {
   try {
     const productId = req.params.id;
+
+    if (!mongoose.Types.ObjectId.isValid(productId)) {
+      return res.status(400).json({ message: "Invalid productId" });
+    }
+
     const stocks = await Stock.find({ productId }).sort({ createdAt: -1 });
     res.json(stocks);
   } catch (err) {

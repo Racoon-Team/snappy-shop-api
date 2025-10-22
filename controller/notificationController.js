@@ -1,31 +1,43 @@
 const { default: mongoose } = require("mongoose");
 const Notification = require("../models/Notification");
-
 const addNotification = async (req, res) => {
   try {
-    const { productId, userId, message } = req.body; 
+    const { productId, userId, message } = req.body;
 
-    if (productId && !mongoose.Types.ObjectId.isValid(productId)) {
-      return res.status(400).send({ message: "Invalid productId" });
+    if (!userId || !mongoose.Types.ObjectId.isValid(userId)) {
+      return res.status(400).send({ message: "Invalid userId" });
     }
 
+    const userObjectId = new mongoose.Types.ObjectId(userId);
+
+    let productObjectId = null;
     if (productId) {
-      const isAdded = await Notification.findOne({ productId, userId });
-      if (isAdded) {
-        return res.status(200).end();
+      if (!mongoose.Types.ObjectId.isValid(productId)) {
+        return res.status(400).send({ message: "Invalid productId" });
       }
+      productObjectId = new mongoose.Types.ObjectId(productId);
     }
 
-    const newNotification = new Notification({ productId, userId, message });
-    await newNotification.save();
+    const query = { userId: userObjectId };
+    if (productObjectId) query.productId = productObjectId;
 
-    res.status(200).send({
-      message: "Notification saved successfully!",
+    const isAdded = await Notification.findOne(query);
+
+    if (isAdded) {
+      return res.status(200).end();
+    }
+
+    const newNotification = new Notification({
+      userId: userObjectId,
+      productId: productObjectId,
+      message,
     });
+
+    await newNotification.save();
+    res.status(200).send({ message: "Notification added successfully" });
   } catch (err) {
-    res.status(500).send({
-      message: err.message,
-    });
+    console.error(err);
+    res.status(500).send({ message: "Server error" });
   }
 };
 
@@ -84,24 +96,33 @@ const updateStatusNotification = async (req, res) => {
 
 const updateManyStatusNotification = async (req, res) => {
   try {
+    const { ids, status } = req.body;
+
+    const allowedStatuses = ["read", "unread", "pending"];
+    if (!status || !allowedStatuses.includes(status)) {
+      return res.status(400).send({ message: "Invalid status" });
+    }
+
+    if (!Array.isArray(ids) || ids.some(id => !mongoose.Types.ObjectId.isValid(id))) {
+      return res.status(400).send({ message: "Invalid ids array" });
+    }
+
+    const safeIds = ids.map(id => new mongoose.Types.ObjectId(id));
+    const safeStatus = status;
+
     await Notification.updateMany(
-      { _id: { $in: req.body.ids } },
-      {
-        $set: {
-          status: req.body.status,
-        },
-      },
-      {
-        multi: true,
-      },
+      { _id: { $in: safeIds } },
+      { $set: { status: safeStatus } },
+      { multi: true }
     );
 
-    res.send({
-      message: "Notification update successfully!",
+    res.status(200).send({
+      message: "Notifications updated successfully!",
     });
   } catch (err) {
+    console.error(err);
     res.status(500).send({
-      message: err.message,
+      message: "Server error",
     });
   }
 };
@@ -114,7 +135,9 @@ const deleteNotificationById = async (req, res) => {
       return res.status(400).send({ message: "Invalid ID" });
     }
 
-    const result = await Notification.deleteOne({ _id: id });
+    const safeId = new mongoose.Types.ObjectId(id);
+
+    const result = await Notification.deleteOne({ _id: safeId });
 
     if (result.deletedCount === 0) {
       return res.status(404).send({ message: "Notification not found" });
@@ -139,12 +162,14 @@ const deleteNotificationByProductId = async (req, res) => {
       return res.status(400).send({ message: "Invalid productId" });
     }
 
-    const result = await Notification.deleteOne({ productId: id });
+    const safeProductId = new mongoose.Types.ObjectId(id);
+
+    const result = await Notification.deleteOne({ productId: safeProductId });
 
     if (result.deletedCount === 0) {
       return res.status(404).send({ message: "Notification not found" });
     }
-    
+
     res.send({
       message: "Notification deleted successfully!",
     });
@@ -155,6 +180,7 @@ const deleteNotificationByProductId = async (req, res) => {
   }
 };
 
+
 const deleteManyNotification = async (req, res) => {
   try {
     const { ids } = req.body;
@@ -163,7 +189,9 @@ const deleteManyNotification = async (req, res) => {
       return res.status(400).send({ message: "Invalid IDs" });
     }
 
-    await Notification.deleteMany({ _id: { $in: ids } });
+    const safeIds = ids.map(id => new mongoose.Types.ObjectId(id));
+
+    await Notification.deleteMany({ _id: { $in: safeIds } });
 
     res.send({
       message: "Notification Delete Successfully!",

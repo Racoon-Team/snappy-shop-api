@@ -1,5 +1,6 @@
 const Language = require("../models/Language");
 const { mongo_connection } = require("../config/db"); // CCDev
+const { default: mongoose } = require("mongoose");
 
 const addLanguage = async (req, res) => {
   try {
@@ -102,7 +103,7 @@ const updateManyLanguage = async (req, res) => {
   try {
     const { ids, status } = req.body;
 
-    if (!Array.isArray(ids) || ids.some(id => typeof id !== "string")) {
+    if (!Array.isArray(ids) || ids.some(id => !/^[0-9a-fA-F]{24}$/.test(id))) {
       return res.status(400).send({ message: "Invalid IDs format" });
     }
 
@@ -110,16 +111,20 @@ const updateManyLanguage = async (req, res) => {
       return res.status(400).send({ message: "Invalid status value" });
     }
 
+    const safeIds = ids.map(id => new mongoose.Types.ObjectId(id));
+
     await Language.updateMany(
-      { _id: { $in: ids } },
+      { _id: { $in: safeIds } },
       { $set: { status: status.trim() } }
     );
 
     res.send({ message: "Languages updated successfully!" });
   } catch (err) {
+    console.error("Error updating languages:", err);
     res.status(500).send({ message: err.message });
   }
 };
+
 
 const updateStatus = async (req, res) => {
   try {
@@ -134,17 +139,19 @@ const updateStatus = async (req, res) => {
       return res.status(400).send({ message: "Invalid status value" });
     }
 
+    const safeId = new mongoose.Types.ObjectId(id);
+
     await Language.updateOne(
-      { _id: id },
+      { _id: safeId },
       { $set: { status: status.trim() } }
     );
 
     res.status(200).send({
-      message: `Language ${
-        status === "show" ? "Published" : "Un-Published"} Successfully!`,
+      message: `Language ${status === "show" ? "Published" : "Un-Published"} Successfully!`,
       messageKey: status,
     });
   } catch (err) {
+    console.error("Error updating language status:", err);
     res.status(500).send({ message: err.message });
   }
 };
@@ -158,17 +165,23 @@ const deleteLanguage = async (req, res) => {
       return res.status(400).send({ message: "Invalid ID format" });
     }
 
-    await Language.deleteOne({ _id: id });
+    const objectId = new mongoose.Types.ObjectId(id);
+
+    const result = await Language.deleteOne({ _id: objectId });
+
+    if (result.deletedCount === 0) {
+      return res.status(404).send({ message: "Language not found" });
+    }
 
     res.send({
-      message: "Delete language successfully!",
+      message: "Language deleted successfully!",
     });
   } catch (err) {
-    res.status(500).send({
-      message: err.message,
-    });
+    console.error("Error deleting language:", err);
+    res.status(500).send({ message: err.message });
   }
 };
+
 
 const deleteManyLanguage = async (req, res) => {
   try {
