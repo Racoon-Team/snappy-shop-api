@@ -163,11 +163,13 @@ const registerCustomer = async (req, res) => {
 const addAllCustomers = async (req, res) => {
   try {
     await Customer.deleteMany();
-    const validCustomers = req.body.map((c) => ({
-      name: c.name,
-      email: c.email,
-      password: c.password ? bcrypt.hashSync(c.password) : undefined,
-      phone: c.phone,
+    const validCustomers = req.body.map((customer) => ({
+      name: customer.name,
+      email: customer.email,
+      password: customer.password
+        ? bcrypt.hashSync(customer.password)
+        : undefined,
+      phone: customer.phone,
     }));
     await Customer.insertMany(validCustomers);
     res.send({
@@ -615,19 +617,21 @@ const deleteCustomer = (req, res) => {
   );
 };
 
+const isValidEmail = (email) =>
+  typeof email === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+
 const getCustomerByEmail = async (req, res) => {
   try {
     const { email } = req.params;
 
-    if (
-      typeof email !== "string" ||
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-    ) {
+    if (!isValidEmail(email)) {
       return res.status(400).send({ message: "Invalid email format" });
     }
 
-    const sanitizedEmail = String(email).trim();
+    const sanitizedEmail = String(email).trim().toLowerCase();
+
     const customer = await Customer.findOne({ email: sanitizedEmail }).lean();
+
     if (!customer) {
       return res.status(404).send({ message: "Customer not found" });
     }
@@ -643,10 +647,7 @@ const updateCustomerLocation = async (req, res) => {
   try {
     const { email, location } = req.body;
 
-    if (
-      typeof email !== "string" ||
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-    ) {
+    if (!isValidEmail(email)) {
       return res.status(400).send({ message: "Invalid email format" });
     }
 
@@ -658,6 +659,7 @@ const updateCustomerLocation = async (req, res) => {
     }
 
     const sanitizedEmail = email.trim().toLowerCase();
+
     if (typeof location !== "object" || location === null) {
       return res.status(400).send({ message: "Invalid location data" });
     }
@@ -680,13 +682,9 @@ const updateCustomerLocation = async (req, res) => {
 
 const updateCustomerPreferences = async (req, res) => {
   try {
-    const email =
-      typeof req.body.email === "string"
-        ? req.body.email.trim().toLowerCase()
-        : null;
-    const { preferences } = req.body;
+    const { email, preferences } = req.body;
 
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (!isValidEmail(email)) {
       return res.status(400).json({ message: "Invalid email format" });
     }
 
@@ -704,7 +702,8 @@ const updateCustomerPreferences = async (req, res) => {
         .json({ message: "Some preferences have invalid IDs" });
     }
 
-    const customer = await Customer.findOne({ email });
+    const sanitizedEmail = email.trim().toLowerCase();
+    const customer = await Customer.findOne({ email: sanitizedEmail });
 
     if (!customer) {
       return res.status(404).json({ message: "Customer not found" });
