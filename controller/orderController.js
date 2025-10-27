@@ -2,7 +2,7 @@ const Order = require("../models/Order");
 
 const sanitizeString = (str) => {
   if (typeof str !== "string") return "";
-  return str.replace(/[^\w\s.-]/gi, ""); 
+  return str.replaceAll(String.raw`[^\w\s.-]`, "");
 };
 
 const sanitizeNumber = (value, defaultValue = 0) => {
@@ -33,10 +33,14 @@ const buildQueryObject = (query) => {
 
   if (customerName) {
     const isNumber = !Number.isNaN(Number(customerName));
-    queryObject.$or = [
-      { "user_info.name": { $regex: customerName, $options: "i" } },
+    const customerFilter = [
+      { "user_info.name": { $regex: customerName, $options: "i" } }
     ];
-    if (isNumber) queryObject.$or.push({ invoice: Number(customerName) });
+    if (isNumber) customerFilter.push({ invoice: Number(customerName) });
+
+    queryObject.$or = queryObject.$or
+      ? queryObject.$or.concat(customerFilter)
+      : customerFilter;
   }
 
   if (day) {
@@ -46,11 +50,13 @@ const buildQueryObject = (query) => {
     queryObject.createdAt = { $gte: pastDate, $lte: today };
   }
 
-  if (startDate && endDate) {
-    const start = new Date(startDate);
-    const end = new Date(endDate);
+ if (startDate && endDate) {
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+  if (!Number.isNaN(start.getTime()) && !Number.isNaN(end.getTime())) {
     queryObject.updatedAt = { $gt: start, $lt: end };
   }
+}
 
   if (method) {
     queryObject.paymentMethod = { $regex: method, $options: "i" };
@@ -59,42 +65,63 @@ const buildQueryObject = (query) => {
   return queryObject;
 };
 
-const calculateMethodTotals = async (queryObject) => {
-  const filteredOrders = await Order.find(queryObject, {
-    paymentMethod: 1,
-    total: 1,
-  }).sort({ updatedAt: -1 });
-
-  const totals = [];
-  for (const order of filteredOrders) {
-    const existing = totals.find((item) => item.method === order.paymentMethod);
-    if (existing) {
-      existing.total += order.total;
-    } else {
-      totals.push({ method: order.paymentMethod, total: order.total });
+const filterAllowedQueryFields = (queryObject) => {
+  const allowedFields = ["status", "$or", "createdAt", "updatedAt", "paymentMethod"];
+  const safeQuery = {};
+  for (const key of allowedFields) {
+    if (Object.hasOwn(queryObject, key)) {
+      safeQuery[key] = queryObject[key];
     }
   }
-  return totals;
+  return safeQuery;
+};
+
+const calculateMethodTotals = async (queryObject) => {
+  const safeQuery = filterAllowedQueryFields(queryObject);
+
+    const filteredOrders = await Order.where(safeQuery)
+    .select("paymentMethod total")
+    .sort({ updatedAt: -1 });
+
+  const totals = [];
+for (const order of filteredOrders) {
+  let existing = null;
+  for (const item of totals) {
+    if (item.method === order.paymentMethod) {
+      existing = item;
+      break;
+    }
+  }
+
+  if (existing) {
+    existing.total += order.total;
+  } else {
+    totals.push({ method: order.paymentMethod, total: order.total });
+  }
+}
+
+return totals;
 };
 
 const getAllOrders = async (req, res) => {
   try {
     const queryObject = buildQueryObject(req.query);
+    const safeQuery = filterAllowedQueryFields(queryObject);
 
     const page = sanitizeNumber(req.query.page, 1);
     const limit = sanitizeNumber(req.query.limit, 10);
     const skip = (page - 1) * limit;
-    const totalDoc = await Order.countDocuments(queryObject);
-    const orders = await Order.find(queryObject)
+
+    const totalDoc = await Order.countDocuments(safeQuery);
+    const orders = await Order.find(safeQuery)
       .select("_id invoice paymentMethod subTotal total user_info discount shippingCost status createdAt updatedAt")
       .sort({ updatedAt: -1 })
       .skip(skip)
       .limit(limit);
 
     const methodTotals =
-      sanitizeString(req.query.startDate) &&
-      sanitizeString(req.query.endDate)
-        ? await calculateMethodTotals(queryObject)
+      sanitizeString(req.query.startDate) && sanitizeString(req.query.endDate)
+        ? await calculateMethodTotals(safeQuery)
         : [];
 
     res.send({
@@ -109,10 +136,17 @@ const getAllOrders = async (req, res) => {
   }
 };
 
+const isValidId = (...ids) =>
+  ids.every(
+    (id) =>
+      typeof id === "string" &&
+      /^[a-fA-F0-9]{24}$/.test(id.trim())
+  );
+
 const getOrderCustomer = async (req, res) => {
   try {
     const userId = String(req.params.id).trim();
-    if (!/^[a-fA-F0-9]{24}$/.test(userId)) {
+    if (!isValidId(userId)) {
       return res.status(400).send({ message: "Invalid user ID format" });
     }
 
@@ -136,43 +170,52 @@ const getOrderById = async (req, res) => {
   }
 };
 
-const updateOrder = (req, res) => {
-  const newStatus = req.body.status;
-  Order.updateOne(
-    {
-      _id: req.params.id,
-    },
-    {
-      $set: {
-        status: newStatus,
-      },
-    },
-    (err) => {
-      if (err) {
-        res.status(500).send({
-          message: err.message,
-        });
-      } else {
-        res.status(200).send({
-          message: "Order Updated Successfully!",
-        });
-      }
-    },
-  );
+const updateOrder = async (req, res) => {
+  try {
+    const id = String(req.params.id).trim();
+    const newStatus = typeof req.body.status === "string" ? req.body.status.trim() : "";
+
+    if (!isValidId(id)) { 
+      return res.status(400).send({ message: "Invalid order ID format" });
+    }
+
+    if (!newStatus) {
+      return res.status(400).send({ message: "Invalid or empty status" });
+    }
+
+    const result = await Order.updateOne(
+      { _id: id },
+      { $set: { status: newStatus } }
+    );
+
+    if (result.matchedCount === 0) {
+      return res.status(404).send({ message: "Order not found" });
+    }
+
+    res.status(200).send({ message: "Order Updated Successfully!" });
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
 };
 
-const deleteOrder = (req, res) => {
-  Order.deleteOne({ _id: req.params.id }, (err) => {
-    if (err) {
-      res.status(500).send({
-        message: err.message,
-      });
-    } else {
-      res.status(200).send({
-        message: "Order Deleted Successfully!",
-      });
+const deleteOrder = async (req, res) => {
+  try {
+    const id = String(req.params.id).trim();
+
+  if (!isValidId(id)) {
+      return res.status(400).send({ message: "Invalid order ID format" });
     }
-  });
+
+    const result = await Order.deleteOne({ _id: id });
+
+    if (result.deletedCount === 0) {
+      return res.status(404).send({ message: "Order not found" });
+    }
+
+    res.status(200).send({ message: "Order Deleted Successfully!" });
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
 };
 
 // get dashboard recent order
@@ -638,7 +681,11 @@ const getDashboardOrders = async (req, res) => {
 
 const getTotalSoldByProduct = async (req, res) => {
   try {
-    const { productId } = req.params;
+    const productId = String(req.params.productId).trim();
+
+   if (!isValidId(productId)) {
+      return res.status(400).json({ message: "Invalid product ID format" });
+    }
 
     const result = await Order.aggregate([
       { $unwind: "$cart" },

@@ -145,17 +145,17 @@ const getAllProducts = async (req, res) => {
   }
 };
 
-
 const getProductBySlug = async (req, res) => {
   try {
     const { slug } = req.params;
 
-    if (typeof slug !== "string" || slug.trim() === "") {
+    if (typeof slug !== "string" || !/^[A-Za-z0-9_-]+$/.test(slug)) {
       return res.status(400).send({ message: "Invalid slug" });
     }
 
-    const sanitizeSlug = (input) => input.replace(/[^\w-]/g, "");
-    const safeSlug = sanitizeSlug(slug);
+    const safeSlug = slug.trim(); 
+
+  
     const product = await Product.findOne({ slug: safeSlug }).lean().exec();
 
     if (!product) {
@@ -164,12 +164,9 @@ const getProductBySlug = async (req, res) => {
 
     res.send(product);
   } catch (err) {
-    res.status(500).send({
-      message: `Slug problem, ${err.message}`,
-    });
+    res.status(500).send({ message: `Slug problem: ${err.message}` });
   }
 };
-
 
 const getProductById = async (req, res) => {
   try {
@@ -316,96 +313,61 @@ const deleteProduct = (req, res) => {
 
 const getShowingStoreProducts = async (req, res) => {
   try {
+    const { category, title, slug } = req.query;
+
+    const sanitizeInput = (input) =>
+      typeof input === "string" ? input.replaceAll(/[^\w\s.-]/g, "").trim() : "";
+
+    const safeCategory = sanitizeInput(category);
+    const safeTitle = sanitizeInput(title);
+    const safeSlug = sanitizeInput(slug);
+
     const queryObject = { status: "show" };
-
-    let { category, title, slug } = req.query;
-
-    if (category && typeof category === "string") {
-      queryObject.categories = { $in: [category] };
-    }
-
-    if (title && typeof title === "string") {
-   
-      const safeTitle = title.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`);
-      const titleQueries = languageCodes.map((lang) => ({
-        [`title.${lang}`]: { $regex: safeTitle, $options: "i" },
+    if (safeCategory) queryObject.categories = { $in: [safeCategory] };
+    if (safeTitle) {
+      queryObject.$or = languageCodes.map(lang => ({
+        [`title.${lang}`]: { $regex: safeTitle, $options: "i" }
       }));
-      queryObject.$or = titleQueries;
     }
+    if (safeSlug) queryObject.slug = { $regex: safeSlug, $options: "i" };
 
-    if (slug && typeof slug === "string") {
-      const safeSlug = slug.replaceAll(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`);
-      queryObject.slug = { $regex: safeSlug, $options: "i" };
-    }
+    const defaultSort = { _id: -1 };
 
-    let products = [];
-    let popularProducts = [];
-    let discountedProducts = [];
-    let relatedProducts = [];
-
-    if (slug) {
-      products = await Product.find(queryObject)
+    const fetchProducts = async (filter, limit = 100, sort = defaultSort) =>
+      Product.find(filter)
         .populate({ path: "category", select: "name _id" })
-        .sort({ _id: -1 })
-        .limit(100);
+        .sort(sort)
+        .limit(limit);
 
+    let products = [], popularProducts = [], discountedProducts = [], relatedProducts = [];
+
+    if (safeSlug) {
+      products = await fetchProducts(queryObject);
       if (products[0]?.category) {
-        relatedProducts = await Product.find({
-          category: products[0].category,
-        }).populate({ path: "category", select: "_id name" });
+        relatedProducts = await fetchProducts({ category: products[0].category });
       }
-    } else if (title || category) {
-      products = await Product.find(queryObject)
-        .populate({ path: "category", select: "name _id" })
-        .sort({ _id: -1 })
-        .limit(100);
+    } else if (safeTitle || safeCategory) {
+      products = await fetchProducts(queryObject);
     } else {
-      popularProducts = await Product.find({ status: "show" })
-        .populate({ path: "category", select: "name _id" })
-        .sort({ sales: -1 })
-        .limit(20);
-
-      discountedProducts = await Product.find({
-        status: "show",
-        $or: [
-          {
-            $and: [
-              { isCombination: true },
-              {
-                variants: {
-                  $elemMatch: { 
-                    discount: { $gt: "0.00" } },
-                },
-              },
-            ],
-          },
-          {
-            $and: [
-              { isCombination: false },
-              {
-                $expr: {
-                  $gt: [{ $toDouble: "$prices.discount" }, 0],
-                },
-              },
-            ],
-          },
-        ],
-      })
-        .populate({ path: "category", select: "name _id" })
-        .sort({ _id: -1 })
-        .limit(20);
+      popularProducts = await fetchProducts({ status: "show" }, 20, { sales: -1 });
+      discountedProducts = await fetchProducts(
+        {
+          status: "show",
+          $or: [
+            {
+              isCombination: true,
+              variants: { $elemMatch: { discount: { $gt: "0.00" } } }
+            }
+          ]
+        },
+        20
+      );
     }
 
-    res.send({ 
-      products,
-      popularProducts,
-      relatedProducts, 
-      discountedProducts,
-     });
+    res.send({ products, popularProducts, discountedProducts, relatedProducts });
   } catch (err) {
-    res.status(500).send({ 
-      message: err.message, 
-    });
+    console.error(err);
+    res.status(500).send({ message: `Error retrieving products: ${err.message}` });
   }
 };
 
