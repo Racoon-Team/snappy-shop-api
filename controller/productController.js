@@ -24,9 +24,24 @@ const addProduct = async (req, res) => {
 
 const addAllProducts = async (req, res) => {
   try {
-    // console.log('product data',req.body)
+    const products = req.body;
+
+    if (!Array.isArray(products)) {
+      return res.status(400).send({ message: "Invalid products array" });
+    }
+
+    const sanitizedProducts = products.map(p => ({
+      name: p.name,
+      price: p.price,
+      category: p.category,
+      description: p.description,
+      image: p.image,
+      stock: p.stock,
+    }));
+
     await Product.deleteMany();
-    await Product.insertMany(req.body);
+    await Product.insertMany(sanitizedProducts);
+
     res.status(200).send({
       message: "Product Added successfully!",
     });
@@ -41,7 +56,7 @@ const getShowingProducts = async (req, res) => {
   try {
     const products = await Product.find({ status: "show" }).sort({ _id: -1 });
     res.send(products);
-    // console.log("products", products);
+   
   } catch (err) {
     res.status(500).send({
       message: err.message,
@@ -50,61 +65,67 @@ const getShowingProducts = async (req, res) => {
 };
 
 const getAllProducts = async (req, res) => {
-  const { title, category, price, page, limit } = req.query;
-
-  // console.log("getAllProducts");
-
-  let queryObject = {};
-  let sortObject = {};
-  if (title) {
-    const titleQueries = languageCodes.map((lang) => ({
-      [`title.${lang}`]: { $regex: `${title}`, $options: "i" },
-    }));
-    queryObject.$or = titleQueries;
-  }
-
-  if (price === "low") {
-    sortObject = {
-      "prices.originalPrice": 1,
-    };
-  } else if (price === "high") {
-    sortObject = {
-      "prices.originalPrice": -1,
-    };
-  } else if (price === "published") {
-    queryObject.status = "show";
-  } else if (price === "unPublished") {
-    queryObject.status = "hide";
-  } else if (price === "status-selling") {
-    queryObject.stock = { $gt: 0 };
-  } else if (price === "status-out-of-stock") {
-    queryObject.stock = { $lt: 1 };
-  } else if (price === "date-added-asc") {
-    sortObject.createdAt = 1;
-  } else if (price === "date-added-desc") {
-    sortObject.createdAt = -1;
-  } else if (price === "date-updated-asc") {
-    sortObject.updatedAt = 1;
-  } else if (price === "date-updated-desc") {
-    sortObject.updatedAt = -1;
-  } else {
-    sortObject = { _id: -1 };
-  }
-
-  // console.log('sortObject', sortObject);
-
-  if (category) {
-    queryObject.categories = category;
-  }
-
-  const pages = Number(page);
-  const limits = Number(limit);
-  const skip = (pages - 1) * limits;
-
   try {
-    const totalDoc = await Product.countDocuments(queryObject);
+    const { title, category, price, page, limit } = req.query;
 
-    const products = await Product.find(queryObject)
+    const safeTitle = typeof title === "string" ? title.trim() : "";
+    const safeCategory = typeof category === "string" ? category.trim() : "";
+    const safePrice = typeof price === "string" ? price.trim() : "";
+    const pages = Number(page) || 1;
+    const limits = Number(limit) || 10;
+    const skip = (pages - 1) * limits;
+
+    let queryObject = {};
+    let sortObject = {};
+
+    if (safeTitle) {
+      const titleQueries = languageCodes.map((lang) => ({
+        [`title.${lang}`]: { $regex: safeTitle, $options: "i" },
+      }));
+      queryObject.$or = titleQueries;
+    }
+
+    switch (safePrice) {
+      case "low":
+        sortObject = { "prices.originalPrice": 1 };
+        break;
+      case "high":
+        sortObject = { "prices.originalPrice": -1 };
+        break;
+      case "published":
+        queryObject.status = "show";
+        break;
+      case "unPublished":
+        queryObject.status = "hide";
+        break;
+      case "status-selling":
+        queryObject.stock = { $gt: 0 };
+        break;
+      case "status-out-of-stock":
+        queryObject.stock = { $lt: 1 };
+        break;
+      case "date-added-asc":
+        sortObject.createdAt = 1;
+        break;
+      case "date-added-desc":
+        sortObject.createdAt = -1;
+        break;
+      case "date-updated-asc":
+        sortObject.updatedAt = 1;
+        break;
+      case "date-updated-desc":
+        sortObject.updatedAt = -1;
+        break;
+      default:
+        sortObject = { _id: -1 };
+    }
+
+    if (safeCategory) {
+      queryObject.categories = safeCategory;
+    }
+
+    const totalDoc = await Product.countDocuments({ ...queryObject });
+    const products = await Product.find({ ...queryObject })
       .populate({ path: "category", select: "_id name" })
       .populate({ path: "categories", select: "_id name" })
       .sort(sortObject)
@@ -118,7 +139,6 @@ const getAllProducts = async (req, res) => {
       pages,
     });
   } catch (err) {
-    // console.log("error", err);
     res.status(500).send({
       message: err.message,
     });
@@ -126,14 +146,25 @@ const getAllProducts = async (req, res) => {
 };
 
 const getProductBySlug = async (req, res) => {
-  // console.log("slug", req.params.slug);
   try {
-    const product = await Product.findOne({ slug: req.params.slug });
+    const { slug } = req.params;
+
+    if (typeof slug !== "string" || !/^[A-Za-z0-9_-]+$/.test(slug)) {
+      return res.status(400).send({ message: "Invalid slug" });
+    }
+
+    const safeSlug = slug.trim(); 
+
+  
+    const product = await Product.findOne({ slug: safeSlug }).lean().exec();
+
+    if (!product) {
+      return res.status(404).send({ message: "Product not found" });
+    }
+
     res.send(product);
   } catch (err) {
-    res.status(500).send({
-      message: `Slug problem, ${err.message}`,
-    });
+    res.status(500).send({ message: `Slug problem: ${err.message}` });
   }
 };
 
@@ -156,7 +187,7 @@ const updateProduct = async (req, res) => {
   // console.log('variant',req.body.variants)
   try {
     const product = await Product.findById(req.params.id);
-    // console.log("product", product);
+    
 
     if (product) {
       product.title = { ...product.title, ...req.body.title };
@@ -194,23 +225,28 @@ const updateProduct = async (req, res) => {
 
 const updateManyProducts = async (req, res) => {
   try {
+    const { ids, ...restBody } = req.body;
+
+    if (!Array.isArray(ids) || ids.some(id => !/^[0-9a-fA-F]{24}$/.test(id))) {
+      return res.status(400).send({ message: "Invalid product IDs" });
+    }
+
+    const safeIds = ids.map(id => new mongoose.Types.ObjectId(id));
+
     const updatedData = {};
-    for (const key of Object.keys(req.body)) {
+    for (const key of Object.keys(restBody)) {
       if (
-        req.body[key] !== "[]" &&
-        Object.entries(req.body[key]).length > 0 &&
-        req.body[key] !== req.body.ids
+        restBody[key] !== "[]" &&
+        Object.entries(restBody[key]).length > 0 &&
+        restBody[key] !== ids
       ) {
-        // console.log('req.body[key]', typeof req.body[key]);
-        updatedData[key] = req.body[key];
+        updatedData[key] = restBody[key];
       }
     }
 
-    // console.log("updated data", updatedData);
-
     await Product.updateMany(
-      { _id: { $in: req.body.ids } },
-      {
+      { _id: { $in: safeIds } },
+      { 
         $set: updatedData,
       },
       {
@@ -221,6 +257,7 @@ const updateManyProducts = async (req, res) => {
       message: "Products update successfully!",
     });
   } catch (err) {
+    console.error(err);
     res.status(500).send({
       message: err.message,
     });
@@ -229,36 +266,45 @@ const updateManyProducts = async (req, res) => {
 
 const updateStatus = (req, res) => {
   const newStatus = req.body.status;
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).send({ message: "Invalid product ID" });
+  }
+
+  const safeId = new mongoose.Types.ObjectId(id);
+
   Product.updateOne(
-    { _id: req.params.id },
-    {
-      $set: {
-        status: newStatus,
-      },
-    },
+    { _id: safeId },
+    { $set: { status: newStatus } },
     (err) => {
       if (err) {
-        res.status(500).send({
-          message: err.message,
-        });
-      } else {
-        res.status(200).send({
-          message: `Product ${newStatus === "show" ? "Show" : "Hide"} Successfully!`,
-          messageKey: newStatus,
-        });
+        return res.status(500).send({ message: err.message });
       }
-    },
+      res.status(200).send({
+        message: `Product ${newStatus === "show" ? "Show" : "Hide"} Successfully!`,
+        messageKey: newStatus,
+      });
+    }
   );
 };
 
 const deleteProduct = (req, res) => {
-  Product.deleteOne({ _id: req.params.id }, (err) => {
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).send({ message: "Invalid product ID" });
+  }
+
+  const safeId = new mongoose.Types.ObjectId(id);
+
+  Product.deleteOne({ _id: safeId }, (err) => {
     if (err) {
-      res.status(500).send({
+      res.status(500).send({ 
         message: err.message,
       });
     } else {
-      res.status(200).send({
+      res.status(200).send({ 
         message: "Product Deleted Successfully!",
       });
     }
@@ -266,112 +312,79 @@ const deleteProduct = (req, res) => {
 };
 
 const getShowingStoreProducts = async (req, res) => {
-  // console.log("req.body", req);
   try {
-    const queryObject = { status: "show" };
-
-    // console.log("getShowingStoreProducts");
-
     const { category, title, slug } = req.query;
-    // console.log("title", title);
 
-    // console.log("query", req);
+    const sanitizeInput = (input) =>
+      typeof input === "string" ? input.replaceAll(/[^\w\s.-]/g, "").trim() : "";
 
-    if (category) {
-      queryObject.categories = {
-        $in: [category],
-      };
-    }
+    const safeCategory = sanitizeInput(category);
+    const safeTitle = sanitizeInput(title);
+    const safeSlug = sanitizeInput(slug);
 
-    if (title) {
-      const titleQueries = languageCodes.map((lang) => ({
-        [`title.${lang}`]: { $regex: `${title}`, $options: "i" },
+    const queryObject = { status: "show" };
+    if (safeCategory) queryObject.categories = { $in: [safeCategory] };
+    if (safeTitle) {
+      queryObject.$or = languageCodes.map(lang => ({
+        [`title.${lang}`]: { $regex: safeTitle, $options: "i" }
       }));
-
-      queryObject.$or = titleQueries;
     }
-    if (slug) {
-      queryObject.slug = { $regex: slug, $options: "i" };
-    }
+    if (safeSlug) queryObject.slug = { $regex: safeSlug, $options: "i" };
 
-    let products = [];
-    let popularProducts = [];
-    let discountedProducts = [];
-    let relatedProducts = [];
+    const defaultSort = { _id: -1 };
 
-    if (slug) {
-      products = await Product.find(queryObject)
+    const fetchProducts = async (filter, limit = 100, sort = defaultSort) =>
+      Product.find(filter)
         .populate({ path: "category", select: "name _id" })
-        .sort({ _id: -1 })
-        .limit(100);
-      relatedProducts = await Product.find({
-        category: products[0]?.category,
-      }).populate({ path: "category", select: "_id name" });
-    } else if (title || category) {
-      products = await Product.find(queryObject)
-        .populate({ path: "category", select: "name _id" })
-        .sort({ _id: -1 })
-        .limit(100);
+        .sort(sort)
+        .limit(limit);
+
+    let products = [], popularProducts = [], discountedProducts = [], relatedProducts = [];
+
+    if (safeSlug) {
+      products = await fetchProducts(queryObject);
+      if (products[0]?.category) {
+        relatedProducts = await fetchProducts({ category: products[0].category });
+      }
+    } else if (safeTitle || safeCategory) {
+      products = await fetchProducts(queryObject);
     } else {
-      popularProducts = await Product.find({ status: "show" })
-        .populate({ path: "category", select: "name _id" })
-        .sort({ sales: -1 })
-        .limit(20);
-
-      discountedProducts = await Product.find({
-        status: "show", // Ensure status "show" for discounted products
-        $or: [
-          {
-            $and: [
-              { isCombination: true },
-              {
-                variants: {
-                  $elemMatch: {
-                    discount: { $gt: "0.00" },
-                  },
-                },
-              },
-            ],
-          },
-          {
-            $and: [
-              { isCombination: false },
-              {
-                $expr: {
-                  $gt: [
-                    { $toDouble: "$prices.discount" }, // Convert the discount field to a double
-                    0,
-                  ],
-                },
-              },
-            ],
-          },
-        ],
-      })
-        .populate({ path: "category", select: "name _id" })
-        .sort({ _id: -1 })
-        .limit(20);
+      popularProducts = await fetchProducts({ status: "show" }, 20, { sales: -1 });
+      discountedProducts = await fetchProducts(
+        {
+          status: "show",
+          $or: [
+            {
+              isCombination: true,
+              variants: { $elemMatch: { discount: { $gt: "0.00" } } }
+            }
+          ]
+        },
+        20
+      );
     }
 
-    res.send({
-      products,
-      popularProducts,
-      relatedProducts,
-      discountedProducts,
-    });
+    res.send({ products, popularProducts, discountedProducts, relatedProducts });
   } catch (err) {
-    res.status(500).send({
-      message: err.message,
-    });
+    console.error(err);
+    res.status(500).send({ message: `Error retrieving products: ${err.message}` });
   }
 };
 
 const deleteManyProducts = async (req, res) => {
   try {
     const cname = req.cname;
-    // console.log("deleteMany", cname, req.body.ids);
+    console.log("deleteMany called by:", cname, "for ids:", req.body.ids);
 
-    await Product.deleteMany({ _id: req.body.ids });
+    let ids = Array.isArray(req.body.ids) ? req.body.ids : [];
+
+    ids = ids.filter((id) => mongoose.Types.ObjectId.isValid(id));
+
+    if (ids.length === 0) {
+      return res.status(400).send({ message: "No valid IDs provided." });
+    }
+
+    await Product.deleteMany({ _id: { $in: ids } });
 
     res.send({
       message: `Products Delete Successfully!`,
@@ -382,6 +395,7 @@ const deleteManyProducts = async (req, res) => {
     });
   }
 };
+
 
 module.exports = {
   addProduct,

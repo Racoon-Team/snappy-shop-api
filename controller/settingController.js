@@ -71,7 +71,7 @@ const addStoreSetting = async (req, res) => {
 
 const getStoreSetting = async (req, res) => {
   try {
-    // console.log("getStoreSetting");
+
 
     const storeSetting = await Setting.findOne({ name: "storeSetting" });
     res.send(storeSetting.setting);
@@ -129,9 +129,9 @@ const addStoreCustomizationSetting = async (req, res) => {
 const getStoreCustomizationSetting = async (req, res) => {
   try {
     const { key, keyTwo } = req.query;
-    // console.log("getStoreCustomizationSetting");
+   
 
-    // console.log("req query", req.query, "key", key, "keyTwo", keyTwo);
+    
 
     let projection = {};
     if (key) {
@@ -162,7 +162,7 @@ const getStoreCustomizationSetting = async (req, res) => {
 };
 
 const getStoreSeoSetting = async (req, res) => {
-  // console.log("getStoreSeoSetting");
+
   try {
     const storeCustomizationSetting = await Setting.findOne(
       {
@@ -170,7 +170,7 @@ const getStoreSeoSetting = async (req, res) => {
       },
       { "setting.seo": 1, _id: 0 },
     );
-    // console.log("storeCustomizationSetting", storeCustomizationSetting);
+    
     res.send(storeCustomizationSetting?.setting);
   } catch (err) {
     res.status(500).send({
@@ -228,27 +228,31 @@ const addDeliveryPoint = async (req, res) => {
   try {
     const newPoint = req.body;
     newPoint.id = uuidv4();
-    let deliveryPointsSetting = await Setting.findOne({
-      name: "deliveryPoints",
-    });
-    if (!deliveryPointsSetting) {
+
+    let deliveryPointsSetting = await Setting.findOne({ name: "deliveryPoints" });
+
+    if (deliveryPointsSetting) {
+      deliveryPointsSetting.setting.points.push(newPoint);
+      deliveryPointsSetting.markModified("setting.points");
+    } else {
       deliveryPointsSetting = new Setting({
         name: "deliveryPoints",
         setting: { points: [newPoint] },
       });
-    } else {
-      deliveryPointsSetting.setting.points.push(newPoint);
-      deliveryPointsSetting.markModified("setting.points");
     }
+
     await deliveryPointsSetting.save();
+
     res.status(200).send({
       message: "Delivery point added successfully!",
       data: deliveryPointsSetting.setting.points,
     });
   } catch (err) {
     console.error(err);
+    res.status(500).send({ message: err.message });
   }
 };
+
 
 const deleteDeliveryPoint = async (req, res) => {
   try {

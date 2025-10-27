@@ -62,12 +62,26 @@ const getStockById = async (req, res) => {
 
 const getStocksByProductId = async (req, res) => {
   try {
-    const productId = req.params.id;
-    const stocks = await Stock.find({ productId }).sort({ createdAt: -1 });
-    res.json(stocks);
+    const { id } = req.params;
+
+    
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ message: "Invalid productId" });
+    }
+
+   
+    const productObjectId = new mongoose.Types.ObjectId(id);
+
+    
+    const stocks = await Stock.find({ productId: productObjectId })
+      .sort({ createdAt: -1 })
+      .lean()
+      .exec();
+
+    return res.json(stocks);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: err.message });
+    return res.status(500).json({ message: err.message });
   }
 };
 
