@@ -18,18 +18,22 @@ const addLanguage = async (req, res) => {
 const addAllLanguage = async (req, res) => {
   try {
     if (!Array.isArray(req.body) || !req.body.length) {
-      return res.status(400).send({ message: "Request body must be a non-empty array" });
+      return res
+        .status(400)
+        .send({ message: "Request body must be a non-empty array" });
     }
 
     const validLanguages = req.body
-      .filter(lang => lang?.name && lang?.code)  
-      .map(lang => ({ 
-        name: String(lang.name).trim(), 
-        code: String(lang.code).trim() 
+      .filter((lang) => lang?.name && lang?.code)
+      .map((lang) => ({
+        name: String(lang.name).trim(),
+        code: String(lang.code).trim(),
       }));
 
     if (!validLanguages.length) {
-      return res.status(400).send({ message: "No valid language data provided" });
+      return res
+        .status(400)
+        .send({ message: "No valid language data provided" });
     }
 
     await Language.insertMany(validLanguages);
@@ -54,8 +58,6 @@ const getAllLanguages = async (req, res) => {
 
 const getShowingLanguage = async (req, res) => {
   try {
-    
-
     // console.log('get showing language')
     const languages = await Language.find({ status: "show" }).sort({
       _id: -1,
@@ -121,7 +123,8 @@ const updateManyLanguage = async (req, res) => {
 
     await Language.updateMany(
       { _id: { $in: objectIds } },
-      { $set: { status: safeStatus } }
+
+      { $set: { status: safeStatus } },
     );
 
     res.send({ message: "Languages updated successfully!" });
@@ -145,20 +148,20 @@ const updateStatus = async (req, res) => {
     }
 
     await Language.updateOne(
-      { _id: id },
-      { $set: { status: status.trim() } }
+      { _id: String(id).trim() },
+      { $set: { status: String(status).trim() } },
     );
 
     res.status(200).send({
       message: `Language ${
-        status === "show" ? "Published" : "Un-Published"} Successfully!`,
+        status === "show" ? "Published" : "Un-Published"
+      } Successfully!`,
       messageKey: status,
     });
   } catch (err) {
     res.status(500).send({ message: err.message });
   }
 };
-
 
 const deleteLanguage = async (req, res) => {
   try {
@@ -168,7 +171,7 @@ const deleteLanguage = async (req, res) => {
       return res.status(400).send({ message: "Invalid ID format" });
     }
 
-    await Language.deleteOne({ _id: id });
+    await Language.deleteOne({ _id: String(id).trim() });
 
     res.send({
       message: "Delete language successfully!",
@@ -189,7 +192,7 @@ const deleteManyLanguage = async (req, res) => {
     }
 
     const validIds = ids.filter(
-      (id) => typeof id === "string" && /^[0-9a-fA-F]{24}$/.test(id)
+      (id) => typeof id === "string" && /^[0-9a-fA-F]{24}$/.test(id),
     );
 
     if (validIds.length === 0) {
@@ -207,7 +210,6 @@ const deleteManyLanguage = async (req, res) => {
     });
   }
 };
-
 
 module.exports = {
   addLanguage,
