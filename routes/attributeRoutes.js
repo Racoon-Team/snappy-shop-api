@@ -34,7 +34,6 @@ router.put("/add/child/:id", addChildAttributes);
 //get all attribute
 router.get("/", getAllAttributes);
 
-// router.get('/show', getShowingProducts);
 router.get("/show", getShowingAttributes);
 
 router.put("/show/test", getShowingAttributesTest);
