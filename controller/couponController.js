@@ -2,7 +2,6 @@ const dayjs = require("dayjs");
 const utc = require("dayjs/plugin/utc");
 dayjs.extend(utc);
 
-
 const Coupon = require("../models/Coupon");
 
 const addCoupon = async (req, res) => {
@@ -18,7 +17,7 @@ const addCoupon = async (req, res) => {
 const addAllCoupon = async (req, res) => {
   try {
     await Coupon.deleteMany();
-    await Coupon.insertMany(req.body);
+    await Coupon.insertMany(structuredClone(req.body));
     res.status(200).send({
       message: "Coupon Added successfully!",
     });
@@ -36,7 +35,7 @@ const getAllCoupons = async (req, res) => {
     const { status } = req.query;
 
     if (status) {
-      queryObject.status = { $regex: `${status}`, $options: "i" };
+      queryObject.status = { $regex: String(status), $options: "i" };
     }
     const coupons = await Coupon.find(queryObject).sort({ _id: -1 });
     // console.log('coups',coupons)
@@ -49,7 +48,6 @@ const getAllCoupons = async (req, res) => {
 };
 
 const getShowingCoupons = async (req, res) => {
- 
   try {
     const coupons = await Coupon.find({
       status: "show",
@@ -76,48 +74,41 @@ const getCouponById = async (req, res) => {
 const updateCoupon = async (req, res) => {
   try {
     const coupon = await Coupon.findById(req.params.id);
-    
+
     if (coupon) {
       res.status(404).send({ message: "Coupon not found!" });
-      
     }
-      coupon.title = { ...coupon.title, ...req.body.title };
+    coupon.title = { ...coupon.title, ...req.body.title };
 
-      
-      coupon.couponCode = req.body.couponCode;
-      coupon.endTime = dayjs().utc().format(req.body.endTime);
-      
+    coupon.couponCode = req.body.couponCode;
+    coupon.endTime = dayjs().utc().format(req.body.endTime);
 
-    
-      coupon.couponCode = req.body.couponCode;
-      coupon.endTime = dayjs().utc().format(req.body.endTime);
+    coupon.couponCode = req.body.couponCode;
+    coupon.endTime = dayjs().utc().format(req.body.endTime);
 
+    coupon.minimumAmount = req.body.minimumAmount;
+    coupon.productType = req.body.productType;
+    coupon.discountType = req.body.discountType;
+    coupon.logo = req.body.logo;
 
-      coupon.minimumAmount = req.body.minimumAmount;
-      coupon.productType = req.body.productType;
-      coupon.discountType = req.body.discountType;
-      coupon.logo = req.body.logo;
-
-      await coupon.save();
-      res.send({ message: "Coupon Updated Successfully!" });
+    await coupon.save();
+    res.send({ message: "Coupon Updated Successfully!" });
   } catch (err) {
-
     res.status(500).send({
       message: err.message,
     });
 
     console.log(err);
-
   }
 };
 
 const updateManyCoupons = async (req, res) => {
   try {
     await Coupon.updateMany(
-      { _id: { $in: req.body.ids } },
+      { _id: { $in: (req.body.ids || []).map(String) } },
       {
         $set: {
-          status: req.body.status,
+          status: String(req.body.status),
           startTime: req.body.startTime,
           endTime: req.body.endTime,
         },
@@ -139,10 +130,10 @@ const updateManyCoupons = async (req, res) => {
 
 const updateStatus = async (req, res) => {
   try {
-    const newStatus = req.body.status;
+    const newStatus = String(req.body.status);
 
     await Coupon.updateOne(
-      { _id: req.params.id },
+      { _id: String(req.params.id) },
       {
         $set: {
           status: newStatus,
@@ -162,7 +153,7 @@ const updateStatus = async (req, res) => {
 
 const deleteCoupon = async (req, res) => {
   try {
-    await Coupon.deleteOne({ _id: req.params.id });
+    await Coupon.deleteOne({ _id: String(req.params.id) });
     res.status(200).send({
       message: "Coupon Deleted Successfully!",
     });
@@ -173,7 +164,8 @@ const deleteCoupon = async (req, res) => {
 
 const deleteManyCoupons = async (req, res) => {
   try {
-    await Coupon.deleteMany({ _id: req.body.ids });
+    const ids = (req.body.ids || []).map(String);
+    await Coupon.deleteMany({ _id: { $in: ids } });
     res.send({
       message: `Coupons Delete Successfully!`,
     });

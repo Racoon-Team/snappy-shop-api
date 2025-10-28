@@ -44,9 +44,6 @@ const verifyEmailAddress = async (req, res) => {
 const verifyPhoneNumber = async (req, res) => {
   const phoneNumber = String(req.body.phone || "").trim();
 
-
-  
-
   // Check if phone number is provided and is in the correct format
   if (!phoneNumber) {
     return res.status(400).send({
@@ -166,12 +163,13 @@ const registerCustomer = async (req, res) => {
 const addAllCustomers = async (req, res) => {
   try {
     await Customer.deleteMany();
-
-     const validCustomers = req.body.map(c => ({
-      name: c.name,
-      email: c.email,
-      password: c.password ? bcrypt.hashSync(c.password) : undefined, 
-      phone: c.phone
+    const validCustomers = req.body.map((customer) => ({
+      name: customer.name,
+      email: customer.email,
+      password: customer.password
+        ? bcrypt.hashSync(customer.password)
+        : undefined,
+      phone: customer.phone,
     }));
     await Customer.insertMany(validCustomers);
     res.send({
@@ -186,16 +184,18 @@ const addAllCustomers = async (req, res) => {
 
 const loginCustomer = async (req, res) => {
   try {
-   
-    const email = typeof req.body.email === "string" ? req.body.email.trim().toLowerCase() : null;
-    const password = typeof req.body.password === "string" ? req.body.password : null;
+    const email =
+      typeof req.body.email === "string"
+        ? req.body.email.trim().toLowerCase()
+        : null;
+    const password =
+      typeof req.body.password === "string" ? req.body.password : null;
 
     if (!email || !password) {
       return res.status(400).send({
         message: "Email and password are required.",
       });
     }
-
 
     const customer = await Customer.findOne({ email: email }).lean();
 
@@ -225,7 +225,10 @@ const loginCustomer = async (req, res) => {
 
 const forgetPassword = async (req, res) => {
   try {
-    const email = typeof req.body.email === "string" ? req.body.email.trim().toLowerCase() : null;
+    const email =
+      typeof req.body.email === "string"
+        ? req.body.email.trim().toLowerCase()
+        : null;
 
     if (!email) {
       return res.status(400).send({
@@ -244,7 +247,7 @@ const forgetPassword = async (req, res) => {
 
       const body = {
         from: process.env.EMAIL_USER,
-        to: email, 
+        to: email,
         subject: "Password Reset",
         html: forgetPasswordEmailBody(option),
       };
@@ -301,15 +304,14 @@ const changePassword = async (req, res) => {
 
     const customer = await Customer.findOne({ email });
 
-    
     if (!customer?.password) {
       return res.status(403).send({
         message:
           "For change password, you need to sign up with email & password!",
       });
-    }
-
-    if (bcrypt.compareSync(req.body.currentPassword, customer.password)) {
+    } else if (
+      bcrypt.compareSync(req.body.currentPassword, customer.password)
+    ) {
       customer.password = bcrypt.hashSync(req.body.newPassword);
       await customer.save();
       res.send({
@@ -368,7 +370,6 @@ const signUpWithProvider = async (req, res) => {
 
 const signUpWithOauthProvider = async (req, res) => {
   try {
-    
     const email =
       typeof req.body.email === "string"
         ? req.body.email.trim().toLowerCase()
@@ -392,7 +393,6 @@ const signUpWithOauthProvider = async (req, res) => {
         image: isAdded.image,
       });
     } else {
-
       const newUser = new Customer({
         name: req.body.name,
         email: email,
@@ -415,7 +415,6 @@ const signUpWithOauthProvider = async (req, res) => {
     });
   }
 };
-
 
 const getAllCustomers = async (req, res) => {
   try {
@@ -460,9 +459,7 @@ const addShippingAddress = async (req, res) => {
       req.body && typeof req.body === "object" ? req.body : null;
 
     if (!newShippingAddress) {
-      return res
-        .status(400)
-        .send({ message: "Invalid shipping address data" });
+      return res.status(400).send({ message: "Invalid shipping address data" });
     }
 
     const customer = await Customer.findById(id);
@@ -491,7 +488,6 @@ const getShippingAddress = async (req, res) => {
     const customer = await Customer.findById(customerId);
     res.send({ shippingAddress: customer?.shippingAddress });
   } catch (err) {
-    
     res.status(500).send({
       message: err.message,
     });
@@ -532,7 +528,7 @@ const deleteShippingAddress = async (req, res) => {
         $pull: {
           shippingAddress: { _id: new mongoose.Types.ObjectId(shippingId) },
         },
-      }
+      },
     );
 
     if (result.modifiedCount === 0) {
@@ -547,7 +543,6 @@ const deleteShippingAddress = async (req, res) => {
     });
   }
 };
-
 
 const updateCustomer = async (req, res) => {
   try {
@@ -600,40 +595,42 @@ const updateCustomer = async (req, res) => {
   }
 };
 
-
 const deleteCustomer = (req, res) => {
   const { id } = req.params;
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(400).send({ message: "Invalid customer ID" });
   }
 
-  Customer.deleteOne({ _id: new mongoose.Types.ObjectId(id) }, (err, result) => {
-    if (err) {
-      return res.status(500).send({ message: err.message });
-    }
+  Customer.deleteOne(
+    { _id: new mongoose.Types.ObjectId(id) },
+    (err, result) => {
+      if (err) {
+        return res.status(500).send({ message: err.message });
+      }
 
-    if (result.deletedCount === 0) {
-      return res.status(404).send({ message: "Customer not found" });
-    }
+      if (result.deletedCount === 0) {
+        return res.status(404).send({ message: "Customer not found" });
+      }
 
-    res.status(200).send({ message: "User Deleted Successfully!" });
-  });
+      res.status(200).send({ message: "User Deleted Successfully!" });
+    },
+  );
 };
+
+const isValidEmail = (email) =>
+  typeof email === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
 
 const getCustomerByEmail = async (req, res) => {
   try {
-    const rawEmail = req.params.email || req.body.email || req.query.email;
+    const { email } = req.params;
 
-    const email =
-      typeof rawEmail === "string"
-        ? rawEmail.trim().toLowerCase().replaceAll(/[^\w@.-]/g, "")
-        : null;
-
-    if (!email) {
-      return res.status(400).send({ message: "Valid email is required" });
+    if (!isValidEmail(email)) {
+      return res.status(400).send({ message: "Invalid email format" });
     }
 
-    const customer = await Customer.findOne({ email }).lean();
+    const sanitizedEmail = String(email).trim().toLowerCase();
+
+    const customer = await Customer.findOne({ email: sanitizedEmail }).lean();
 
     if (!customer) {
       return res.status(404).send({ message: "Customer not found" });
@@ -649,12 +646,20 @@ const getCustomerByEmail = async (req, res) => {
 const updateCustomerLocation = async (req, res) => {
   try {
     const { email, location } = req.body;
-  
-    if (typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+
+    if (!isValidEmail(email)) {
+      return res.status(400).send({ message: "Invalid email format" });
+    }
+
+    if (
+      typeof email !== "string" ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    ) {
       return res.status(400).send({ message: "Invalid email format" });
     }
 
     const sanitizedEmail = email.trim().toLowerCase();
+
     if (typeof location !== "object" || location === null) {
       return res.status(400).send({ message: "Invalid location data" });
     }
@@ -677,13 +682,9 @@ const updateCustomerLocation = async (req, res) => {
 
 const updateCustomerPreferences = async (req, res) => {
   try {
-    const email =
-      typeof req.body.email === "string"
-        ? req.body.email.trim().toLowerCase()
-        : null;
-    const { preferences } = req.body;
+    const { email, preferences } = req.body;
 
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (!isValidEmail(email)) {
       return res.status(400).json({ message: "Invalid email format" });
     }
 
@@ -692,7 +693,7 @@ const updateCustomerPreferences = async (req, res) => {
     }
 
     const validPreferences = preferences.filter((id) =>
-      mongoose.Types.ObjectId.isValid(id)
+      mongoose.Types.ObjectId.isValid(id),
     );
 
     if (validPreferences.length !== preferences.length) {
@@ -701,8 +702,9 @@ const updateCustomerPreferences = async (req, res) => {
         .json({ message: "Some preferences have invalid IDs" });
     }
 
-    const customer = await Customer.findOne({ email });
-    
+    const sanitizedEmail = email.trim().toLowerCase();
+    const customer = await Customer.findOne({ email: sanitizedEmail });
+
     if (!customer) {
       return res.status(404).json({ message: "Customer not found" });
     }
