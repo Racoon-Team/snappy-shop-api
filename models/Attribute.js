@@ -46,8 +46,6 @@ const attributeSchema = new mongoose.Schema(
   },
 );
 
-// module.exports = attributeSchema;
-
 const Attribute = mongoose.model("Attribute", attributeSchema);
 
 module.exports = Attribute;
