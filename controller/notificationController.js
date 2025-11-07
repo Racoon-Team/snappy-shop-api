@@ -37,22 +37,22 @@ const getAllNotification = async (req, res) => {
     const { page } = req.query;
 
     const pages = page;
-    const limits = 5;
-    const skip = (pages - 1) * limits;
-    const totalDoc = await Notification.countDocuments();
-    const totalUnreadDoc = await Notification.countDocuments({
+    const limit = 5;
+    const skip = (pages - 1) * limit;
+    const total = await Notification.countDocuments();
+    const  totalUnread = await Notification.countDocuments({
       status: "unread",
     });
-    const notifications = await Notification.find({
+    const data = await Notification.find({
       status: { $in: ["read", "unread"] },
     })
       .sort({
         _id: -1,
       })
       .skip(skip)
-      .limit(limits);
+      .limit(limit);
 
-    res.send({ totalDoc, totalUnreadDoc, notifications });
+    res.send({ total, additionalInfo:{totalUnread},limit, data, pages });
   } catch (err) {
     res.status(500).send({
       message: err.message,
