@@ -196,8 +196,11 @@ const updateStaff = async (req, res) => {
       return res.status(404).send({ message: "This Staff not found!" });
     }
 
-    if (req.body.email) {
-      const existingEmail = await Admin.findOne({ email: req.body.email });
+    const email =
+      typeof req.body.email === "string" ? req.body.email.trim() : "";
+
+    if (email) {
+      const existingEmail = await Admin.findOne({ email });
 
       if (existingEmail && existingEmail._id.toString() !== req.params.id) {
         return res.status(400).send({
