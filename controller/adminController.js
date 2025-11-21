@@ -192,39 +192,53 @@ const updateStaff = async (req, res) => {
   try {
     const admin = await Admin.findOne({ _id: String(req.params.id) });
 
-    if (admin) {
-      admin.name = { ...admin.name, ...req.body.name };
-      admin.email = req.body.email;
-      admin.phone = req.body.phone;
-      admin.role = req.body.role;
-      admin.joiningData = req.body.joiningData;
-      admin.image = req.body.image;
-
-      const updatedAdmin = await admin.save();
-      const token = signInToken(updatedAdmin);
-
-      await updatedAdmin.populate("role");
-      const { data, iv } = handleEncryptData(updatedAdmin.role.permissions);
-
-      res.send({
-        token,
-        _id: updatedAdmin._id,
-        name: updatedAdmin.name,
-        email: updatedAdmin.email,
-        image: updatedAdmin.image,
-        role: updatedAdmin.role.name,
-        data,
-        iv,
-        joiningData: updatedAdmin.joiningData,
-      });
-    } else {
-      res.status(404).send({
-        message: "This Staff not found!",
-      });
+    if (!admin) {
+      return res.status(404).send({ message: "This Staff not found!" });
     }
+
+    const email =
+      typeof req.body.email === "string" ? req.body.email.trim() : "";
+
+    if (email) {
+      const existingEmail = await Admin.findOne({ email });
+
+      if (existingEmail && existingEmail._id.toString() !== req.params.id) {
+        return res.status(400).send({
+          message: "This email already exists!",
+        });
+      }
+    }
+
+    admin.name = { ...admin.name, ...req.body.name };
+    admin.email = req.body.email;
+    admin.phone = req.body.phone;
+    admin.role = req.body.role;
+    admin.joiningData = req.body.joiningData;
+    admin.image = req.body.image;
+
+    const updatedAdmin = await admin.save();
+
+    const token = signInToken(updatedAdmin);
+
+    await updatedAdmin.populate("role");
+
+    const permissions = updatedAdmin.role?.permissions || "";
+    const { data, iv } = handleEncryptData(permissions);
+
+    res.send({
+      token,
+      _id: updatedAdmin._id,
+      name: updatedAdmin.name,
+      email: updatedAdmin.email,
+      image: updatedAdmin.image,
+      role: updatedAdmin.role.name,
+      data,
+      iv,
+      joiningData: updatedAdmin.joiningData,
+    });
   } catch (err) {
     res.status(500).send({
-      message: err.message,
+      message: err.message || "Server error",
     });
   }
 };
