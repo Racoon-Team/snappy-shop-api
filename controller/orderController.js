@@ -34,7 +34,7 @@ const buildQueryObject = (query) => {
   if (customerName) {
     const isNumber = !Number.isNaN(Number(customerName));
     const customerFilter = [
-      { "user_info.name": { $regex: customerName, $options: "i" } }
+      { "user_info.name": { $regex: customerName, $options: "i" } },
     ];
     if (isNumber) customerFilter.push({ invoice: Number(customerName) });
 
@@ -50,13 +50,13 @@ const buildQueryObject = (query) => {
     queryObject.createdAt = { $gte: pastDate, $lte: today };
   }
 
- if (startDate && endDate) {
-  const start = new Date(startDate);
-  const end = new Date(endDate);
-  if (!Number.isNaN(start.getTime()) && !Number.isNaN(end.getTime())) {
-    queryObject.updatedAt = { $gt: start, $lt: end };
+  if (startDate && endDate) {
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+    if (!Number.isNaN(start.getTime()) && !Number.isNaN(end.getTime())) {
+      queryObject.updatedAt = { $gt: start, $lt: end };
+    }
   }
-}
 
   if (method) {
     queryObject.paymentMethod = { $regex: method, $options: "i" };
@@ -66,7 +66,13 @@ const buildQueryObject = (query) => {
 };
 
 const filterAllowedQueryFields = (queryObject) => {
-  const allowedFields = ["status", "$or", "createdAt", "updatedAt", "paymentMethod"];
+  const allowedFields = [
+    "status",
+    "$or",
+    "createdAt",
+    "updatedAt",
+    "paymentMethod",
+  ];
   const safeQuery = {};
   for (const key of allowedFields) {
     if (Object.hasOwn(queryObject, key)) {
@@ -79,28 +85,28 @@ const filterAllowedQueryFields = (queryObject) => {
 const calculateMethodTotals = async (queryObject) => {
   const safeQuery = filterAllowedQueryFields(queryObject);
 
-    const filteredOrders = await Order.where(safeQuery)
+  const filteredOrders = await Order.where(safeQuery)
     .select("paymentMethod total")
     .sort({ updatedAt: -1 });
 
   const totals = [];
-for (const order of filteredOrders) {
-  let existing = null;
-  for (const item of totals) {
-    if (item.method === order.paymentMethod) {
-      existing = item;
-      break;
+  for (const order of filteredOrders) {
+    let existing = null;
+    for (const item of totals) {
+      if (item.method === order.paymentMethod) {
+        existing = item;
+        break;
+      }
+    }
+
+    if (existing) {
+      existing.total += order.total;
+    } else {
+      totals.push({ method: order.paymentMethod, total: order.total });
     }
   }
 
-  if (existing) {
-    existing.total += order.total;
-  } else {
-    totals.push({ method: order.paymentMethod, total: order.total });
-  }
-}
-
-return totals;
+  return totals;
 };
 
 const getAllOrders = async (req, res) => {
@@ -108,13 +114,22 @@ const getAllOrders = async (req, res) => {
     const queryObject = buildQueryObject(req.query);
     const safeQuery = filterAllowedQueryFields(queryObject);
 
+    if (req.query.customerName) {
+      safeQuery["user_info.name"] = {
+        $regex: req.query.customerName,
+      };
+    }
+
     const page = sanitizeNumber(req.query.page, 1);
     const limit = sanitizeNumber(req.query.limit, 10);
     const skip = (page - 1) * limit;
 
     const totalDoc = await Order.countDocuments(safeQuery);
+
     const orders = await Order.find(safeQuery)
-      .select("_id invoice paymentMethod subTotal total user_info discount shippingCost status createdAt updatedAt")
+      .select(
+        "_id invoice paymentMethod subTotal total user_info discount shippingCost status createdAt updatedAt",
+      )
       .sort({ updatedAt: -1 })
       .skip(skip)
       .limit(limit);
@@ -138,9 +153,7 @@ const getAllOrders = async (req, res) => {
 
 const isValidId = (...ids) =>
   ids.every(
-    (id) =>
-      typeof id === "string" &&
-      /^[a-fA-F0-9]{24}$/.test(id.trim())
+    (id) => typeof id === "string" && /^[a-fA-F0-9]{24}$/.test(id.trim()),
   );
 
 const getOrderCustomer = async (req, res) => {
@@ -173,9 +186,10 @@ const getOrderById = async (req, res) => {
 const updateOrder = async (req, res) => {
   try {
     const id = String(req.params.id).trim();
-    const newStatus = typeof req.body.status === "string" ? req.body.status.trim() : "";
+    const newStatus =
+      typeof req.body.status === "string" ? req.body.status.trim() : "";
 
-    if (!isValidId(id)) { 
+    if (!isValidId(id)) {
       return res.status(400).send({ message: "Invalid order ID format" });
     }
 
@@ -185,7 +199,7 @@ const updateOrder = async (req, res) => {
 
     const result = await Order.updateOne(
       { _id: id },
-      { $set: { status: newStatus } }
+      { $set: { status: newStatus } },
     );
 
     if (result.matchedCount === 0) {
@@ -202,7 +216,7 @@ const deleteOrder = async (req, res) => {
   try {
     const id = String(req.params.id).trim();
 
-  if (!isValidId(id)) {
+    if (!isValidId(id)) {
       return res.status(400).send({ message: "Invalid order ID format" });
     }
 
@@ -241,8 +255,6 @@ const getDashboardRecentOrder = async (req, res) => {
       .sort({ updatedAt: -1 })
       .skip(skip)
       .limit(limits);
-
-    
 
     res.send({
       orders: orders,
@@ -683,7 +695,7 @@ const getTotalSoldByProduct = async (req, res) => {
   try {
     const productId = String(req.params.productId).trim();
 
-   if (!isValidId(productId)) {
+    if (!isValidId(productId)) {
       return res.status(400).json({ message: "Invalid product ID format" });
     }
 
