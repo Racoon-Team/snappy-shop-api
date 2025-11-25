@@ -124,9 +124,10 @@ const getAllOrders = async (req, res) => {
     const limit = sanitizeNumber(req.query.limit, 10);
     const skip = (page - 1) * limit;
 
-    const totalDoc = await Order.countDocuments(safeQuery);
+    const totalDoc = await Order.countDocuments({ ...safeQuery });
 
-    const orders = await Order.find(safeQuery)
+    const orders = await Order.find({ ...safeQuery })
+
       .select(
         "_id invoice paymentMethod subTotal total user_info discount shippingCost status createdAt updatedAt",
       )
