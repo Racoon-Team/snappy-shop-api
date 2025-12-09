@@ -3,23 +3,17 @@ const Notification = require("../models/Notification");
 
 const addNotification = async (req, res) => {
   try {
-    const { productId, userId, message } = req.body;
+    const { orderId, productId, adminId, userId, message, image } = req.body;
 
-    if (productId && !mongoose.Types.ObjectId.isValid(productId)) {
-      return res.status(400).send({ message: "Invalid productId" });
-    }
+    const newNotification = new Notification({
+      orderId,
+      productId,
+      adminId,
+      userId,
+      message,
+      image,
+    });
 
-    if (productId) {
-      const isAdded = await Notification.findOne({
-        productId: String(productId).trim(),
-        userId: String(userId).trim(),
-      });
-      if (isAdded) {
-        return res.status(200).end();
-      }
-    }
-
-    const newNotification = new Notification({ productId, userId, message });
     await newNotification.save();
 
     res.status(200).send({
