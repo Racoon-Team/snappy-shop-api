@@ -134,9 +134,9 @@ const getAllProducts = async (req, res) => {
 
     res.send({
       products,
-      totalDoc,
-      limits,
-      pages,
+      total:totalDoc,
+      limit:limits,
+      pages:pages,
     });
   } catch (err) {
     res.status(500).send({
