@@ -142,9 +142,9 @@ const getAllOrders = async (req, res) => {
 
     res.send({
       orders,
-      limit,
-      page,
-      totalDoc,
+      limit: limit,
+      pages: page,
+      total: totalDoc,
       methodTotals,
     });
   } catch (err) {
