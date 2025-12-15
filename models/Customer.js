@@ -28,6 +28,11 @@ const customerSchema = new mongoose.Schema(
       default: "",
     },
 
+    locationSkipped: {
+      type: Boolean,
+      default: false,
+    },
+
     preferences: [
       {
         type: mongoose.Schema.Types.ObjectId,

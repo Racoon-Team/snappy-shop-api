@@ -137,6 +137,7 @@ const registerCustomer = async (req, res) => {
               email,
               password: bcrypt.hashSync(password),
               location,
+              preferences: [],
             });
 
             await newUser.save();
@@ -146,6 +147,8 @@ const registerCustomer = async (req, res) => {
               _id: newUser._id,
               name: newUser.name,
               email: newUser.email,
+              location: newUser.location,
+              preferences: newUser.preferences || [],
               message: "Email Verified, Please Login Now!",
             });
           }
@@ -209,6 +212,9 @@ const loginCustomer = async (req, res) => {
         address: customer.address,
         phone: customer.phone,
         image: customer.image,
+        location: customer.location || null,
+        preferences: customer.preferences || [],
+        locationSkipped: customer.locationSkipped,
       });
     }
 
@@ -343,12 +349,16 @@ const signUpWithProvider = async (req, res) => {
         address: isAdded.address,
         phone: isAdded.phone,
         image: isAdded.image,
+        location: isAdded.location,
+        preferences: isAdded.preferences,
       });
     } else {
       const newUser = new Customer({
         name: user.name,
         email: user.email,
         image: user.picture,
+        location: null,
+        preferences: [],
       });
 
       const signUpCustomer = await newUser.save();
@@ -359,6 +369,8 @@ const signUpWithProvider = async (req, res) => {
         name: signUpCustomer.name,
         email: signUpCustomer.email,
         image: signUpCustomer.image,
+        location: signUpCustomer.location,
+        preferences: signUpCustomer.preferences,
       });
     }
   } catch (err) {
@@ -391,12 +403,16 @@ const signUpWithOauthProvider = async (req, res) => {
         address: isAdded.address,
         phone: isAdded.phone,
         image: isAdded.image,
+        location: isAdded.location,
+        preferences: isAdded.preferences,
       });
     } else {
       const newUser = new Customer({
         name: req.body.name,
         email: email,
         image: req.body.image,
+        location: null,
+        preferences: [],
       });
 
       const signUpCustomer = await newUser.save();
@@ -407,6 +423,8 @@ const signUpWithOauthProvider = async (req, res) => {
         name: signUpCustomer.name,
         email: signUpCustomer.email,
         image: signUpCustomer.image,
+        location: signUpCustomer.location,
+        preferences: signUpCustomer.preferences,
       });
     }
   } catch (err) {
@@ -587,6 +605,7 @@ const updateCustomer = async (req, res) => {
       phone: updatedUser.phone,
       image: updatedUser.image,
       location: updatedUser.location,
+      preferences: updatedUser.preferences,
       message: "Customer updated successfully!",
     });
   } catch (err) {
@@ -635,48 +654,42 @@ const getCustomerByEmail = async (req, res) => {
     if (!customer) {
       return res.status(404).send({ message: "Customer not found" });
     }
-
-    res.send(customer);
+    res.send({
+      ...customer,
+      locationSkipped: customer.locationSkipped || false,
+    });
   } catch (err) {
     console.error("Error fetching customer by email:", err);
     res.status(500).send({ message: err.message });
   }
 };
-
 const updateCustomerLocation = async (req, res) => {
   try {
     const { email, location } = req.body;
 
-    if (!isValidEmail(email)) {
-      return res.status(400).send({ message: "Invalid email format" });
+    if (!email || !location) {
+      return res
+        .status(400)
+        .send({ message: "Email and location are required" });
     }
 
-    if (
-      typeof email !== "string" ||
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-    ) {
-      return res.status(400).send({ message: "Invalid email format" });
-    }
-
-    const sanitizedEmail = email.trim().toLowerCase();
-
-    if (typeof location !== "object" || location === null) {
-      return res.status(400).send({ message: "Invalid location data" });
-    }
-
-    const customer = await Customer.findOne({ email: sanitizedEmail });
+    const customer = await Customer.findOneAndUpdate(
+      { email: email.trim().toLowerCase() },
+      { $set: { location } },
+      { new: true },
+    );
 
     if (!customer) {
       return res.status(404).send({ message: "Customer not found" });
     }
 
-    customer.location = location;
-    await customer.save();
-
-    res.send({ message: "Location updated successfully!" });
+    res.send({
+      message: "Location updated successfully",
+      location: customer.location,
+    });
   } catch (err) {
-    console.error("Error updating customer location:", err);
-    res.status(500).send({ message: err.message });
+    console.error("Error updating location:", err);
+    res.status(500).send({ message: "Server error" });
   }
 };
 
@@ -719,6 +732,24 @@ const updateCustomerPreferences = async (req, res) => {
   }
 };
 
+const skipLocation = async (req, res) => {
+  try {
+    const { email } = req.body;
+    const customer = await Customer.findOne({
+      email: email.trim().toLowerCase(),
+    });
+    if (!customer) {
+      return res.status(404).send({ message: "Customer not found" });
+    }
+    customer.locationSkipped = true;
+    await customer.save();
+    res.send({ message: "Location skipped successfully!" });
+  } catch (err) {
+    console.error("Error skipping location:", err);
+    res.status(500).send({ message: err.message });
+  }
+};
+
 module.exports = {
   loginCustomer,
   verifyPhoneNumber,
@@ -741,4 +772,5 @@ module.exports = {
   getCustomerByEmail,
   updateCustomerLocation,
   updateCustomerPreferences,
+  skipLocation,
 };
