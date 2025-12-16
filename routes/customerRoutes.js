@@ -22,13 +22,14 @@ const {
   getCustomerByEmail,
   updateCustomerLocation,
   updateCustomerPreferences,
+  skipLocation,
 } = require("../controller/customerController");
 const {
   passwordVerificationLimit,
   emailVerificationLimit,
   phoneVerificationLimit,
 } = require("../lib/email-sender/sender");
-
+router.post("/skip-location", skipLocation);
 //verify email
 router.post("/verify-email", emailVerificationLimit, verifyEmailAddress);
 //verify phone number
