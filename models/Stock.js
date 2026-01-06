@@ -7,6 +7,10 @@ const stockSchema = new mongoose.Schema(
       ref: "Product",
       required: true,
     },
+    variantId: {
+      type: String,
+      default: null,
+    },
     productName: {
       type: String,
       required: true,

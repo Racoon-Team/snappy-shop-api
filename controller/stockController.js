@@ -4,7 +4,7 @@ const Product = require("../models/Product");
 
 const addStock = async (req, res) => {
   try {
-    const { productId, quantity, type } = req.body;
+    const { productId, variantId, quantity, type } = req.body;
 
     if (!productId || !quantity) {
       return res
@@ -19,6 +19,7 @@ const addStock = async (req, res) => {
 
     const newStock = new Stock({
       productId: product._id,
+      variantId: variantId || null,
       productName: product.title.en,
       category: product.category?.name?.en || "",
       quantity: Math.abs(quantity),
@@ -63,21 +64,19 @@ const getStockById = async (req, res) => {
 const getStocksByProductId = async (req, res) => {
   try {
     const { id } = req.params;
+    const { variantId } = req.query;
 
-    
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({ message: "Invalid productId" });
     }
 
-   
-    const productObjectId = new mongoose.Types.ObjectId(id);
+    const query = { productId: new mongoose.Types.ObjectId(id) };
+    if (variantId) query.variantId = variantId;
 
-    
-    const stocks = await Stock.find({ productId: productObjectId })
+    const stocks = await Stock.find(query)
       .sort({ createdAt: -1 })
       .lean()
       .exec();
-
     return res.json(stocks);
   } catch (err) {
     console.error(err);
@@ -88,9 +87,13 @@ const getStocksByProductId = async (req, res) => {
 const getStockTotals = async (req, res) => {
   try {
     const { productId } = req.params;
+    const { variantId } = req.query;
+
+    const match = { productId: new mongoose.Types.ObjectId(productId) };
+    if (variantId) match.variantId = variantId;
 
     const result = await Stock.aggregate([
-      { $match: { productId: new mongoose.Types.ObjectId(productId) } },
+      { $match: match },
       {
         $group: {
           _id: "$type",
