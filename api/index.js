@@ -23,7 +23,7 @@ const roleRoutes = require("../routes/roleRoutes");
 
 const { isAuth, isAdmin } = require("../config/auth");
 const stockRoutes = require("../routes/stockRoutes");
-
+const chatRoutes = require("../routes/chatRoutes");
 
 connectDB();
 const app = express();
@@ -56,7 +56,7 @@ app.use("/api/language/", languageRoutes);
 app.use("/api/notification/", isAuth, notificationRoutes);
 app.use("/api/admin/category", categoryRoutes);
 app.use("/api/payment", paymentRoutes);
-
+app.use("/api", chatRoutes);
 app.use("/api/stock", stockRoutes);
 
 app.use("/api/roles", roleRoutes);
