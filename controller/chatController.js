@@ -1,56 +1,86 @@
+const Category = require("../models/Category");
+const Product = require("../models/Product");
 
 const handleChat = async (req, res) => {
   try {
-   
-    const messages = req.body.messages || [];
-    const lastMessage = messages[messages.length - 1];
-    const text = String(lastMessage?.text || "").toLowerCase().trim();
+    const text = String(
+      req.body?.message ||
+        req.body?.text ||
+        req.body?.messages?.at(-1)?.text ||
+        "",
+    )
+      .toLowerCase()
+      .trim();
 
-   
+    // Saludo inicial
     if (!text || text === "hola") {
+      const rootCategories = await Category.find({
+        parentName: "Home",
+        status: "show",
+      });
+
       return res.send({
         type: "options",
-        text: "Hola, ¿qué productos estás buscando?",
-        options: [
-          { label: "Alimentos", value: "alimentos" },
-          { label: "Belleza y Salud", value: "0A8A" },
-          { label: "Herramientas para el hogar", value: "0B49" },
-          { label: "Cuidado de mascotas", value: "0B0E" },
-        ],
+        text: "Hola, ¿Qué tipo de categoría estás buscando?",
+        options: rootCategories.map((c) => ({
+          label: c.name?.es,
+          value: c._id,
+        })),
       });
     }
 
-    if (text === "alimentos") {
-      return res.send({
-        type: "options",
-        text: "¿Qué tipo de alimentos estás buscando?",
-        options: [
-          { label: "Frutas y verduras", value: "0BE8" },
-          { label: "Pescado y carne", value: "0C24" },
-          { label: "Bebidas", value: "09C1" },
-        ],
-      });
-    }
+    const categories = await Category.find({ status: "show" });
 
-    
-    if (["0be8", "0c24", "09c1"].includes(text)) {
-      return res.send({
-        text: "Tenemos productos disponibles en esta categoría.",
-      });
-    }
-
-    
-    return res.send({
-      text: "No entendí tu mensaje. Por favor, elige una opción.",
+    const words = text.split(/\s+/);
+    let category = categories.find((cat) => {
+      const name = cat.name?.es?.toLowerCase();
+      return name && words.some((word) => name.includes(word));
     });
 
-  } catch (err) {
+    if (category) {
+      const subcategories = await Category.find({
+        parentId: category._id,
+        status: "show",
+      });
+
+      if (subcategories.length > 0) {
+        return res.send({
+          type: "options",
+          text: `Estas son las subcategorías de ${category.name.es}:`,
+          options: subcategories.map((c) => ({
+            label: c.name.es,
+            value: c._id,
+          })),
+        });
+      }
+
+      const products = await Product.find({ categoryId: category._id });
+      return res.send({
+        type: "text",
+        text: `Tenemos ${products.length} productos en ${category.name.es}.`,
+      });
+    }
+
+    const rootCategories = await Category.find({
+      parentId: { $in: [null, ""] },
+      status: "show",
+    });
+
+    return res.send({
+      type: "options",
+      text: `No encontré lo que buscas: "${text}". ¿Qué categoría te interesa?`,
+      options: rootCategories.map((c) => ({
+        label: c.name.es,
+        value: c._id,
+      })),
+    });
+  } catch (error) {
+    console.error("Chat error:", error);
     return res.status(500).send({
-      message: err.message,
+      type: "text",
+      text: "Ocurrió un error, intenta nuevamente.",
     });
   }
 };
 
-module.exports = {
-  handleChat,
-};
+module.exports = { handleChat };
