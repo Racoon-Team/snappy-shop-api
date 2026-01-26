@@ -12,7 +12,6 @@ const handleChat = async (req, res) => {
       .toLowerCase()
       .trim();
 
-    // Saludo inicial
     if (!text || text === "hola") {
       const rootCategories = await Category.find({
         parentName: "Home",
@@ -31,11 +30,21 @@ const handleChat = async (req, res) => {
 
     const categories = await Category.find({ status: "show" });
 
-    const words = text.split(/\s+/);
+    const normalizedText = text.toLowerCase();
+
     let category = categories.find((cat) => {
       const name = cat.name?.es?.toLowerCase();
-      return name && words.some((word) => name.includes(word));
+      return name === normalizedText;
     });
+
+    if (!category) {
+      const words = normalizedText.split(/\s+/);
+
+      category = categories.find((cat) => {
+        const name = cat.name?.es?.toLowerCase();
+        return name && words.some((word) => name.includes(word));
+      });
+    }
 
     if (category) {
       const subcategories = await Category.find({
