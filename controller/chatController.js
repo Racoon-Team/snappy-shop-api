@@ -30,20 +30,18 @@ const handleChat = async (req, res) => {
 
     const categories = await Category.find({ status: "show" });
 
-    const normalizedText = text.toLowerCase();
-
-    let category = categories.find((cat) => {
-      const name = cat.name?.es?.toLowerCase();
-      return name === normalizedText;
-    });
+    let category = categories.find(
+      (cat) => cat.name?.es?.toLowerCase() === text,
+    );
 
     if (!category) {
-      const words = normalizedText.split(/\s+/);
+      const words = text.split(/\s+/);
 
-      category = categories.find((cat) => {
-        const name = cat.name?.es?.toLowerCase();
-        return name && words.some((word) => name.includes(word));
-      });
+      category = categories.find(
+        (cat) =>
+          cat.name?.es?.toLowerCase() &&
+          words.some((word) => cat.name.es.toLowerCase().includes(word)),
+      );
     }
 
     if (category) {
@@ -54,19 +52,46 @@ const handleChat = async (req, res) => {
 
       if (subcategories.length > 0) {
         return res.send({
-          type: "options",
-          text: `Estas son las subcategorías de ${category.name.es}:`,
-          options: subcategories.map((c) => ({
-            label: c.name.es,
-            value: c._id,
-          })),
+          errors: [],
+          data: {
+            reply: `Estas son las subcategorías de ${category.name.es}:`,
+            products: [],
+            context: {
+              intent: "select_subcategory",
+              category: category.name.es.toLowerCase(),
+              ambiguous: false,
+              options: subcategories.map((c) => ({
+                label: c.name.es,
+                value: c._id,
+              })),
+            },
+          },
         });
       }
 
-      const products = await Product.find({ categoryId: category._id });
+      const products = await Product.find({
+        category: category._id,
+        status: "show",
+      }).lean();
+
       return res.send({
-        type: "text",
-        text: `Tenemos ${products.length} productos en ${category.name.es}.`,
+        errors: [],
+        data: {
+          reply: `Aquí tienes productos de ${category.name.es}`,
+          products: products.map((p) => ({
+            id: p._id,
+            name: p.title?.es || p.name,
+            price: p.prices?.price || p.price,
+            category: category.name.es,
+            color: p.color || null,
+          })),
+          context: {
+            intent: "search_product",
+            category: category.name.es.toLowerCase(),
+            ambiguous: false,
+            options: [],
+          },
+        },
       });
     }
 
@@ -76,18 +101,30 @@ const handleChat = async (req, res) => {
     });
 
     return res.send({
-      type: "options",
-      text: `No encontré lo que buscas: "${text}". ¿Qué categoría te interesa?`,
-      options: rootCategories.map((c) => ({
-        label: c.name.es,
-        value: c._id,
-      })),
+      errors: [],
+      data: {
+        reply: `No encontré lo que buscas: "${text}". ¿Qué categoría te interesa?`,
+        products: [],
+        context: {
+          intent: "select_category",
+          category: null,
+          ambiguous: true,
+          options: rootCategories.map((c) => ({
+            label: c.name.es,
+            value: c._id,
+          })),
+        },
+      },
     });
   } catch (error) {
     console.error("Chat error:", error);
     return res.status(500).send({
-      type: "text",
-      text: "Ocurrió un error, intenta nuevamente.",
+      errors: [{ message: "Ocurrió un error, intenta nuevamente." }],
+      data: {
+        reply: "Ocurrió un error, intenta nuevamente.",
+        products: [],
+        context: {},
+      },
     });
   }
 };
