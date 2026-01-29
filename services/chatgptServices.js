@@ -1,38 +1,37 @@
 const fetch = require("node-fetch");
 
-async function askChatGPT(message) {
-  const response = await fetch(
-    "https://openrouter.ai/api/v1/chat/completions",
-    {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
-        "Content-Type": "application/json",
-       
-        "HTTP-Referer": "http://localhost:5055",
-        "X-Title": "Ecommerce Chatbot",
-      },
-      body: JSON.stringify({
-        model: "mistralai/mistral-7b-instruct",
-        messages: [
-          {
-            role: "system",
-            content:
-              "Eres un asistente de una tienda online. Ayudas al cliente a encontrar productos.",
-          },
-          {
-            role: "user",
-            content: message,
-          },
-        ],
-      }),
-    },
-  );
+async function askChatGPT({ message, products }) {
+  const prompt = `
+Usuario busca: "${message}"
 
-  if (!response.ok) {
-    const error = await response.text();
-    throw new Error(error);
-  }
+Productos disponibles:
+${products
+  .map((p, i) => `${i + 1}. ${p.title?.es} - ${p.description?.es || ""}`)
+  .join("\n")}
+
+Selecciona SOLO los productos relevantes.
+Devuelve los índices separados por coma.
+`;
+
+  const response = await fetch(process.env.OPENROUTER_API_URL, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+      "Content-Type": "application/json",
+      "HTTP-Referer": "http://localhost:5055",
+      "X-Title": "Ecommerce Chatbot",
+    },
+    body: JSON.stringify({
+      model: "mistralai/mistral-7b-instruct",
+      messages: [
+        {
+          role: "system",
+          content: "Eres un asistente de ecommerce que clasifica productos.",
+        },
+        { role: "user", content: prompt },
+      ],
+    }),
+  });
 
   const data = await response.json();
   return data.choices[0].message.content;

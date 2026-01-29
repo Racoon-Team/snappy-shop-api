@@ -1,5 +1,6 @@
 const Category = require("../models/Category");
 const Product = require("../models/Product");
+const { askChatGPT } = require("../services/chatgptServices");
 
 const handleChat = async (req, res) => {
   try {
@@ -74,10 +75,15 @@ const handleChat = async (req, res) => {
         status: "show",
       }).lean();
 
+      const aiResponse = await askChatGPT({
+        message: text,
+        products,
+      });
+
       return res.send({
         errors: [],
         data: {
-          reply: `Aquí tienes productos de ${category.name.es}`,
+          reply: aiResponse,
           products: products.map((p) => ({
             id: p._id,
             name: p.title?.es || p.name,
