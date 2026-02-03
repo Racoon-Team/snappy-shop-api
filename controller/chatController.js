@@ -2,6 +2,19 @@ const Category = require("../models/Category");
 const Product = require("../models/Product");
 const { askChatGPT } = require("../services/chatgptServices");
 
+function normalizeUserMessage(text) {
+  if (!text) return null;
+
+  const clean = text
+    .toLowerCase()
+    .replace(/[^a-záéíóúñ\s]/gi, "")
+    .trim();
+
+  if (clean.length < 3) return null;
+
+  return clean;
+}
+
 const handleChat = async (req, res) => {
   try {
     const text = String(
@@ -13,6 +26,22 @@ const handleChat = async (req, res) => {
       .toLowerCase()
       .trim();
 
+    const normalizedText = normalizeUserMessage(text);
+
+    if (!normalizedText) {
+      return res.send({
+        errors: [],
+        data: {
+          reply: "¿Podrías escribir un poco más para ayudarte mejor? ",
+          products: [],
+          context: {
+            intent: "unknown",
+            ambiguous: true,
+            options: [],
+          },
+        },
+      });
+    }
     if (!text || text === "hola") {
       const rootCategories = await Category.find({
         parentName: "Home",
@@ -32,11 +61,11 @@ const handleChat = async (req, res) => {
     const categories = await Category.find({ status: "show" });
 
     let category = categories.find(
-      (cat) => cat.name?.es?.toLowerCase() === text,
+      (cat) => cat.name?.es?.toLowerCase() === normalizedText,
     );
 
     if (!category) {
-      const words = text.split(/\s+/);
+      const words = normalizedText.split(/\s+/);
 
       category = categories.find(
         (cat) =>
@@ -75,16 +104,42 @@ const handleChat = async (req, res) => {
         status: "show",
       }).lean();
 
-      const aiResponse = await askChatGPT({
-        message: text,
-        products,
-      });
+      const aiProducts = products.slice(0, 15).map((p, index) => ({
+        index: index + 1,
+        name: p.title?.es || p.name,
+        price: p.prices?.price || p.price,
+      }));
+      const prompt = `
+Consulta del usuario: "${normalizedText}"
 
+Productos disponibles:
+${aiProducts.map((p) => `${p.index}. ${p.name} (${p.price})`).join("\n")}
+
+Devuelve SOLO los números de los productos relevantes.
+`;
+      const aiResponse = await askChatGPT({
+        message: prompt,
+      });
+      const indexes =
+        aiResponse?.match(/\d+/g)?.map((n) => parseInt(n, 10) - 1) || [];
+
+      const filteredProducts = indexes.map((i) => products[i]).filter(Boolean);
+
+      if (filteredProducts.length === 0) {
+        filteredProducts.push(...products.slice(0, 3));
+      }
+
+      const replyText = filteredProducts
+        .map(
+          (p, i) =>
+            `${i + 1}. ${p.title?.es || p.name} (${p.prices?.price || p.price})`,
+        )
+        .join("\n");
       return res.send({
         errors: [],
         data: {
-          reply: aiResponse,
-          products: products.map((p) => ({
+          reply: replyText,
+          products: filteredProducts.map((p) => ({
             id: p._id,
             name: p.title?.es || p.name,
             price: p.prices?.price || p.price,
@@ -109,7 +164,7 @@ const handleChat = async (req, res) => {
     return res.send({
       errors: [],
       data: {
-        reply: `No encontré lo que buscas: "${text}". ¿Qué categoría te interesa?`,
+        reply: `No encontré lo que buscas: "${normalizedText}". ¿Qué categoría te interesa?`,
         products: [],
         context: {
           intent: "select_category",
