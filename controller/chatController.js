@@ -65,13 +65,37 @@ const handleChat = async (req, res) => {
     );
 
     if (!category) {
-      const words = normalizedText.split(/\s+/);
+      const categoryPrompt = `
+Texto del usuario: "${normalizedText}"
 
-      category = categories.find(
-        (cat) =>
-          cat.name?.es?.toLowerCase() &&
-          words.some((word) => cat.name.es.toLowerCase().includes(word)),
-      );
+Categorías disponibles:
+${categories.map((c, i) => `${i + 1}. ${c.name.es}`).join("\n")}
+
+De esta lista de categorías, dime cuál coincide mejor con lo que el usuario quiso decir.
+Devuelve SOLO el número de la categoría.
+Si ninguna coincide, responde "ninguna".
+`;
+
+      const aiCategoryResponse = await askChatGPT({
+        message: categoryPrompt,
+      });
+
+      if (aiCategoryResponse !== "ninguna") {
+        const index = parseInt(aiCategoryResponse, 10) - 1;
+
+        if (!isNaN(index) && categories[index]) {
+          category = categories[index];
+        }
+      }
+
+      if (!category) {
+        const words = normalizedText.split(/\s+/);
+        category = categories.find(
+          (cat) =>
+            cat.name?.es?.toLowerCase() &&
+            words.some((word) => cat.name.es.toLowerCase().includes(word)),
+        );
+      }
     }
 
     if (category) {
@@ -103,7 +127,21 @@ const handleChat = async (req, res) => {
         category: category._id,
         status: "show",
       }).lean();
-
+      if (products.length === 0) {
+        return res.send({
+          errors: [],
+          data: {
+            reply: `Encontré la categoría "${category.name.es}", pero todavía no tenemos productos disponibles en esta sección.`,
+            products: [],
+            context: {
+              intent: "empty_category",
+              category: category.name.es.toLowerCase(),
+              ambiguous: false,
+              options: [],
+            },
+          },
+        });
+      }
       const aiProducts = products.slice(0, 15).map((p, index) => ({
         index: index + 1,
         name: p.title?.es || p.name,
@@ -129,12 +167,14 @@ Devuelve SOLO los números de los productos relevantes.
         filteredProducts.push(...products.slice(0, 3));
       }
 
-      const replyText = filteredProducts
+      const productList = filteredProducts
         .map(
           (p, i) =>
             `${i + 1}. ${p.title?.es || p.name} (${p.prices?.price || p.price})`,
         )
         .join("\n");
+
+      const replyText = `Estos son los productos que tenemos:\n\n${productList}\n\n`;
       return res.send({
         errors: [],
         data: {
