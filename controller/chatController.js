@@ -97,7 +97,16 @@ Si ninguna coincide, responde "ninguna".
         );
       }
     }
+    if (category) {
+      const words = normalizedText.split(/\s+/);
+      const categoryName = category.name.es.toLowerCase();
 
+      const hasRelation = words.some((word) => categoryName.includes(word));
+
+      if (!hasRelation) {
+        category = null;
+      }
+    }
     if (category) {
       const subcategories = await Category.find({
         parentId: category._id,
@@ -204,10 +213,10 @@ Devuelve SOLO los números de los productos relevantes.
     return res.send({
       errors: [],
       data: {
-        reply: `No encontré lo que buscas: "${normalizedText}". ¿Qué categoría te interesa?`,
+        reply: `No encontré lo que buscas: "${normalizedText}". Escoge las siguientes opciones:`,
         products: [],
         context: {
-          intent: "select_category",
+          intent: "search_product",
           category: null,
           ambiguous: true,
           options: rootCategories.map((c) => ({
