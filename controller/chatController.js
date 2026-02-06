@@ -2,6 +2,8 @@ const Category = require("../models/Category");
 const Product = require("../models/Product");
 const { askChatGPT } = require("../services/chatgptServices");
 
+const GENERIC_ERROR_MESSAGE = "Ocurrió un error, intenta nuevamente.";
+
 function normalizeUserMessage(text) {
   if (!text) return null;
 
@@ -14,7 +16,16 @@ function normalizeUserMessage(text) {
 
   return clean;
 }
-
+function sendChatResponse(res, reply, products = [], context = {}) {
+  return res.send({
+    errors: [],
+    data: {
+      reply,
+      products,
+      context,
+    },
+  });
+}
 const handleChat = async (req, res) => {
   try {
     const text = String(
@@ -29,18 +40,16 @@ const handleChat = async (req, res) => {
     const normalizedText = normalizeUserMessage(text);
 
     if (!normalizedText) {
-      return res.send({
-        errors: [],
-        data: {
-          reply: "¿Podrías escribir un poco más para ayudarte mejor? ",
-          products: [],
-          context: {
-            intent: "unknown",
-            ambiguous: true,
-            options: [],
-          },
+      return sendChatResponse(
+        res,
+        "¿Podrías escribir un poco más para ayudarte mejor?",
+        [],
+        {
+          intent: "unknown",
+          ambiguous: true,
+          options: [],
         },
-      });
+      );
     }
     if (!text || text === "hola") {
       const rootCategories = await Category.find({
@@ -48,14 +57,19 @@ const handleChat = async (req, res) => {
         status: "show",
       });
 
-      return res.send({
-        type: "options",
-        text: "Hola, ¿Qué tipo de categoría estás buscando?",
-        options: rootCategories.map((c) => ({
-          label: c.name?.es,
-          value: c._id,
-        })),
-      });
+      return sendChatResponse(
+        res,
+        "Hola, ¿Qué tipo de categoría estás buscando?",
+        [],
+        {
+          intent: "select_category",
+          ambiguous: false,
+          options: rootCategories.map((category) => ({
+            label: category.name?.es,
+            value: category._id,
+          })),
+        },
+      );
     }
 
     const categories = await Category.find({ status: "show" });
@@ -69,7 +83,7 @@ const handleChat = async (req, res) => {
 Texto del usuario: "${normalizedText}"
 
 Categorías disponibles:
-${categories.map((c, i) => `${i + 1}. ${c.name.es}`).join("\n")}
+${categories.map((categoryItem, index) => `${index + 1}. ${categoryItem.name.es}`).join("\n")}
 
 De esta lista de categorías, dime cuál coincide mejor con lo que el usuario quiso decir.
 Devuelve SOLO el número de la categoría.
@@ -96,8 +110,7 @@ Si ninguna coincide, responde "ninguna".
             words.some((word) => cat.name.es.toLowerCase().includes(word)),
         );
       }
-    }
-    if (category) {
+    } else {
       const words = normalizedText.split(/\s+/);
       const categoryName = category.name.es.toLowerCase();
 
@@ -114,22 +127,20 @@ Si ninguna coincide, responde "ninguna".
       });
 
       if (subcategories.length > 0) {
-        return res.send({
-          errors: [],
-          data: {
-            reply: `Estas son las subcategorías de ${category.name.es}:`,
-            products: [],
-            context: {
-              intent: "select_subcategory",
-              category: category.name.es.toLowerCase(),
-              ambiguous: false,
-              options: subcategories.map((c) => ({
-                label: c.name.es,
-                value: c._id,
-              })),
-            },
+        return sendChatResponse(
+          res,
+          `Estas son las subcategorías de ${category.name.es}:`,
+          [],
+          {
+            intent: "select_subcategory",
+            category: category.name.es.toLowerCase(),
+            ambiguous: false,
+            options: subcategories.map((subcategory) => ({
+              label: subcategory.name.es,
+              value: subcategory._id,
+            })),
           },
-        });
+        );
       }
 
       const products = await Product.find({
@@ -137,30 +148,28 @@ Si ninguna coincide, responde "ninguna".
         status: "show",
       }).lean();
       if (products.length === 0) {
-        return res.send({
-          errors: [],
-          data: {
-            reply: `Encontré la categoría "${category.name.es}", pero todavía no tenemos productos disponibles en esta sección.`,
-            products: [],
-            context: {
-              intent: "empty_category",
-              category: category.name.es.toLowerCase(),
-              ambiguous: false,
-              options: [],
-            },
+        return sendChatResponse(
+          res,
+          `Encontré la categoría "${category.name.es}", pero todavía no tenemos productos disponibles en esta sección.`,
+          [],
+          {
+            intent: "empty_category",
+            category: category.name.es.toLowerCase(),
+            ambiguous: false,
+            options: [],
           },
-        });
+        );
       }
-      const aiProducts = products.slice(0, 15).map((p, index) => ({
+      const aiProducts = products.slice(0, 15).map((product, index) => ({
         index: index + 1,
-        name: p.title?.es || p.name,
-        price: p.prices?.price || p.price,
+        name: product.title?.es || product.name,
+        price: product.prices?.price || product.price,
       }));
       const prompt = `
 Consulta del usuario: "${normalizedText}"
 
 Productos disponibles:
-${aiProducts.map((p) => `${p.index}. ${p.name} (${p.price})`).join("\n")}
+${aiProducts.map((productItem) => `${productItem.index}. ${productItem.name} (${productItem.price})`).join("\n")}
 
 Devuelve SOLO los números de los productos relevantes.
 `;
@@ -178,31 +187,29 @@ Devuelve SOLO los números de los productos relevantes.
 
       const productList = filteredProducts
         .map(
-          (p, i) =>
-            `${i + 1}. ${p.title?.es || p.name} (${p.prices?.price || p.price})`,
+          (product, index) =>
+            `${index + 1}. ${product.title?.es || product.name} (${product.prices?.price || product.price})`,
         )
         .join("\n");
 
       const replyText = `Estos son los productos que tenemos:\n\n${productList}\n\n`;
-      return res.send({
-        errors: [],
-        data: {
-          reply: replyText,
-          products: filteredProducts.map((p) => ({
-            id: p._id,
-            name: p.title?.es || p.name,
-            price: p.prices?.price || p.price,
-            category: category.name.es,
-            color: p.color || null,
-          })),
-          context: {
-            intent: "search_product",
-            category: category.name.es.toLowerCase(),
-            ambiguous: false,
-            options: [],
-          },
+      return sendChatResponse(
+        res,
+        replyText,
+        filteredProducts.map((product) => ({
+          id: product._id,
+          name: product.title?.es || product.name,
+          price: product.prices?.price || product.price,
+          category: category.name.es,
+          color: product.color || null,
+        })),
+        {
+          intent: "search_product",
+          category: category.name.es.toLowerCase(),
+          ambiguous: false,
+          options: [],
         },
-      });
+      );
     }
 
     const rootCategories = await Category.find({
@@ -210,32 +217,23 @@ Devuelve SOLO los números de los productos relevantes.
       status: "show",
     });
 
-    return res.send({
-      errors: [],
-      data: {
-        reply: `No encontré lo que buscas: "${normalizedText}". Escoge las siguientes opciones:`,
-        products: [],
-        context: {
-          intent: "search_product",
-          category: null,
-          ambiguous: true,
-          options: rootCategories.map((c) => ({
-            label: c.name.es,
-            value: c._id,
-          })),
-        },
+    return sendChatResponse(
+      res,
+      `No encontré lo que buscas: "${normalizedText}". Escoge las siguientes opciones:`,
+      [],
+      {
+        intent: "select_category",
+        category: null,
+        ambiguous: true,
+        options: rootCategories.map((category) => ({
+          label: category.name.es,
+          value: category._id,
+        })),
       },
-    });
+    );
   } catch (error) {
     console.error("Chat error:", error);
-    return res.status(500).send({
-      errors: [{ message: "Ocurrió un error, intenta nuevamente." }],
-      data: {
-        reply: "Ocurrió un error, intenta nuevamente.",
-        products: [],
-        context: {},
-      },
-    });
+    return sendChatResponse(res, GENERIC_ERROR_MESSAGE);
   }
 };
 
