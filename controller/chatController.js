@@ -26,6 +26,60 @@ function sendChatResponse(res, reply, products = [], context = {}) {
     },
   });
 }
+function formatProduct(product) {
+  return {
+    id: product._id,
+    name: product.title?.es || product.name,
+    price: product.prices?.price || product.price,
+    color: product.color || null,
+  };
+}
+
+function formatProductsForAI(products) {
+  return products.slice(0, 15).map((product, index) => ({
+    index: index + 1,
+    name: product.title?.es || product.name,
+    price: product.prices?.price || product.price,
+  }));
+}
+
+function buildProductReply(products) {
+  return products
+    .map(
+      (product, index) =>
+        `${index + 1}. ${product.title?.es || product.name} (${product.prices?.price || product.price})`,
+    )
+    .join("\n");
+}
+
+function buildContext(
+  intent,
+  category = null,
+  options = [],
+  ambiguous = false,
+) {
+  return {
+    intent,
+    category,
+    ambiguous,
+    options,
+  };
+}
+
+function mapCategoriesToOptions(categories) {
+  return categories.map((category) => ({
+    label: category.name.es,
+    value: category._id,
+  }));
+}
+
+async function getProductsByCategory(categoryId) {
+  return Product.find({
+    category: categoryId,
+    status: "show",
+  }).lean();
+}
+
 const handleChat = async (req, res) => {
   try {
     const text = String(
@@ -36,7 +90,20 @@ const handleChat = async (req, res) => {
     )
       .toLowerCase()
       .trim();
-
+    if (text === "agregar al carrito") {
+      return res.send({
+        errors: [],
+        data: {
+          reply: "Selecciona el producto para agregar al carrito:",
+          products: [],
+          context: {
+            intent: "add_to_cart",
+            ambiguous: false,
+            options: [],
+          },
+        },
+      });
+    }
     const normalizedText = normalizeUserMessage(text);
 
     if (!normalizedText) {
@@ -131,40 +198,25 @@ Si ninguna coincide, responde "ninguna".
           res,
           `Estas son las subcategorías de ${category.name.es}:`,
           [],
-          {
-            intent: "select_subcategory",
-            category: category.name.es.toLowerCase(),
-            ambiguous: false,
-            options: subcategories.map((subcategory) => ({
-              label: subcategory.name.es,
-              value: subcategory._id,
-            })),
-          },
+          buildContext(
+            "select_subcategory",
+            category.name.es.toLowerCase(),
+            mapCategoriesToOptions(subcategories),
+          ),
         );
       }
 
-      const products = await Product.find({
-        category: category._id,
-        status: "show",
-      }).lean();
+      const products = await getProductsByCategory(category._id);
       if (products.length === 0) {
         return sendChatResponse(
           res,
           `Encontré la categoría "${category.name.es}", pero todavía no tenemos productos disponibles en esta sección.`,
           [],
-          {
-            intent: "empty_category",
-            category: category.name.es.toLowerCase(),
-            ambiguous: false,
-            options: [],
-          },
+          buildContext("empty_category", category.name.es.toLowerCase()),
         );
       }
-      const aiProducts = products.slice(0, 15).map((product, index) => ({
-        index: index + 1,
-        name: product.title?.es || product.name,
-        price: product.prices?.price || product.price,
-      }));
+      const aiProducts = formatProductsForAI(products);
+
       const prompt = `
 Consulta del usuario: "${normalizedText}"
 
@@ -185,30 +237,14 @@ Devuelve SOLO los números de los productos relevantes.
         filteredProducts.push(...products.slice(0, 3));
       }
 
-      const productList = filteredProducts
-        .map(
-          (product, index) =>
-            `${index + 1}. ${product.title?.es || product.name} (${product.prices?.price || product.price})`,
-        )
-        .join("\n");
+      const productList = buildProductReply(filteredProducts);
 
       const replyText = `Estos son los productos que tenemos:\n\n${productList}\n\n`;
       return sendChatResponse(
         res,
         replyText,
-        filteredProducts.map((product) => ({
-          id: product._id,
-          name: product.title?.es || product.name,
-          price: product.prices?.price || product.price,
-          category: category.name.es,
-          color: product.color || null,
-        })),
-        {
-          intent: "search_product",
-          category: category.name.es.toLowerCase(),
-          ambiguous: false,
-          options: [],
-        },
+        filteredProducts.map(formatProduct),
+        buildContext("search_product", category.name.es.toLowerCase()),
       );
     }
 
@@ -221,15 +257,12 @@ Devuelve SOLO los números de los productos relevantes.
       res,
       `No encontré lo que buscas: "${normalizedText}". Escoge las siguientes opciones:`,
       [],
-      {
-        intent: "select_category",
-        category: null,
-        ambiguous: true,
-        options: rootCategories.map((category) => ({
-          label: category.name.es,
-          value: category._id,
-        })),
-      },
+      buildContext(
+        "select_category",
+        null,
+        mapCategoriesToOptions(rootCategories),
+        true,
+      ),
     );
   } catch (error) {
     console.error("Chat error:", error);
