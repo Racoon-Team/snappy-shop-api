@@ -91,19 +91,14 @@ const handleChat = async (req, res) => {
       .toLowerCase()
       .trim();
     if (text === "agregar al carrito") {
-      return res.send({
-        errors: [],
-        data: {
-          reply: "Selecciona el producto para agregar al carrito:",
-          products: [],
-          context: {
-            intent: "add_to_cart",
-            ambiguous: false,
-            options: [],
-          },
-        },
-      });
+      return sendChatResponse(
+        res,
+        "Selecciona el producto para agregar al carrito:",
+        [],
+        buildContext("add_to_cart"),
+      );
     }
+
     const normalizedText = normalizeUserMessage(text);
 
     if (!normalizedText) {
