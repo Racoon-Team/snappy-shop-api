@@ -32,6 +32,8 @@ function formatProduct(product) {
     name: product.title?.es || product.name,
     price: product.prices?.price || product.price,
     color: product.color || null,
+    stock: product.stock|| 0,
+    image: product.image?.[0]|| null,
   };
 }
 
