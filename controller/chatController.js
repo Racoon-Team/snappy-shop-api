@@ -139,7 +139,7 @@ const handleChat = async (req, res) => {
     }
 
     if (text === "cart_product_key") {
-      return sendChatResponse(res, "Producto agregado al carrito ✅", [], {
+      return sendChatResponse(res, "Producto agregado al carrito ", [], {
         intent: "cart_confirmed",
         ambiguous: false,
         options: [{ label: "Inicio" }],
@@ -157,7 +157,7 @@ const handleChat = async (req, res) => {
       );
     }
 
-    if (!text || text === "hola") {
+    if (!text || text === "__init__") {
       const rootCategories = await Category.find({
         parentName: "Home",
         status: "show",
