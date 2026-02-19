@@ -3,6 +3,17 @@ const Product = require("../models/Product");
 const { askChatGPT } = require("../services/chatgptServices");
 
 const GENERIC_ERROR_MESSAGE = "Ocurrió un error, intenta nuevamente.";
+const CART = "agregar al carrito";
+const SELECT = "Selecciona el producto para agregar al carrito:";
+const PRODUCT_CART = "Producto agregado al carrito ";
+const MESSAGE = "¿Podrías escribir un poco más para ayudarte mejor?";
+const GREETING = "Hola, ¿Qué tipo de categoría estás buscando?";
+const PRODUCT_NOT_FOUND = (normalizedText) =>
+  `No encontré lo que buscas: "${normalizedText}". Escoge las siguientes opciones:`;
+const SUB_CATEGORIES = (category) =>
+  `Estas son las subcategorías de ${category.name.es}:`;
+const CATEGORY_FOUND = (category) =>
+  `Encontré la categoría "${category.name.es}", pero todavía no tenemos productos disponibles en esta sección.`;
 
 function normalizeUserMessage(text) {
   if (!text) return null;
@@ -119,6 +130,10 @@ Si ninguna coincide, responde "ninguna".
 }
 
 const handleChat = async (req, res) => {
+  let reply = GENERIC_ERROR_MESSAGE;
+  let productsResponse = [];
+  let context = {};
+
   try {
     const text = String(
       req.body?.message ||
@@ -129,140 +144,112 @@ const handleChat = async (req, res) => {
       .toLowerCase()
       .trim();
 
-    if (text === "agregar al carrito") {
-      return sendChatResponse(
-        res,
-        "Selecciona el producto para agregar al carrito:",
-        [],
-        buildContext("add_to_cart"),
-      );
-    }
+    const normalizedText = normalizeUserMessage(text);
 
-    if (text === "cart_product_key") {
-      return sendChatResponse(res, "Producto agregado al carrito ", [], {
+    if (text === CART) {
+      reply = SELECT;
+      context = buildContext("add_to_cart");
+    } else if (text === "cart_product_key") {
+      reply = PRODUCT_CART;
+      context = {
         intent: "cart_confirmed",
         ambiguous: false,
         options: [{ label: "Inicio" }],
-      });
-    }
-
-    const normalizedText = normalizeUserMessage(text);
-
-    if (!normalizedText) {
-      return sendChatResponse(
-        res,
-        "¿Podrías escribir un poco más para ayudarte mejor?",
-        [],
-        { intent: "unknown", ambiguous: true, options: [] },
-      );
-    }
-
-    if (!text || text === "__init__") {
+      };
+    } else if (!normalizedText) {
+      reply = MESSAGE;
+      context = {
+        intent: "unknown",
+        ambiguous: true,
+        options: [],
+      };
+    } else if (!text || text === "__init__") {
       const rootCategories = await Category.find({
         parentName: "Home",
         status: "show",
       });
 
-      return sendChatResponse(
-        res,
-        "Hola, ¿Qué tipo de categoría estás buscando?",
-        [],
-        buildContext(
-          "select_category",
-          null,
-          mapCategoriesToOptions(rootCategories),
-          false,
-        ),
+      reply = GREETING;
+      context = buildContext(
+        "select_category",
+        null,
+        mapCategoriesToOptions(rootCategories),
+        false,
       );
-    }
+    } else {
+      const categories = await Category.find({ status: "show" });
+      const category = await resolveCategory(normalizedText, categories);
 
-    const categories = await Category.find({ status: "show" });
-    const category = await resolveCategory(normalizedText, categories);
+      if (!category) {
+        const rootCategories = await Category.find({
+          parentId: { $in: [null, ""] },
+          status: "show",
+        });
 
-    if (!category) {
-      const rootCategories = await Category.find({
-        parentId: { $in: [null, ""] },
-        status: "show",
-      });
-
-      return sendChatResponse(
-        res,
-        `No encontré lo que buscas: "${normalizedText}". Escoge las siguientes opciones:`,
-        [],
-        buildContext(
+        reply = PRODUCT_NOT_FOUND(normalizedText);
+        context = buildContext(
           "select_category",
           null,
           mapCategoriesToOptions(rootCategories),
           true,
-        ),
-      );
+        );
+      } else {
+        const subcategories = await Category.find({
+          parentId: category._id,
+          status: "show",
+        });
+
+        if (subcategories.length > 0) {
+          reply = SUB_CATEGORIES(category);
+          context = buildContext(
+            "select_subcategory",
+            category.name.es.toLowerCase(),
+            mapCategoriesToOptions(subcategories),
+          );
+        } else {
+          const products = await getProductsByCategory(category._id);
+
+          if (products.length === 0) {
+            reply = CATEGORY_FOUND(category);
+            context = buildContext(
+              "empty_category",
+              category.name.es.toLowerCase(),
+            );
+          } else {
+            const aiProducts = formatProductsForAI(products);
+            const prompt = `Consulta del usuario: "${normalizedText}" Productos disponibles:
+            ${aiProducts.map((p) => `${p.index}. ${p.name} (${p.price})`).join("\n")}
+            Devuelve SOLO los números de los productos relevantes.`;
+            const aiResponse = await askChatGPT({ message: prompt });
+
+            const indexes =
+              aiResponse?.match(/\d+/g)?.map((n) => parseInt(n, 10) - 1) || [];
+
+            const filteredProducts = indexes
+              .map((i) => products[i])
+              .filter(Boolean);
+
+            if (filteredProducts.length === 0) {
+              filteredProducts.push(...products.slice(0, 3));
+            }
+
+            reply = `Estos son los productos que tenemos:\n\n${buildProductReply(
+              filteredProducts,
+            )}\n\n`;
+
+            productsResponse = filteredProducts.map(formatProduct);
+
+            context = buildContext(
+              "search_product",
+              category.name.es.toLowerCase(),
+            );
+          }
+        }
+      }
     }
-
-    const subcategories = await Category.find({
-      parentId: category._id,
-      status: "show",
-    });
-
-    if (subcategories.length > 0) {
-      return sendChatResponse(
-        res,
-        `Estas son las subcategorías de ${category.name.es}:`,
-        [],
-        buildContext(
-          "select_subcategory",
-          category.name.es.toLowerCase(),
-          mapCategoriesToOptions(subcategories),
-        ),
-      );
-    }
-
-    const products = await getProductsByCategory(category._id);
-
-    if (products.length === 0) {
-      return sendChatResponse(
-        res,
-        `Encontré la categoría "${category.name.es}", pero todavía no tenemos productos disponibles en esta sección.`,
-        [],
-        buildContext("empty_category", category.name.es.toLowerCase()),
-      );
-    }
-
-    const aiProducts = formatProductsForAI(products);
-
-    const prompt = `
-Consulta del usuario: "${normalizedText}"
-
-Productos disponibles:
-${aiProducts.map((p) => `${p.index}. ${p.name} (${p.price})`).join("\n")}
-
-Devuelve SOLO los números de los productos relevantes.
-`;
-
-    const aiResponse = await askChatGPT({ message: prompt });
-
-    const indexes =
-      aiResponse?.match(/\d+/g)?.map((n) => parseInt(n, 10) - 1) || [];
-
-    const filteredProducts = indexes.map((i) => products[i]).filter(Boolean);
-
-    if (filteredProducts.length === 0) {
-      filteredProducts.push(...products.slice(0, 3));
-    }
-
-    const replyText = `Estos son los productos que tenemos:\n\n${buildProductReply(
-      filteredProducts,
-    )}\n\n`;
-
-    return sendChatResponse(
-      res,
-      replyText,
-      filteredProducts.map(formatProduct),
-      buildContext("search_product", category.name.es.toLowerCase()),
-    );
   } catch (error) {
     console.error("Chat error:", error);
-    return sendChatResponse(res, GENERIC_ERROR_MESSAGE);
   }
+  return sendChatResponse(res, reply, productsResponse, context);
 };
-
 module.exports = { handleChat };
